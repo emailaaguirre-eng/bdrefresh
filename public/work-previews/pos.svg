@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Illustrative restaurant POS and kitchen display">
+  <defs>
+    <style type="text/css"><![CDATA[
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap');
+.t { font-family: 'Rubik', system-ui, sans-serif; }
+]]></style>
+    <linearGradient id="p-kds" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="#e9edf3"/>
+  <rect x="12" y="12" width="616" height="336" rx="14" fill="#fff" stroke="#b8c2d0" stroke-width="1"/>
+  <rect x="24" y="24" width="292" height="312" rx="0" fill="#f4f6f9" stroke="#c5ced8" stroke-width="1"/>
+  <text class="t" x="40" y="54" font-size="14" font-weight="600" fill="#1a1a1a">Floor / Table service</text>
+  <rect x="40" y="64" width="124" height="26" rx="0" fill="#fff" stroke="#c5cdd8"/>
+  <text class="t" x="102" y="77" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle" dominant-baseline="central">Table 12</text>
+  <rect x="40" y="100" width="260" height="60" rx="12" fill="#fff" stroke="#d0d7e0" stroke-width="1"/>
+  <rect x="54" y="116" width="138" height="9" rx="2" fill="#c5cdd8"/>
+  <rect x="54" y="132" width="102" height="9" rx="0" fill="#e5e9ef"/>
+  <rect x="40" y="172" width="260" height="60" rx="4" fill="#fff" stroke="#d0d7e0" stroke-width="1"/>
+  <rect x="54" y="188" width="118" height="9" rx="0" fill="#c5cdd8"/>
+  <rect x="54" y="204" width="90" height="9" rx="2" fill="#e5e9ef"/>
+  <rect x="40" y="244" width="72" height="40" rx="20" fill="#16a34a"/>
+  <text class="t" x="76" y="264" font-size="11" font-weight="800" fill="#fff" text-anchor="middle" dominant-baseline="central">Fire</text>
+  <rect x="120" y="244" width="56" height="40" rx="3" fill="#fff" stroke="#16a34a" stroke-width="2"/>
+  <text class="t" x="148" y="264" font-size="10" font-weight="700" fill="#16a34a" text-anchor="middle" dominant-baseline="central">Hold</text>
+  <rect x="328" y="24" width="288" height="312" rx="10" fill="url(#p-kds)" stroke="#2a2a2a"/>
+  <text class="t" x="344" y="52" font-size="12" font-weight="700" fill="#fbbf24" letter-spacing="0.08em">KITCHEN</text>
+  <text class="t" x="344" y="92" font-size="30" font-weight="800" fill="#fff">12 / 2</text>
+  <text class="t" x="344" y="118" font-size="12" font-weight="500" fill="#a3a3a3">2m ago</text>
+  <rect x="344" y="132" width="248" height="5" rx="0" fill="#3d3d3d"/>
+  <text class="t" x="344" y="172" font-size="19" font-weight="700" fill="#fff">Entree x2</text>
+  <text class="t" x="344" y="200" font-size="16" font-weight="600" fill="#d4d4d4">Modifier - no dairy</text>
+  <text class="t" x="344" y="234" font-size="19" font-weight="700" fill="#86efac">Side x1</text>
+  <rect x="344" y="252" width="208" height="48" rx="0" fill="#222" stroke="#444"/>
+  <text class="t" x="358" y="276" font-size="11" font-weight="500" fill="#a3a3a3">Routing: Grill / Cold</text>
+  <text class="t" x="358" y="294" font-size="10" font-weight="400" fill="#737373">Sample ticket - not a live order</text>
+</svg>

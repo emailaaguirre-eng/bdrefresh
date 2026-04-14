@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Illustrative campaign operations UI">
+  <defs>
+    <style type="text/css"><![CDATA[
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+.t { font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; }
+]]></style>
+  </defs>
+  <rect width="640" height="360" fill="#e9edf3"/>
+  <rect x="12" y="12" width="616" height="336" rx="14" fill="#fff" stroke="#b8c2d0" stroke-width="1"/>
+  <rect x="28" y="28" width="584" height="40" rx="0" fill="#e8ecf4" stroke="#aeb8c6" stroke-width="1"/>
+  <text class="t" x="42" y="42" font-size="8" font-weight="700" fill="#64748b" letter-spacing="0.1em">OUTBOUND OPS BOARD</text>
+  <text class="t" x="42" y="60" font-size="14" font-weight="700" fill="#0f172a">Batch queue</text>
+  <rect x="432" y="36" width="76" height="26" rx="2" fill="#fff" stroke="#9ca8b8" stroke-width="1"/>
+  <text class="t" x="470" y="49" font-size="11" font-weight="600" fill="#334155" text-anchor="middle" dominant-baseline="central">Filter</text>
+  <rect x="518" y="36" width="94" height="26" rx="13" fill="#1e3a5f" stroke="#152d4a" stroke-width="1"/>
+  <text class="t" x="565" y="49" font-size="11" font-weight="600" fill="#fff" text-anchor="middle" dominant-baseline="central">New batch</text>
+  <rect x="28" y="82" width="584" height="30" rx="0" fill="#dce3ee" stroke="#aeb8c6" stroke-width="1"/>
+  <rect x="42" y="94" width="52" height="8" rx="2" fill="#5a6b7e"/>
+  <rect x="118" y="94" width="92" height="8" rx="0" fill="#5a6b7e"/>
+  <rect x="236" y="94" width="76" height="8" rx="2" fill="#5a6b7e"/>
+  <rect x="354" y="94" width="68" height="8" rx="0" fill="#5a6b7e"/>
+  <rect x="472" y="94" width="54" height="8" rx="2" fill="#5a6b7e"/>
+  <line x1="28" y1="120" x2="612" y2="120" stroke="#9ca8b8" stroke-width="1"/>
+  <g>
+    <rect x="28" y="128" width="584" height="38" fill="#fff" stroke="#c5ced8" stroke-width="1"/>
+    <rect x="42" y="140" width="46" height="10" rx="0" fill="#b8c4d0"/>
+    <rect x="118" y="140" width="136" height="10" rx="3" fill="#b8c4d0"/>
+    <rect x="296" y="140" width="54" height="10" rx="0" fill="#7ec8a0"/>
+    <rect x="514" y="140" width="42" height="10" rx="5" fill="#7eb0dc"/>
+    <rect x="28" y="166" width="584" height="38" fill="#f0f3f8" stroke="#c5ced8" stroke-width="1"/>
+    <rect x="42" y="178" width="46" height="10" rx="3" fill="#b8c4d0"/>
+    <rect x="118" y="178" width="118" height="10" rx="0" fill="#b8c4d0"/>
+    <rect x="296" y="178" width="54" height="10" rx="5" fill="#c9b87a"/>
+    <rect x="514" y="178" width="42" height="10" rx="0" fill="#7eb0dc"/>
+    <rect x="28" y="204" width="584" height="38" fill="#fff" stroke="#c5ced8" stroke-width="1"/>
+    <rect x="42" y="216" width="46" height="10" rx="0" fill="#b8c4d0"/>
+    <rect x="118" y="216" width="152" height="10" rx="3" fill="#b8c4d0"/>
+    <rect x="296" y="216" width="54" height="10" rx="0" fill="#7ec8a0"/>
+    <rect x="514" y="216" width="42" height="10" rx="5" fill="#7eb0dc"/>
+    <rect x="28" y="242" width="584" height="38" fill="#f0f3f8" stroke="#c5ced8" stroke-width="1"/>
+    <rect x="42" y="254" width="46" height="10" rx="3" fill="#b8c4d0"/>
+    <rect x="118" y="254" width="98" height="10" rx="0" fill="#b8c4d0"/>
+    <rect x="296" y="254" width="54" height="10" rx="5" fill="#d4948a"/>
+    <rect x="514" y="254" width="42" height="10" rx="0" fill="#7eb0dc"/>
+  </g>
+  <line x1="28" y1="286" x2="612" y2="286" stroke="#c5ced8" stroke-width="1"/>
+  <text class="t" x="42" y="306" font-size="9" font-weight="500" fill="#64748b">Showing 4 of 12 active batches</text>
+</svg>

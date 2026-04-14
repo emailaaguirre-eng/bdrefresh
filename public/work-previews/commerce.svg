@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Illustrative custom product experience UI, not a client deliverable">
+  <defs>
+    <style type="text/css"><![CDATA[
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap');
+.t { font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif; }
+]]></style>
+    <linearGradient id="cx-hero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1629"/>
+      <stop offset="50%" stop-color="#172a48"/>
+      <stop offset="100%" stop-color="#121c3a"/>
+    </linearGradient>
+    <radialGradient id="cx-vignette" cx="50%" cy="45%" r="70%" gradientUnits="objectBoundingBox">
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0c1629" stop-opacity="0.22"/>
+    </radialGradient>
+    <clipPath id="cx-product-clip">
+      <rect x="111" y="132" width="208" height="108" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <rect width="640" height="360" fill="#dce5f0"/>
+  <rect x="12" y="12" width="616" height="336" rx="14" fill="#f8fafc" stroke="#c5ced8" stroke-width="1"/>
+
+  <text class="t" x="28" y="40" font-size="12" font-weight="700" fill="#0f172a" letter-spacing="-0.02em">Home</text>
+  <text class="t" x="88" y="40" font-size="9" font-weight="500" fill="#64748b">Shop</text>
+  <text class="t" x="132" y="40" font-size="9" font-weight="500" fill="#94a3b8">Brands</text>
+  <text class="t" x="194" y="40" font-size="9" font-weight="500" fill="#94a3b8">About us</text>
+  <g id="header-cart" transform="translate(612, 28)" aria-label="Cart, 0 items">
+    <rect x="-66" y="0" width="66" height="18" rx="9" ry="9" fill="#1e4976" stroke="#143a5c" stroke-width="1"/>
+    <g transform="translate(-33, 9)">
+      <g transform="translate(-21, 0)">
+        <g transform="translate(0, 1.65) scale(0.26) translate(-12, -12)" fill="#f8fafc" aria-hidden="true">
+          <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+        </g>
+        <text class="t" x="8" y="0" font-size="9" font-weight="600" fill="#f8fafc" dominant-baseline="central">Cart (0)</text>
+      </g>
+    </g>
+  </g>
+  <line x1="24" y1="52" x2="616" y2="52" stroke="#e2e8f0" stroke-width="1"/>
+
+  <rect x="24" y="60" width="382" height="228" rx="12" fill="url(#cx-hero)" stroke="#1e293b" stroke-width="1"/>
+  <text class="t" x="40" y="80" font-size="8" font-weight="600" fill="#7dd3fc" letter-spacing="0.14em">YOUR CONFIGURATION</text>
+  <text class="t" x="40" y="98" font-size="7" font-weight="500" fill="#94a3b8" opacity="0.95">Preview updates as you personalize</text>
+  <rect x="99" y="108" width="232" height="148" rx="14" fill="rgba(12,22,41,0.45)" stroke="rgba(148,163,184,0.28)" stroke-width="1"/>
+  <text class="t" x="215" y="124" font-size="6" font-weight="700" fill="#94a3b8" text-anchor="middle" letter-spacing="0.12em">PRODUCT PREVIEW</text>
+  <rect x="107" y="128" width="216" height="120" rx="10" fill="rgba(8,15,30,0.55)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <g id="com-product-smartwatch" clip-path="url(#cx-product-clip)">
+    <svg x="111" y="132" width="208" height="108" viewBox="0 0 1024 765" preserveAspectRatio="xMidYMid meet" overflow="hidden">
+      <image href="commerce-watch.png" width="1024" height="765" preserveAspectRatio="xMidYMid meet"/>
+    </svg>
+  </g>
+  <rect x="111" y="132" width="208" height="108" fill="url(#cx-vignette)" opacity="0.35" pointer-events="none"/>
+  <text class="t" x="40" y="268" font-size="8" font-weight="500" fill="#94a3b8">Compare all models</text>
+  <text class="t" x="158" y="268" font-size="8" font-weight="600" fill="#7dd3fc">→</text>
+
+  <rect x="24" y="292" width="382" height="28" rx="6" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text class="t" x="36" y="308" font-size="7" font-weight="700" fill="#64748b" letter-spacing="0.08em">SHIPPING</text>
+  <rect x="92" y="298" width="72" height="16" rx="4" fill="#ffffff" stroke="#1e4976" stroke-width="1.5"/>
+  <text class="t" x="128" y="306" font-size="7" font-weight="600" fill="#1e4976" text-anchor="middle" dominant-baseline="central">Standard</text>
+  <rect x="170" y="298" width="72" height="16" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text class="t" x="206" y="306" font-size="7" font-weight="500" fill="#64748b" text-anchor="middle" dominant-baseline="central">Express</text>
+  <rect x="248" y="298" width="88" height="16" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text class="t" x="292" y="306" font-size="7" font-weight="500" fill="#64748b" text-anchor="middle" dominant-baseline="central">Store pickup</text>
+  <text class="t" x="348" y="308" font-size="6" font-weight="500" fill="#94a3b8">Insured · tracked</text>
+
+  <rect x="414" y="60" width="198" height="258" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text class="t" x="428" y="74" font-size="7" font-weight="700" fill="#64748b" letter-spacing="0.12em">BUILD SUMMARY</text>
+  <text class="t" x="428" y="90" font-size="12" font-weight="700" fill="#0f172a">Arc Pro · titanium</text>
+  <text class="t" x="428" y="104" font-size="8" font-weight="500" fill="#64748b">From $1,240 · est. ship 5–7 days</text>
+  <line x1="428" y1="112" x2="598" y2="112" stroke="#e2e8f0" stroke-width="1"/>
+  <text class="t" x="428" y="124" font-size="8" font-weight="500" fill="#475569">· Brushed titanium case, sapphire</text>
+  <text class="t" x="428" y="136" font-size="8" font-weight="500" fill="#475569">· Leather band, standard fit</text>
+
+  <text class="t" x="428" y="154" font-size="7" font-weight="700" fill="#64748b" letter-spacing="0.1em">PERSONALIZE</text>
+  <text class="t" x="428" y="164" font-size="7" font-weight="600" fill="#94a3b8">FINISH</text>
+  <rect x="428" y="168" width="48" height="16" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text class="t" x="452" y="176" font-size="7" font-weight="500" fill="#64748b" text-anchor="middle" dominant-baseline="central">Steel</text>
+  <rect x="480" y="168" width="54" height="16" rx="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text class="t" x="507" y="176" font-size="7" font-weight="600" fill="#f8fafc" text-anchor="middle" dominant-baseline="central">Titanium</text>
+  <rect x="538" y="168" width="40" height="16" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text class="t" x="558" y="176" font-size="7" font-weight="500" fill="#64748b" text-anchor="middle" dominant-baseline="central">Black</text>
+  <text class="t" x="428" y="194" font-size="7" font-weight="600" fill="#94a3b8">BAND</text>
+  <rect x="428" y="198" width="50" height="16" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text class="t" x="453" y="206" font-size="7" font-weight="500" fill="#64748b" text-anchor="middle" dominant-baseline="central">Rubber</text>
+  <rect x="484" y="198" width="48" height="16" rx="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text class="t" x="508" y="206" font-size="7" font-weight="600" fill="#f8fafc" text-anchor="middle" dominant-baseline="central">Leather</text>
+  <rect x="538" y="198" width="44" height="16" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text class="t" x="560" y="206" font-size="7" font-weight="500" fill="#64748b" text-anchor="middle" dominant-baseline="central">Nylon</text>
+
+  <text class="t" x="428" y="224" font-size="7" font-weight="700" fill="#64748b" letter-spacing="0.1em">ADD-ONS</text>
+  <rect x="428" y="228" width="170" height="26" rx="5" fill="#f8fafc" stroke="#1e4976" stroke-width="1.5"/>
+  <path d="M438 241 L442 245 L450 235" fill="none" stroke="#1e4976" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="t" x="456" y="241" font-size="8" font-weight="600" fill="#0f172a">Screen protector</text>
+  <text class="t" x="582" y="241" font-size="7" font-weight="600" fill="#64748b" text-anchor="end">+$29</text>
+  <rect x="428" y="258" width="170" height="26" rx="5" fill="#f8fafc" stroke="#1e4976" stroke-width="1.5"/>
+  <path d="M438 271 L442 275 L450 265" fill="none" stroke="#1e4976" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="t" x="456" y="271" font-size="7" font-weight="600" fill="#0f172a">Extended 2-year coverage</text>
+  <text class="t" x="582" y="271" font-size="7" font-weight="600" fill="#64748b" text-anchor="end">+$89</text>
+
+  <rect x="428" y="290" width="88" height="24" rx="5" fill="#1e4976" stroke="#143a5c" stroke-width="1"/>
+  <text class="t" x="472" y="302" font-size="7" font-weight="600" fill="#f8fafc" text-anchor="middle" dominant-baseline="central">Review configuration</text>
+  <rect x="522" y="290" width="76" height="24" rx="5" fill="#ffffff" stroke="#1e4976" stroke-width="1"/>
+  <text class="t" x="560" y="302" font-size="7" font-weight="600" fill="#1e4976" text-anchor="middle" dominant-baseline="central">Save build</text>
+</svg>

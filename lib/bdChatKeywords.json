@@ -1,0 +1,222 @@
+[
+  {
+    "keys": [
+      "website",
+      "site",
+      "web page",
+      "webpage",
+      "landing page",
+      "homepage",
+      "redesign"
+    ],
+    "response": "websites"
+  },
+  {
+    "keys": [
+      "app",
+      "application",
+      "software",
+      "program",
+      "platform",
+      "portal",
+      "saas"
+    ],
+    "response": "custom_app"
+  },
+  {
+    "keys": [
+      "ai",
+      "artificial intelligence",
+      "chatbot",
+      "bot",
+      "agent",
+      "machine learning",
+      "gpt",
+      "llm"
+    ],
+    "response": "ai"
+  },
+  {
+    "keys": [
+      "automation",
+      "automate",
+      "workflow",
+      "automated"
+    ],
+    "response": "ai"
+  },
+  {
+    "keys": [
+      "price",
+      "cost",
+      "how much",
+      "quote",
+      "budget",
+      "afford",
+      "pricing",
+      "rate",
+      "charge",
+      "fee"
+    ],
+    "response": "pricing"
+  },
+  {
+    "keys": [
+      "how long",
+      "timeline",
+      "deadline",
+      "turnaround",
+      "fast",
+      "when",
+      "duration",
+      "weeks"
+    ],
+    "response": "timeline"
+  },
+  {
+    "keys": [
+      "ecommerce",
+      "e-commerce",
+      "shop",
+      "store",
+      "sell",
+      "payment",
+      "cart",
+      "product",
+      "shopify"
+    ],
+    "response": "ecommerce"
+  },
+  {
+    "keys": [
+      "api",
+      "integration",
+      "connect",
+      "webhook",
+      "sync",
+      "data sync",
+      "zapier"
+    ],
+    "response": "internal_tools"
+  },
+  {
+    "keys": [
+      "database",
+      "data",
+      "sql",
+      "backend",
+      "server",
+      "storage"
+    ],
+    "response": "internal_tools"
+  },
+  {
+    "keys": [
+      "desktop",
+      "local",
+      "windows",
+      "mac",
+      "native",
+      "installed"
+    ],
+    "response": "desktop"
+  },
+  {
+    "keys": [
+      "dashboard",
+      "admin",
+      "panel",
+      "reporting",
+      "analytics",
+      "internal tool",
+      "crm"
+    ],
+    "response": "internal_tools"
+  },
+  {
+    "keys": [
+      "react",
+      "node",
+      "python",
+      "javascript",
+      "typescript",
+      "php",
+      "mysql",
+      "postgres",
+      "docker",
+      "aws",
+      "html",
+      "css",
+      "framework",
+      "library",
+      "stack",
+      "language",
+      "code",
+      "coding",
+      "angular",
+      "vue",
+      "next",
+      "django",
+      "flask",
+      "ruby",
+      "java",
+      "swift",
+      "kotlin"
+    ],
+    "response": "technical"
+  },
+  {
+    "keys": [
+      "contact",
+      "email",
+      "call",
+      "phone",
+      "talk",
+      "reach",
+      "message",
+      "speak",
+      "hire",
+      "consultation"
+    ],
+    "response": "contact"
+  },
+  {
+    "keys": [
+      "hi",
+      "hello",
+      "hey",
+      "howdy",
+      "greetings",
+      "good morning",
+      "good afternoon",
+      "good evening",
+      "sup",
+      "yo"
+    ],
+    "response": "greeting"
+  },
+  {
+    "keys": [
+      "services",
+      "what do you",
+      "what can you",
+      "capabilities",
+      "offer",
+      "do you build",
+      "can you build",
+      "do you make"
+    ],
+    "response": "services"
+  },
+  {
+    "keys": [
+      "help",
+      "can you help",
+      "need help",
+      "looking for",
+      "i need",
+      "i want"
+    ],
+    "response": "project_help"
+  }
+]

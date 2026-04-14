@@ -1,0 +1,267 @@
+{
+  "greeting": {
+    "text": "Hi! I'm the B&D Servicing assistant. I can help you learn about what we build and whether we're a good fit for your project. What can I help with?",
+    "options": [
+      {
+        "label": "What do you build?",
+        "action": "services"
+      },
+      {
+        "label": "Can you help with my project?",
+        "action": "project_help"
+      },
+      {
+        "label": "Pricing & timelines",
+        "action": "pricing"
+      },
+      {
+        "label": "Talk to the team",
+        "action": "contact"
+      }
+    ]
+  },
+  "services": {
+    "text": "We build a wide range of digital solutions:\n\n• Custom websites & web applications\n• Web-based programs (portals, dashboards, SaaS)\n• Desktop & local applications\n• AI Agents & AI-powered tools\n• API integrations & automation\n• Database design & data systems\n• E-commerce solutions\n\nWant to know more about a specific area?",
+    "options": [
+      {
+        "label": "Websites & web apps",
+        "action": "websites"
+      },
+      {
+        "label": "AI & automation",
+        "action": "ai"
+      },
+      {
+        "label": "Internal tools & dashboards",
+        "action": "internal_tools"
+      },
+      {
+        "label": "Something else",
+        "action": "other_service"
+      }
+    ]
+  },
+  "websites": {
+    "text": "Absolutely — we design and build custom websites and web applications from the ground up. Whether it's a professional business site, a client portal, a booking platform, or a full SaaS product, we handle everything from design to deployment.",
+    "options": [
+      {
+        "label": "What about e-commerce?",
+        "action": "ecommerce"
+      },
+      {
+        "label": "Get a quote",
+        "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "ai": {
+    "text": "Yes! We build AI Agents, intelligent chatbots, automated workflows, and custom AI-powered tools. These solutions help businesses automate repetitive tasks, process information faster, and deliver better experiences to their customers.",
+    "options": [
+      {
+        "label": "What kind of AI agents?",
+        "action": "ai_detail"
+      },
+      {
+        "label": "Get a quote",
+        "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "ai_detail": {
+    "text": "Our AI solutions range from customer-facing chatbots and virtual assistants to behind-the-scenes agents that handle data processing, content generation, workflow automation, and intelligent decision-making. We build practical AI that solves real business problems.",
+    "options": [
+      {
+        "label": "Start a project",
+        "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "internal_tools": {
+    "text": "This is one of our specialties. We build admin dashboards, approval workflows, reporting tools, CRM integrations, and internal management platforms. Everything is custom-built to match exactly how your team operates.",
+    "options": [
+      {
+        "label": "Get a quote",
+        "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "ecommerce": {
+    "text": "We build e-commerce solutions including custom online stores, payment processing, inventory management, and order tracking. Whether you need a full storefront or e-commerce features added to an existing platform, we can help.",
+    "options": [
+      {
+        "label": "Get a quote",
+        "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "project_help": {
+    "text": "We'd love to help! What type of project are you thinking about?",
+    "options": [
+      {
+        "label": "I need a website",
+        "action": "websites"
+      },
+      {
+        "label": "I need a custom app",
+        "action": "custom_app"
+      },
+      {
+        "label": "I need automation or AI",
+        "action": "ai"
+      },
+      {
+        "label": "I'm not sure yet",
+        "action": "not_sure"
+      }
+    ]
+  },
+  "custom_app": {
+    "text": "We build custom applications of all kinds — web-based programs, desktop software, portals, dashboards, and full platforms. We handle the entire stack: user interface, back-end logic, database, integrations, and deployment.",
+    "options": [
+      {
+        "label": "Desktop apps too?",
+        "action": "desktop"
+      },
+      {
+        "label": "Get a quote",
+        "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "desktop": {
+    "text": "Yes — we build local desktop applications for Windows and Mac in addition to web-based solutions. Whether you need a standalone tool or a system that connects to your web platform, we've got it covered.",
+    "options": [
+      {
+        "label": "Get a quote",
+        "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "not_sure": {
+    "text": "No problem at all! That's what our free consultation is for. Just tell us about your business challenge or idea, and we'll help you figure out the best approach. Zero commitment — just a conversation.",
+    "options": [
+      {
+        "label": "Fill out contact form",
+        "action": "scroll_contact"
+      },
+      {
+        "label": "View our services",
+        "action": "services"
+      }
+    ]
+  },
+  "pricing": {
+    "text": "Every project is unique, so we provide custom quotes based on your specific needs. Our custom applications start at $1,499. We offer free consultations where we scope your project and give you a detailed estimate — no obligation.",
+    "options": [
+      {
+        "label": "How long do projects take?",
+        "action": "timeline"
+      },
+      {
+        "label": "Get a free quote",
+        "action": "contact"
+      },
+      {
+        "label": "Back to start",
+        "action": "greeting"
+      }
+    ]
+  },
+  "timeline": {
+    "text": "Timelines depend on the scope. A standard website is typically ready in 2–4 weeks. Custom applications usually take 4–8 weeks. More complex builds may run longer. We'll give you a clear timeline during our initial consultation.",
+    "options": [
+      {
+        "label": "Get started",
+        "action": "contact"
+      },
+      {
+        "label": "Back to start",
+        "action": "greeting"
+      }
+    ]
+  },
+  "other_service": {
+    "text": "We're flexible and enjoy solving unique challenges. If your project doesn't fit neatly into a box, reach out anyway — chances are we can help. We've built everything from data migration tools to custom API bridges to AI-powered workflows.",
+    "options": [
+      {
+        "label": "Contact us",
+        "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "contact": {
+    "text": "Great choice! The best way to get started is through our contact form. Blake and Andrea will personally review your message and get back to you within 24 hours.",
+    "options": [
+      {
+        "label": "Go to contact form",
+        "action": "scroll_contact"
+      },
+      {
+        "label": "Call: 602-456-9889",
+        "action": "phone"
+      },
+      {
+        "label": "Back to start",
+        "action": "greeting"
+      }
+    ]
+  },
+  "technical": {
+    "text": "We use modern, industry-standard technologies specifically chosen for each project. Rather than getting into the technical weeds here, we'd love to discuss the best approach for your specific needs in a free consultation.",
+    "options": [
+      {
+        "label": "Schedule a consultation",
+        "action": "contact"
+      },
+      {
+        "label": "What do you build?",
+        "action": "services"
+      }
+    ]
+  },
+  "fallback": {
+    "text": "That's a great question! Our team can give you a thorough answer on that. I'd recommend reaching out through our contact form — Blake and Andrea will get back to you personally within 24 hours.",
+    "options": [
+      {
+        "label": "Go to contact form",
+        "action": "scroll_contact"
+      },
+      {
+        "label": "Ask something else",
+        "action": "greeting"
+      }
+    ]
+  }
+}
