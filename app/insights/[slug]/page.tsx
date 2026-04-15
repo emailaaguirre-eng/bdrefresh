@@ -61,7 +61,9 @@ export default async function InsightArticlePage({ params }: Props) {
             ·
           </span>
           <span>
-            {post.author.name}, {post.author.affiliation}
+            {post.author.affiliation.trim()
+              ? `${post.author.name}, ${post.author.affiliation}`
+              : post.author.name}
           </span>
         </div>
       </InsightArticleHero>
@@ -73,8 +75,12 @@ export default async function InsightArticlePage({ params }: Props) {
             <p className="text-sm font-medium text-bd-light-text">
               <span className="text-bd-light-muted">Written by </span>
               {post.author.name}
-              <span className="text-bd-light-muted"> · </span>
-              {post.author.affiliation}
+              {post.author.affiliation.trim() ? (
+                <>
+                  <span className="text-bd-light-muted"> · </span>
+                  {post.author.affiliation}
+                </>
+              ) : null}
             </p>
           </footer>
           <ArticleEndCta />

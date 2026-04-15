@@ -25,7 +25,7 @@ export const insightPosts: InsightPost[] = [
     excerpt:
       "Not every business needs the same kind of site. Here is how to think about brochure, marketing, content, commerce, and custom platforms—so you build the right thing from the start.",
     publishedAt: "2026-04-01",
-    author: { name: "Chet Aiellu", affiliation: "B&D Servicing" },
+    author: { name: "B&D Servicing", affiliation: "" },
     blocks: [
       { kind: "p", text: "Not every business needs the same kind of website." },
       {
