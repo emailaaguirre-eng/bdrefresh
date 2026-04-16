@@ -1,91 +1,16 @@
 import type { Metadata } from "next";
 import { MagneticLink } from "@/components/effects/MagneticLink";
+import { ProcessPageContent } from "@/components/process/ProcessPageContent";
 import { LightCtaBand } from "@/components/layout/LightCtaBand";
 import { Reveal } from "@/components/motion/Reveal";
 import { PageHero } from "@/components/layout/PageHero";
-import { Container } from "@/components/ui/Container";
-import { SectionTag } from "@/components/ui/SectionTag";
+import { processPagePhases } from "@/lib/process-page-phases";
 
 export const metadata: Metadata = {
   title: "Process",
   description:
     "Discovery, build, test and launch, and improve — a straightforward rhythm with clear checkpoints and honest communication.",
 };
-
-const phases = [
-  {
-    tag: "Phase 01",
-    title: "Discovery",
-    blocks: [
-      {
-        label: "What happens",
-        text: "We clarify goals, constraints, users, and success criteria. We map current workflows, data sources, and integrations so the architecture matches reality, not assumptions.",
-      },
-      {
-        label: "Why it matters",
-        text: "Most expensive rework traces back to fuzzy requirements. Discovery front-loads the hard questions so build time is spent shipping, not undoing.",
-      },
-      {
-        label: "Outcome",
-        text: "A shared picture of scope, risks, and milestones you can plan around.",
-      },
-    ],
-  },
-  {
-    tag: "Phase 02",
-    title: "Build",
-    blocks: [
-      {
-        label: "What happens",
-        text: "We implement the UI, application logic, database layer, and integrations in tight loops, with regular checkpoints so you see progress, not a black box.",
-      },
-      {
-        label: "Why it matters",
-        text: "Custom software only wins if it’s maintainable. We favor clear structure, sensible defaults, and documentation your team can grow into.",
-      },
-      {
-        label: "Outcome",
-        text: "Working software in staging that reflects agreed scope and is ready for hardening.",
-      },
-    ],
-  },
-  {
-    tag: "Phase 03",
-    title: "Test & Launch",
-    blocks: [
-      {
-        label: "What happens",
-        text: "QA passes, edge cases, performance checks, and a controlled go-live. We verify backups, monitoring hooks, and rollback paths where they matter.",
-      },
-      {
-        label: "Why it matters",
-        text: "Launch day shouldn’t be the first time someone tries the critical path. Testing reduces surprises for your team and your customers.",
-      },
-      {
-        label: "Outcome",
-        text: "Production deployment with confidence, plus a short stabilization window to catch real-world nuances.",
-      },
-    ],
-  },
-  {
-    tag: "Phase 04",
-    title: "Improve",
-    blocks: [
-      {
-        label: "What happens",
-        text: "We measure, tune, and extend: performance work, feature increments, and operational hardening based on real usage.",
-      },
-      {
-        label: "Why it matters",
-        text: "The first release is not the finish line. Software that improves calmly over time protects your investment.",
-      },
-      {
-        label: "Outcome",
-        text: "A living system with a clear path for the next iteration.",
-      },
-    ],
-  },
-] as const;
 
 export default function ProcessPage() {
   return (
@@ -99,30 +24,7 @@ export default function ProcessPage() {
         }
         lead="A straightforward rhythm: discovery, build, test and launch, improve. You always know what stage you’re in and what comes next."
       />
-      {phases.map((phase, pi) => (
-        <section
-          key={phase.title}
-          className={pi % 2 === 0 ? "bg-bd-light-bg py-16 md:py-20" : "dot-grid-bg py-16 md:py-20"}
-          aria-labelledby={`phase-${pi}`}
-        >
-          <Container>
-            <Reveal delay={pi * 0.04}>
-              <SectionTag>{phase.tag}</SectionTag>
-              <h2 id={`phase-${pi}`} className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
-                {phase.title}
-              </h2>
-              <div className="mt-8 max-w-3xl space-y-6">
-                {phase.blocks.map((b) => (
-                  <div key={b.label}>
-                    <p className="font-heading text-sm font-bold text-bd-accent">{b.label}</p>
-                    <p className="mt-2 text-bd-light-secondary">{b.text}</p>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
-          </Container>
-        </section>
-      ))}
+      <ProcessPageContent phases={processPagePhases} />
       <LightCtaBand aria-labelledby="process-cta-heading">
         <Reveal>
           <h2
