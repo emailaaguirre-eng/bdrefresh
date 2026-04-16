@@ -10,7 +10,7 @@ type Props = SectionProps & {
 };
 
 /**
- * Closing CTA: `bd.light.alt` (`#e5e9f0`) — same pale band as home “Services preview” / `bg-bd-light-alt`.
+ * Closing CTA: frosted gray band — white headline lead + body; emphasized words use primary ink via `.bd-light-cta-copy` (see globals).
  */
 export function LightCtaBand({
   children,
@@ -20,14 +20,20 @@ export function LightCtaBand({
 }: Props) {
   return (
     <section
-      className={`relative overflow-hidden bg-bd-light-alt text-bd-light-text ${pyClass} ${className}`.trim()}
+      className={`relative overflow-hidden border-t border-bd-light-border/90 bg-bd-light-bg/85 text-bd-light-text backdrop-blur-md supports-[backdrop-filter]:bg-bd-light-bg/70 ${pyClass} ${className}`.trim()}
       {...sectionProps}
     >
       <div
-        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_80%_55%_at_50%_0%,rgba(37,104,160,0.06),transparent_58%)]"
+        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_75%_55%_at_50%_0%,rgba(37,104,160,0.08),transparent_55%)]"
         aria-hidden
       />
-      <Container className="relative z-10 max-w-[580px] text-center">{children}</Container>
+      <div
+        className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(ellipse_50%_40%_at_100%_100%,rgba(90,171,238,0.06),transparent_50%)]"
+        aria-hidden
+      />
+      <Container className="relative z-10 max-w-[580px] text-center">
+        <div className="bd-light-cta-copy">{children}</div>
+      </Container>
     </section>
   );
 }

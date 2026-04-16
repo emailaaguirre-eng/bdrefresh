@@ -21,9 +21,10 @@ export default {
             faint: "#4d6280",
           },
           light: {
-            bg: "#eef1f6",
-            alt: "#e5e9f0",
-            card: "#f5f6fa",
+            /** Main light canvas + dot-grid (push toward white; keep `alt` for band contrast). */
+            bg: "#fcfcfd",
+            alt: "#f3f5f8",
+            card: "#ffffff",
             border: "#cfd4de",
             text: "#161a26",
             secondary: "#3d4556",

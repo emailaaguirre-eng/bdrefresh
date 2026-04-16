@@ -55,11 +55,15 @@ export function SiteFooter() {
           <p>
             © {new Date().getFullYear()} {siteName}. All rights reserved.
           </p>
-          <p>
-            Powered by{" "}
-            <Link href="/about#codrex" className="font-medium text-bd-accent-lighter hover:underline">
-              CoDre-X
+          <p className="font-sans text-sm text-bd-dark-muted">
+            <span className="font-normal">Powered by </span>
+            <Link href="/about#codrex" className="font-semibold text-bd-dark-text hover:underline">
+              CoDre-<span className="text-[#ff3131]">X</span>
             </Link>
+            <span className="mx-1.5 text-bd-dark-muted" aria-hidden>
+              |
+            </span>
+            <span className="font-normal text-bd-dark-muted">{siteName}</span>
           </p>
         </div>
       </div>

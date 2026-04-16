@@ -41,7 +41,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle, rgba(37, 104, 160, 0.05) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(37, 104, 160, 0.065) 1px, transparent 1px);
     background-size: 28px 28px;
     pointer-events: none;
     z-index: 0;
@@ -327,7 +327,7 @@
     font-weight: 500;
     letter-spacing: 0.1em;
     color: #3d4556;
-    background: #f5f6fa;
+    background: #fcfcfd;
     border-color: rgba(37, 104, 160, 0.12);
     box-shadow: none;
   }
@@ -359,7 +359,7 @@
     grid-template-rows: auto minmax(0, auto);
     align-items: stretch;
     margin: 0;
-    background: #f5f6fa;
+    background: #fcfcfd;
     border-bottom: 1px solid #cfd4de;
   }
 
@@ -382,7 +382,7 @@
   }
 
   .bd-work-preview__media {
-    background: linear-gradient(180deg, #eef1f6 0%, #e4e9f0 100%);
+    background: linear-gradient(180deg, #fcfcfd 0%, #eef1f6 100%);
   }
 
   .bd-work-preview__img {
@@ -407,6 +407,29 @@
 }
 
 @layer components {
+  /** LightCtaBand on frosted gray: white headline lead-in + body; emphasized `h2` spans use primary ink (`bd.light.text`) for contrast on gray. */
+  .bd-light-cta-copy h2 {
+    color: rgb(255 255 255) !important;
+    text-shadow:
+      0 0 1px rgb(0 0 0 / 0.22),
+      0 1px 2px rgb(0 0 0 / 0.28),
+      0 2px 12px rgb(0 0 0 / 0.12);
+  }
+
+  .bd-light-cta-copy h2 span {
+    color: theme("colors.bd.light.text") !important;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 0.35);
+  }
+
+  .bd-light-cta-copy p {
+    color: rgb(255 255 255) !important;
+    font-weight: 500 !important;
+    text-shadow:
+      0 0 1px rgb(0 0 0 / 0.2),
+      0 1px 2px rgb(0 0 0 / 0.26);
+    -webkit-font-smoothing: antialiased;
+  }
+
   .bd-service-card {
     position: relative;
     transform-style: preserve-3d;

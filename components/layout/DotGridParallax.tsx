@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-/** Legacy script.js §18 — scroll-driven --bd-grid-offset on .dot-grid-bg sections. */
+/** Legacy script.js §18 — scroll-driven --bd-grid-offset on `.dot-grid-bg` sections. */
 export function DotGridParallax() {
   useEffect(() => {
     if (typeof window === "undefined") return;
