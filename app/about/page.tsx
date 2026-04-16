@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { CodrexBand } from "@/components/about/CodrexBand";
 import { MagneticLink } from "@/components/effects/MagneticLink";
 import { Reveal } from "@/components/motion/Reveal";
-import { PageHeroWithWeb } from "@/components/layout/PageHeroWithWeb";
+import { LightCtaBand } from "@/components/layout/LightCtaBand";
+import { PageHero } from "@/components/layout/PageHero";
 import { Container } from "@/components/ui/Container";
 import { SectionTag } from "@/components/ui/SectionTag";
 
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHeroWithWeb
+      <PageHero
         eyebrow="About"
         title={
           <>
@@ -86,18 +87,18 @@ export default function AboutPage() {
       </section>
       <CodrexBand>
         <Reveal>
-          <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-bd-accent-lighter">
+          <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-bd-accent">
             [ CoDre-X ]
           </span>
-          <h2 id="codrex-heading" className="mt-4 font-heading text-3xl font-bold md:text-4xl">
+          <h2 id="codrex-heading" className="mt-4 font-heading text-3xl font-bold text-bd-light-text md:text-4xl">
             Powered by CoDre-X
           </h2>
-          <p className="mt-4 max-w-2xl text-bd-dark-muted">
+          <p className="mt-4 max-w-2xl text-bd-light-secondary">
             You’ll see this mark in our footer. It’s not a separate product pitch.
           </p>
         </Reveal>
-        <Reveal className="mt-10 max-w-3xl space-y-4 leading-relaxed text-bd-dark-muted">
-          <p className="text-bd-dark-text">
+        <Reveal className="mt-10 max-w-3xl space-y-4 leading-relaxed text-bd-light-secondary">
+          <p className="text-bd-light-text">
             <strong>CoDre-X is the creative and technical engine behind B&amp;D Servicing.</strong> It represents the
             signature development approach behind the company’s work: thoughtful, custom-built, and focused on turning
             ideas into functional digital systems.
@@ -108,38 +109,29 @@ export default function AboutPage() {
           </p>
         </Reveal>
       </CodrexBand>
-      <section
-        className="relative overflow-hidden bg-bd-dark-bg py-24 text-bd-dark-text md:py-[100px]"
-        aria-labelledby="about-cta-heading"
-      >
-        <div
-          className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(ellipse_at_center,_rgba(37,104,160,0.22),_transparent_70%)]"
-          aria-hidden
-        />
-        <Container className="relative z-10 max-w-[580px] text-center">
-          <Reveal>
-            <h2
-              id="about-cta-heading"
-              className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-white"
-            >
-              Want to see if we&apos;re a <span className="text-bd-accent-lighter">good fit?</span>
-            </h2>
-            <p className="mt-4 text-[1.05rem] leading-relaxed text-bd-dark-muted">
-              Share a bit about your project. We&apos;ll respond with clear next steps.
-            </p>
-            <MagneticLink
-              href="/start-project"
-              className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-bd-accent px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-bd-accent-light"
-            >
-              <span>Start a Project</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </MagneticLink>
-          </Reveal>
-        </Container>
-      </section>
+      <LightCtaBand aria-labelledby="about-cta-heading">
+        <Reveal>
+          <h2
+            id="about-cta-heading"
+            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-white"
+          >
+            Want to see if we&apos;re a <span className="text-bd-dark-bg">good fit?</span>
+          </h2>
+          <p className="mt-4 text-[1.05rem] leading-relaxed text-white/85">
+            Share a bit about your project. We&apos;ll respond with clear next steps.
+          </p>
+          <MagneticLink
+            href="/start-project"
+            className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-bd-accent shadow-md transition hover:bg-bd-light-alt"
+          >
+            <span>Start a Project</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </MagneticLink>
+        </Reveal>
+      </LightCtaBand>
     </>
   );
 }

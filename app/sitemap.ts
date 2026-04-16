@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getInsightSlugs } from "@/lib/insightsData";
 import { getSiteUrl } from "@/lib/site";
 
 const routes = [
@@ -10,7 +11,7 @@ const routes = [
   "/work",
   "/start-project",
   "/insights",
-  "/insights/what-type-of-website-is-right-for-your-business",
+  ...getInsightSlugs().map((slug) => `/insights/${slug}`),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -3,19 +3,19 @@ import Link from "next/link";
 export function ArticleEndCta() {
   return (
     <aside
-      className="mt-16 rounded-2xl border border-bd-light-border bg-gradient-to-br from-[rgba(37,104,160,0.06)] to-transparent px-8 py-10 md:px-10 md:py-12"
+      className="mt-16 rounded-2xl border border-white/15 bg-bd-accent px-8 py-10 text-white md:px-10 md:py-12"
       aria-labelledby="article-cta-heading"
     >
-      <h2 id="article-cta-heading" className="font-heading text-xl font-bold tracking-tight text-bd-light-text md:text-2xl">
-        Not sure what type of website fits your business?
+      <h2 id="article-cta-heading" className="font-heading text-xl font-bold tracking-tight md:text-2xl">
+        Not sure what type of website <span className="text-bd-dark-bg">fits your business?</span>
       </h2>
-      <p className="mt-4 max-w-2xl text-base leading-relaxed text-bd-light-secondary">
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/85">
         We help businesses figure out whether they need a polished marketing site, an e-commerce experience, a custom
         platform, or something in between.
       </p>
       <Link
         href="/start-project"
-        className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-bd-accent px-6 py-3.5 text-sm font-semibold text-white shadow-md transition hover:bg-bd-accent-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bd-accent-lighter"
+        className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-bd-accent shadow-md transition hover:bg-bd-light-alt focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
         Start a Project
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>

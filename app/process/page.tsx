@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { MagneticLink } from "@/components/effects/MagneticLink";
-import { DarkCtaBand } from "@/components/layout/DarkCtaBand";
+import { LightCtaBand } from "@/components/layout/LightCtaBand";
 import { Reveal } from "@/components/motion/Reveal";
-import { PageHeroWithWeb } from "@/components/layout/PageHeroWithWeb";
+import { PageHero } from "@/components/layout/PageHero";
 import { Container } from "@/components/ui/Container";
 import { SectionTag } from "@/components/ui/SectionTag";
 
@@ -90,7 +90,7 @@ const phases = [
 export default function ProcessPage() {
   return (
     <>
-      <PageHeroWithWeb
+      <PageHero
         eyebrow="Process"
         title={
           <>
@@ -123,20 +123,20 @@ export default function ProcessPage() {
           </Container>
         </section>
       ))}
-      <DarkCtaBand withParticles={false} aria-labelledby="process-cta-heading">
+      <LightCtaBand aria-labelledby="process-cta-heading">
         <Reveal>
           <h2
             id="process-cta-heading"
             className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-white"
           >
-            Ready to start <span className="text-bd-accent-lighter">phase one?</span>
+            Ready to start <span className="text-bd-dark-bg">phase one?</span>
           </h2>
-          <p className="mt-4 text-[1.05rem] leading-relaxed text-bd-dark-muted">
+          <p className="mt-4 text-[1.05rem] leading-relaxed text-white/85">
             Tell us what you&apos;re trying to fix or launch. We&apos;ll map the right sequence.
           </p>
           <MagneticLink
             href="/start-project"
-            className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-bd-accent px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-bd-accent-light"
+            className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-bd-accent shadow-md transition hover:bg-bd-light-alt"
           >
             <span>Start a Project</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
@@ -145,7 +145,7 @@ export default function ProcessPage() {
             </svg>
           </MagneticLink>
         </Reveal>
-      </DarkCtaBand>
+      </LightCtaBand>
     </>
   );
 }

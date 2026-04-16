@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { MagneticLink } from "@/components/effects/MagneticLink";
-import { DarkCtaBand } from "@/components/layout/DarkCtaBand";
+import { LightCtaBand } from "@/components/layout/LightCtaBand";
 import { Reveal } from "@/components/motion/Reveal";
-import { PageHeroWithWeb } from "@/components/layout/PageHeroWithWeb";
+import { PageHero } from "@/components/layout/PageHero";
 import { ServicesPageDetail } from "@/components/services/ServicesPageDetail";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <PageHeroWithWeb
+      <PageHero
         eyebrow="Services"
         title={
           <>
@@ -24,20 +24,20 @@ export default function ServicesPage() {
         lead="Seven practice areas, one standard: thoughtful execution, clean handoffs, and software you can rely on day to day."
       />
       <ServicesPageDetail />
-      <DarkCtaBand withParticles={false} aria-labelledby="svc-cta-heading">
+      <LightCtaBand aria-labelledby="svc-cta-heading">
         <Reveal>
           <h2
             id="svc-cta-heading"
             className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-white"
           >
-            Not sure which service <span className="text-bd-accent-lighter">fits first?</span>
+            Not sure which service <span className="text-bd-dark-bg">fits first?</span>
           </h2>
-          <p className="mt-4 text-[1.05rem] leading-relaxed text-bd-dark-muted">
+          <p className="mt-4 text-[1.05rem] leading-relaxed text-white/85">
             Describe the problem. We&apos;ll recommend a sane starting point.
           </p>
           <MagneticLink
             href="/start-project"
-            className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-bd-accent px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-bd-accent-light"
+            className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-bd-accent shadow-md transition hover:bg-bd-light-alt"
           >
             <span>Start a Project</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
@@ -46,7 +46,7 @@ export default function ServicesPage() {
             </svg>
           </MagneticLink>
         </Reveal>
-      </DarkCtaBand>
+      </LightCtaBand>
     </>
   );
 }

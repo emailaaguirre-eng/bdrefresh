@@ -14,6 +14,14 @@ export type InsightPost = {
   blocks: InsightBlock[];
 };
 
+/** Prefer organization line so bylines show e.g. “B&D Servicing” only, not “Individual, B&D Servicing”. */
+export function getAuthorByline(author: InsightPost["author"]): string {
+  const affiliation = author.affiliation.trim();
+  const name = author.name.trim();
+  if (affiliation) return affiliation;
+  return name;
+}
+
 const WEBSITE_TYPES_SLUG = "what-type-of-website-is-right-for-your-business";
 
 export const insightPosts: InsightPost[] = [
@@ -24,8 +32,8 @@ export const insightPosts: InsightPost[] = [
       "A practical guide to brochure sites, marketing sites, content hubs, e-commerce, and when you need a custom web application instead.",
     excerpt:
       "Not every business needs the same kind of site. Here is how to think about brochure, marketing, content, commerce, and custom platforms—so you build the right thing from the start.",
-    publishedAt: "2026-04-01",
-    author: { name: "B&D Servicing", affiliation: "" },
+    publishedAt: "2026-03-15",
+    author: { name: "", affiliation: "B&D Servicing" },
     blocks: [
       { kind: "p", text: "Not every business needs the same kind of website." },
       {
@@ -204,6 +212,75 @@ export const insightPosts: InsightPost[] = [
       {
         kind: "p",
         text: "If you are not sure where your project falls, that is usually the best place to start the conversation.",
+      },
+    ],
+  },
+  {
+    slug: "beyond-the-box-strategic-advantage-custom-business-applications",
+    title: "Beyond the Box: The Strategic Advantage of Custom Business Applications",
+    description:
+      "Why bespoke software becomes critical as you outgrow off-the-shelf tools: fewer workarounds, deeper integrations, brand control, and ownership of your operational stack.",
+    excerpt:
+      "When templates and connectors stop matching how you work, custom applications shift from nice-to-have to operational leverage. Here is the strategic case.",
+    publishedAt: "2026-04-15",
+    author: { name: "", affiliation: "B&D Servicing" },
+    blocks: [
+      {
+        kind: "p",
+        text: "Most businesses begin their journey relying on off-the-shelf software. It makes sense in the early days: it is immediate, accessible, and solves the problem right in front of you.",
+      },
+      {
+        kind: "p",
+        text: "But as a business matures, a subtle shift happens. Instead of the software supporting the company's operations, the company begins adapting its workflows to accommodate the limitations of the software. Teams find themselves manually exporting data, relying on clunky third-party connectors, and developing elaborate workarounds just to get their daily tasks done.",
+      },
+      {
+        kind: "p",
+        text: "When a business reaches this inflection point, transitioning to a custom-built application stops being a luxury and becomes a critical operational advantage. Here is why investing in software designed specifically for your exact specifications yields an incredible return on investment.",
+      },
+      { kind: "h2", text: '1. Eradicating the "Workaround"' },
+      {
+        kind: "p",
+        text: "Pre-packaged software is built for the masses, which means it is full of features you don't need and missing the highly specific features you do.",
+      },
+      {
+        kind: "p",
+        text: "A custom application is engineered precisely for your operational reality. If your business requires complex, automated background tasks, like pinging domains, running recurring health checks, or generating highly specific data reports for clients, a custom build handles it natively. It eliminates the need to duct-tape different platforms together, significantly reducing human error and saving countless hours of manual administrative work.",
+      },
+      { kind: "h2", text: "2. Seamless, Deep Integration" },
+      {
+        kind: "p",
+        text: "Modern businesses do not operate in a vacuum; they rely on a web of tools, from CRMs to secure financial databases. Off-the-shelf platforms often struggle to communicate with one another effectively.",
+      },
+      {
+        kind: "p",
+        text: "Building a bespoke application allows you to create a central nervous system for your business. You can connect disparate APIs, migrate heavy data seamlessly, and ensure that your front-end user interface and your back-end data processing are communicating flawlessly in real-time.",
+      },
+      { kind: "h2", text: "3. Uncompromising Brand and Experience Control" },
+      {
+        kind: "p",
+        text: "When you use a white-labeled or template-based platform, you are at the mercy of their design limitations. Your client portal ends up looking exactly like your competitor's.",
+      },
+      {
+        kind: "p",
+        text: "Custom development grants you absolute control over the user experience. It allows a business to enforce strict brand standards across every touchpoint, locking in the exact typography, such as keeping Arial consistent across all views, and executing precise color palettes. More importantly, it allows for high-fidelity, professional UI design. Whether that means implementing modern 3D effects, cinematic visual hierarchies, or clean, data-rich dashboards, a custom app ensures your clients experience an executive-level presentation that off-the-shelf software simply cannot replicate.",
+      },
+      { kind: "h2", text: "4. Security and Total Ownership" },
+      {
+        kind: "p",
+        text: "Relying entirely on a third-party vendor means you are renting your operational infrastructure. If that vendor raises their prices, sunsets a feature you rely on, or suffers a security breach, your business is directly impacted.",
+      },
+      {
+        kind: "p",
+        text: "When you build a custom application, you own the code, the architecture, and the roadmap. You dictate the security protocols, and you decide when and how the platform scales as your business grows or pivots.",
+      },
+      { kind: "h2", text: "The Bottom Line" },
+      {
+        kind: "p",
+        text: "Building a custom program is an investment in operational leverage. It moves a business from reacting to software limitations to dictating exactly how its technology should serve its goals, its team, and its clients.",
+      },
+      {
+        kind: "p",
+        text: "For companies ready to scale efficiently, a bespoke application isn't just a tool; it is a competitive moat.",
       },
     ],
   },

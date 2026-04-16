@@ -5,7 +5,7 @@ import { ArticleEndCta } from "@/components/insights/ArticleEndCta";
 import { InsightArticleHero } from "@/components/insights/InsightArticleHero";
 import { InsightBody } from "@/components/insights/InsightBody";
 import { Container } from "@/components/ui/Container";
-import { getInsightPost, getInsightSlugs } from "@/lib/insightsData";
+import { getAuthorByline, getInsightPost, getInsightSlugs } from "@/lib/insightsData";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -60,11 +60,7 @@ export default async function InsightArticlePage({ params }: Props) {
           <span aria-hidden className="text-bd-dark-faint">
             ·
           </span>
-          <span>
-            {post.author.affiliation.trim()
-              ? `${post.author.name}, ${post.author.affiliation}`
-              : post.author.name}
-          </span>
+          <span>{getAuthorByline(post.author)}</span>
         </div>
       </InsightArticleHero>
 
@@ -74,13 +70,7 @@ export default async function InsightArticlePage({ params }: Props) {
           <footer className="mt-14 border-t border-bd-light-border pt-10">
             <p className="text-sm font-medium text-bd-light-text">
               <span className="text-bd-light-muted">Written by </span>
-              {post.author.name}
-              {post.author.affiliation.trim() ? (
-                <>
-                  <span className="text-bd-light-muted"> · </span>
-                  {post.author.affiliation}
-                </>
-              ) : null}
+              {getAuthorByline(post.author)}
             </p>
           </footer>
           <ArticleEndCta />

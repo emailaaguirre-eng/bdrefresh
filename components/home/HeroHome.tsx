@@ -20,8 +20,8 @@ const CODE_FLOATS: { text: string; cls: string }[] = [
 ];
 
 /**
- * Legacy index.html `.hero` + script.js matrix, parallax bg/canvas, code-floats,
- * composition (max-width 740px content), title weight/color, tagline spacing.
+ * Legacy index.html `.hero`: matrix rain, parallax aurora wash, scanlines/grid, code-floats,
+ * and the headline stack. Particle web lives on the “Ready to build something real” band.
  */
 export function HeroHome() {
   const reduce = useReducedMotion();

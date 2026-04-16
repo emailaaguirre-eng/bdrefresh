@@ -58,6 +58,9 @@
   .shimmer-text {
     position: relative;
     display: inline-block;
+    /* background-clip: text can clip descenders (g, j, y); pad the line box */
+    padding-bottom: 0.18em;
+    line-height: 1.2;
     background: linear-gradient(
       120deg,
       #5aabee 0%,

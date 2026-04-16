@@ -5,7 +5,7 @@ import { siteName, siteTagline } from "@/lib/site";
 export function SiteFooter() {
   return (
     <footer className="border-t border-bd-dark-border bg-bd-dark-bg text-bd-dark-muted" role="contentinfo">
-      <div className="mx-auto max-w-container px-6 py-14">
+      <div className="mx-auto max-w-container py-14 pl-6 pr-24 md:pr-32">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block">

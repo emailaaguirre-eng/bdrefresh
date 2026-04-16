@@ -5,10 +5,10 @@ import { useEffect, useRef, useState } from "react";
 import { MagneticLink } from "@/components/effects/MagneticLink";
 import { Reveal } from "@/components/motion/Reveal";
 import { Container } from "@/components/ui/Container";
-import { HomeCtaMotionBackdrop } from "./HomeCtaMotionBackdrop";
+import { HeroBackdropShell } from "@/components/layout/HeroBackdropShell";
 import { HomeCtaSatelliteCursor } from "./HomeCtaSatelliteCursor";
 
-/** Home closing CTA: aurora + pointer spotlight + optional satellite cursor in this band. */
+/** Home closing CTA: legacy `.cta-section` — `var(--dark-bg)` / `#080c12`, particle only, no aurora or pointer wash. */
 export function HomeCtaBand() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const reduce = useReducedMotion();
@@ -30,7 +30,7 @@ export function HomeCtaBand() {
       className={`relative overflow-hidden bg-bd-dark-bg py-24 text-bd-dark-text md:py-[100px] ${satelliteOn ? "bd-home-cta-satellite-zone" : ""}`}
       aria-labelledby="home-cta-heading"
     >
-      <HomeCtaMotionBackdrop boundaryRef={sectionRef} />
+      <HeroBackdropShell boundaryRef={sectionRef} variant="cta" />
       <HomeCtaSatelliteCursor boundaryRef={sectionRef} enabled={satelliteOn} />
       <Container className="relative z-10 max-w-[580px] text-center">
         <Reveal>
