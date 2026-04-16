@@ -18,31 +18,38 @@ export const techStack = [
 export const servicesDetailed = [
   {
     title: "Custom Applications",
-    description: "Web apps and portals built around your workflow, not a one-size-fits-all template.",
+    description:
+      "When your rules, roles, and data do not fit a template: customer-facing apps and portals scoped to how people actually work.",
   },
   {
     title: "Internal Tools",
-    description: "Dashboards, admin panels, approvals, and reporting tools designed to save time.",
+    description:
+      "For teams stuck in spreadsheets and email chains: dashboards, approvals, and reporting with permissions that match reality.",
   },
   {
     title: "Automation & API Integrations",
-    description: "Connect platforms using APIs, webhooks, data sync, imports, deduplication, and automated workflows.",
+    description:
+      "When systems need to stay in sync without copy-paste: APIs, webhooks, imports, deduplication, and guarded jobs between tools.",
   },
   {
     title: "Launch & Improve",
-    description: "Deployment support, performance tuning, monitoring, and iterative enhancements.",
+    description:
+      "After go-live: deployment hygiene, monitoring, performance work, and measured iterations as usage grows.",
   },
   {
     title: "Web Copy",
-    description: "Clear, compelling copy that communicates your value and drives visitors to take action.",
+    description:
+      "Messaging that states who it is for, what changes, and what to do next—written alongside the build, not bolted on after.",
   },
   {
     title: "Search Engine Optimization",
-    description: "On-page SEO, keyword strategy, and technical optimization so your site ranks and gets found.",
+    description:
+      "When discovery matters: structure and technical hygiene so search engines and humans both understand the offer.",
   },
   {
     title: "Graphic Design",
-    description: "Logos, brand assets, marketing materials, and visual design that matches your identity.",
+    description:
+      "Identity and marketing visuals that read as the same company as the product—not a separate aesthetic layer.",
   },
 ] as const;
 
@@ -53,69 +60,70 @@ export const servicesPageOffers = [
     iconIndex: 0,
     title: "Custom Applications",
     description:
-      "Web apps and customer-facing portals built around your rules, roles, and data, not a one-size template.",
-    insightLabel: "Value" as const,
+      "For teams where SaaS or templates force awkward workarounds: customer-facing apps and portals shaped around your roles, data, and rules. Typical scope covers auth, core flows, admin surfaces, and a staging path to production.",
+    insightLabel: "Fit & risk" as const,
     insight:
-      "When off-the-shelf products force compromises, a focused custom build can reduce support burden and give you a real competitive edge in how you serve clients.",
+      "Reduces rework from wrong assumptions early. You get explicit tradeoffs on complexity, a sensible permission model, and handoff material your staff can use without re-interpreting the build.",
   },
   {
     id: "svc-internal-tools",
     iconIndex: 1,
     title: "Internal Tools",
     description:
-      "Dashboards, admin panels, approvals, and reporting so your team spends less time fighting software.",
-    insightLabel: "Use case" as const,
+      "When decisions live in inboxes and one-off sheets: dashboards, approvals, and reporting that match how work is approved and recorded. Done means people can run daily operations from the tool—not around it.",
+    insightLabel: "Fit & risk" as const,
     insight:
-      "Replace scattered spreadsheets with a single source of truth: permissions, audit trails, and workflows that match how decisions actually get made.",
+      "Cuts duplicate entry and “which version is true?” moments. Audit-friendly patterns where they matter; plain workflows where they do not.",
   },
   {
     id: "svc-automation",
     iconIndex: 2,
     title: "Automation & API Integrations",
     description:
-      "Connect CRMs, billing, inventory, and custom systems with APIs, webhooks, sync jobs, and guardrails.",
-    insightLabel: "Value" as const,
+      "When two or more systems need to stay aligned: APIs, webhooks, scheduled sync, imports, deduplication, and guardrails so partial failures do not silently corrupt data.",
+    insightLabel: "Fit & risk" as const,
     insight:
-      "Fewer copy-paste errors, faster turnaround, and reporting that reflects reality because the data pipeline is intentional, not manual.",
+      "Surfaces integration edges early (auth, rate limits, id mapping). You get operational visibility: what runs, when, and how to recover if a vendor changes behavior.",
   },
   {
     id: "svc-launch",
     iconIndex: 3,
     title: "Launch & Improve",
-    description: "Deployment, monitoring, performance work, and iterative enhancements after go-live.",
-    insightLabel: "Use case" as const,
+    description:
+      "Deployment, monitoring, performance passes, and measured iterations after go-live—when the goal is stability under real traffic, not a one-time push and disappear.",
+    insightLabel: "Fit & risk" as const,
     insight:
-      "Go live with confidence, then tighten bottlenecks as usage grows, without heroics or surprise rebuilds.",
+      "Reduces launch-week guesswork: staging sign-off, rollback thinking, and a sane first slice of observability. Post-launch work stays tied to observed bottlenecks, not generic tuning.",
   },
   {
     id: "svc-web-copy",
     iconIndex: 4,
     title: "Web Copy",
     description:
-      "Clear messaging that explains what you do, who it’s for, and what happens next, aligned with the build and not bolted on later.",
-    insightLabel: "Value" as const,
+      "Copy that states who it is for, what problem you solve, and what happens next—drafted in the same pass as structure and UI so the story matches the product.",
+    insightLabel: "Fit & risk" as const,
     insight:
-      "Visitors understand the offer faster; sales conversations start warmer because the site did the first pass of qualification.",
+      "Avoids the “beautiful site, vague offer” trap. Visitors self-select; your team spends less time re-explaining basics on first calls.",
   },
   {
     id: "svc-seo",
     iconIndex: 5,
     title: "Search Engine Optimization",
     description:
-      "On-page structure, technical hygiene, and keyword intent so search engines and humans both get the picture.",
-    insightLabel: "Use case" as const,
+      "Technical structure, internal linking, and intent-aligned page work so humans and crawlers get a coherent picture—without promising rankings that nobody can guarantee.",
+    insightLabel: "Fit & risk" as const,
     insight:
-      "You have a legitimate offer but invisible discovery. SEO is treated as part of the implementation, not an afterthought.",
+      "Best when you have a real offer worth finding and are willing to align content with how people actually search. Treats SEO as implementation discipline, not keyword stuffing.",
   },
   {
     id: "svc-design",
     iconIndex: 6,
     title: "Graphic Design",
     description:
-      "Logos, brand assets, and marketing visuals that match the product experience, not a separate aesthetic bolted on.",
-    insightLabel: "Value" as const,
+      "Logos, brand assets, and marketing visuals that sit credibly next to the product—useful when identity and interface need to feel like one organization.",
+    insightLabel: "Fit & risk" as const,
     insight:
-      "Consistent identity across site, decks, and collateral so every touchpoint feels like the same company.",
+      "Reduces visual drift between site, decks, and collateral. Clear file delivery and practical formats your vendors can reuse.",
   },
 ] as const;
 
@@ -123,22 +131,22 @@ export const processPhases = [
   {
     phase: "01",
     title: "Discovery",
-    body: "Understand your goals, map requirements, and plan the architecture.",
+    body: "Goals, constraints, and who does what—mapped into a concrete plan and architecture before build hours stack up.",
   },
   {
     phase: "02",
     title: "Build",
-    body: "Develop the front-end, back-end, database, and integrations.",
+    body: "Front-end, back-end, data, and integrations in tight loops with visible progress—not a black box until the end.",
   },
   {
     phase: "03",
     title: "Test & Launch",
-    body: "QA, staging review, deployment, and go-live with monitoring.",
+    body: "Staging review, QA, deployment, and go-live checks so ownership is clear the day it ships.",
   },
   {
     phase: "04",
     title: "Improve",
-    body: "Iterate based on feedback, optimize performance, and scale.",
+    body: "Measured iterations from real usage: performance, reliability, and the next slice of value—without surprise rewrites.",
   },
 ] as const;
 
@@ -147,7 +155,7 @@ export const workCases = [
     n: "01",
     title: "AI Workflow Assistant Platform",
     description:
-      "A custom assistant interface designed to support organization, information handling, and day-to-day workflow productivity.",
+      "Scattered notes and tasks across tabs and threads. One workspace pulls context together: less re-finding, clearer decisions.",
     image: "/work-previews/assistant.svg",
     alt: "Illustrative mockup: assistant-style workspace interface, not a client deliverable",
     useObject: false,
@@ -156,7 +164,7 @@ export const workCases = [
     n: "02",
     title: "Custom Campaign Operations System",
     description:
-      "A workflow-based outreach platform built to support more tailored communication, task flow, and campaign organization.",
+      "Outreach stuck in ad hoc lists. Clear owner, status, and next step so batches do not slip.",
     image: "/work-previews/campaign.svg",
     alt: "Illustrative mockup: campaign operations style UI, not a client deliverable",
     useObject: false,
@@ -164,7 +172,8 @@ export const workCases = [
   {
     n: "03",
     title: "Custom Commerce & Experience Platform",
-    description: "A tailored web platform built to deliver a more interactive and customized online experience.",
+    description:
+      "Products and shipping rules generic carts handle poorly. Tailored checkout, clear choices, logic where you need it.",
     image: "/work-previews/commerce.svg",
     alt: "Illustrative mockup: physical product configuration with add-ons and shipping options, not a client deliverable",
     useObject: true,
@@ -173,7 +182,7 @@ export const workCases = [
     n: "04",
     title: "Professional Services Website",
     description:
-      "A polished business website designed to communicate complex services more clearly and strengthen digital credibility.",
+      "Strong offer, vague site. Services, proof, and next steps structured so fit is clear before the call.",
     image: "/work-previews/site.svg",
     alt: "Illustrative mockup: professional services marketing site style, not a client deliverable",
     useObject: false,
@@ -182,7 +191,7 @@ export const workCases = [
     n: "05",
     title: "System Health Monitoring & Diagnostics Platform",
     description:
-      "A proprietary system in development focused on monitoring website health, technical configuration, and operational signals across managed environments.",
+      "Many environments, no shared health view. One dashboard for checks and alerts. Issues surface sooner.",
     image: "/work-previews/monitor.svg",
     alt: "Illustrative mockup: monitoring dashboard style UI, not a client deliverable",
     useObject: false,
@@ -191,7 +200,7 @@ export const workCases = [
     n: "06",
     title: "Custom Restaurant POS & Kitchen Routing System",
     description:
-      "A custom restaurant operations system developed in collaboration with ownership and staff to support a more efficient workflow from table-side ordering to kitchen communication and reporting.",
+      "Front and kitchen drift in the rush. Table-side orders, kitchen routing, lighter reporting.",
     image: "/work-previews/pos.svg",
     alt: "Illustrative mockup: restaurant POS and kitchen display style UI, not a client deliverable",
     useObject: false,

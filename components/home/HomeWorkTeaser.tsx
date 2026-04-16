@@ -90,7 +90,7 @@ export function HomeWorkTeaser() {
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bd-light-secondary">
             Many projects involve internal operations or private data, so we don&apos;t publicly showcase most builds.
-            Here are examples of what we deliver:
+            Below are representative patterns—illustrative mockups, not client deliverables.
           </p>
         </Reveal>
         <div className="mt-12 grid gap-6 md:grid-cols-2">

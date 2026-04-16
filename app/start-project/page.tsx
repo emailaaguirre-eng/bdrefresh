@@ -8,21 +8,25 @@ import { SectionTag } from "@/components/ui/SectionTag";
 export const metadata: Metadata = {
   title: "Start a Project",
   description:
-    "Tell us what you’re building. We respond with honest fit, clarifying questions, and a sensible first step.",
+    "What happens after you reach out: quick acknowledgment, a low-pressure discovery touchpoint, and an honest next step—including when we are not the right fit.",
 };
 
 const steps = [
   {
     title: "We acknowledge quickly",
-    body: "You’ll get a human read, not an auto-responder that goes nowhere. Expect a reply within one business day for most inquiries.",
+    body: "You get a human read, not a dead-end auto-reply. Most inquiries hear back within one business day.",
   },
   {
     title: "Short discovery touchpoint",
-    body: "If there’s fit, we’ll propose a focused call or written follow-up to confirm goals, constraints, and rough shape of work.",
+    body: "If there is fit, a short call or written follow-up. We cover goals, constraints, who uses the software, and rough shape. No interrogation, no deck theater.",
   },
   {
     title: "Clear proposal or redirect",
-    body: "You’ll either get a scoped path forward, or a straight recommendation if another approach is smarter. No vague “let’s circle back.”",
+    body: "Either a scoped path forward, or a straight recommendation when another vendor, product, or phased DIY path is smarter. No vague \"circle back.\"",
+  },
+  {
+    title: "How work usually begins",
+    body: "No perfect spec. Most paths start small: discovery and one concrete milestone. Big decisions land before build hours stack up.",
   },
 ];
 
@@ -36,24 +40,24 @@ export default function StartProjectPage() {
             Tell us what you’re <span className="shimmer-text">building</span>
           </>
         }
-        lead="Whether you have a tight brief or a rough idea, we’ll read it carefully and reply with honest fit, clarifying questions, and what a sensible first step looks like."
+        lead="Tight brief or rough notes both work. We'll review what you send, reply honestly on fit, ask a few clear questions, and suggest a sensible next step. If we are not the right fit, we will say so."
       />
       <section className="bg-bd-light-bg py-16 md:py-20" aria-labelledby="invite-heading">
         <Container>
           <Reveal>
             <SectionTag>Invitation</SectionTag>
             <h2 id="invite-heading" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
-              You don’t need a perfect spec
+              You don&apos;t need a perfect spec
             </h2>
-            <p className="mt-4 max-w-2xl text-bd-light-secondary">
-              Share context: who the software serves, what’s painful today, and what would count as a win. We handle the
-              translation into scope.
+            <p className="mt-4 max-w-3xl text-bd-light-secondary">
+              Tell us who the software serves, what hurts today, and what a good outcome looks like. We can help translate
+              that into scope. Timelines, integrations, or compliance notes are helpful if you have them, but they are not
+              required.
             </p>
-          </Reveal>
-          <Reveal className="mt-8 max-w-3xl text-bd-light-secondary">
-            <p>
-              If you already have timelines, integrations, or compliance constraints, include them. If not, that’s fine
-              too. We’ll help you surface the decisions that matter early.
+            <p className="mt-5 max-w-3xl text-bd-light-secondary">
+              A good fit is often an operations-heavy small business, a repeatable workflow stuck in email or spreadsheets,
+              or a customer-facing flow that has to follow specific rules. If that does not sound like you, reach out
+              anyway. We will answer honestly.
             </p>
           </Reveal>
         </Container>
@@ -65,8 +69,11 @@ export default function StartProjectPage() {
             <h2 id="next-heading" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
               After you reach out
             </h2>
+            <p className="mt-4 max-w-2xl text-bd-light-secondary">
+              Plain language, low pressure. The first conversation is about clarity, not a pitch.
+            </p>
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
             {steps.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.06}>
                 <article className="h-full rounded-2xl border border-bd-light-border bg-white p-6 shadow-card">
@@ -85,7 +92,9 @@ export default function StartProjectPage() {
             <h2 id="contact-heading" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
               Project inquiry
             </h2>
-            <p className="mt-4 text-bd-light-secondary">Use the form below or call or email. We monitor both.</p>
+            <p className="mt-4 max-w-2xl text-bd-light-secondary">
+              Use the form, call, or email, whichever you prefer. The same team reads all three.
+            </p>
           </Reveal>
           <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,320px)_1fr]">
             <Reveal>

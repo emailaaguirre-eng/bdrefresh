@@ -8,7 +8,7 @@ import { ServicesPageDetail } from "@/components/services/ServicesPageDetail";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Custom applications, internal tools, automation and API integrations, launch and improve, web copy, SEO, and graphic design.",
+    "A practical buying guide: custom apps, internal tools, integrations, launch and improve, copy, SEO, and design—who each is for, typical scope, and where risk drops.",
 };
 
 export default function ServicesPage() {
@@ -21,7 +21,7 @@ export default function ServicesPage() {
             What we build <span className="shimmer-text">with you</span>
           </>
         }
-        lead="Seven practice areas, one standard: thoughtful execution, clean handoffs, and software you can rely on day to day."
+        lead="Seven practice areas, one bar for execution: clear fit, honest tradeoffs, and software your team can run day to day—not a separate pile of mystery phases."
       />
       <ServicesPageDetail />
       <LightCtaBand aria-labelledby="svc-cta-heading">

@@ -20,10 +20,12 @@ export function ServicesPageDetail() {
               id="svc-detail-heading"
               className="whitespace-nowrap font-heading text-2xl font-bold tracking-tight text-bd-light-text sm:text-3xl md:text-4xl"
             >
-              Offerings in detail
+              A field guide to fit
             </h2>
             <p className="mt-4 max-w-3xl text-lg leading-relaxed text-bd-light-secondary">
-              Each block below maps to how we scope work in the real world: no fluff, no mysterious phases.
+              Skim by headline or read in order. Each block covers who it is for, what a typical scope includes, what
+              &quot;done&quot; tends to look like, and where we reduce common risks—without turning the page into a
+              contract.
             </p>
           </Reveal>
         </Container>

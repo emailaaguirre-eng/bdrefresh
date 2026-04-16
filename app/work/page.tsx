@@ -12,7 +12,7 @@ import { workCases } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Representative use cases and illustrative mockups. Real systems, selective sharing — no fabricated case studies.",
+    "Representative problem patterns and illustrative mockups—honest fit signals without client names, screenshots, or invented results.",
 };
 
 const focus = ["Websites", "Web applications", "Internal tools", "Diagnostics", "Platform experiences"];
@@ -27,7 +27,7 @@ export default function WorkPage() {
             Real systems, <span className="shimmer-text">selective sharing.</span>
           </>
         }
-        lead="We build for production: websites, applications, internal tools, and platforms. These use cases reflect the kinds of problems we solve so you can gauge fit without requiring confidential project details."
+        lead="We build websites, applications, internal tools, and platforms for real operations. The examples below are anonymized patterns: the kinds of systems we build and the kinds of problems they help solve."
       />
       <section aria-label="Confidentiality and selected use cases">
         <div className="bg-bd-light-bg pt-16 pb-0 md:pt-20">
@@ -39,9 +39,8 @@ export default function WorkPage() {
                   How we show work
                 </h2>
                 <p className="mt-4 text-lg leading-relaxed text-bd-light-secondary">
-                  Because much of our work involves private systems, internal workflows, pre-launch environments, or projects
-                  covered by confidentiality agreements, we may show illustrative mockups and high-level descriptions instead
-                  of actual client screenshots or named case studies.
+                  Much of our work is internal, pre-release, or under confidentiality. We use illustrative mockups and
+                  pattern-level descriptions rather than client screens or named case studies.
                 </p>
               </Reveal>
             </div>
@@ -56,8 +55,8 @@ export default function WorkPage() {
                   Illustrative use cases
                 </h2>
                 <p className="mt-4 text-bd-light-secondary">
-                  Representative use cases shown through illustrative mockups, without client names, endorsements, or
-                  fabricated metrics.
+                  Stylized mockups only. The copy stays at pattern level: the kind of problem, the kind of system, and
+                  what usually becomes easier.
                 </p>
               </Reveal>
             </div>
@@ -117,8 +116,8 @@ export default function WorkPage() {
             </Reveal>
             <Reveal className="mt-8 text-lg text-bd-light-secondary">
               <p>
-                Not every project can be shared in full, but each one reflects the same goal: to build something thoughtful,
-                functional, and tailored to the business it supports.
+                The through-line is consistent: software shaped around how work actually runs, with clearer ownership,
+                fewer brittle handoffs, and room to improve after launch.
               </p>
             </Reveal>
           </div>

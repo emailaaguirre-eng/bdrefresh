@@ -22,7 +22,8 @@ export function HomeValuesBlock() {
             <p className="mt-5 text-[1.05rem] leading-[1.75] text-bd-light-secondary">
               We believe in one-on-one attention for every build so we understand your goals and deliver a system that
               fits. If you want to understand what&apos;s being built and why, we&apos;ll guide you through it and
-              provide clean documentation.
+              provide clean documentation—with staging and review checkpoints baked into delivery, not bolted on at the
+              end.
             </p>
             <HomeMetricsCounters />
           </Reveal>

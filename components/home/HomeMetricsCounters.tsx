@@ -1,74 +1,28 @@
-"use client";
+const pillars = [
+  {
+    title: "10+ years",
+    body: "Shipping production websites, applications, and internal tools for teams that need software to match real workflows.",
+  },
+  {
+    title: "Direct collaboration",
+    body: "You work with the people scoping and building the software—not a rotating cast of handoffs.",
+  },
+  {
+    title: "Clear checkpoints",
+    body: "Staging, documentation, and review moments before go-live so ownership and expectations stay grounded.",
+  },
+] as const;
 
-import { useReducedMotion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-
-type MetricProps = {
-  target: number;
-  suffix: string;
-  label: string;
-};
-
-function MetricCounter({ target, suffix, label }: MetricProps) {
-  const reduce = useReducedMotion();
-  const [animatedValue, setAnimatedValue] = useState(0);
-  const value = reduce ? target : animatedValue;
-  const ref = useRef<HTMLDivElement>(null);
-  const ran = useRef(false);
-
-  useEffect(() => {
-    if (reduce) return;
-    const el = ref.current;
-    if (!el) return;
-
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting || ran.current) return;
-          ran.current = true;
-          const duration = 1800;
-          const stepTime = 20;
-          const steps = duration / stepTime;
-          const increment = target / steps;
-          let current = 0;
-
-          const tick = () => {
-            current += increment;
-            if (current >= target) {
-              setAnimatedValue(target);
-            } else {
-              setAnimatedValue(Math.floor(current));
-              requestAnimationFrame(() => setTimeout(tick, stepTime));
-            }
-          };
-          tick();
-          obs.unobserve(el);
-        });
-      },
-      { threshold: 0.5 },
-    );
-
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [reduce, target]);
-
-  return (
-    <div ref={ref} className="relative">
-      <div className="inline font-heading text-[2.2rem] font-extrabold tabular-nums tracking-tight text-bd-accent">
-        {value}
-      </div>
-      <span className="inline font-heading text-[1.3rem] font-bold text-bd-accent">{suffix}</span>
-      <div className="mt-1 text-[0.82rem] text-bd-light-muted">{label}</div>
-    </div>
-  );
-}
-
+/** Grounded trust strip (no unverifiable metrics). */
 export function HomeMetricsCounters() {
   return (
     <div className="mt-10 grid grid-cols-1 gap-6 border-t border-bd-light-border pt-8 sm:grid-cols-3 sm:gap-8">
-      <MetricCounter target={100} suffix="%" label="Client Satisfaction" />
-      <MetricCounter target={24} suffix="/7" label="Support Available" />
-      <MetricCounter target={50} suffix="+" label="Projects Delivered" />
+      {pillars.map((p) => (
+        <div key={p.title}>
+          <div className="font-heading text-lg font-bold tracking-tight text-bd-accent">{p.title}</div>
+          <p className="mt-2 text-[0.88rem] leading-relaxed text-bd-light-secondary">{p.body}</p>
+        </div>
+      ))}
     </div>
   );
 }

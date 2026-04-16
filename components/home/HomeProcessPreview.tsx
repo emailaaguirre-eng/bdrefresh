@@ -45,7 +45,8 @@ export function HomeProcessPreview() {
             How We Build
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bd-light-secondary">
-            A clear, repeatable process that keeps you informed at every stage and delivers reliable results.
+            A clear, repeatable process that keeps you informed at every stage and delivers reliable results—with
+            visible staging and sign-off before go-live so expectations stay grounded.
           </p>
         </Reveal>
 
