@@ -1,7 +1,7 @@
 const formAction =
   process.env.NEXT_PUBLIC_CONTACT_FORM_ACTION?.trim() || "/contact/send.php";
 
-export function ProjectInquiryForm({ showDeployHint = true }: { showDeployHint?: boolean }) {
+export function ProjectInquiryForm() {
   return (
     <form
       action={formAction}
@@ -98,13 +98,6 @@ export function ProjectInquiryForm({ showDeployHint = true }: { showDeployHint?:
           <polygon points="22 2 15 22 11 13 2 9 22 2" />
         </svg>
       </button>
-      {showDeployHint ? (
-        <p className="text-xs text-bd-light-muted">
-          Posts to <code className="rounded bg-bd-light-alt px-1 py-0.5 font-mono">{formAction}</code>. Set{" "}
-          <code className="rounded bg-bd-light-alt px-1 py-0.5 font-mono">NEXT_PUBLIC_CONTACT_FORM_ACTION</code> to
-          override. Ensure your handler (e.g. existing PHP) is deployed alongside this app.
-        </p>
-      ) : null}
     </form>
   );
 }

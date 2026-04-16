@@ -86,7 +86,7 @@ export function HomeContactSection() {
           </Reveal>
 
           <Reveal delay={0.06}>
-            <ProjectInquiryForm showDeployHint={false} />
+            <ProjectInquiryForm />
           </Reveal>
         </div>
       </Container>

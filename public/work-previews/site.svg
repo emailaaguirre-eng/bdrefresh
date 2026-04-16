@@ -13,8 +13,8 @@
   <rect width="640" height="360" fill="#e6ebe9"/>
   <rect x="12" y="12" width="616" height="336" rx="14" fill="#fff" stroke="#b0bbb8" stroke-width="1"/>
   <rect x="12" y="12" width="616" height="48" fill="#fff" stroke="#b8c3c0" stroke-width="1"/>
-  <text class="t" x="32" y="41" font-size="11" font-weight="600" fill="#0f172a" text-anchor="start">Home</text>
-  <text class="t" x="88" y="41" font-size="11" font-weight="700" fill="#334155" text-anchor="start">Services</text>
+  <text class="t" x="32" y="41" font-size="11" font-weight="500" fill="#5a6f6b" text-anchor="start">Home</text>
+  <text class="t" x="88" y="41" font-size="11" font-weight="700" fill="#0f172a" text-anchor="start">Services</text>
   <text class="t" x="168" y="41" font-size="11" font-weight="500" fill="#5a6f6b" text-anchor="start">Insights</text>
   <text class="t" x="248" y="41" font-size="11" font-weight="500" fill="#5a6f6b" text-anchor="start">Our Team</text>
   <rect x="528" y="26" width="84" height="26" rx="14" fill="#0f766e" stroke="#0d5f58" stroke-width="1"/>
