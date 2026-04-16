@@ -14,10 +14,10 @@ export function HomeValuesBlock() {
           </Reveal>
           <Reveal delay={0.08}>
             <SectionTag>Our Values</SectionTag>
-            <h2 id="home-values-heading" className="text-left font-heading text-3xl font-bold tracking-tight md:text-4xl">
+            <h2 id="home-values-heading" className="text-left font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
               Dedicated to Providing
               <br />
-              Superior <span className="text-bd-accent">Development.</span>
+              Superior Development.
             </h2>
             <p className="mt-5 text-[1.05rem] leading-[1.75] text-bd-light-secondary">
               We believe in one-on-one attention for every build so we understand your goals and deliver a system that

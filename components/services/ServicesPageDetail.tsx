@@ -18,7 +18,7 @@ export function ServicesPageDetail() {
             <SectionTag>Capabilities</SectionTag>
             <h2
               id="svc-detail-heading"
-              className="whitespace-nowrap font-heading text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl"
+              className="whitespace-nowrap font-heading text-2xl font-bold tracking-tight text-bd-light-text sm:text-3xl md:text-4xl"
             >
               Offerings in detail
             </h2>

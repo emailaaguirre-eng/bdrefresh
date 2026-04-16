@@ -85,7 +85,7 @@ export function HomeWorkTeaser() {
       <Container>
         <Reveal>
           <SectionTag>Selected Work</SectionTag>
-          <h2 id="home-work-heading" className="font-heading text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 id="home-work-heading" className="font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
             Client-Confidential
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bd-light-secondary">

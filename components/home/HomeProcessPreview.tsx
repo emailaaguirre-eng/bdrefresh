@@ -79,8 +79,8 @@ export function HomeProcessPreview() {
       <Container>
         <Reveal>
           <SectionTag>Our Process</SectionTag>
-          <h2 id="home-process-heading" className="font-heading text-3xl font-bold tracking-tight md:text-4xl">
-            How We <span className="text-bd-accent">Build</span>
+          <h2 id="home-process-heading" className="font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
+            How We Build
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bd-light-secondary">
             A clear, repeatable process that keeps you informed at every stage and delivers reliable results.

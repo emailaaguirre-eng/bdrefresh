@@ -10,7 +10,7 @@ export function HomeContactSection() {
       <Container>
         <Reveal>
           <SectionTag>Contact</SectionTag>
-          <h2 id="contact-heading" className="font-heading text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 id="contact-heading" className="font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
             Start Your Project
           </h2>
           <p className="mt-4 max-w-2xl text-bd-light-secondary">

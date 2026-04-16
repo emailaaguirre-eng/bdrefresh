@@ -7,7 +7,7 @@ import { CtaParticleCanvas } from "@/components/effects/CtaParticleCanvas";
 /**
  * Particle web plus optional overlays.
  * - `hero`: scanlines + vignette + grid (inner page heroes).
- * - `cta`: particle only — matches legacy `.cta-section` on flat `#080c12` (no extra darkening).
+ * - `cta`: particle only — matches legacy `.cta-section` on flat `#080c12` (canvas at full opacity like static site).
  */
 export function HeroBackdropShell({
   boundaryRef,
@@ -44,7 +44,7 @@ export function HeroBackdropShell({
     <>
       {!reduce ? (
         <div
-          className={`pointer-events-none absolute inset-0 z-0 ${variant === "cta" ? "opacity-[0.5]" : "opacity-[0.55]"}`}
+          className={`pointer-events-none absolute inset-0 z-0 ${variant === "cta" ? "opacity-100" : "opacity-[0.55]"}`}
           style={{ transform: canvasTransform }}
           aria-hidden
         >

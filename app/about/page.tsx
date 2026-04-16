@@ -31,7 +31,7 @@ export default function AboutPage() {
         <Container>
           <Reveal>
             <SectionTag>Who we are</SectionTag>
-            <h2 id="about-who" className="font-heading text-3xl font-bold md:text-4xl">
+            <h2 id="about-who" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
               Full-stack, with the long view
             </h2>
             <p className="mt-4 max-w-3xl text-lg text-bd-light-secondary">
@@ -60,7 +60,7 @@ export default function AboutPage() {
         <Container>
           <Reveal>
             <SectionTag>How we work</SectionTag>
-            <h2 id="about-guide" className="font-heading text-3xl font-bold md:text-4xl">
+            <h2 id="about-guide" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
               What guides our work
             </h2>
             <p className="mt-4 text-bd-light-secondary">A few principles that show up in every engagement.</p>
@@ -113,16 +113,16 @@ export default function AboutPage() {
         <Reveal>
           <h2
             id="about-cta-heading"
-            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-white"
+            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
           >
-            Want to see if we&apos;re a <span className="text-bd-dark-bg">good fit?</span>
+            Want to see if we&apos;re a <span className="text-bd-accent">good fit?</span>
           </h2>
-          <p className="mt-4 text-[1.05rem] leading-relaxed text-white/85">
+          <p className="mt-4 text-[1.05rem] leading-relaxed text-bd-light-secondary">
             Share a bit about your project. We&apos;ll respond with clear next steps.
           </p>
           <MagneticLink
             href="/start-project"
-            className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-bd-accent shadow-md transition hover:bg-bd-light-alt"
+            className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-bd-accent px-6 py-3.5 text-sm font-semibold text-white shadow-md transition hover:bg-bd-accent-light"
           >
             <span>Start a Project</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>

@@ -9,10 +9,10 @@ export function HomeWhatWeDo() {
       <Container>
         <Reveal>
           <SectionTag>What We Do</SectionTag>
-          <h2 id="home-wwd-heading" className="font-heading text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 id="home-wwd-heading" className="font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
             Development-first.
             <br />
-            <span className="text-bd-accent">Outcome-driven.</span>
+            Outcome-driven.
           </h2>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-bd-light-secondary">
             B&amp;D Servicing builds modern websites and custom web applications end-to-end, from web design and

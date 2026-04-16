@@ -54,16 +54,16 @@ export default function InsightsPage() {
         <Reveal>
           <h2
             id="insights-cta-heading"
-            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-white"
+            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
           >
-            Planning a <span className="text-bd-dark-bg">new build?</span>
+            Planning a <span className="text-bd-accent">new build?</span>
           </h2>
-          <p className="mt-4 text-[1.05rem] leading-relaxed text-white/85">
+          <p className="mt-4 text-[1.05rem] leading-relaxed text-bd-light-secondary">
             Tell us what you&apos;re weighing. We&apos;ll help you think through scope and fit.
           </p>
           <MagneticLink
             href="/start-project"
-            className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-bd-accent shadow-md transition hover:bg-bd-light-alt"
+            className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-bd-accent px-6 py-3.5 text-sm font-semibold text-white shadow-md transition hover:bg-bd-accent-light"
           >
             <span>Start a Project</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>

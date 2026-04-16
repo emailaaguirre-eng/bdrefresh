@@ -16,7 +16,7 @@ export function HomeServicesPreview() {
       <Container className="relative">
         <Reveal>
           <SectionTag>Services</SectionTag>
-          <h2 id="home-svc-heading" className="font-heading text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 id="home-svc-heading" className="font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
             What We Build
           </h2>
         </Reveal>

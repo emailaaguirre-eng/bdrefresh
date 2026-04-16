@@ -35,7 +35,7 @@ export default function WorkPage() {
             <div className="w-full max-w-3xl">
               <Reveal>
                 <SectionTag>Confidentiality</SectionTag>
-                <h2 id="work-how" className="font-heading text-3xl font-bold md:text-4xl">
+                <h2 id="work-how" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
                   How we show work
                 </h2>
                 <p className="mt-4 text-lg leading-relaxed text-bd-light-secondary">
@@ -52,7 +52,7 @@ export default function WorkPage() {
             <div className="w-full max-w-3xl">
               <Reveal>
                 <SectionTag>Selected Use Cases</SectionTag>
-                <h2 id="work-cases" className="font-heading text-3xl font-bold md:text-4xl">
+                <h2 id="work-cases" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
                   Illustrative use cases
                 </h2>
                 <p className="mt-4 text-bd-light-secondary">
@@ -111,7 +111,7 @@ export default function WorkPage() {
           <div className="w-full max-w-3xl">
             <Reveal>
               <SectionTag>Closing note</SectionTag>
-              <h2 id="work-close" className="font-heading text-3xl font-bold md:text-4xl">
+              <h2 id="work-close" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
                 The through-line
               </h2>
             </Reveal>
@@ -128,16 +128,16 @@ export default function WorkPage() {
         <Reveal>
           <h2
             id="work-cta-heading"
-            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-white"
+            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
           >
-            Ready to talk <span className="text-bd-dark-bg">scope and fit?</span>
+            Ready to talk <span className="text-bd-accent">scope and fit?</span>
           </h2>
-          <p className="mt-4 text-[1.05rem] leading-relaxed text-white/85">
+          <p className="mt-4 text-[1.05rem] leading-relaxed text-bd-light-secondary">
             Tell us what you&apos;re trying to ship. We&apos;ll respond with clear next steps.
           </p>
           <MagneticLink
             href="/start-project"
-            className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-bd-accent shadow-md transition hover:bg-bd-light-alt"
+            className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-bd-accent px-6 py-3.5 text-sm font-semibold text-white shadow-md transition hover:bg-bd-accent-light"
           >
             <span>Start a Project</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>

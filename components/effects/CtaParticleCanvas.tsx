@@ -9,7 +9,7 @@ const COUNT = 60;
 const LINK_DIST = 120;
 const MOUSE_DIST = 180;
 
-/** Legacy script.js §13: networked dots + lines to cursor inside CTA section. */
+/** Matches legacy `banddservicing-website/script.js` §13 (NETWORK PARTICLE CANVAS): blue inter-particle links within connection distance; teal lines from dots to cursor within 180px; dots drift with bounce. */
 export function CtaParticleCanvas({ boundaryRef }: { boundaryRef: RefObject<HTMLElement | null> }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const reduce = useReducedMotion();

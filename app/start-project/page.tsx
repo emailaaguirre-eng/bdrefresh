@@ -42,7 +42,7 @@ export default function StartProjectPage() {
         <Container>
           <Reveal>
             <SectionTag>Invitation</SectionTag>
-            <h2 id="invite-heading" className="font-heading text-3xl font-bold md:text-4xl">
+            <h2 id="invite-heading" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
               You don’t need a perfect spec
             </h2>
             <p className="mt-4 max-w-2xl text-bd-light-secondary">
@@ -62,7 +62,7 @@ export default function StartProjectPage() {
         <Container>
           <Reveal>
             <SectionTag>What happens next</SectionTag>
-            <h2 id="next-heading" className="font-heading text-3xl font-bold md:text-4xl">
+            <h2 id="next-heading" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
               After you reach out
             </h2>
           </Reveal>
@@ -82,7 +82,7 @@ export default function StartProjectPage() {
         <Container>
           <Reveal>
             <SectionTag>Contact</SectionTag>
-            <h2 id="contact-heading" className="font-heading text-3xl font-bold md:text-4xl">
+            <h2 id="contact-heading" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
               Project inquiry
             </h2>
             <p className="mt-4 text-bd-light-secondary">Use the form below or call or email. We monitor both.</p>
