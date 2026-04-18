@@ -12,7 +12,7 @@ import { workCases } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Representative problem patterns and illustrative mockups: honest fit signals without client names, screenshots, or invented results.",
+    "Representative examples of the kinds of systems B&D Servicing builds, from websites and web applications to internal tools, diagnostics, and operational systems.",
 };
 
 const focus = ["Websites", "Web applications", "Internal tools", "Diagnostics", "Platform experiences"];
