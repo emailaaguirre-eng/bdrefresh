@@ -1,12 +1,12 @@
 import type { ReactNode } from "react";
 import { Container } from "@/components/ui/Container";
 
-/** CoDre-X: solid white band — only About section without dot-grid / alt tint on the outer shell. */
+/** CoDre-X: solid white band (color break vs alt sections; no hairline borders). */
 export function CodrexBand({ children }: { children: ReactNode }) {
   return (
     <section
       id="codrex"
-      className="scroll-mt-28 border-y border-bd-light-border bg-white py-16 text-bd-light-text md:py-24"
+      className="scroll-mt-28 bg-white py-16 text-bd-light-text md:py-24"
       aria-labelledby="codrex-heading"
     >
       <Container>

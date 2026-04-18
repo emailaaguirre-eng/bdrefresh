@@ -31,7 +31,7 @@ export const insightPosts: InsightPost[] = [
     description:
       "A practical guide to brochure sites, marketing sites, content hubs, e-commerce, and when you need a custom web application instead.",
     excerpt:
-      "Not every business needs the same kind of site. Here is how to think about brochure, marketing, content, commerce, and custom platforms—so you build the right thing from the start.",
+      "Not every business needs the same kind of site. Here is how to think about brochure, marketing, content, commerce, and custom platforms, so you build the right thing from the start.",
     publishedAt: "2026-03-15",
     author: { name: "", affiliation: "B&D Servicing" },
     blocks: [

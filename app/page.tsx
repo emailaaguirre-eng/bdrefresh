@@ -18,6 +18,10 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      {/*
+        After hero + tech (dark): strict two-step light rhythm — bright `bg-white` vs deck `bg-bd-light-alt`.
+        Dark `HomeCtaBand` breaks the strip; keep this order when adding sections so white/alt never doubles up.
+      */}
       <HeroHome />
       <TechStrip />
       <HomeWhatWeDo />

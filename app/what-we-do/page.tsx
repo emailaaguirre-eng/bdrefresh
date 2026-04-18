@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { MagneticLink } from "@/components/effects/MagneticLink";
-import { LightCtaBand } from "@/components/layout/LightCtaBand";
+import { ClosingBand } from "@/components/layout/ClosingBand";
 import { Reveal } from "@/components/motion/Reveal";
 import { PageHero } from "@/components/layout/PageHero";
 import { WhatWeDoBody } from "@/components/what-we-do/WhatWeDoBody";
@@ -24,7 +24,7 @@ export default function WhatWeDoPage() {
         lead="B&D Servicing is a full-stack development firm with 10+ years of experience building websites, web applications, internal tools, and digital systems shaped around real business needs, not generic templates."
       />
       <WhatWeDoBody />
-      <LightCtaBand aria-labelledby="wwd-cta-heading">
+      <ClosingBand deck="white" aria-labelledby="wwd-cta-heading">
         <Reveal>
           <h2
             id="wwd-cta-heading"
@@ -46,7 +46,7 @@ export default function WhatWeDoPage() {
             </svg>
           </MagneticLink>
         </Reveal>
-      </LightCtaBand>
+      </ClosingBand>
     </>
   );
 }

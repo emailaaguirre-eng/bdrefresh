@@ -100,7 +100,7 @@ export function BdChatbot() {
       }
 
       if (action === "phone") {
-        addBot("Give us a call at 602-456-9889 — we'd love to hear from you!");
+        addBot("Give us a call at 602-456-9889. We'd love to hear from you!");
         window.setTimeout(() => {
           window.location.href = "tel:6024569889";
         }, 600);

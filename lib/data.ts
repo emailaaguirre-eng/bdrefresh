@@ -39,7 +39,7 @@ export const servicesDetailed = [
   {
     title: "Web Copy",
     description:
-      "Messaging that states who it is for, what changes, and what to do next—written alongside the build, not bolted on after.",
+      "Messaging that states who it is for, what changes, and what to do next, written alongside the build, not bolted on after.",
   },
   {
     title: "Search Engine Optimization",
@@ -49,11 +49,11 @@ export const servicesDetailed = [
   {
     title: "Graphic Design",
     description:
-      "Identity and marketing visuals that read as the same company as the product—not a separate aesthetic layer.",
+      "Identity and marketing visuals that read as the same company as the product, not a separate aesthetic layer.",
   },
 ] as const;
 
-/** Full services page (legacy services.html): anchors + extended Value / Use case copy — not the home preview grid. */
+/** Full services page (legacy services.html): anchors + extended Value / Use case copy (not the home preview grid). */
 export const servicesPageOffers = [
   {
     id: "svc-custom-apps",
@@ -70,7 +70,7 @@ export const servicesPageOffers = [
     iconIndex: 1,
     title: "Internal Tools",
     description:
-      "When decisions live in inboxes and one-off sheets: dashboards, approvals, and reporting that match how work is approved and recorded. Done means people can run daily operations from the tool—not around it.",
+      "When decisions live in inboxes and one-off sheets: dashboards, approvals, and reporting that match how work is approved and recorded. Done means people can run daily operations from the tool, not around it.",
     insightLabel: "Fit & risk" as const,
     insight:
       "Cuts duplicate entry and “which version is true?” moments. Audit-friendly patterns where they matter; plain workflows where they do not.",
@@ -90,7 +90,7 @@ export const servicesPageOffers = [
     iconIndex: 3,
     title: "Launch & Improve",
     description:
-      "Deployment, monitoring, performance passes, and measured iterations after go-live—when the goal is stability under real traffic, not a one-time push and disappear.",
+      "Deployment, monitoring, performance passes, and measured iterations after go-live, when the goal is stability under real traffic, not a one-time push and disappear.",
     insightLabel: "Fit & risk" as const,
     insight:
       "Reduces launch-week guesswork: staging sign-off, rollback thinking, and a sane first slice of observability. Post-launch work stays tied to observed bottlenecks, not generic tuning.",
@@ -100,7 +100,7 @@ export const servicesPageOffers = [
     iconIndex: 4,
     title: "Web Copy",
     description:
-      "Copy that states who it is for, what problem you solve, and what happens next—drafted in the same pass as structure and UI so the story matches the product.",
+      "Copy that states who it is for, what problem you solve, and what happens next, drafted in the same pass as structure and UI so the story matches the product.",
     insightLabel: "Fit & risk" as const,
     insight:
       "Avoids the “beautiful site, vague offer” trap. Visitors self-select; your team spends less time re-explaining basics on first calls.",
@@ -110,7 +110,7 @@ export const servicesPageOffers = [
     iconIndex: 5,
     title: "Search Engine Optimization",
     description:
-      "Technical structure, internal linking, and intent-aligned page work so humans and crawlers get a coherent picture—without promising rankings that nobody can guarantee.",
+      "Technical structure, internal linking, and intent-aligned page work so humans and crawlers get a coherent picture, without promising rankings that nobody can guarantee.",
     insightLabel: "Fit & risk" as const,
     insight:
       "Best when you have a real offer worth finding and are willing to align content with how people actually search. Treats SEO as implementation discipline, not keyword stuffing.",
@@ -120,7 +120,7 @@ export const servicesPageOffers = [
     iconIndex: 6,
     title: "Graphic Design",
     description:
-      "Logos, brand assets, and marketing visuals that sit credibly next to the product—useful when identity and interface need to feel like one organization.",
+      "Logos, brand assets, and marketing visuals that sit credibly next to the product, useful when identity and interface need to feel like one organization.",
     insightLabel: "Fit & risk" as const,
     insight:
       "Reduces visual drift between site, decks, and collateral. Clear file delivery and practical formats your vendors can reuse.",
@@ -131,12 +131,12 @@ export const processPhases = [
   {
     phase: "01",
     title: "Discovery",
-    body: "Goals, constraints, and who does what—mapped into a concrete plan and architecture before build hours stack up.",
+    body: "Goals, constraints, and who does what, mapped into a concrete plan and architecture before build hours stack up.",
   },
   {
     phase: "02",
     title: "Build",
-    body: "Front-end, back-end, data, and integrations in tight loops with visible progress—not a black box until the end.",
+    body: "Front-end, back-end, data, and integrations in tight loops with visible progress, not a black box until the end.",
   },
   {
     phase: "03",
@@ -146,7 +146,7 @@ export const processPhases = [
   {
     phase: "04",
     title: "Improve",
-    body: "Measured iterations from real usage: performance, reliability, and the next slice of value—without surprise rewrites.",
+    body: "Measured iterations from real usage: performance, reliability, and the next slice of value, without surprise rewrites.",
   },
 ] as const;
 

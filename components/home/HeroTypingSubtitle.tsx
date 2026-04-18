@@ -4,7 +4,7 @@ import { useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const FULL_TEXT =
-  "We build custom applications, internal tools, and automation with API integrations that reduce manual work and keep your systems connected—so day-to-day operations depend less on fragile glue between tools.";
+  "We build custom applications, internal tools, and automation with API integrations that reduce manual work and keep your systems connected, so day-to-day operations depend less on fragile glue between tools.";
 
 export function HeroTypingSubtitle() {
   const reduce = useReducedMotion();

@@ -13,7 +13,7 @@ export function PageHero({
   return (
     <header className="relative overflow-hidden bg-[#080c12] text-bd-dark-text">
       <Container className="relative py-16 md:py-20 lg:py-24">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+        <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-end">
           <div>
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-bd-accent-lighter">
               {eyebrow}

@@ -23,12 +23,13 @@ const principles: readonly { title: string; body: string }[] = [
 ] as const;
 
 /**
- * About body: split “story rail” + principles mosaic (distinct from What We Do bento and Process phases).
+ * After dark `PageHero`: same stagger as home light bands — `bg-white` ↔ `bg-bd-light-alt` (no hairlines).
+ * Order: white (who) → alt (how we work) → white (CoDre-X) → closing band is `bg-bd-light-alt` via `ClosingBand deck="alt"`.
  */
 export function AboutBody() {
   return (
     <>
-      <section className="dot-grid-bg py-16 md:py-24" aria-labelledby="about-who">
+      <section className="bg-white py-16 md:py-24" aria-labelledby="about-who">
         <Container>
           <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-start lg:gap-16">
             <Reveal className="lg:pt-2">
@@ -97,19 +98,8 @@ export function AboutBody() {
         </Container>
       </section>
 
-      <section
-        className="relative overflow-hidden border-t border-bd-light-border bg-bd-light-alt py-16 md:py-24"
-        aria-labelledby="about-guide"
-      >
-        <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_75%_55%_at_50%_0%,rgba(37,104,160,0.08),transparent_55%)]"
-          aria-hidden
-        />
-        <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_100%_100%,rgba(90,171,238,0.06),transparent_50%)]"
-          aria-hidden
-        />
-        <Container className="relative">
+      <section className="bg-bd-light-alt py-16 md:py-24" aria-labelledby="about-guide">
+        <Container>
           <Reveal className="max-w-2xl">
             <SectionTag>How we work</SectionTag>
             <h2 id="about-guide" className="mt-3 font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">

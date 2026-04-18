@@ -8,7 +8,7 @@ import { SectionTag } from "@/components/ui/SectionTag";
 export const metadata: Metadata = {
   title: "Start a Project",
   description:
-    "What happens after you reach out: quick acknowledgment, a low-pressure discovery touchpoint, and an honest next step—including when we are not the right fit.",
+    "What happens after you reach out: quick acknowledgment, a low-pressure discovery touchpoint, and an honest next step, including when we are not the right fit.",
 };
 
 const steps = [
@@ -116,7 +116,7 @@ export default function StartProjectPage() {
                 </div>
                 <div>
                   <h3 className="text-sm font-bold uppercase tracking-wider text-bd-light-muted">Location</h3>
-                  <p className="mt-1 text-bd-light-secondary">100% remote — serving clients nationwide</p>
+                  <p className="mt-1 text-bd-light-secondary">100% remote, serving clients nationwide</p>
                 </div>
                 <div>
                   <h3 className="text-sm font-bold uppercase tracking-wider text-bd-light-muted">Availability</h3>

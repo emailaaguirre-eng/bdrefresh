@@ -5,7 +5,7 @@ import { SectionTag } from "@/components/ui/SectionTag";
 
 export function HomeWhatWeDo() {
   return (
-    <section className="dot-grid-bg py-20 md:py-28" aria-labelledby="home-wwd-heading">
+    <section className="bg-white py-20 md:py-28" aria-labelledby="home-wwd-heading">
       <Container>
         <Reveal>
           <SectionTag>What We Do</SectionTag>
@@ -17,7 +17,7 @@ export function HomeWhatWeDo() {
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-bd-light-secondary">
             B&amp;D Servicing builds modern websites and custom web applications end-to-end, from web design and
             graphic design to website copywriting and SEO. We handle front-end, back-end, databases, integrations,
-            and deployment so everything works together cleanly—especially when the result has to hold up in day-to-day
+            and deployment so everything works together cleanly, especially when the result has to hold up in day-to-day
             operations, not just at launch.
           </p>
           <Link

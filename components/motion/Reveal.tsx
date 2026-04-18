@@ -25,7 +25,8 @@ export function Reveal({ children, className, delay = 0, ...rest }: RevealProps)
       className={className}
       initial={{ opacity: 0, y: 14 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-32px" }}
+      /* Generous viewport so light sections still reveal on first paint (negative margin was too strict for tall heroes). */
+      viewport={{ once: true, amount: 0.08, margin: "0px 0px 12% 0px" }}
       transition={{ duration: 0.45, delay, ease: [0.16, 1, 0.3, 1] }}
       {...rest}
     >

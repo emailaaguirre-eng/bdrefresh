@@ -1,6 +1,7 @@
 "use client";
 
 import { useReducedMotion } from "framer-motion";
+import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { MagneticLink } from "@/components/effects/MagneticLink";
 import { ButtonLink } from "@/components/ui/ButtonLink";
@@ -20,8 +21,8 @@ const CODE_FLOATS: { text: string; cls: string }[] = [
 ];
 
 /**
- * Legacy index.html `.hero`: matrix rain, parallax aurora wash, scanlines/grid, code-floats,
- * and the headline stack. Particle web lives on the “Ready to build something real” band.
+ * Legacy index.html `.hero`: infrastructure-style network canvas, parallax aurora wash,
+ * scanlines/grid, code-floats, and the headline stack. Particle canvas lives on the closing CTA band.
  */
 export function HeroHome() {
   const reduce = useReducedMotion();
@@ -130,10 +131,7 @@ export function HeroHome() {
           <HeroStatusBadge />
 
           <h1 className="mb-5 font-heading text-[clamp(2.5rem,5.5vw,4rem)] font-black leading-[1.08] tracking-[-0.03em] text-white">
-            <span className="block">Websites and apps,</span>
-            <span className="block">
-              built <span className="shimmer-text">end-to-end.</span>
-            </span>
+            Websites and apps, built <span className="shimmer-text">end-to-end.</span>
           </h1>
 
           <div className="mt-5 flex flex-wrap items-center gap-4 font-mono text-[0.95rem] font-semibold tracking-[0.02em] text-bd-accent-lighter">
@@ -164,6 +162,22 @@ export function HeroHome() {
           </div>
         </div>
       </Container>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex justify-center pb-5 md:pb-7">
+        <Link
+          href="#home-tech"
+          className="bd-hero-scroll-cue pointer-events-auto"
+          aria-label="Explore more"
+        >
+          <span className="bd-hero-scroll-cue__line" aria-hidden />
+          <span className="bd-hero-scroll-cue__mark">
+            <svg width="14" height="10" viewBox="0 0 24 16" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+              <path d="M7 6l5 5 5-5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <span>Explore more</span>
+          </span>
+        </Link>
+      </div>
     </section>
   );
 }

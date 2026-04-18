@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { MagneticLink } from "@/components/effects/MagneticLink";
 import { InsightPostCard } from "@/components/insights/InsightPostCard";
-import { LightCtaBand } from "@/components/layout/LightCtaBand";
+import { ClosingBand } from "@/components/layout/ClosingBand";
 import { PageHero } from "@/components/layout/PageHero";
 import { Reveal } from "@/components/motion/Reveal";
 import { Container } from "@/components/ui/Container";
@@ -50,7 +50,7 @@ export default function InsightsPage() {
           ) : null}
         </Container>
       </section>
-      <LightCtaBand aria-labelledby="insights-cta-heading">
+      <ClosingBand deck="alt" aria-labelledby="insights-cta-heading">
         <Reveal>
           <h2
             id="insights-cta-heading"
@@ -72,7 +72,7 @@ export default function InsightsPage() {
             </svg>
           </MagneticLink>
         </Reveal>
-      </LightCtaBand>
+      </ClosingBand>
     </>
   );
 }

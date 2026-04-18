@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AboutBody } from "@/components/about/AboutBody";
 import { MagneticLink } from "@/components/effects/MagneticLink";
 import { Reveal } from "@/components/motion/Reveal";
-import { LightCtaBand } from "@/components/layout/LightCtaBand";
+import { ClosingBand } from "@/components/layout/ClosingBand";
 import { PageHero } from "@/components/layout/PageHero";
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function AboutPage() {
         lead="Full-stack development with a bias toward clarity, maintainability, and software that still makes sense after launch week."
       />
       <AboutBody />
-      <LightCtaBand aria-labelledby="about-cta-heading">
+      <ClosingBand deck="alt" aria-labelledby="about-cta-heading">
         <Reveal>
           <h2
             id="about-cta-heading"
@@ -48,7 +48,7 @@ export default function AboutPage() {
             </svg>
           </MagneticLink>
         </Reveal>
-      </LightCtaBand>
+      </ClosingBand>
     </>
   );
 }

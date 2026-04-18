@@ -16,10 +16,13 @@ function TechRow({ hidden }: { hidden?: boolean }) {
   );
 }
 
-/** Infinite marquee matching the static site tech bar (paused when reduced motion). */
+/**
+ * Infinite marquee: two identical rows and translateX(-50%) produce a seamless loop.
+ * This is intentional (not a duplicate strip); only one `<TechStrip />` mounts on the home page.
+ */
 export function TechStrip() {
   return (
-    <div className="bd-tech-marquee" aria-label="Technologies we use">
+    <div id="home-tech" className="bd-tech-marquee scroll-mt-24" aria-label="Technologies we use">
       <div className="bd-tech-track">
         <TechRow />
         <TechRow hidden />

@@ -20,7 +20,7 @@ export function HomeServicesPreview() {
             What We Build
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-bd-light-secondary md:text-base">
-            Areas below are often combined in a single engagement—scoped to who uses the software and what has to be
+            Areas below are often combined in a single engagement, scoped to who uses the software and what has to be
             true when it ships.
           </p>
         </Reveal>

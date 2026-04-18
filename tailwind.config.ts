@@ -24,6 +24,8 @@ export default {
             /** Main light canvas + dot-grid (push toward white; keep `alt` for band contrast). */
             bg: "#fcfcfd",
             alt: "#f3f5f8",
+            /** Flat mid band: cooler than `alt`, for stacked light sections without repeating the same gray. */
+            sheet: "#e6eaf2",
             card: "#ffffff",
             border: "#cfd4de",
             text: "#161a26",

@@ -22,9 +22,9 @@ export function ProcessPhasesColumn({ phases }: { phases: readonly ProcessPagePh
 
   useEffect(() => {
     const hash = typeof window !== "undefined" ? window.location.hash.slice(1) : "";
-    if (hash && phases.some((p) => p.id === hash)) {
-      setActiveId(hash);
-    }
+    if (!hash || !phases.some((p) => p.id === hash)) return;
+    const id = requestAnimationFrame(() => setActiveId(hash));
+    return () => cancelAnimationFrame(id);
   }, [phases]);
 
   useEffect(() => {

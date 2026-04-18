@@ -6,7 +6,7 @@ import { SectionTag } from "@/components/ui/SectionTag";
 /** Legacy index.html `#contact` — same structure: info column + form. */
 export function HomeContactSection() {
   return (
-    <section className="bg-bd-light-bg py-24 md:py-[110px]" id="contact" aria-labelledby="contact-heading">
+    <section className="bg-bd-light-alt py-24 md:py-[110px]" id="contact" aria-labelledby="contact-heading">
       <Container>
         <Reveal>
           <SectionTag>Contact</SectionTag>

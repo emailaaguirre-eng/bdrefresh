@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { MagneticLink } from "@/components/effects/MagneticLink";
-import { LightCtaBand } from "@/components/layout/LightCtaBand";
+import { ClosingBand } from "@/components/layout/ClosingBand";
 import { Reveal } from "@/components/motion/Reveal";
 import { PageHero } from "@/components/layout/PageHero";
 import { ServicesPageDetail } from "@/components/services/ServicesPageDetail";
@@ -8,7 +8,7 @@ import { ServicesPageDetail } from "@/components/services/ServicesPageDetail";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "A practical buying guide: custom apps, internal tools, integrations, launch and improve, copy, SEO, and design—who each is for, typical scope, and where risk drops.",
+    "A practical buying guide: custom apps, internal tools, integrations, launch and improve, copy, SEO, and design, who each is for, typical scope, and where risk drops.",
 };
 
 export default function ServicesPage() {
@@ -21,10 +21,10 @@ export default function ServicesPage() {
             What we build <span className="shimmer-text">with you</span>
           </>
         }
-        lead="Seven practice areas, one bar for execution: clear fit, honest tradeoffs, and software your team can run day to day—not a separate pile of mystery phases."
+        lead="Seven practice areas, one bar for execution: clear fit, honest tradeoffs, and software your team can run day to day, not a separate pile of mystery phases."
       />
       <ServicesPageDetail />
-      <LightCtaBand aria-labelledby="svc-cta-heading">
+      <ClosingBand deck="alt" aria-labelledby="svc-cta-heading">
         <Reveal>
           <h2
             id="svc-cta-heading"
@@ -46,7 +46,7 @@ export default function ServicesPage() {
             </svg>
           </MagneticLink>
         </Reveal>
-      </LightCtaBand>
+      </ClosingBand>
     </>
   );
 }

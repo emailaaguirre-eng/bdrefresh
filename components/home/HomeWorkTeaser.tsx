@@ -78,10 +78,10 @@ function WorkCard({ item, delay }: { item: (typeof items)[number]; delay: number
   return <Reveal delay={delay}>{card}</Reveal>;
 }
 
-/** Legacy `#work` grid — 2×2, horizontal icon row, left accent bar on hover. */
+/** Legacy `#work` grid — 2×2; `bg-white` band in the home white ↔ alt rhythm (see `app/page.tsx`). */
 export function HomeWorkTeaser() {
   return (
-    <section className="dot-grid-bg py-24 md:py-[110px]" id="work" aria-labelledby="home-work-heading">
+    <section className="bg-white py-24 md:py-[110px]" id="work" aria-labelledby="home-work-heading">
       <Container>
         <Reveal>
           <SectionTag>Selected Work</SectionTag>
@@ -90,7 +90,7 @@ export function HomeWorkTeaser() {
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bd-light-secondary">
             Many projects involve internal operations or private data, so we don&apos;t publicly showcase most builds.
-            Below are representative patterns—illustrative mockups, not client deliverables.
+            Below are representative patterns: illustrative mockups, not client deliverables.
           </p>
         </Reveal>
         <div className="mt-12 grid gap-6 md:grid-cols-2">

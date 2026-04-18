@@ -44,7 +44,7 @@ export function HomeCtaBand() {
             </span>
           </h2>
           <p className="mt-4 text-[1.1rem] leading-relaxed text-bd-dark-muted">
-            Tell us about your project. We&apos;ll scope it, plan it, and build it right—with a direct reply and clear
+            Tell us about your project. We&apos;ll scope it, plan it, and build it right, with a direct reply and clear
             next steps.
           </p>
           <MagneticLink

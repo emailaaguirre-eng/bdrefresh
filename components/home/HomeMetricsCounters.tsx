@@ -5,7 +5,7 @@ const pillars = [
   },
   {
     title: "Direct collaboration",
-    body: "You work with the people scoping and building the software—not a rotating cast of handoffs.",
+    body: "You work with the people scoping and building the software, not a rotating cast of handoffs.",
   },
   {
     title: "Clear checkpoints",

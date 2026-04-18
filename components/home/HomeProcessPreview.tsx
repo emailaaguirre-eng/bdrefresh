@@ -34,7 +34,7 @@ export function HomeProcessPreview() {
   return (
     <section
       ref={sectionRef}
-      className="dot-grid-bg relative overflow-hidden py-24 md:py-[110px]"
+      className="relative overflow-hidden bg-white py-24 md:py-[110px]"
       id="process"
       aria-labelledby="home-process-heading"
     >
@@ -45,7 +45,7 @@ export function HomeProcessPreview() {
             How We Build
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-bd-light-secondary">
-            A clear, repeatable process that keeps you informed at every stage and delivers reliable results—with
+            A clear, repeatable process that keeps you informed at every stage and delivers reliable results, with
             visible staging and sign-off before go-live so expectations stay grounded.
           </p>
         </Reveal>

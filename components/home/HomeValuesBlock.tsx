@@ -6,7 +6,7 @@ import { SectionTag } from "@/components/ui/SectionTag";
 
 export function HomeValuesBlock() {
   return (
-    <section className="bg-bd-light-bg py-20 md:py-28" aria-labelledby="home-values-heading">
+    <section className="bg-bd-light-alt py-20 md:py-28" aria-labelledby="home-values-heading">
       <Container>
         <div className="grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
@@ -22,7 +22,7 @@ export function HomeValuesBlock() {
             <p className="mt-5 text-[1.05rem] leading-[1.75] text-bd-light-secondary">
               We believe in one-on-one attention for every build so we understand your goals and deliver a system that
               fits. If you want to understand what&apos;s being built and why, we&apos;ll guide you through it and
-              provide clean documentation—with staging and review checkpoints baked into delivery, not bolted on at the
+              provide clean documentation, with staging and review checkpoints baked into delivery, not bolted on at the
               end.
             </p>
             <HomeMetricsCounters />

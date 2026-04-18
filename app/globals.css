@@ -407,29 +407,6 @@
 }
 
 @layer components {
-  /** LightCtaBand on frosted gray: white headline lead-in + body; emphasized `h2` spans use primary ink (`bd.light.text`) for contrast on gray. */
-  .bd-light-cta-copy h2 {
-    color: rgb(255 255 255) !important;
-    text-shadow:
-      0 0 1px rgb(0 0 0 / 0.22),
-      0 1px 2px rgb(0 0 0 / 0.28),
-      0 2px 12px rgb(0 0 0 / 0.12);
-  }
-
-  .bd-light-cta-copy h2 span {
-    color: theme("colors.bd.light.text") !important;
-    text-shadow: 0 1px 0 rgb(255 255 255 / 0.35);
-  }
-
-  .bd-light-cta-copy p {
-    color: rgb(255 255 255) !important;
-    font-weight: 500 !important;
-    text-shadow:
-      0 0 1px rgb(0 0 0 / 0.2),
-      0 1px 2px rgb(0 0 0 / 0.26);
-    -webkit-font-smoothing: antialiased;
-  }
-
   .bd-service-card {
     position: relative;
     transform-style: preserve-3d;
@@ -661,7 +638,8 @@
     height 0.3s ease,
     opacity 0.3s ease;
   opacity: 0;
-  mix-blend-mode: screen;
+  /* `screen` blew out contrast on light sections below the hero; keep normal blend for both surfaces. */
+  mix-blend-mode: normal;
   box-shadow:
     0 0 12px rgba(90, 171, 238, 0.6),
     0 0 30px rgba(90, 171, 238, 0.2);
@@ -694,7 +672,7 @@
   pointer-events: none;
   z-index: 10055;
   opacity: 0;
-  mix-blend-mode: screen;
+  mix-blend-mode: normal;
 }
 
 @media (hover: none), (prefers-reduced-motion: reduce) {
@@ -727,6 +705,85 @@
   .bd-home-cursor-mode [data-bd-site-header] a,
   .bd-home-cursor-mode [data-bd-site-header] button {
     cursor: none;
+  }
+}
+
+@keyframes bd-hero-scroll-line {
+  0%,
+  100% {
+    opacity: 0.32;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.52;
+    transform: scaleY(1.08);
+  }
+}
+
+@keyframes bd-hero-scroll-nudge {
+  0%,
+  100% {
+    opacity: 0.42;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.78;
+    transform: translateY(4px);
+  }
+}
+
+.bd-hero-scroll-cue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem 0.15rem;
+  color: rgba(198, 220, 244, 0.68);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.bd-hero-scroll-cue:hover {
+  color: rgba(214, 232, 255, 0.88);
+}
+
+.bd-hero-scroll-cue:focus-visible {
+  outline: 2px solid rgba(90, 171, 238, 0.55);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.bd-hero-scroll-cue__line {
+  width: 1px;
+  height: 1.5rem;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(90, 171, 238, 0.45) 35%,
+    rgba(120, 195, 255, 0.72) 50%,
+    rgba(90, 171, 238, 0.45) 65%,
+    transparent 100%
+  );
+  transform-origin: center top;
+  animation: bd-hero-scroll-line 3.4s ease-in-out infinite;
+}
+
+.bd-hero-scroll-cue__mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  animation: bd-hero-scroll-nudge 3.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bd-hero-scroll-cue__line,
+  .bd-hero-scroll-cue__mark {
+    animation: none;
   }
 }
 

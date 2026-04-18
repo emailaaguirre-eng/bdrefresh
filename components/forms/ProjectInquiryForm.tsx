@@ -84,7 +84,7 @@ export function ProjectInquiryForm() {
           name="message"
           required
           rows={5}
-          placeholder="Context, goals, who uses it, constraints—rough notes are fine."
+          placeholder="Context, goals, who uses it, constraints (rough notes are fine)."
           className="mt-2 min-h-[120px] w-full resize-y rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/12"
         />
       </div>

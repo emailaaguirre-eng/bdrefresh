@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { MagneticLink } from "@/components/effects/MagneticLink";
 import { ProcessPageContent } from "@/components/process/ProcessPageContent";
-import { LightCtaBand } from "@/components/layout/LightCtaBand";
+import { ClosingBand } from "@/components/layout/ClosingBand";
 import { Reveal } from "@/components/motion/Reveal";
 import { PageHero } from "@/components/layout/PageHero";
 import { processPagePhases } from "@/lib/process-page-phases";
@@ -9,7 +9,7 @@ import { processPagePhases } from "@/lib/process-page-phases";
 export const metadata: Metadata = {
   title: "Process",
   description:
-    "Discovery, build, test and launch, and improve — a straightforward rhythm with clear checkpoints and honest communication.",
+    "Discovery, build, test and launch, and improve: a straightforward rhythm with clear checkpoints and honest communication.",
 };
 
 export default function ProcessPage() {
@@ -25,7 +25,7 @@ export default function ProcessPage() {
         lead="A straightforward rhythm: discovery, build, test and launch, improve. You always know what stage you’re in and what comes next."
       />
       <ProcessPageContent phases={processPagePhases} />
-      <LightCtaBand aria-labelledby="process-cta-heading">
+      <ClosingBand deck="alt" aria-labelledby="process-cta-heading">
         <Reveal>
           <h2
             id="process-cta-heading"
@@ -47,7 +47,7 @@ export default function ProcessPage() {
             </svg>
           </MagneticLink>
         </Reveal>
-      </LightCtaBand>
+      </ClosingBand>
     </>
   );
 }

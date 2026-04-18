@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { MagneticLink } from "@/components/effects/MagneticLink";
 import { DarkParticleSection } from "@/components/layout/DarkParticleSection";
-import { LightCtaBand } from "@/components/layout/LightCtaBand";
+import { ClosingBand } from "@/components/layout/ClosingBand";
 import { Reveal } from "@/components/motion/Reveal";
 import { PageHero } from "@/components/layout/PageHero";
 import { WorkPreviewMedia } from "@/components/work/WorkPreviewMedia";
@@ -12,7 +12,7 @@ import { workCases } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Representative problem patterns and illustrative mockups—honest fit signals without client names, screenshots, or invented results.",
+    "Representative problem patterns and illustrative mockups: honest fit signals without client names, screenshots, or invented results.",
 };
 
 const focus = ["Websites", "Web applications", "Internal tools", "Diagnostics", "Platform experiences"];
@@ -24,10 +24,10 @@ export default function WorkPage() {
         eyebrow="Work"
         title={
           <>
-            Real systems, <span className="shimmer-text">selective sharing.</span>
+            Represent<span className="shimmer-text">ative</span> <span className="shimmer-text">work</span>
           </>
         }
-        lead="We build websites, applications, internal tools, and platforms for real operations. The examples below are anonymized patterns: the kinds of systems we build and the kinds of problems they help solve."
+        lead="We build websites, applications, internal tools, and platforms for real operations. The examples below are a small sample of the kinds of systems we build and illustrate the solutions they provide for our clients."
       />
       <section aria-label="Confidentiality and selected use cases">
         <div className="bg-bd-light-bg pt-16 pb-0 md:pt-20">
@@ -87,9 +87,15 @@ export default function WorkPage() {
         <Container>
           <div className="w-full max-w-3xl">
             <Reveal>
-              <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-bd-accent-lighter">
-                Where this work tends to land
-              </p>
+              <h2
+                id="work-focus-heading"
+                className="font-heading text-[clamp(2rem,4vw,2.75rem)] font-extrabold tracking-[-0.025em] text-white"
+              >
+                Where this work{" "}
+                <span className="bd-home-cta-real-glow inline-block">
+                  <span className="bd-home-cta-real-text">tends to land</span>
+                </span>
+              </h2>
               <ul className="mt-6 flex flex-wrap gap-3" role="list">
                 {focus.map((label) => (
                   <li
@@ -123,7 +129,7 @@ export default function WorkPage() {
           </div>
         </Container>
       </section>
-      <LightCtaBand aria-labelledby="work-cta-heading">
+      <ClosingBand deck="alt" aria-labelledby="work-cta-heading">
         <Reveal>
           <h2
             id="work-cta-heading"
@@ -145,7 +151,7 @@ export default function WorkPage() {
             </svg>
           </MagneticLink>
         </Reveal>
-      </LightCtaBand>
+      </ClosingBand>
     </>
   );
 }
