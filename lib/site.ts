@@ -1,5 +1,11 @@
 export const siteName = "B&D Servicing LLC";
 export const siteTagline = "Design. Build. Launch. Improve.";
+
+/** CoDre-X product / studio site (external). */
+export const codreXUrl = "https://www.codre-x.com";
+
+/** Approved raster logo (PNG, transparent). File: `public/bd-servicing-logo.png`. */
+export const brandLogoSrc = "/bd-servicing-logo.png";
 export const defaultDescription =
   "Full-stack development for real operations: custom web applications, internal tools, automation, and API integrations, with clear fit, handoffs, and software you can run.";
 

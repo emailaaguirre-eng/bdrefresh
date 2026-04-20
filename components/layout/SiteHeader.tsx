@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { mainNav } from "@/lib/nav";
+import { brandLogoSrc } from "@/lib/site";
 
 const SCROLL_THRESHOLD = 32;
 
@@ -48,7 +49,13 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-container items-center justify-between gap-4 px-6">
         <Link href="/" className="flex shrink-0 items-center gap-2" aria-label="B&D Servicing home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/bd-logo.svg" alt="" width={160} height={42} className="h-[42px] w-auto brightness-0 invert opacity-90 transition hover:opacity-100" />
+          <img
+            src={brandLogoSrc}
+            alt=""
+            width={320}
+            height={84}
+            className="h-[42px] w-auto opacity-95 transition hover:opacity-100"
+          />
         </Link>
 
         <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Main navigation">

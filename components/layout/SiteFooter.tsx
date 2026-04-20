@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { footerNav } from "@/lib/nav";
-import { siteName, siteTagline } from "@/lib/site";
+import { brandLogoSrc, codreXUrl, siteName, siteTagline } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -11,11 +11,11 @@ export function SiteFooter() {
             <Link href="/" className="inline-block">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/bd-logo.svg"
+                src={brandLogoSrc}
                 alt={siteName}
-                width={160}
-                height={42}
-                className="h-9 w-auto brightness-0 invert opacity-90"
+                width={320}
+                height={84}
+                className="h-9 w-auto opacity-95"
               />
             </Link>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-bd-dark-muted">
@@ -57,7 +57,12 @@ export function SiteFooter() {
           </p>
           <p className="font-sans text-sm text-bd-dark-muted">
             <span className="font-normal">Powered by </span>
-            <Link href="/about#codrex" className="font-semibold text-bd-dark-text hover:underline">
+            <Link
+              href={codreXUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-bd-dark-text hover:underline"
+            >
               CoDre-<span className="text-[#ff3131]">X</span>
             </Link>
             <span className="mx-1.5 text-bd-dark-muted" aria-hidden>

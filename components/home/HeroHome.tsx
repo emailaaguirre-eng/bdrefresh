@@ -21,8 +21,7 @@ const CODE_FLOATS: { text: string; cls: string }[] = [
 ];
 
 /**
- * Legacy index.html `.hero`: infrastructure-style network canvas, parallax aurora wash,
- * scanlines/grid, code-floats, and the headline stack. Particle canvas lives on the closing CTA band.
+ * Home `.hero`: binary rain canvas, parallax aurora wash, scanlines/grid, code-floats, headline stack.
  */
 export function HeroHome() {
   const reduce = useReducedMotion();

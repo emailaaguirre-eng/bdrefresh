@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { CodrexBand } from "@/components/about/CodrexBand";
+import { codreXUrl } from "@/lib/site";
 import { Reveal } from "@/components/motion/Reveal";
 import { Container } from "@/components/ui/Container";
 import { SectionTag } from "@/components/ui/SectionTag";
@@ -132,13 +134,29 @@ export function AboutBody() {
       <CodrexBand>
         <Reveal>
           <h2 id="codrex-heading" className="font-heading text-3xl font-bold text-bd-light-text md:text-4xl">
-            Powered by CoDre-<span className="text-[#ff3131]">X</span>
+            Powered by{" "}
+            <Link
+              href={codreXUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline hover:underline"
+            >
+              CoDre-<span className="text-[#ff3131]">X</span>
+            </Link>
           </h2>
         </Reveal>
         <Reveal className="mt-10 max-w-3xl text-[1.05rem] leading-relaxed text-bd-light-secondary">
           <p>
-            CoDre-X is a division of B&amp;D Servicing representing the company&apos;s premium creative and development
-            work, where thoughtful ideas are shaped into custom digital solutions.
+            <Link
+              href={codreXUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-bd-accent hover:underline"
+            >
+              CoDre-X
+            </Link>{" "}
+            is a division of B&amp;D Servicing representing the company&apos;s premium creative and development work,
+            where thoughtful ideas are shaped into custom digital solutions.
           </p>
         </Reveal>
       </CodrexBand>
