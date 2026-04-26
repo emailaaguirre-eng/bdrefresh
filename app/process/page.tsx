@@ -19,7 +19,9 @@ export default function ProcessPage() {
         eyebrow="Process"
         title={
           <>
-            From idea to <span className="shimmer-text">production</span>
+            <span className="whitespace-nowrap">
+              From idea to <span className="shimmer-text">production</span>
+            </span>
           </>
         }
         lead="A straightforward rhythm: discovery, build, test and launch, improve. You always know what stage you’re in and what comes next."

@@ -23,9 +23,9 @@ export function ServicesPageDetail() {
               A field guide to fit
             </h2>
             <p className="mt-4 max-w-3xl text-lg leading-relaxed text-bd-light-secondary">
-              Skim by headline or read in order. Each block covers who it is for, what a typical scope includes, what
-              &quot;done&quot; tends to look like, and where we reduce common risks, without turning the page into a
-              contract.
+              Not every project needs the same level of structure. Some call for a focused website, others require
+              custom workflows, integrations, dashboards, or tools behind the scenes. We help identify what belongs in
+              the first build, what can come later, and how the pieces should work together.
             </p>
           </Reveal>
         </Container>

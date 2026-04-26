@@ -21,7 +21,7 @@ export default function ServicesPage() {
             What we build <span className="shimmer-text">with you</span>
           </>
         }
-        lead="Seven practice areas, one bar for execution: clear fit, honest tradeoffs, and software your team can run day to day, not a separate pile of mystery phases."
+        lead="Our services cover the visible and behind-the-scenes parts of a digital build: websites, applications, integrations, workflows, dashboards, and ongoing support. The focus is always the same: clear fit, thoughtful execution, and systems your team can understand, use, and improve over time."
       />
       <ServicesPageDetail />
       <ClosingBand deck="alt" aria-labelledby="svc-cta-heading">
