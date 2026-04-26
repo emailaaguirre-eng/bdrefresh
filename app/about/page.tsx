@@ -18,12 +18,10 @@ export default function AboutPage() {
         eyebrow="About"
         title={
           <>
-            Built Beyond Templates.
-            <br />
-            Designed for the <span className="shimmer-text">Way You Work.</span>
+            Built beyond templates, designed for the <span className="shimmer-text">way you work.</span>
           </>
         }
-        lead="End-to-end development with a bias toward clarity, maintainability, and software that still makes sense after launch week."
+        lead="B&D Servicing has been building building digital applications, internal tools, and systems shaped around real business needs."
       />
       <AboutBody />
       <ClosingBand deck="alt" aria-labelledby="about-cta-heading">

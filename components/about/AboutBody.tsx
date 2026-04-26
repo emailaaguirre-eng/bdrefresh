@@ -40,8 +40,9 @@ export function AboutBody() {
                 Built in connected layers
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-bd-light-secondary">
-                B&amp;D Servicing has been building websites, web applications, and digital systems shaped around real
-                business needs for over 10 years.
+                Every digital build has visible and invisible parts. We think through both: what users see, how
+                information moves, where tools connect, and how the system can continue supporting the business after
+                launch.
               </p>
             </Reveal>
 
@@ -88,8 +89,8 @@ export function AboutBody() {
                     />
                     <div className="rounded-2xl border border-bd-light-border bg-gradient-to-br from-white to-bd-light-alt/35 p-5 shadow-card transition duration-300 ease-out will-change-transform hover:-translate-y-0.5 hover:border-bd-accent/30 hover:shadow-card-hover motion-reduce:hover:translate-y-0 md:p-6">
                       <p className="leading-relaxed text-bd-light-secondary">
-                        We are not interested in shipping a brochure and disappearing. We want software your team can run,
-                        extend, and reason about.
+                        We build with handoff, maintenance, and future improvement in mind so the final product is
+                        something your team can understand, manage, and grow over time.
                       </p>
                     </div>
                   </li>

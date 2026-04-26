@@ -18,10 +18,10 @@ export default function WhatWeDoPage() {
         eyebrow="What we do"
         title={
           <>
-            Full-stack development for <span className="shimmer-text">real operations</span>
+            Websites, tools, and integrations that help the <span className="shimmer-text">work move</span>
           </>
         }
-        lead="B&D Servicing is a full-stack development firm with 10+ years of experience building websites, web applications, internal tools, and digital systems shaped around real business needs, not generic templates."
+        lead="End-to-end development with a bias toward clarity, maintainability, and software that still makes sense after launch week."
       />
       <WhatWeDoBody />
       <ClosingBand deck="white" aria-labelledby="wwd-cta-heading">
