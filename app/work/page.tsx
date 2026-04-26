@@ -12,7 +12,7 @@ import { workCases } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Representative examples of the kinds of systems B&D Servicing builds, from websites and web applications to internal tools, diagnostics, and operational systems.",
+    "Our projects reflect the kinds of systems B&D Servicing builds, from websites and web applications to internal tools, diagnostics, and operational systems.",
 };
 
 const focus = ["Websites", "Web applications", "Internal tools", "Diagnostics", "Platform experiences"];
@@ -24,29 +24,13 @@ export default function WorkPage() {
         eyebrow="Work"
         title={
           <>
-            Represent<span className="shimmer-text">ative</span> <span className="shimmer-text">work</span>
+            B&amp;D <span className="shimmer-text">Projects</span>
           </>
         }
         lead="We build websites, applications, internal tools, and platforms for real operations. The examples below are a small sample of the kinds of systems we build and illustrate the solutions they provide for our clients."
       />
-      <section aria-label="Confidentiality and selected use cases">
-        <div className="bg-bd-light-bg pt-16 pb-0 md:pt-20">
-          <Container>
-            <div className="w-full max-w-3xl">
-              <Reveal>
-                <SectionTag>Confidentiality</SectionTag>
-                <h2 id="work-how" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
-                  How we show work
-                </h2>
-                <p className="mt-4 text-lg leading-relaxed text-bd-light-secondary">
-                  Much of our work is internal, pre-release, or under confidentiality. We use illustrative mockups and
-                  pattern-level descriptions rather than client screens or named case studies.
-                </p>
-              </Reveal>
-            </div>
-          </Container>
-        </div>
-        <div className="dot-grid-bg relative overflow-hidden pt-5 pb-16 md:pt-6 md:pb-24" aria-labelledby="work-cases">
+      <section aria-label="Selected use cases with confidentiality context">
+        <div className="dot-grid-bg relative overflow-hidden bg-bd-light-bg pt-16 pb-16 md:pt-20 md:pb-24" aria-labelledby="work-cases">
           <Container className="relative">
             <div className="w-full max-w-3xl">
               <Reveal>
@@ -54,9 +38,9 @@ export default function WorkPage() {
                 <h2 id="work-cases" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
                   Illustrative use cases
                 </h2>
-                <p className="mt-4 text-bd-light-secondary">
-                  Stylized mockups only. The copy stays at pattern level: the kind of problem, the kind of system, and
-                  what usually becomes easier.
+                <p className="mt-4 text-lg leading-relaxed text-bd-light-secondary">
+                  Much of our work is internal, pre-release, or confidential. The examples below are illustrative
+                  mockups and pattern-level descriptions rather than client screens or named case studies.
                 </p>
               </Reveal>
             </div>

@@ -37,11 +37,11 @@ export function AboutBody() {
             <Reveal className="lg:pt-2">
               <SectionTag>Who we are</SectionTag>
               <h2 id="about-who" className="mt-3 font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
-                Full-stack, with the long view
+                Built in connected layers
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-bd-light-secondary">
-                B&amp;D Servicing is a full-stack development firm with over 10 years of experience building websites, web
-                applications, and digital systems tailored to real business needs.
+                B&amp;D Servicing has been building websites, web applications, and digital systems shaped around real
+                business needs for over 10 years.
               </p>
             </Reveal>
 
@@ -133,16 +133,16 @@ export function AboutBody() {
 
       <CodrexBand>
         <Reveal>
-          <h2 id="codrex-heading" className="font-heading text-3xl font-bold text-bd-light-text md:text-4xl">
-            Powered by{" "}
-            <Link
-              href={codreXUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline hover:underline"
-            >
-              CoDre-<span className="text-[#ff3131]">X</span>
-            </Link>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/codrex-logo-v2-blue.png"
+            alt="CoDre-X Concept Realized"
+            width={420}
+            height={138}
+            className="mb-6 h-auto w-full max-w-[340px] md:max-w-[420px]"
+          />
+          <h2 id="codrex-heading" className="sr-only">
+            CoDre-X
           </h2>
         </Reveal>
         <Reveal className="mt-10 max-w-3xl text-[1.05rem] leading-relaxed text-bd-light-secondary">
@@ -151,9 +151,9 @@ export function AboutBody() {
               href={codreXUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-bd-accent hover:underline"
+              className="font-semibold text-bd-light-text hover:underline"
             >
-              CoDre-X
+              CoDre<span className="text-[#678fc6]">-X</span>
             </Link>{" "}
             is a division of B&amp;D Servicing representing the company&apos;s premium creative and development work,
             where thoughtful ideas are shaped into custom digital solutions.

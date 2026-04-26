@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="B&D Servicing LLC - Custom web applications, internal tools, automation, and API integrations. Design. Build. Launch. Improve.">
+    <meta name="keywords" content="web development, custom applications, API integrations, automation, internal tools, Phoenix web developer, B&D Servicing">
+    <title>B&D Servicing LLC | Design. Build. Launch. Improve.</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="shortcut icon" href="assets/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Skip to Content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo">
+                    <img src="assets/logo-main.png" alt="B&D Servicing - Build &amp; Deliver" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu" role="menubar">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#what-we-do" class="nav-link">What We Do</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#process" class="nav-link">Process</a></li>
+                    <li><a href="#values" class="nav-link">About</a></li>
+                    <li><a href="#work" class="nav-link">Work</a></li>
+                    <li><a href="#contact" class="nav-link cta-nav">Start a Project</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="home" aria-label="Introduction">
+        <div class="hero-image-bg" aria-hidden="true"></div>
+        <canvas id="matrixCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-scanline" aria-hidden="true"></div>
+        <div class="hero-decorations" aria-hidden="true">
+            <span class="code-float code-float-1">&lt;/&gt;</span>
+            <span class="code-float code-float-2">{ }</span>
+            <span class="code-float code-float-3">func()</span>
+            <span class="code-float code-float-4">[ ]</span>
+            <span class="code-float code-float-5">&lt;div&gt;</span>
+            <span class="code-float code-float-6">async</span>
+            <span class="code-float code-float-7">=&gt;</span>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" aria-hidden="true">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text" id="badgeText">system.status: online</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Websites and apps,</span>
+                    <span class="title-line">built <span class="shimmer-text">end-to-end.</span></span>
+                </h1>
+                <div class="hero-tagline">
+                    <span class="tagline-item">Design</span>
+                    <span class="tagline-dot"></span>
+                    <span class="tagline-item">Build</span>
+                    <span class="tagline-dot"></span>
+                    <span class="tagline-item">Launch</span>
+                    <span class="tagline-dot"></span>
+                    <span class="tagline-item">Improve</span>
+                </div>
+                <p class="hero-subtitle" id="heroSubtitle" aria-label="B&amp;D Servicing is an end-to-end development firm with 10+ years of experience building websites, web applications, internal tools, and digital systems shaped around real business needs, not generic templates."></p>
+                <noscript>
+                    <p class="hero-subtitle">B&amp;D Servicing is an end-to-end development firm with 10+ years of experience building websites, web applications, internal tools, and digital systems shaped around real business needs, not generic templates.</p>
+                </noscript>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Start a Project</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Bar -->
+    <div class="tech-stack-bar" aria-label="Technologies we use">
+        <div class="tech-stack-track">
+            <div class="tech-stack-inner">
+                <span class="tech-item"><span class="tech-dot"></span>React</span>
+                <span class="tech-item"><span class="tech-dot"></span>Next.js</span>
+                <span class="tech-item"><span class="tech-dot"></span>Node.js</span>
+                <span class="tech-item"><span class="tech-dot"></span>TypeScript</span>
+                <span class="tech-item"><span class="tech-dot"></span>Python</span>
+                <span class="tech-item"><span class="tech-dot"></span>PostgreSQL</span>
+                <span class="tech-item"><span class="tech-dot"></span>REST APIs</span>
+                <span class="tech-item"><span class="tech-dot"></span>GraphQL</span>
+                <span class="tech-item"><span class="tech-dot"></span>AWS</span>
+                <span class="tech-item"><span class="tech-dot"></span>Docker</span>
+                <span class="tech-item"><span class="tech-dot"></span>WordPress</span>
+                <span class="tech-item"><span class="tech-dot"></span>Webhooks</span>
+                <span class="tech-item"><span class="tech-dot"></span>CI/CD</span>
+                <span class="tech-item"><span class="tech-dot"></span>Firebase</span>
+            </div>
+            <div class="tech-stack-inner" aria-hidden="true">
+                <span class="tech-item"><span class="tech-dot"></span>React</span>
+                <span class="tech-item"><span class="tech-dot"></span>Next.js</span>
+                <span class="tech-item"><span class="tech-dot"></span>Node.js</span>
+                <span class="tech-item"><span class="tech-dot"></span>TypeScript</span>
+                <span class="tech-item"><span class="tech-dot"></span>Python</span>
+                <span class="tech-item"><span class="tech-dot"></span>PostgreSQL</span>
+                <span class="tech-item"><span class="tech-dot"></span>REST APIs</span>
+                <span class="tech-item"><span class="tech-dot"></span>GraphQL</span>
+                <span class="tech-item"><span class="tech-dot"></span>AWS</span>
+                <span class="tech-item"><span class="tech-dot"></span>Docker</span>
+                <span class="tech-item"><span class="tech-dot"></span>WordPress</span>
+                <span class="tech-item"><span class="tech-dot"></span>Webhooks</span>
+                <span class="tech-item"><span class="tech-dot"></span>CI/CD</span>
+                <span class="tech-item"><span class="tech-dot"></span>Firebase</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- What We Do Section -->
+    <section class="what-we-do dot-grid-bg" id="what-we-do">
+        <div class="container">
+            <div class="wwd-grid">
+                <div class="wwd-label">
+                    <span class="section-tag"><span class="tag-bracket">[</span> What We Do <span class="tag-bracket">]</span></span>
+                </div>
+                <div class="wwd-content">
+                    <h2 class="section-title">Development-first.<br><span class="text-accent">Outcome-driven.</span></h2>
+                    <p class="wwd-text">B&amp;D Servicing builds modern websites and custom web applications end-to-end, from web design and graphic design to website copywriting and SEO. We handle front-end development, back-end development, databases, integrations, and deployment, so everything works together cleanly. Whether you need a fast small-business website or a scalable web platform, we deliver reliable, maintainable builds that grow with your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="gradient-orb gradient-orb-1" aria-hidden="true"></div>
+        <div class="gradient-orb gradient-orb-2" aria-hidden="true"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><span class="tag-bracket">[</span> Services <span class="tag-bracket">]</span></span>
+                <h2 class="section-title">What We Build</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-animate data-tilt>
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-number">01</div>
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    <h3>Custom Applications</h3>
+                    <p>Web apps and portals built around your workflow, not a one-size-fits-all template.</p>
+                    <div class="card-line" aria-hidden="true"></div>
+                </div>
+                <div class="service-card" data-animate data-tilt>
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-number">02</div>
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    </div>
+                    <h3>Internal Tools</h3>
+                    <p>Dashboards, admin panels, approvals, and reporting tools designed to save time.</p>
+                    <div class="card-line" aria-hidden="true"></div>
+                </div>
+                <div class="service-card" data-animate data-tilt>
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-number">03</div>
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <h3>Automation &amp; API Integrations</h3>
+                    <p>Connect platforms using APIs, webhooks, data sync, imports, deduplication, and automated workflows.</p>
+                    <div class="card-line" aria-hidden="true"></div>
+                </div>
+                <div class="service-card" data-animate data-tilt>
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-number">04</div>
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <h3>Launch &amp; Improve</h3>
+                    <p>Deployment support, performance tuning, monitoring, and iterative enhancements.</p>
+                    <div class="card-line" aria-hidden="true"></div>
+                </div>
+                <div class="service-card" data-animate data-tilt>
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-number">05</div>
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <h3>Web Copy</h3>
+                    <p>Clear, compelling copy that communicates your value and drives visitors to take action.</p>
+                    <div class="card-line" aria-hidden="true"></div>
+                </div>
+                <div class="service-card" data-animate data-tilt>
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-number">06</div>
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    </div>
+                    <h3>Search Engine Optimization</h3>
+                    <p>On-page SEO, keyword strategy, and technical optimization so your site ranks and gets found.</p>
+                    <div class="card-line" aria-hidden="true"></div>
+                </div>
+                <div class="service-card" data-animate data-tilt>
+                    <div class="card-glow" aria-hidden="true"></div>
+                    <div class="service-number">07</div>
+                    <div class="service-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="0.5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r="0.5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r="0.5" fill="currentColor"></circle><circle cx="6.5" cy="12" r="0.5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Logos, brand assets, marketing materials, and visual design that matches your identity.</p>
+                    <div class="card-line" aria-hidden="true"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Build Section -->
+    <section class="process dot-grid-bg" id="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><span class="tag-bracket">[</span> Our Process <span class="tag-bracket">]</span></span>
+                <h2 class="section-title">How We <span class="text-accent">Build</span></h2>
+                <p class="section-subtitle">A clear, repeatable process that keeps you informed at every stage and delivers reliable results.</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-connector" aria-hidden="true">
+                    <div class="process-connector-fill" id="processLine"></div>
+                </div>
+                <div class="process-step" data-animate>
+                    <div class="step-number-ring">
+                        <svg class="step-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    </div>
+                    <span class="step-label">Phase 01</span>
+                    <h3>Discovery</h3>
+                    <p>Understand your goals, map requirements, and plan the architecture.</p>
+                </div>
+                <div class="process-step" data-animate>
+                    <div class="step-number-ring">
+                        <svg class="step-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    <span class="step-label">Phase 02</span>
+                    <h3>Build</h3>
+                    <p>Develop the front-end, back-end, database, and integrations.</p>
+                </div>
+                <div class="process-step" data-animate>
+                    <div class="step-number-ring">
+                        <svg class="step-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <span class="step-label">Phase 03</span>
+                    <h3>Test & Launch</h3>
+                    <p>QA, staging review, deployment, and go-live with monitoring.</p>
+                </div>
+                <div class="process-step" data-animate>
+                    <div class="step-number-ring">
+                        <svg class="step-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"></path><path d="M12 18v4"></path><path d="M4.93 4.93l2.83 2.83"></path><path d="M16.24 16.24l2.83 2.83"></path><path d="M2 12h4"></path><path d="M18 12h4"></path><path d="M4.93 19.07l2.83-2.83"></path><path d="M16.24 7.76l2.83-2.83"></path></svg>
+                    </div>
+                    <span class="step-label">Phase 04</span>
+                    <h3>Improve</h3>
+                    <p>Iterate based on feedback, optimize performance, and scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-bg-effect" aria-hidden="true"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to build <span class="text-accent">something real?</span></h2>
+                <p>Tell us about your project. We'll scope it, plan it, and build it right.</p>
+                <a href="#contact" class="btn btn-primary btn-lg">
+                    <span>Get a Free Quote</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values" id="values">
+        <div class="container">
+            <div class="values-wrapper">
+                <div class="terminal-window" data-animate="left" role="img" aria-label="Terminal showing our core values: one-on-one attention, transparency, clean documentation, and systems that fit your business">
+                    <div class="terminal-header">
+                        <div class="terminal-tab">
+                            <span class="terminal-title-icon">&lt;/&gt;</span>
+                            <span class="terminal-title">Code</span>
+                        </div>
+                        <div class="terminal-controls">
+                            <span class="terminal-ctrl">&#x2500;</span>
+                            <span class="terminal-ctrl">&#x25A1;</span>
+                            <span class="terminal-ctrl terminal-ctrl--close">&#x2715;</span>
+                        </div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">bd deploy</span></div>
+                        <div class="terminal-line t-output t-reveal"></div>
+                        <div class="terminal-line t-output t-reveal"><span class="t-arg">Building release...</span></div>
+                        <div class="terminal-line t-output t-reveal"><span class="t-check">&#x2713;</span> Architecture defined</div>
+                        <div class="terminal-line t-output t-reveal"><span class="t-check">&#x2713;</span> Application developed</div>
+                        <div class="terminal-line t-output t-reveal"><span class="t-check">&#x2713;</span> Tests passing</div>
+                        <div class="terminal-line t-output t-reveal"><span class="t-check">&#x2713;</span> Documentation included</div>
+                        <div class="terminal-line t-output t-reveal"><span class="t-check">&#x2713;</span> Deployed to production</div>
+                        <div class="terminal-line t-output t-reveal"></div>
+                        <div class="terminal-line t-output t-reveal"><span class="t-arg">Running health checks...</span></div>
+                        <div class="terminal-line t-output t-reveal"><span class="t-check">&#x2713;</span> API responding</div>
+                        <div class="terminal-line t-output t-reveal"><span class="t-check">&#x2713;</span> Database connected</div>
+                        <div class="terminal-line t-output t-reveal"><span class="t-check">&#x2713;</span> SSL verified</div>
+                        <div class="terminal-line t-output t-reveal"></div>
+                        <div class="terminal-line t-output t-reveal"><span class="t-key">Status:</span> <span class="t-bool">Live</span> <span class="t-cursor">_</span></div>
+                    </div>
+                </div>
+                <div class="values-text" data-animate="right">
+                    <span class="section-tag"><span class="tag-bracket">[</span> Our Values <span class="tag-bracket">]</span></span>
+                    <h2 class="section-title">Dedicated to Providing<br>Superior <span class="text-accent">Development.</span></h2>
+                    <p>We believe in one-on-one attention for every build so we understand your goals and deliver a system that fits. If you want to understand what's being built and why, we'll guide you through it and provide clean documentation.</p>
+                    <div class="values-metrics">
+                        <div class="metric">
+                            <div class="metric-value" data-count="100">0</div>
+                            <div class="metric-unit">%</div>
+                            <div class="metric-label">Client Satisfaction</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value" data-count="24">0</div>
+                            <div class="metric-unit">/7</div>
+                            <div class="metric-label">Support Available</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value" data-count="50">0</div>
+                            <div class="metric-unit">+</div>
+                            <div class="metric-label">Projects Delivered</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Work Section -->
+    <section class="work dot-grid-bg" id="work">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><span class="tag-bracket">[</span> Selected Work <span class="tag-bracket">]</span></span>
+                <h2 class="section-title">Client-Confidential</h2>
+                <p class="section-subtitle">Many projects involve internal operations or private data, so we don't publicly showcase most builds. Here are examples of what we deliver:</p>
+            </div>
+            <div class="work-grid">
+                <div class="work-item" data-animate>
+                    <div class="work-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                    </div>
+                    <div class="work-content">
+                        <h3>Workflow Systems</h3>
+                        <p>Tools that manage steps, status, approvals, and reporting</p>
+                    </div>
+                </div>
+                <div class="work-item" data-animate>
+                    <div class="work-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    </div>
+                    <div class="work-content">
+                        <h3>Admin Dashboards</h3>
+                        <p>Secure portals for users, settings, and operational controls</p>
+                    </div>
+                </div>
+                <div class="work-item" data-animate>
+                    <div class="work-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <div class="work-content">
+                        <h3>Automation + API Integrations</h3>
+                        <p>Syncing data between platforms, webhooks, imports, dedupe and tagging</p>
+                    </div>
+                </div>
+                <div class="work-item" data-animate>
+                    <div class="work-icon-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                    </div>
+                    <div class="work-content">
+                        <h3>Production Improvements</h3>
+                        <p>Configuration cleanup, stability, and performance hardening</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><span class="tag-bracket">[</span> Contact <span class="tag-bracket">]</span></span>
+                <h2 class="section-title">Start Your Project</h2>
+                <p class="section-subtitle">Tell us about your vision and we'll bring it to life</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <a href="tel:6024569889">602-456-9889</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:info@banddservicing.com">info@banddservicing.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>100% Remote<br>Serving clients nationwide</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <div>
+                            <h3>Availability</h3>
+                            <p>Mon - Fri: 9AM - 6PM<br>Remote support 24/7</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" action="contact/send.php" method="POST" aria-label="Contact form">
+                    <!-- Spam honeypot (hidden from users) -->
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required aria-required="true" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="you@company.com" required aria-required="true" autocomplete="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="custom-app">Custom Application</option>
+                                <option value="internal-tools">Internal Tools</option>
+                                <option value="automation">Automation & API Integration</option>
+                                <option value="launch">Launch & Improve</option>
+                                <option value="web-copy">Web Copy</option>
+                                <option value="seo">Search Engine Optimization</option>
+                                <option value="graphic-design">Graphic Design</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Project *</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Describe your project, goals, and timeline..." required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <a href="#home" class="footer-logo">
+                        <img src="assets/logo-main.png" alt="B&D Servicing" class="footer-logo-img">
+                    </a>
+                    <p class="footer-desc">Modern web software, built end-to-end. Design. Build. Launch. Improve.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#what-we-do">What We Do</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#process">Process</a></li>
+                            <li><a href="#values">About</a></li>
+                            <li><a href="#work">Work</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Custom Applications</a></li>
+                            <li><a href="#services">Internal Tools</a></li>
+                            <li><a href="#services">Automation & APIs</a></li>
+                            <li><a href="#services">Launch & Improve</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="tel:6024569889">602-456-9889</a></li>
+                            <li><a href="mailto:info@banddservicing.com">info@banddservicing.com</a></li>
+                            <li>100% Remote - Nationwide</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="powered-by">
+                    Powered by
+                    <a href="#" class="codrex-link codrex-brand">
+                        <img src="assets/codrex-logo.png" alt="CoDre-X logo" class="codrex-logo-img">
+                        <span>CoDre<span class="codrex-x">-X</span></span>
+                    </a> | B&amp;D Servicing
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Chatbot Widget -->
+    <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open chat assistant" aria-expanded="false">
+        <svg class="chat-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <svg class="close-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+
+    <div class="chatbot-window" id="chatbotWindow" role="dialog" aria-label="Chat assistant">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <div class="chatbot-header-info">
+                <h4>B&D Assistant</h4>
+                <p><span class="online-dot"></span> Online now</p>
+            </div>
+        </div>
+        <div class="chatbot-messages" id="chatMessages"></div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type a message..." autocomplete="off">
+            <button id="chatSendBtn" aria-label="Send message">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="chatbot-knowledge.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -8,7 +8,7 @@ import { PageHero } from "@/components/layout/PageHero";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Built beyond templates. B&D Servicing is full-stack development with a bias toward clarity, maintainability, and software that still makes sense after launch week.",
+    "Built beyond templates. B&D Servicing is end-to-end development with a bias toward clarity, maintainability, and software that still makes sense after launch week.",
 };
 
 export default function AboutPage() {
@@ -23,7 +23,7 @@ export default function AboutPage() {
             Designed for the <span className="shimmer-text">Way You Work.</span>
           </>
         }
-        lead="Full-stack development with a bias toward clarity, maintainability, and software that still makes sense after launch week."
+        lead="End-to-end development with a bias toward clarity, maintainability, and software that still makes sense after launch week."
       />
       <AboutBody />
       <ClosingBand deck="alt" aria-labelledby="about-cta-heading">
