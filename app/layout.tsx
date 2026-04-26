@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Inter, Space_Mono } from "next/font/google";
 import { SiteChrome } from "@/components/layout/SiteChrome";
-import { brandLogoSrc, defaultDescription, getSiteUrl, siteName, siteTagline } from "@/lib/site";
+import { defaultDescription, getSiteUrl, siteName, siteTagline } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -32,8 +32,9 @@ export const metadata: Metadata = {
   },
   description: defaultDescription,
   icons: {
-    icon: brandLogoSrc,
-    apple: brandLogoSrc,
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    shortcut: ["/favicon.png"],
+    apple: [{ url: "/favicon.png", type: "image/png" }],
   },
   openGraph: {
     type: "website",
