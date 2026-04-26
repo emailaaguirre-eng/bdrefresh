@@ -63,7 +63,7 @@ export function SiteFooter() {
               rel="noopener noreferrer"
               className="font-semibold text-white hover:text-white/90 hover:underline"
             >
-              CoDre<span className="text-[#678fc6]">-X</span>
+              CoDre<span className="text-[#6b93c9]">-X</span>
             </Link>
             <span className="mx-1.5 text-bd-dark-muted" aria-hidden>
               |
