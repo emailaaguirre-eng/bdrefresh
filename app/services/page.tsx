@@ -21,7 +21,7 @@ export default function ServicesPage() {
             What we build <span className="shimmer-text">with you</span>
           </>
         }
-        lead="Our services cover the visible and behind-the-scenes parts of a digital build: websites, applications, integrations, workflows, dashboards, and ongoing support. The focus is always the same: clear fit, thoughtful execution, and systems your team can understand, use, and improve over time."
+        lead="Our services cover both the visible and behind-the-scenes parts of a digital build: websites, applications, integrations, workflows, dashboards, and ongoing support. The goal is always to create something that fits the business clearly, works reliably, and can grow without becoming difficult to manage."
       />
       <ServicesPageDetail />
       <ClosingBand deck="alt" aria-labelledby="svc-cta-heading">

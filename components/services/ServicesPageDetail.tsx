@@ -23,9 +23,9 @@ export function ServicesPageDetail() {
               A field guide to fit
             </h2>
             <p className="mt-4 max-w-3xl text-lg leading-relaxed text-bd-light-secondary">
-              Not every project needs the same level of structure. Some call for a focused website, others require
-              custom workflows, integrations, dashboards, or tools behind the scenes. We help identify what belongs in
-              the first build, what can come later, and how the pieces should work together.
+              Every project starts by understanding what needs to happen now and what should be planned for later. We
+              help shape the right first version, prioritize the pieces that matter most, and design the structure so
+              future improvements have a solid place to land.
             </p>
           </Reveal>
         </Container>
