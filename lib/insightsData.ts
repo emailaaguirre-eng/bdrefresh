@@ -26,6 +26,139 @@ const WEBSITE_TYPES_SLUG = "what-type-of-website-is-right-for-your-business";
 
 export const insightPosts: InsightPost[] = [
   {
+    slug: "real-cost-of-free-hosting-managed-support",
+    title: "The Real Cost of Free Hosting: Why Business Websites Need Managed Support",
+    description:
+      "Free hosting can be useful for learning and testing, but business websites need stability, backups, security review, support, and room to grow.",
+    excerpt:
+      "Free hosting can look attractive at first, but business websites often pay the real cost through slow performance, weak recovery options, security gaps, limited support, and lost time.",
+    publishedAt: "2026-06-03",
+    author: { name: "", affiliation: "B&D Servicing" },
+    blocks: [
+      { kind: "p", text: "When you are first launching a website, side project, or new digital venture, the word free can be tempting." },
+      { kind: "p", text: "Free hosting platforms promise to get your site online quickly, often with little or no upfront cost. For learning, testing, or experimenting, that can be useful. But when your website becomes part of your business, free can start carrying hidden costs." },
+      { kind: "p", text: "Those costs usually show up as slow performance, limited control, security gaps, missing backups, poor support, and time spent troubleshooting issues that should have been prevented in the first place." },
+      { kind: "p", text: "For a business website, hosting is not just where your files live. It is part of your business infrastructure." },
+      { kind: "p", text: "At B&D Servicing, we believe managed hosting should give business owners more than server space. It should provide stability, accountability, support, and a clearer path when something needs attention." },
+
+      { kind: "h2", text: "Free hosting has a place" },
+      { kind: "p", text: "Free hosting can be a good starting point for learning basic website development, testing a personal project, creating a temporary landing page, or experimenting before investing in a full setup." },
+      { kind: "p", text: "But a business website has different expectations. Your website may be where customers find you, contact you, read about your services, schedule appointments, submit forms, or decide whether your business looks credible." },
+      { kind: "p", text: "When that website becomes part of your sales, operations, or client communication, the hosting behind it matters." },
+
+      { kind: "h2", text: "1. Performance: your website needs room to breathe" },
+      { kind: "p", text: "Free hosting platforms often place many websites on shared resources. That means your site may be affected by limits you do not control." },
+      { kind: "p", text: "A slow website can create a poor first impression. Visitors may leave before your page finishes loading. Search engines may also view poor performance as a negative signal." },
+      { kind: "p", text: "Managed hosting gives your website a more reliable foundation. Depending on the site and platform, that may include better server configuration, caching, CDN support, image optimization, and performance monitoring." },
+      { kind: "p", text: "The goal is simple: your website should load reliably and give visitors a smooth experience." },
+
+      { kind: "h2", text: "2. Security: hope is not a hosting strategy" },
+      { kind: "p", text: "Security is one of the biggest differences between a casual website setup and a managed hosting approach." },
+      { kind: "p", text: "With free or low-support hosting, the business owner is often responsible for figuring out updates, vulnerabilities, suspicious traffic, malware issues, SSL problems, and recovery steps." },
+      { kind: "p", text: "That can become overwhelming quickly." },
+      { kind: "p", text: "A managed hosting approach should include regular review of important security basics, such as:" },
+      {
+        kind: "ul",
+        items: [
+          "SSL certificate status",
+          "website and platform updates",
+          "backup availability",
+          "basic malware or file exposure checks",
+          "DNS and domain health",
+          "access control review",
+          "security headers where appropriate",
+          "monitoring for common website issues",
+        ],
+      },
+      { kind: "p", text: "Security is not a one-time setup. It is an ongoing responsibility." },
+
+      { kind: "h2", text: "3. Backups: the safety net you hope you never need" },
+      { kind: "p", text: "A website can break for many reasons. An update can fail. A plugin can conflict. A file can be overwritten. A form can stop working. A server issue can cause unexpected downtime." },
+      { kind: "p", text: "Without backups, recovery becomes stressful and expensive." },
+      { kind: "p", text: "Managed hosting should include a clear backup plan. That means knowing:" },
+      {
+        kind: "ul",
+        items: [
+          "how often backups happen",
+          "where backups are stored",
+          "how long backups are retained",
+          "when the last backup completed",
+          "whether a restore process has been tested",
+        ],
+      },
+      { kind: "p", text: "Backups are not glamorous, but they are one of the most important parts of responsible website management." },
+
+      { kind: "h2", text: "4. Ownership and control: your business should not be trapped" },
+      { kind: "p", text: "Free platforms often come with limitations. You may be restricted by a forced subdomain, limited features, ads, platform rules, or a setup that becomes difficult to move later." },
+      { kind: "p", text: "For a business, that can create long-term problems." },
+      { kind: "p", text: "A managed setup should help you maintain better control over your:" },
+      {
+        kind: "ul",
+        items: [
+          "custom domain",
+          "DNS records",
+          "website files",
+          "hosting environment",
+          "email-related records",
+          "security settings",
+          "growth path",
+        ],
+      },
+      { kind: "p", text: "Your website should support your business, not trap it inside someone else's limitations." },
+
+      { kind: "h2", text: "5. Staging and maintenance: changes should not be guesswork" },
+      { kind: "p", text: "Making changes directly on a live website can be risky. A small update can unexpectedly affect layout, forms, checkout, links, or page behavior." },
+      { kind: "p", text: "That is why managed website support often includes a safer workflow for reviewing and testing changes before they affect customers. Depending on the website, this may include a staging environment, backup-before-change process, maintenance logs, or controlled deployment steps." },
+      { kind: "p", text: "For business websites, the goal is not just to make changes. The goal is to make changes carefully." },
+
+      { kind: "h2", text: "6. Support: business-hours help from someone who knows your site" },
+      { kind: "p", text: "Free hosting usually leaves you with help articles, community forums, or automated responses." },
+      { kind: "p", text: "Managed hosting gives you a clearer support path." },
+      { kind: "p", text: "At B&D Servicing, managed support is designed around business-hours technical support, documented troubleshooting, and practical guidance. We do not position standard hosting support as 24/7 coverage." },
+      { kind: "p", text: "For clients who need emergency or after-hours support, that should be handled separately through a defined agreement or support plan." },
+      { kind: "p", text: "That distinction matters because responsible service should be clear, realistic, and honest." },
+
+      { kind: "h2", text: "Free hosting vs. managed hosting" },
+      {
+        kind: "ul",
+        items: [
+          "Cost: free hosting may have no or low upfront cost, while managed hosting is a monthly service investment.",
+          "Domain: free hosting may require a subdomain or platform branding, while managed hosting supports custom domain control.",
+          "Performance: free hosting often has limited resources, while managed hosting allows better configuration, caching, and performance review.",
+          "Security: free hosting is often self-managed, while managed hosting includes ongoing security basics and review.",
+          "Backups: free hosting may have limited, manual, or unavailable backups, while managed hosting includes scheduled backups and recovery planning.",
+          "Support: free hosting often relies on forums, bots, or self-help, while managed hosting provides business-hours technical support.",
+          "Control: free hosting may involve platform restrictions, while managed hosting provides more flexibility and ownership.",
+          "Maintenance: free hosting is mostly do-it-yourself, while managed hosting supports updates, monitoring, and troubleshooting.",
+          "Growth: free hosting can become limiting, while managed hosting is built for a more professional long-term setup.",
+        ],
+      },
+
+      { kind: "h2", text: "When free hosting stops being free" },
+      { kind: "p", text: "Free hosting can be useful when the stakes are low. But when your website supports a business, client relationships, marketing campaigns, online sales, lead generation, or professional credibility, the cost of free can become much higher than expected." },
+      { kind: "p", text: "The real cost may be paid through:" },
+      {
+        kind: "ul",
+        items: [
+          "lost leads",
+          "downtime",
+          "poor customer experience",
+          "security problems",
+          "missing backups",
+          "limited support",
+          "time spent troubleshooting instead of running your business",
+        ],
+      },
+      { kind: "p", text: "Managed hosting is not just a technical upgrade. It is a business decision." },
+      { kind: "p", text: "It gives your website a stronger foundation and gives you someone responsible for helping keep that foundation healthy." },
+
+      { kind: "h2", text: "Is your website hosting helping or holding you back?" },
+      { kind: "p", text: "If your website has become important to your business, it may be time to treat hosting like infrastructure, not an afterthought." },
+      { kind: "p", text: "B&D Servicing can review your website, hosting setup, domain, SSL, backups, and site health to help you understand where things stand and what should be improved." },
+      { kind: "p", text: "Whether you need a simple business website, a managed WordPress setup, a custom application, or a more advanced hosting plan, the right foundation can save time, reduce risk, and help your website support your business more reliably." },
+    ],
+  },
+  {
     slug: WEBSITE_TYPES_SLUG,
     title: "What Type of Website Is Right for Your Business?",
     description:
