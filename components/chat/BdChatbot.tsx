@@ -12,11 +12,25 @@ type ChatLine =
   | { kind: "user"; id: number; text: string }
   | { kind: "options"; id: number; options: Opt[]; disabled: boolean };
 
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function keywordMatches(input: string, key: string): boolean {
+  const normalizedKey = key.toLowerCase().trim();
+
+  if (normalizedKey.length <= 3 && /^[a-z0-9+#.]+$/.test(normalizedKey)) {
+    return new RegExp(`\\b${escapeRegExp(normalizedKey)}\\b`, "i").test(input);
+  }
+
+  return input.includes(normalizedKey);
+}
+
 function matchKeywords(input: string): string {
   const lower = input.toLowerCase().trim();
   for (const row of keywordRows) {
     for (const key of row.keys) {
-      if (lower.includes(key)) return row.response;
+      if (keywordMatches(lower, key)) return row.response;
     }
   }
   return "fallback";

@@ -1,6 +1,57 @@
 [
   {
     "keys": [
+      "website copy",
+      "copywriting",
+      "copy writer",
+      "copywriter",
+      "write copy",
+      "write the copy",
+      "copy for my website",
+      "website content",
+      "content writing",
+      "page copy",
+      "homepage copy",
+      "home page copy",
+      "service page copy",
+      "seo copy",
+      "rewrite content",
+      "rewrite my content",
+      "messaging",
+      "brand messaging",
+      "calls to action",
+      "call to action",
+      "cta"
+    ],
+    "response": "copywriting"
+  },
+  {
+    "keys": [
+      "dns",
+      "domain records",
+      "txt record",
+      "cname",
+      "mx record",
+      "spf",
+      "dkim",
+      "dmarc",
+      "email authentication",
+      "email deliverability",
+      "domain setup",
+      "domain health",
+      "blacklist",
+      "mail records",
+      "google workspace dns",
+      "microsoft 365 dns",
+      "godaddy dns",
+      "cloudflare dns",
+      "nameservers",
+      "name servers"
+    ],
+    "response": "dns"
+  },
+  {
+    "keys": [
       "website",
       "site",
       "web page",
