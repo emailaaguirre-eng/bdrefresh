@@ -112,9 +112,8 @@ export function AboutBody() {
           </Reveal>
 
           <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:gap-6" role="list">
-            {principles.map((item, i) => (
-              <Reveal key={item.title} delay={i * 0.05}>
-                <li
+            {principles.map((item) => (
+                <li key={item.title}
                   className="group relative flex h-full cursor-default flex-col overflow-hidden rounded-2xl border border-bd-light-border bg-white p-6 shadow-card transition duration-300 ease-out will-change-transform hover:-translate-y-1 hover:border-bd-accent/35 hover:shadow-card-hover motion-reduce:hover:translate-y-0 active:translate-y-0 active:shadow-card md:p-7"
                   role="listitem"
                 >
@@ -126,7 +125,6 @@ export function AboutBody() {
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-bd-light-secondary md:text-[0.95rem]">{item.body}</p>
                   <div className="mt-5 h-0.5 w-12 rounded-full bg-gradient-to-r from-bd-accent to-bd-accent-lighter opacity-70" aria-hidden />
                 </li>
-              </Reveal>
             ))}
           </ul>
         </Container>
