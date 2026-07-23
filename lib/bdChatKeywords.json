@@ -1,6 +1,72 @@
 [
   {
     "keys": [
+      "cyber security",
+      "cybersecurity",
+      "cyber-security",
+      "infosec",
+      "information security",
+      "penetration test",
+      "pen test",
+      "pentest",
+      "vulnerability scan",
+      "vuln scan",
+      "security audit",
+      "security assessment",
+      "soc 2",
+      "soc2",
+      "hipaa security",
+      "firewall management",
+      "managed security",
+      "mssp",
+      "siem",
+      "endpoint protection",
+      "antivirus management"
+    ],
+    "response": "cybersecurity"
+  },
+  {
+    "keys": [
+      "website monitoring",
+      "site monitoring",
+      "uptime monitoring",
+      "uptime checks",
+      "ssl monitoring",
+      "availability monitoring",
+      "monitor my website",
+      "monitor my site",
+      "website alerts",
+      "downtime alerts",
+      "monitoring service",
+      "monitoring services",
+      "monitoring"
+    ],
+    "response": "monitoring"
+  },
+  {
+    "keys": [
+      "seo",
+      "search engine",
+      "search engines",
+      "search optimization",
+      "search ranking",
+      "rankings",
+      "google ranking",
+      "show up on google",
+      "appear on google",
+      "organic search",
+      "on-page seo",
+      "on page seo",
+      "technical seo",
+      "local seo",
+      "seo care",
+      "seo package",
+      "seo plan"
+    ],
+    "response": "seo"
+  },
+  {
+    "keys": [
       "website copy",
       "copywriting",
       "copy writer",
@@ -21,9 +87,55 @@
       "brand messaging",
       "calls to action",
       "call to action",
-      "cta"
+      "cta",
+      "web copy"
     ],
     "response": "copywriting"
+  },
+  {
+    "keys": [
+      "graphic design",
+      "logo",
+      "branding",
+      "brand identity",
+      "visual design",
+      "marketing visuals",
+      "brand assets",
+      "flyer",
+      "one-pager",
+      "one pager",
+      "pitch deck",
+      "presentation design"
+    ],
+    "response": "graphic_design"
+  },
+  {
+    "keys": [
+      "managed hosting",
+      "web hosting",
+      "website hosting",
+      "host my site",
+      "host my website",
+      "hosting plan",
+      "where is my site hosted",
+      "server hosting",
+      "hosting"
+    ],
+    "response": "hosting"
+  },
+  {
+    "keys": [
+      "website care",
+      "site care",
+      "website maintenance",
+      "site maintenance",
+      "maintenance plan",
+      "ongoing maintenance",
+      "website updates",
+      "keep my site updated",
+      "care plan"
+    ],
+    "response": "website_care"
   },
   {
     "keys": [
@@ -58,7 +170,9 @@
       "webpage",
       "landing page",
       "homepage",
-      "redesign"
+      "redesign",
+      "new website",
+      "rebuild my site"
     ],
     "response": "websites"
   },
@@ -70,7 +184,9 @@
       "program",
       "platform",
       "portal",
-      "saas"
+      "saas",
+      "custom app",
+      "web application"
     ],
     "response": "custom_app"
   },
@@ -92,9 +208,12 @@
       "automation",
       "automate",
       "workflow",
-      "automated"
+      "automated",
+      "zapier",
+      "make.com",
+      "power automate"
     ],
-    "response": "ai"
+    "response": "automation"
   },
   {
     "keys": [
@@ -107,7 +226,8 @@
       "pricing",
       "rate",
       "charge",
-      "fee"
+      "fee",
+      "starting at"
     ],
     "response": "pricing"
   },
@@ -145,10 +265,9 @@
       "connect",
       "webhook",
       "sync",
-      "data sync",
-      "zapier"
+      "data sync"
     ],
-    "response": "internal_tools"
+    "response": "automation"
   },
   {
     "keys": [
@@ -180,7 +299,8 @@
       "reporting",
       "analytics",
       "internal tool",
-      "crm"
+      "crm",
+      "spreadsheet"
     ],
     "response": "internal_tools"
   },
@@ -255,7 +375,8 @@
       "offer",
       "do you build",
       "can you build",
-      "do you make"
+      "do you make",
+      "what do you offer"
     ],
     "response": "services"
   },

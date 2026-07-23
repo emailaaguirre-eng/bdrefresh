@@ -63,19 +63,23 @@ function WorkCard({ item, delay }: { item: (typeof items)[number]; delay: number
   const card = (
     <article
       ref={tilt.ref}
-      className="bd-work-card flex h-full gap-4 rounded-2xl border border-bd-light-border bg-white p-6 shadow-card"
+      className="bd-work-card flex h-full min-h-0 gap-4 rounded-2xl border border-bd-light-border bg-white p-6 shadow-card"
       {...tilt.handlers}
     >
       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-bd-accent/10 text-bd-accent">{item.icon}</div>
-      <div>
+      <div className="flex min-h-0 flex-1 flex-col">
         <h3 className="font-heading text-lg font-bold text-bd-light-text">{item.title}</h3>
-        <p className="mt-2 text-sm leading-relaxed text-bd-light-secondary">{item.body}</p>
+        <p className="mt-2 flex-1 text-sm leading-relaxed text-bd-light-secondary">{item.body}</p>
       </div>
     </article>
   );
   /* eslint-enable react-hooks/refs */
 
-  return <Reveal delay={delay}>{card}</Reveal>;
+  return (
+    <Reveal delay={delay} className="h-full">
+      {card}
+    </Reveal>
+  );
 }
 
 /** Legacy `#work` grid — 2×2; `bg-white` band in the home white ↔ alt rhythm (see `app/page.tsx`). */
@@ -88,12 +92,12 @@ export function HomeWorkTeaser() {
           <h2 id="home-work-heading" className="font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
             Client-Confidential
           </h2>
-          <p className="mt-4 max-w-2xl text-lg text-bd-light-secondary">
+          <p className="mt-4 text-lg text-bd-light-secondary">
             Many projects involve internal operations or private data, so we don&apos;t publicly showcase most builds.
             Below are representative patterns: illustrative mockups, not client deliverables.
           </p>
         </Reveal>
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid auto-rows-fr gap-6 md:grid-cols-2 md:items-stretch">
           {items.map((item, i) => (
             <WorkCard key={item.title} item={item} delay={i * 0.05} />
           ))}

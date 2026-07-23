@@ -5,6 +5,7 @@ import { ClosingBand } from "@/components/layout/ClosingBand";
 import { Reveal } from "@/components/motion/Reveal";
 import { PageHero } from "@/components/layout/PageHero";
 import { WorkPreviewMedia } from "@/components/work/WorkPreviewMedia";
+import { ThroughLineSection } from "@/components/work/ThroughLineSection";
 import { Container } from "@/components/ui/Container";
 import { SectionTag } from "@/components/ui/SectionTag";
 import { workCases } from "@/lib/data";
@@ -32,7 +33,7 @@ export default function WorkPage() {
       <section aria-label="Selected use cases with confidentiality context">
         <div className="dot-grid-bg relative overflow-hidden bg-bd-light-bg pt-16 pb-16 md:pt-20 md:pb-24" aria-labelledby="work-cases">
           <Container className="relative">
-            <div className="w-full max-w-3xl">
+            <div className="w-full">
               <Reveal>
                 <SectionTag>Selected Use Cases</SectionTag>
                 <h2 id="work-cases" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
@@ -49,7 +50,7 @@ export default function WorkPage() {
                 <Reveal key={item.n} delay={i * 0.05} className="h-full">
                   <article className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-bd-light-border bg-white shadow-card transition hover:border-bd-accent/20 hover:shadow-card-hover">
                     <figure className="bd-work-preview shrink-0">
-                      <figcaption className="bd-work-preview__label">Illustrative mockup</figcaption>
+                      <figcaption className="bd-work-preview__label">Concept mockup</figcaption>
                       <div className="bd-work-preview__media">
                         <WorkPreviewMedia src={item.image} alt={item.alt} useObject={item.useObject} />
                       </div>
@@ -95,24 +96,7 @@ export default function WorkPage() {
           </div>
         </Container>
       </DarkParticleSection>
-      <section className="dot-grid-bg py-16 md:py-20" aria-labelledby="work-close">
-        <Container>
-          <div className="w-full max-w-3xl">
-            <Reveal>
-              <SectionTag>Closing note</SectionTag>
-              <h2 id="work-close" className="font-heading text-3xl font-bold md:text-4xl text-bd-light-text">
-                The through-line
-              </h2>
-            </Reveal>
-            <Reveal className="mt-8 text-lg text-bd-light-secondary">
-              <p>
-                The through-line is consistent: software shaped around how work actually runs, with clearer ownership,
-                fewer brittle handoffs, and room to improve after launch.
-              </p>
-            </Reveal>
-          </div>
-        </Container>
-      </section>
+      <ThroughLineSection />
       <ClosingBand deck="alt" aria-labelledby="work-cta-heading">
         <Reveal>
           <h2

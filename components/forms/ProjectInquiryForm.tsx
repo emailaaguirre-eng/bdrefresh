@@ -64,12 +64,14 @@ export function ProjectInquiryForm() {
             defaultValue=""
           >
             <option value="">Select a service</option>
-            <option value="custom-app">Custom Application</option>
-            <option value="internal-tools">Internal Tools</option>
-            <option value="automation">Automation &amp; API Integration</option>
-            <option value="launch">Launch &amp; Improve</option>
+            <option value="website-builds">Website Builds</option>
+            <option value="custom-app">Custom Web Applications</option>
+            <option value="internal-tools">Internal Tools &amp; Dashboards</option>
+            <option value="automation">Automation &amp; API Integrations</option>
+            <option value="managed-hosting">Managed Hosting</option>
+            <option value="website-care">Website Care</option>
+            <option value="seo">SEO</option>
             <option value="web-copy">Web Copy</option>
-            <option value="seo">Search Engine Optimization</option>
             <option value="graphic-design">Graphic Design</option>
             <option value="other">Other</option>
           </select>

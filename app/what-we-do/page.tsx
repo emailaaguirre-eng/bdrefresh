@@ -8,7 +8,7 @@ import { WhatWeDoBody } from "@/components/what-we-do/WhatWeDoBody";
 export const metadata: Metadata = {
   title: "What We Do",
   description:
-    "Full-stack development for real operations: custom websites, applications, internal tools, and systems shaped around business needs.",
+    "Development-first, outcome-driven work: end-to-end ownership from design through deployment, shaped around how your team actually operates.",
 };
 
 export default function WhatWeDoPage() {
@@ -18,10 +18,10 @@ export default function WhatWeDoPage() {
         eyebrow="What we do"
         title={
           <>
-            Websites, tools, and integrations that help the <span className="shimmer-text">work move</span>
+            Clear ownership. Software that still makes sense <span className="shimmer-text">after launch</span>
           </>
         }
-        lead="End-to-end development with a bias toward clarity, maintainability, and software that still makes sense after launch week."
+        lead="We clarify the outcome, shape the system around real operations, and keep design, engineering, and deployment on one thread—so the result holds up in day-to-day use."
       />
       <WhatWeDoBody />
       <ClosingBand deck="white" aria-labelledby="wwd-cta-heading">
@@ -30,7 +30,7 @@ export default function WhatWeDoPage() {
             id="wwd-cta-heading"
             className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
           >
-            Talk through your <span className="text-bd-accent">next build</span>
+            Talk through your <span className="text-bd-accent">next step</span>
           </h2>
           <p className="mt-4 text-[1.05rem] leading-relaxed text-bd-light-secondary">
             Share where you are today and where you want to be. We&apos;ll help you map a sensible path.

@@ -1,9 +1,9 @@
 {
   "greeting": {
-    "text": "Hi! I'm the B&D Servicing assistant. I can help you learn about what we build and whether we're a good fit for your project. What can I help with?",
+    "text": "Hi! I'm the B&D Servicing assistant. I can help you learn about what we offer and whether we're a good fit. What can I help with?",
     "options": [
       {
-        "label": "What do you build?",
+        "label": "What do you offer?",
         "action": "services"
       },
       {
@@ -21,19 +21,23 @@
     ]
   },
   "services": {
-    "text": "We build a wide range of digital solutions:\n\n\u2022 Custom websites & web applications\n\u2022 Web-based programs (portals, dashboards, SaaS)\n\u2022 Desktop & local applications\n\u2022 AI Agents & AI-powered tools\n\u2022 API integrations & automation\n\u2022 Database design & data systems\n\u2022 E-commerce solutions\n\nWant to know more about a specific area?",
+    "text": "Here's what we offer:\n\n• Website builds\n• Custom web applications\n• Internal tools & dashboards\n• Automation & API integrations\n• Managed hosting\n• Website monitoring\n• Website care\n• SEO\n• Web copy\n• Graphic design\n\nAsk about any of these, or tell us what you're trying to get done.",
     "options": [
       {
-        "label": "Websites & web apps",
+        "label": "Websites & apps",
         "action": "websites"
       },
       {
-        "label": "AI & automation",
-        "action": "ai"
+        "label": "SEO",
+        "action": "seo"
       },
       {
-        "label": "Internal tools & dashboards",
-        "action": "internal_tools"
+        "label": "Hosting & care",
+        "action": "hosting"
+      },
+      {
+        "label": "Copy & design",
+        "action": "graphic_design"
       },
       {
         "label": "Something else",
@@ -42,8 +46,12 @@
     ]
   },
   "websites": {
-    "text": "Absolutely \u2014 we design and build custom websites and web applications from the ground up. Whether it's a professional business site, a client portal, a booking platform, or a full SaaS product, we handle everything from design to deployment.",
+    "text": "Yes — we design and build professional business websites and marketing sites from the ground up: clear structure, design, content placement, and a clean handoff to hosting or ongoing care.",
     "options": [
+      {
+        "label": "Custom web apps?",
+        "action": "custom_app"
+      },
       {
         "label": "What about e-commerce?",
         "action": "ecommerce"
@@ -58,12 +66,110 @@
       }
     ]
   },
-  "ai": {
-    "text": "Yes! We build AI Agents, intelligent chatbots, automated workflows, and custom AI-powered tools. These solutions help businesses automate repetitive tasks, process information faster, and deliver better experiences to their customers.",
+  "seo": {
+    "text": "Yes — we offer SEO to help search engines and visitors understand your site. That includes technical structure, on-page hygiene, and optional ongoing SEO care so search readiness stays on track.\n\nOngoing SEO care starts at $199 per month. Exact fit depends on your site and goals — we're happy to quote after a short conversation. Rankings are not guaranteed.",
     "options": [
       {
-        "label": "What kind of AI agents?",
-        "action": "ai_detail"
+        "label": "Get a quote",
+        "action": "contact"
+      },
+      {
+        "label": "Other services",
+        "action": "services"
+      }
+    ]
+  },
+  "hosting": {
+    "text": "Yes — we offer managed hosting for production websites: a managed environment, SSL, backups, and business-hours support so your live site is treated like an operating asset.\n\nManaged hosting starts at $149 per month. Final pricing depends on the site and needs. Website monitoring is also available alongside hosting if you want checks and alerts for the live site.",
+    "options": [
+      {
+        "label": "Website monitoring?",
+        "action": "monitoring"
+      },
+      {
+        "label": "Website care?",
+        "action": "website_care"
+      },
+      {
+        "label": "Get a quote",
+        "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "monitoring": {
+    "text": "Yes — we offer website monitoring services that can go along with managed hosting, so you have checks and alerts for the live site.\n\nFill out the contact form and the team can walk you through options that fit your setup.",
+    "options": [
+      {
+        "label": "Go to contact form",
+        "action": "scroll_contact"
+      },
+      {
+        "label": "Managed hosting?",
+        "action": "hosting"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "cybersecurity": {
+    "text": "B&D Servicing does not provide cybersecurity services.\n\nWe do work with third-party companies we can recommend when that kind of help is needed. Fill out the contact form and the team can share those options.",
+    "options": [
+      {
+        "label": "Go to contact form",
+        "action": "scroll_contact"
+      },
+      {
+        "label": "What do you offer?",
+        "action": "services"
+      }
+    ]
+  },
+  "website_care": {
+    "text": "Yes — Website Care is ongoing maintenance and health checks so updates, uptime, and routine issues are handled before they become emergencies. It's a good fit after launch when you want clear ownership of who watches the site.\n\nPlans are quoted based on the site and support level you need.",
+    "options": [
+      {
+        "label": "Managed hosting?",
+        "action": "hosting"
+      },
+      {
+        "label": "Get a quote",
+        "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "graphic_design": {
+    "text": "Yes — we offer graphic design for logos, brand assets, and marketing visuals that feel like the same company as your website or product — not a separate look bolted on later.\n\nWe also write web copy when you need clear messaging: who it's for, what changes, and what to do next.",
+    "options": [
+      {
+        "label": "Web copy",
+        "action": "copywriting"
+      },
+      {
+        "label": "Get a quote",
+        "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "ai": {
+    "text": "Yes — we build practical automation and AI-assisted tools when they solve a real business problem: chatbots, workflow helpers, and custom tools that reduce repetitive work. Scope and pricing depend on what you need done.",
+    "options": [
+      {
+        "label": "Automation & integrations",
+        "action": "automation"
       },
       {
         "label": "Get a quote",
@@ -76,10 +182,27 @@
     ]
   },
   "ai_detail": {
-    "text": "Our AI solutions range from customer-facing chatbots and virtual assistants to behind-the-scenes agents that handle data processing, content generation, workflow automation, and intelligent decision-making. We build practical AI that solves real business problems.",
+    "text": "Typical examples include customer-facing assistants, internal helpers for routine tasks, and workflow automation that moves data or triggers follow-ups. We focus on practical outcomes — not buzzwords. A short conversation is the best way to see if AI or simpler automation is the right fit.",
     "options": [
       {
-        "label": "Start a project",
+        "label": "Start a conversation",
+        "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "automation": {
+    "text": "Yes — we connect systems with APIs, webhooks, and automations so tools stay in sync without copy-paste. That can include CRM updates, form routing, imports, and guarded jobs between platforms.",
+    "options": [
+      {
+        "label": "Internal tools?",
+        "action": "internal_tools"
+      },
+      {
+        "label": "Get a quote",
         "action": "contact"
       },
       {
@@ -89,7 +212,7 @@
     ]
   },
   "internal_tools": {
-    "text": "This is one of our specialties. We build admin dashboards, approval workflows, reporting tools, CRM integrations, and internal management platforms. Everything is custom-built to match exactly how your team operates.",
+    "text": "Yes — we build internal tools and dashboards for teams stuck in spreadsheets and email: approvals, reporting, and admin views with permissions that match how your team actually works.",
     "options": [
       {
         "label": "Get a quote",
@@ -102,7 +225,7 @@
     ]
   },
   "ecommerce": {
-    "text": "We build e-commerce solutions including custom online stores, payment processing, inventory management, and order tracking. Whether you need a full storefront or e-commerce features added to an existing platform, we can help.",
+    "text": "Yes — we can build or extend e-commerce experiences: online stores, payments, and order-related flows. Scope varies widely, so we quote after understanding products, payments, and how you fulfill orders.",
     "options": [
       {
         "label": "Get a quote",
@@ -115,19 +238,23 @@
     ]
   },
   "project_help": {
-    "text": "We'd love to help! What type of project are you thinking about?",
+    "text": "Happy to help. What are you looking for?",
     "options": [
       {
-        "label": "I need a website",
+        "label": "A website",
         "action": "websites"
       },
       {
-        "label": "I need a custom app",
-        "action": "custom_app"
+        "label": "SEO",
+        "action": "seo"
       },
       {
-        "label": "I need automation or AI",
-        "action": "ai"
+        "label": "Hosting or care",
+        "action": "hosting"
+      },
+      {
+        "label": "A custom app or tool",
+        "action": "custom_app"
       },
       {
         "label": "I'm not sure yet",
@@ -136,11 +263,11 @@
     ]
   },
   "custom_app": {
-    "text": "We build custom applications of all kinds \u2014 web-based programs, desktop software, portals, dashboards, and full platforms. We handle the entire stack: user interface, back-end logic, database, integrations, and deployment.",
+    "text": "Yes — we build custom web applications and portals when templates aren't enough: logins, roles, workflows, and data shaped around how your business actually operates. Pricing depends on scope.",
     "options": [
       {
-        "label": "Desktop apps too?",
-        "action": "desktop"
+        "label": "Internal tools?",
+        "action": "internal_tools"
       },
       {
         "label": "Get a quote",
@@ -153,7 +280,7 @@
     ]
   },
   "desktop": {
-    "text": "Yes \u2014 we build local desktop applications for Windows and Mac in addition to web-based solutions. Whether you need a standalone tool or a system that connects to your web platform, we've got it covered.",
+    "text": "Yes — in addition to web apps, we can build desktop tools for Windows and Mac when a local application is the better fit. Most business needs are solved with web apps; we'll recommend the simpler path when it works.",
     "options": [
       {
         "label": "Get a quote",
@@ -166,7 +293,7 @@
     ]
   },
   "not_sure": {
-    "text": "No problem at all! That's what our free consultation is for. Just tell us about your business challenge or idea, and we'll help you figure out the best approach. Zero commitment \u2014 just a conversation.",
+    "text": "No problem. A short conversation is often the fastest way to figure out the right approach. Tell us about the business challenge or idea — no obligation.",
     "options": [
       {
         "label": "Fill out contact form",
@@ -179,11 +306,15 @@
     ]
   },
   "pricing": {
-    "text": "Every project is unique, so we provide custom quotes based on your specific needs. Our custom applications start at $1,499. We offer free consultations where we scope your project and give you a detailed estimate \u2014 no obligation.",
+    "text": "Most work is scoped to your needs, so we quote after a short conversation. A few public starting points:\n\n• SEO care — starting at $199/month\n• Managed hosting — starting at $149/month\n\nWebsite builds, custom apps, copy, design, and website care are quoted based on scope. Free consultation — no obligation. Rankings and results are never guaranteed.",
     "options": [
       {
         "label": "How long do projects take?",
         "action": "timeline"
+      },
+      {
+        "label": "Ask about SEO",
+        "action": "seo"
       },
       {
         "label": "Get a free quote",
@@ -196,7 +327,7 @@
     ]
   },
   "timeline": {
-    "text": "Timelines depend on the scope. A standard website is typically ready in 2\u20134 weeks. Custom applications usually take 4\u20138 weeks. More complex builds may run longer. We'll give you a clear timeline during our initial consultation.",
+    "text": "Timelines depend on scope. A standard website is often a few weeks. Custom applications usually take longer. We'll give you a clear estimate during the initial conversation.",
     "options": [
       {
         "label": "Get started",
@@ -209,8 +340,16 @@
     ]
   },
   "other_service": {
-    "text": "We're flexible and enjoy solving unique challenges. If your project doesn't fit neatly into a box, reach out anyway \u2014 chances are we can help. We've built everything from data migration tools to custom API bridges to AI-powered workflows.",
+    "text": "If your need doesn't fit a neat label, reach out anyway. We also help with DNS and email setup, website monitoring, integrations, and other digital workflow problems. A quick message is the best way to check fit.\n\nNote: we do not provide cybersecurity services, but we can recommend trusted third parties when needed.",
     "options": [
+      {
+        "label": "Website monitoring",
+        "action": "monitoring"
+      },
+      {
+        "label": "DNS / email setup",
+        "action": "dns"
+      },
       {
         "label": "Contact us",
         "action": "contact"
@@ -222,7 +361,7 @@
     ]
   },
   "contact": {
-    "text": "Great choice! The best way to get started is through our contact form. The team at B&D will review your message and get back to you within 24 hours.",
+    "text": "Great — the best next step is our contact form. The B&D team reviews messages and typically responds within 24 hours.",
     "options": [
       {
         "label": "Go to contact form",
@@ -239,23 +378,23 @@
     ]
   },
   "technical": {
-    "text": "We use modern, industry-standard technologies specifically chosen for each project. Rather than getting into the technical weeds here, we'd love to discuss the best approach for your specific needs in a free consultation.",
+    "text": "We use modern, industry-standard tools chosen for each project. Rather than listing a long tech stack here, we'd rather talk through the best approach for your needs in a free consultation.",
     "options": [
       {
         "label": "Schedule a consultation",
         "action": "contact"
       },
       {
-        "label": "What do you build?",
+        "label": "What do you offer?",
         "action": "services"
       }
     ]
   },
   "fallback": {
-    "text": "I may need a little more detail, but B&D helps with websites, applications, integrations, hosting, SEO support, content updates, DNS/email setup, and digital workflows. You can ask about a specific service or request a quote.",
+    "text": "I may need a little more detail. B&D offers website builds, custom web apps, internal tools, automation, managed hosting, website monitoring, website care, SEO, web copy, and graphic design. You can ask about a specific service or request a quote.",
     "options": [
       {
-        "label": "What do you build?",
+        "label": "What do you offer?",
         "action": "services"
       },
       {
@@ -269,48 +408,32 @@
     ]
   },
   "copywriting": {
-    "text": "Yes. B&D can help with website copy and copywriting for website projects, including homepage copy, service descriptions, about pages, calls to action, SEO-friendly page content, and refining existing content so it sounds clear, professional, and aligned with your business.\n\nWe can write copy as part of a website build or help refine copy for an existing site.",
+    "text": "Yes — we write and refine website copy: homepage messaging, service pages, about pages, calls to action, and clearer existing content. Copy can ship with a new build or as a standalone refresh.",
     "options": [
       {
-        "label": "Help me write my website copy",
-        "action": "contact"
-      },
-      {
-        "label": "Do you provide SEO copy?",
-        "action": "copywriting"
-      },
-      {
-        "label": "Can you rewrite existing content?",
-        "action": "copywriting"
+        "label": "Graphic design too?",
+        "action": "graphic_design"
       },
       {
         "label": "Get a quote",
         "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
       }
     ]
   },
   "dns": {
-    "text": "Yes. B&D can help with DNS-related website and email setup, including TXT, CNAME, MX, SPF, DKIM, and DMARC records. We can also help review domain health, troubleshoot email authentication issues, and document the changes made.\n\nDNS work can range from a simple record update to a full audit and remediation, depending on the number of domains, sending tools, and issues involved.",
+    "text": "Yes — we help with DNS and email-related setup (records like TXT, CNAME, MX, SPF, DKIM, and DMARC), domain health checks, and deliverability troubleshooting. Scope depends on how many domains and tools are involved.",
     "options": [
-      {
-        "label": "SPF/DKIM/DMARC setup",
-        "action": "dns"
-      },
-      {
-        "label": "DNS record update",
-        "action": "dns"
-      },
-      {
-        "label": "Domain health audit",
-        "action": "dns"
-      },
-      {
-        "label": "Email deliverability help",
-        "action": "dns"
-      },
       {
         "label": "Get a quote",
         "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
       }
     ]
   }

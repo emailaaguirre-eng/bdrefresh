@@ -103,90 +103,25 @@ const glossary = glossaryRaw.map(([term, definition, why]) => ({
   keys: extraKeys[term] || []
 }));
 
-const serviceMenu = `WEBSITES & DIGITAL PRESENCE
-- Website Consultation / Discovery: $250-$1,500
-- Landing Page: $750-$2,500
-- Website Refresh: $1,500-$6,000
-- Professional Business Website: $3,500-$12,000+
-- Premium Custom Website: $8,500-$25,000+
-- E-Commerce Website: $3,000-$30,000+
-- Website Redesign & Rebuild: $5,000-$25,000+
-- Advanced Website Build: $1,500-$30,000+
-- Website Migration: $750-$5,000+
+// Client-facing only: what we offer + a few public starting prices.
+// Do not list full internal rate cards, tier ladders, or proprietary package detail.
+const serviceMenu = `WHAT WE OFFER
+- Website builds — professional business and marketing sites
+- Custom web applications — portals and apps shaped around your workflows
+- Internal tools & dashboards — approvals, reporting, and team systems
+- Automation & API integrations — keep tools in sync without copy-paste
+- Managed hosting — starting at $149/month
+- Website monitoring — checks and alerts for the live site (ask for details)
+- Website care — ongoing maintenance and health checks (quoted to fit)
+- SEO — technical and on-page care; ongoing SEO care starting at $199/month
+- Web copy — clear messaging for pages and calls to action
+- Graphic design — logos, brand assets, and marketing visuals
 
-BRANDING, DESIGN & CONTENT
-- Logo Cleanup / Refinement: $250-$1,500
-- Logo Design: $750-$3,500+
-- Brand Identity Starter Kit: $1,500-$5,000+
-- Website Copywriting: $500-$5,000+
-- Service Page Copy: $250-$1,500 per page
-- SEO Page Copy: $500-$2,500 per page
-- Graphics / Web Assets: $250-$3,500+
-- Pitch Deck / Presentation Design: $750-$7,500+
-- One-Pagers / Fact Sheets: $250-$1,500 each
+Also available when needed: DNS/email setup, monitoring, and project consulting.
 
-SEO & DIGITAL VISIBILITY
-- Basic SEO Setup: $500-$2,500
-- Technical SEO Audit: $750-$3,500
-- Local SEO Setup: $750-$3,500
-- SEO Content Plan: $750-$4,500
-- Blog / Article Optimization: $250-$1,000 per post
-- Monthly SEO Support: $750-$5,000+/mo
-
-CUSTOM APPLICATIONS & INTERNAL SYSTEMS
-- Custom Web Application: $8,500-$35,000+
-- Internal Business Tool: $5,000-$25,000+
-- Admin Dashboard: $5,000-$30,000+
-- Client Portal: $8,500-$40,000+
-- Form-Based Workflow System: $3,500-$20,000+
-- Document Generation System: $4,500-$25,000+
-- Reporting Dashboard: $5,000-$30,000+
-- Quote Builder / Pricing Tool: $7,500-$35,000+
-
-INTEGRATIONS & AUTOMATION
-- Workflow Automation: $1,500-$15,000+
-- Power Automate Workflow: $750-$7,500+
-- Zapier / Make Automation: $500-$5,000+
-- CRM Integration: $2,500-$20,000+
-- API Integration: $2,500-$25,000+
-- Email / Form Routing: $500-$5,000
-- Data Import / Migration: $750-$15,000+
-- Spreadsheet-to-System Workflow: $2,500-$20,000+
-
-HOSTING, MAINTENANCE & SITE MANAGEMENT
-- Basic Hosting Setup: $250-$1,500
-- Website Launch Support: $500-$3,500
-- Monthly Website Care: $250-$1,500+/mo
-- Managed Hosting & Support: $500-$3,500+/mo
-- Emergency Website Support: $150-$250/hr or scoped
-- Content Updates: $100-$200/hr
-- Website Security Review: $500-$3,500
-- Backup / Recovery Setup: $250-$2,500
-
-EMAIL, DOMAIN & DELIVERABILITY SUPPORT
-- Business Email Setup: $250-$2,500
-- Domain DNS Configuration: $250-$2,500
-- SPF / DKIM / DMARC Setup: $500-$3,500
-- DMARC Monitoring Setup: $500-$2,500
-- Email Deliverability Review: $750-$5,000+
-- Email Platform Configuration: $750-$7,500+
-- Cold Email Infrastructure Advisory: $1,500-$7,500+
-
-APP DEVELOPMENT
-- Progressive Web App: $7,500-$35,000+
-- Mobile-Friendly Business App: $8,500-$40,000+
-- iOS / Android App Planning: $1,500-$7,500
-- iOS / Android App Development: $20,000-$100,000+
-- App Prototype / MVP: $7,500-$35,000+
-- App Maintenance: $500-$5,000+/mo
-
-CONSULTING, STRATEGY & PROJECT SUPPORT
-- Technical Consultation: $150-$250/hr
-- Project Scoping: $750-$5,000+
-- System Audit: $750-$7,500+
-- Vendor / Platform Evaluation: $500-$3,500
-- Fractional Web / Technical Support: $1,500-$7,500+/mo
-- Training / Documentation: $500-$5,000+`;
+Notes: Final quotes depend on scope. Rankings and results are not guaranteed.
+B&D Servicing does not provide cybersecurity services; we can recommend third-party partners when needed.
+Ask for a free consultation for a tailored estimate.`
 
 const payload = { glossary, serviceMenu };
 const out = `window.BD_CHATBOT_KNOWLEDGE = ${JSON.stringify(payload)};\n`;

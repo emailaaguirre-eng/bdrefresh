@@ -47,17 +47,17 @@ function BuildStackPill({ label }: { label: string }) {
 }
 
 /**
- * What We Do body: What we build (stack pills + body) + Who we help cards.
+ * What We Do body: How we ship (stack pills + posture) + Who we help cards.
  */
 export function WhatWeDoBody() {
   return (
     <>
-      <section className="dot-grid-bg py-16 md:py-24" aria-labelledby="wwd-build">
+      <section className="dot-grid-bg py-16 md:py-24" aria-labelledby="wwd-ship">
         <Container>
           <div className="mx-auto max-w-3xl">
             <Reveal>
-              <SectionTag>What we build</SectionTag>
-              <h2 id="wwd-build" className="mt-3 font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl lg:text-[2.35rem] lg:leading-tight">
+              <SectionTag>How we ship</SectionTag>
+              <h2 id="wwd-ship" className="mt-3 font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl lg:text-[2.35rem] lg:leading-tight">
                 Software that fits the work
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-bd-light-secondary">We design and ship end-to-end:</p>
@@ -77,8 +77,8 @@ export function WhatWeDoBody() {
                     across tools.
                   </p>
                   <p>
-                    That’s where we focus: custom applications, internal dashboards, automation, and public-facing sites
-                    when they need to perform, not just look passable in a demo.
+                    That’s the posture behind every engagement: clarify the outcome, own the thread from design through
+                    deployment, and leave something the team can run day to day—not a demo that only works at launch.
                   </p>
                 </div>
               </div>
@@ -102,7 +102,7 @@ export function WhatWeDoBody() {
             <h2 id="wwd-help" className="mt-3 font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
               Teams outgrowing off-the-shelf tools
             </h2>
-            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-bd-light-secondary">
+            <p className="mt-6 text-lg leading-relaxed text-bd-light-secondary">
               Whether you’re a small business that needs a fast, credible web presence or a growing company investing in
               internal platforms, we scope to outcomes: fewer manual steps, clearer reporting, and software your team will
               actually use.
@@ -141,10 +141,10 @@ export function WhatWeDoBody() {
           <Reveal className="mt-12" delay={0.08}>
             <div className="border-t border-bd-light-border/80 pt-8">
               <Link
-                href="/start-project"
+                href="/services"
                 className="inline-flex text-sm font-semibold text-bd-accent transition hover:text-bd-accent-dark"
               >
-                Start a conversation →
+                See what we offer →
               </Link>
             </div>
           </Reveal>

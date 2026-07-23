@@ -8,7 +8,7 @@ import { ServicesPageDetail } from "@/components/services/ServicesPageDetail";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "A practical buying guide: custom apps, internal tools, integrations, launch and improve, copy, SEO, and design, who each is for, typical scope, and where risk drops.",
+    "What we offer: website builds, custom web applications, internal tools, integrations, managed hosting, website care, SEO, copy, and design.",
 };
 
 export default function ServicesPage() {
@@ -18,10 +18,10 @@ export default function ServicesPage() {
         eyebrow="Services"
         title={
           <>
-            What we build <span className="shimmer-text">with you</span>
+            What we <span className="shimmer-text">offer</span>
           </>
         }
-        lead="Our services cover both the visible and behind-the-scenes parts of a digital build: websites, applications, integrations, workflows, dashboards, and ongoing support. The goal is always to create something that fits the business clearly, works reliably, and can grow without becoming difficult to manage."
+        lead="Website builds, custom applications, internal tools, integrations, managed hosting, website care, SEO, copy, and design—scoped to fit the business clearly, run reliably, and grow without becoming hard to manage."
       />
       <ServicesPageDetail />
       <ClosingBand deck="alt" aria-labelledby="svc-cta-heading">
@@ -30,7 +30,7 @@ export default function ServicesPage() {
             id="svc-cta-heading"
             className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
           >
-            Not sure which <span className="text-bd-accent-lighter">service fits</span>?
+            Not sure which <span className="text-bd-accent-lighter">offer fits</span>?
           </h2>
           <p className="mt-4 text-[1.05rem] leading-relaxed text-bd-light-secondary">
             Describe the problem. We&apos;ll recommend a sane starting point.

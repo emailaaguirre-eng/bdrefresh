@@ -15,14 +15,14 @@ export function ServicesPageDetail() {
       <section className="bg-bd-light-bg py-16 md:py-20" aria-labelledby="svc-detail-heading">
         <Container>
           <Reveal>
-            <SectionTag>Capabilities</SectionTag>
+            <SectionTag>Offerings</SectionTag>
             <h2
               id="svc-detail-heading"
               className="whitespace-nowrap font-heading text-2xl font-bold tracking-tight text-bd-light-text sm:text-3xl md:text-4xl"
             >
               A field guide to fit
             </h2>
-            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-bd-light-secondary">
+            <p className="mt-4 text-lg leading-relaxed text-bd-light-secondary">
               Every project starts by understanding what needs to happen now and what should be planned for later. We
               help shape the right first version, prioritize the pieces that matter most, and design the structure so
               future improvements have a solid place to land.

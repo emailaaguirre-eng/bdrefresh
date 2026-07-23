@@ -3,7 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionTag } from "@/components/ui/SectionTag";
 import { HomeServicesGrid } from "@/components/home/HomeServicesGrid";
 
-/** Legacy `#services` on index — 7 cards, tilt, glow, orbs, “What We Build”. */
+/** Home `#services` — offer catalog (websites through design, hosting, and care). */
 export function HomeServicesPreview() {
   return (
     <section
@@ -17,11 +17,11 @@ export function HomeServicesPreview() {
         <Reveal>
           <SectionTag>Services</SectionTag>
           <h2 id="home-svc-heading" className="font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
-            What We Build
+            What We Offer
           </h2>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-bd-light-secondary md:text-base">
-            Areas below are often combined in a single engagement, scoped to who uses the software and what has to be
-            true when it ships.
+          <p className="mt-3 text-sm leading-relaxed text-bd-light-secondary md:text-base">
+            Build, grow, and run work, often combined in one engagement, scoped to who uses the software and what has to
+            stay true after it ships.
           </p>
         </Reveal>
         <HomeServicesGrid />

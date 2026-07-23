@@ -26,6 +26,288 @@ const WEBSITE_TYPES_SLUG = "what-type-of-website-is-right-for-your-business";
 
 export const insightPosts: InsightPost[] = [
   {
+    slug: "seo-is-more-than-rankings-long-term-website-value",
+    title: "SEO Is More Than Rankings: Why It Adds Long-Term Value to Your Website",
+    description:
+      "Rankings are only part of SEO. Learn how search optimization improves clarity, attracts the right visitors, builds long-term value, and supports trust for business websites.",
+    excerpt:
+      "Rankings get attention, but the real value of SEO is a clearer, more useful website that helps the right people find you and take the next step.",
+    publishedAt: "2026-07-23",
+    author: { name: "", affiliation: "B&D Servicing" },
+    blocks: [
+      { kind: "p", text: "When most people think about SEO, they think about rankings." },
+      {
+        kind: "p",
+        text: "They picture a business climbing toward the top of Google, appearing ahead of competitors, and attracting more clicks. Rankings are part of search engine optimization, but they are not the whole story.",
+      },
+      { kind: "p", text: "The real value of SEO goes deeper." },
+      {
+        kind: "p",
+        text: "SEO helps make a website easier to find, easier to understand, and more useful over time. It improves the connection between what a business offers and what potential customers are actively searching for. It can also strengthen the structure, clarity, and long-term usefulness of the website itself.",
+      },
+      {
+        kind: "p",
+        text: "A high ranking may get attention. A well-optimized website is what turns that attention into something meaningful.",
+      },
+
+      { kind: "h2", text: "SEO Helps the Right People Find You" },
+      { kind: "p", text: "A website does not automatically become visible just because it is online." },
+      {
+        kind: "p",
+        text: "Search engines need clear signals about what the website is about, which services it offers, who it serves, and which pages are most relevant to a particular search.",
+      },
+      { kind: "p", text: "SEO helps provide those signals." },
+      {
+        kind: "p",
+        text: "That can include improving page titles, headings, service descriptions, internal links, image text, website structure, and technical settings that affect how search engines access and understand the site.",
+      },
+      { kind: "p", text: "The goal is not simply to attract more visitors." },
+      {
+        kind: "p",
+        text: "The goal is to attract people who are actually looking for the products, services, or information the business provides.",
+      },
+      {
+        kind: "p",
+        text: "A smaller number of relevant visitors can be far more valuable than a large amount of unfocused traffic.",
+      },
+
+      { kind: "h2", text: "SEO Improves the Website Itself" },
+      {
+        kind: "p",
+        text: "One of the most overlooked benefits of SEO is that it often makes a website better for real people.",
+      },
+      { kind: "p", text: "A search-friendly website usually has:" },
+      {
+        kind: "ul",
+        items: [
+          "Clearer navigation",
+          "Better organized pages",
+          "Stronger service descriptions",
+          "More useful headings",
+          "Faster loading times",
+          "Improved mobile usability",
+          "Better internal links",
+          "More direct calls to action",
+        ],
+      },
+      {
+        kind: "p",
+        text: "These improvements help search engines understand the website, but they also help visitors move through it with less confusion.",
+      },
+      {
+        kind: "p",
+        text: "A potential customer should be able to quickly understand what the business offers, whether the service is relevant to them, and what they should do next.",
+      },
+      { kind: "p", text: "SEO encourages that level of clarity." },
+
+      { kind: "h2", text: "Rankings Are Only One Measure of Success" },
+      {
+        kind: "p",
+        text: "A first-page ranking may look impressive, but it does not automatically mean the website is supporting the business.",
+      },
+      {
+        kind: "p",
+        text: "A page can rank for the wrong keyword. It can attract people who are not likely to become customers. It can receive traffic while failing to explain the service clearly or provide a useful next step.",
+      },
+      { kind: "p", text: "That is why SEO should not be measured by rankings alone." },
+      { kind: "p", text: "A stronger view of SEO performance may also consider:" },
+      {
+        kind: "ul",
+        items: [
+          "Whether the website is attracting relevant visitors",
+          "Which pages are gaining visibility",
+          "Whether visitors are finding important services",
+          "Which search terms are leading people to the site",
+          "Whether local customers are discovering the business",
+          "Whether visitors are taking meaningful actions",
+          "Which content is helping people make decisions",
+        ],
+      },
+      { kind: "p", text: "Rankings matter, but they are one piece of a larger picture." },
+      {
+        kind: "p",
+        text: "The better question is not only, “Where does the website rank?”",
+      },
+      {
+        kind: "p",
+        text: "It is also, “Is the website reaching the right audience and helping the business move forward?”",
+      },
+
+      { kind: "h2", text: "SEO Builds Long-Term Value" },
+      {
+        kind: "p",
+        text: "Paid advertising can create visibility quickly, but that visibility usually stops when the campaign ends.",
+      },
+      { kind: "p", text: "SEO works differently." },
+      {
+        kind: "p",
+        text: "A well-structured service page, useful blog post, or local landing page can continue bringing people to the website after it is published. Over time, a business can build a stronger library of content, deeper topic coverage, better internal connections, and more search data.",
+      },
+      { kind: "p", text: "That work can build on itself." },
+      {
+        kind: "p",
+        text: "A strong service page can support related blog posts. Those articles can answer common questions and guide visitors back to the service. Search performance can reveal which topics deserve more attention. Existing pages can be updated as the business grows.",
+      },
+      {
+        kind: "p",
+        text: "SEO is not instant, and it is not permanent without care. Search behavior changes. Competitors improve their websites. Services evolve. Older content becomes outdated.",
+      },
+      {
+        kind: "p",
+        text: "Even so, the work invested in SEO can continue adding value long after the initial optimization is complete.",
+      },
+
+      { kind: "h2", text: "SEO Helps Businesses Understand Their Customers" },
+      {
+        kind: "p",
+        text: "SEO can also provide insight into what potential customers are looking for.",
+      },
+      {
+        kind: "p",
+        text: "Businesses often use language that makes sense internally but does not match the way customers search.",
+      },
+      { kind: "p", text: "Keyword research and search performance data can reveal:" },
+      {
+        kind: "ul",
+        items: [
+          "The questions people ask",
+          "The terms they use",
+          "The services they are most interested in",
+          "The locations generating demand",
+          "The problems they are trying to solve",
+          "The information they need before making contact",
+        ],
+      },
+      { kind: "p", text: "That information can improve more than search visibility." },
+      {
+        kind: "p",
+        text: "It can shape website copy, blog topics, service packages, sales conversations, and future marketing decisions.",
+      },
+      { kind: "p", text: "In that sense, SEO becomes a source of business intelligence." },
+      { kind: "p", text: "It helps replace assumptions with evidence." },
+
+      { kind: "h2", text: "SEO Supports Trust and Credibility" },
+      {
+        kind: "p",
+        text: "People often research a business before they call, request a quote, or make a purchase.",
+      },
+      {
+        kind: "p",
+        text: "They may compare websites, read service pages, look for reviews, check business information, and return several times before taking action.",
+      },
+      {
+        kind: "p",
+        text: "A strong search presence can support credibility throughout that process.",
+      },
+      {
+        kind: "p",
+        text: "Clear information, useful content, accurate business details, and a professional website all work together to help the business feel established and trustworthy.",
+      },
+      {
+        kind: "p",
+        text: "SEO does not create credibility on its own. It helps a credible business become easier to find and easier to evaluate.",
+      },
+
+      { kind: "h2", text: "Local SEO Adds Value for Service-Based Businesses" },
+      {
+        kind: "p",
+        text: "For businesses that serve a specific city, region, or service area, local SEO can be especially important.",
+      },
+      {
+        kind: "p",
+        text: "Potential customers may search for a service using phrases such as “near me,” a city name, or a neighborhood.",
+      },
+      {
+        kind: "p",
+        text: "Local SEO helps search engines understand where the business operates and which geographic searches may be relevant.",
+      },
+      {
+        kind: "p",
+        text: "That may involve improving local service pages, business information, Google Business Profile details, location signals, and content that reflects the areas the business serves.",
+      },
+      {
+        kind: "p",
+        text: "For local businesses, visibility in the right market can matter more than broad visibility everywhere.",
+      },
+
+      { kind: "h2", text: "SEO Is an Ongoing Process" },
+      { kind: "p", text: "SEO is not a one-time switch." },
+      {
+        kind: "p",
+        text: "Websites change. Pages are added. Services evolve. Search trends shift. Technical problems can appear after updates. Older content may need to be refreshed.",
+      },
+      { kind: "p", text: "Ongoing SEO may include reviewing:" },
+      {
+        kind: "ul",
+        items: [
+          "Website structure",
+          "Metadata and headings",
+          "Internal links",
+          "Indexing issues",
+          "Technical website health",
+          "Content freshness",
+          "Page performance",
+          "Search trends",
+          "Local visibility",
+          "New opportunities",
+        ],
+      },
+      {
+        kind: "p",
+        text: "The purpose is not to constantly change the website for the sake of activity.",
+      },
+      {
+        kind: "p",
+        text: "It is to keep the website useful, accurate, and aligned with the business over time.",
+      },
+
+      { kind: "h2", text: "Responsible SEO Does Not Guarantee Results" },
+      {
+        kind: "p",
+        text: "No responsible provider can guarantee a specific ranking, a fixed amount of traffic, or a certain number of leads.",
+      },
+      {
+        kind: "p",
+        text: "Search performance depends on many factors, including competition, location, website history, content quality, technical health, industry conditions, and changes made by search engines.",
+      },
+      {
+        kind: "p",
+        text: "SEO can improve the website’s foundation and create stronger opportunities for visibility, but it is not a shortcut or a promise of instant results.",
+      },
+      {
+        kind: "p",
+        text: "The best SEO strategies focus on steady, useful improvements rather than flashy guarantees.",
+      },
+
+      { kind: "h2", text: "The Long-Term Value of SEO" },
+      {
+        kind: "p",
+        text: "SEO is more than rankings because its impact reaches beyond the search results page.",
+      },
+      { kind: "p", text: "It can improve:" },
+      {
+        kind: "ul",
+        items: [
+          "How the website is organized",
+          "How clearly services are presented",
+          "How easily people find the business",
+          "How well the site supports customer decisions",
+          "How the business learns from search behavior",
+          "How useful the website remains over time",
+        ],
+      },
+      {
+        kind: "p",
+        text: "A strong SEO strategy helps turn a website from a static online brochure into a more active business asset.",
+      },
+      { kind: "p", text: "Your website explains what you do." },
+      {
+        kind: "p",
+        text: "SEO helps the right people find that explanation, understand it, and take the next step.",
+      },
+    ],
+  },
+  {
     slug: "real-cost-of-free-hosting-managed-support",
     title: "The Real Cost of Free Hosting: Why Business Websites Need Managed Support",
     description:

@@ -133,13 +133,16 @@ export function AboutBody() {
       <CodrexBand>
         <Reveal>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/codrex-logo-v2-blue.png"
-            alt="CoDre-X Concept Realized"
-            width={420}
-            height={138}
-            className="mb-6 h-auto w-full max-w-[340px] md:max-w-[420px]"
-          />
+<img
+  src="/codrex-logo-v2-blue.png"
+  alt="CoDre-X Concept Realized"
+  width={420}
+  height={138}
+  loading="lazy"
+  decoding="async"
+  fetchPriority="low"
+  className="mb-6 h-auto w-full max-w-[340px] md:max-w-[420px]"
+/>
           <h2 id="codrex-heading" className="sr-only">
             CoDre-X
           </h2>

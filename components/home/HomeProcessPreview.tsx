@@ -44,7 +44,7 @@ export function HomeProcessPreview() {
           <h2 id="home-process-heading" className="font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
             How We Build
           </h2>
-          <p className="mt-4 max-w-2xl text-lg text-bd-light-secondary">
+          <p className="mt-4 text-lg text-bd-light-secondary">
             A clear, repeatable process that keeps you informed at every stage and delivers reliable results, with
             visible staging and sign-off before go-live so expectations stay grounded.
           </p>
