@@ -9,6 +9,14 @@ const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
 const hasGaMeasurementId =
   typeof gaMeasurementId === "string" && /^G-[A-Z0-9]+$/i.test(gaMeasurementId);
 
+const bdccVtSiteKey = process.env.NEXT_PUBLIC_BDCC_VT_SITE_KEY?.trim();
+const bdccVtScriptSrc = (
+  process.env.NEXT_PUBLIC_BDCC_VT_SCRIPT_URL?.trim() ||
+  "https://bdcc.banddservicing.com/t.js"
+).replace(/\/$/, "");
+const hasBdccVisitorTracking =
+  typeof bdccVtSiteKey === "string" && /^bdcc_[a-z0-9]+$/i.test(bdccVtSiteKey);
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -77,6 +85,14 @@ export default function RootLayout({
               `}
             </Script>
           </>
+        ) : null}
+        {hasBdccVisitorTracking ? (
+          <Script
+            id="bdcc-visitor-tracking"
+            src={bdccVtScriptSrc}
+            strategy="afterInteractive"
+            data-site={bdccVtSiteKey}
+          />
         ) : null}
         <SiteChrome>{children}</SiteChrome>
       </body>
