@@ -11,7 +11,7 @@ export function MainFrame({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const isHome = pathname === "/";
   return (
-    <main id="main-content" className={isHome ? "" : "bg-bd-dark-bg pt-[4.5rem]"}>
+    <main id="main-content" tabIndex={-1} className={isHome ? "" : "bg-bd-dark-bg pt-[4.5rem]"}>
       {children}
     </main>
   );
