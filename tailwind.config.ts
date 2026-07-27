@@ -18,7 +18,8 @@ export default {
             border: "#1e2a3d",
             text: "#e4eaf2",
             muted: "#8a9bb5",
-            faint: "#4d6280",
+            /** AA normal text on dark bg/elevated (≥4.5:1). Was #4d6280 (~3.1:1). */
+            faint: "#6e86a6",
           },
           light: {
             /** Main light canvas + dot-grid (push toward white; keep `alt` for band contrast). */

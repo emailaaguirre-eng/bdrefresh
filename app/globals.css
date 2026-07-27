@@ -29,6 +29,21 @@
   h4 {
     @apply font-heading;
   }
+
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme("colors.bd.accent.lighter");
+    outline-offset: 2px;
+  }
+
+  .bg-bd-dark-bg :focus-visible,
+  .bg-bd-dark-elevated :focus-visible,
+  [class*="bg-bd-dark"] :focus-visible {
+    outline-color: theme("colors.bd.accent.lighter");
+  }
 }
 
 @layer utilities {
@@ -565,8 +580,36 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
+    .bd-tech-marquee {
+      overflow: visible;
+    }
+
+    .bd-tech-marquee::before,
+    .bd-tech-marquee::after {
+      display: none;
+    }
+
     .bd-tech-track {
       animation: none;
+      width: 100%;
+      max-width: theme("maxWidth.container");
+      margin-inline: auto;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 12px;
+      column-gap: 8px;
+      padding-inline: 24px;
+    }
+
+    .bd-tech-track .bd-tech-row {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 28px;
+      padding-inline: 0;
+    }
+
+    .bd-tech-track .bd-tech-row[aria-hidden="true"] {
+      display: none;
     }
 
     .bd-service-card::before {

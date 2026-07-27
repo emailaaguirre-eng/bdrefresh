@@ -2,17 +2,27 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { mainNav } from "@/lib/nav";
 import { brandLogoSrc } from "@/lib/site";
 
 const SCROLL_THRESHOLD = 32;
+
+function getFocusable(root: HTMLElement): HTMLElement[] {
+  return Array.from(
+    root.querySelectorAll<HTMLElement>(
+      'a[href],button:not([disabled]),[tabindex]:not([tabindex="-1"])',
+    ),
+  );
+}
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const isHome = pathname === "/";
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileNavRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > SCROLL_THRESHOLD);
@@ -20,6 +30,38 @@ export function SiteHeader() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, [pathname]);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        setOpen(false);
+        menuButtonRef.current?.focus();
+        return;
+      }
+      if (e.key !== "Tab" || !mobileNavRef.current || !menuButtonRef.current) return;
+      const list = [menuButtonRef.current, ...getFocusable(mobileNavRef.current)];
+      const first = list[0];
+      const last = list[list.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", onKey);
+    window.setTimeout(() => {
+      const firstLink = mobileNavRef.current?.querySelector<HTMLElement>("a[href]");
+      firstLink?.focus();
+    }, 0);
+
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open]);
 
   const solid = !isHome || scrolled || open;
 
@@ -78,22 +120,27 @@ export function SiteHeader() {
 
         <button
           type="button"
+          ref={menuButtonRef}
           className={`inline-flex flex-col gap-1.5 rounded-lg p-2 lg:hidden ${solid ? "text-bd-dark-text" : "text-white"}`}
           aria-expanded={open}
           aria-controls="mobile-nav"
-          aria-label="Toggle navigation menu"
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           onClick={() => setOpen((v) => !v)}
         >
-          <span className="h-0.5 w-6 rounded-sm bg-current" />
-          <span className="h-0.5 w-6 rounded-sm bg-current" />
-          <span className="h-0.5 w-6 rounded-sm bg-current" />
+          <span className="h-0.5 w-6 rounded-sm bg-current" aria-hidden />
+          <span className="h-0.5 w-6 rounded-sm bg-current" aria-hidden />
+          <span className="h-0.5 w-6 rounded-sm bg-current" aria-hidden />
         </button>
       </div>
 
       {open ? (
         <div
           id="mobile-nav"
+          ref={mobileNavRef}
           className="border-t border-bd-dark-border bg-bd-dark-elevated px-6 py-4 lg:hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile navigation"
         >
           <ul className="flex flex-col gap-1">
             {mainNav.map((item) => (

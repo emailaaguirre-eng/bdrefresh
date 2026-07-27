@@ -3,7 +3,7 @@
 import keywordRows from "@/lib/bdChatKeywords.json";
 import responses from "@/lib/bdChatResponses.json";
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 
 type Opt = { label: string; action: string };
 
@@ -41,16 +41,29 @@ function getResp(action: string): { text: string; options?: Opt[] } {
   return r ?? (responses as Record<string, { text: string; options?: Opt[] }>).fallback;
 }
 
+function getFocusable(root: HTMLElement): HTMLElement[] {
+  return Array.from(
+    root.querySelectorAll<HTMLElement>(
+      'a[href],button:not([disabled]),textarea,input:not([disabled]),select,[tabindex]:not([tabindex="-1"])',
+    ),
+  ).filter((el) => !el.hasAttribute("disabled") && el.getAttribute("aria-hidden") !== "true");
+}
+
 /** Legacy index.html + script.js §19 — same copy, options, keyword routing, and special actions. */
 export function BdChatbot() {
   const router = useRouter();
+  const titleId = useId();
   const [open, setOpen] = useState(false);
   const [lines, setLines] = useState<ChatLine[]>([]);
   const [typing, setTyping] = useState(false);
   const [input, setInput] = useState("");
+  const [liveAnnounce, setLiveAnnounce] = useState("");
   const idRef = useRef(0);
   const bootedRef = useRef(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const windowRef = useRef<HTMLDivElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const previouslyFocused = useRef<HTMLElement | null>(null);
 
   const scrollChat = useCallback(() => {
     window.setTimeout(() => {
@@ -68,6 +81,7 @@ export function BdChatbot() {
     (text: string) => {
       const id = ++idRef.current;
       setLines((prev) => [...prev, { kind: "bot", id, text }]);
+      setLiveAnnounce(text);
       scrollChat();
     },
     [scrollChat],
@@ -91,6 +105,13 @@ export function BdChatbot() {
     [scrollChat],
   );
 
+  const closeChat = useCallback(() => {
+    setOpen(false);
+    window.setTimeout(() => {
+      (previouslyFocused.current ?? toggleRef.current)?.focus();
+    }, 0);
+  }, []);
+
   const handleAction = useCallback(
     (action: string, label: string | null) => {
       disablePreviousOptions();
@@ -108,7 +129,7 @@ export function BdChatbot() {
           } else {
             router.push("/#contact");
           }
-          setOpen(false);
+          closeChat();
         }, 800);
         return;
       }
@@ -123,6 +144,7 @@ export function BdChatbot() {
 
       const resp = getResp(action);
       setTyping(true);
+      setLiveAnnounce("Assistant is typing");
       scrollChat();
       const delay = 400 + Math.random() * 400;
       window.setTimeout(() => {
@@ -133,7 +155,7 @@ export function BdChatbot() {
         }
       }, delay);
     },
-    [addBot, addOptions, addUser, disablePreviousOptions, router, scrollChat],
+    [addBot, addOptions, addUser, closeChat, disablePreviousOptions, router, scrollChat],
   );
 
   const handleUserInput = useCallback(() => {
@@ -145,6 +167,7 @@ export function BdChatbot() {
     const action = matchKeywords(text);
     const resp = getResp(action);
     setTyping(true);
+    setLiveAnnounce("Assistant is typing");
     scrollChat();
     const delay = 500 + Math.random() * 500;
     window.setTimeout(() => {
@@ -157,12 +180,35 @@ export function BdChatbot() {
   }, [addBot, addOptions, addUser, disablePreviousOptions, input, scrollChat]);
 
   useEffect(() => {
+    if (!open) return;
+
+    previouslyFocused.current = document.activeElement as HTMLElement | null;
+
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && open) setOpen(false);
+      if (e.key === "Escape") {
+        e.preventDefault();
+        closeChat();
+        return;
+      }
+      if (e.key !== "Tab" || !windowRef.current) return;
+      const list = getFocusable(windowRef.current);
+      if (!list.length) return;
+      const first = list[0];
+      const last = list[list.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     };
+
     document.addEventListener("keydown", onKey);
+    window.setTimeout(() => document.getElementById("bd-chat-input")?.focus(), 50);
+
     return () => document.removeEventListener("keydown", onKey);
-  }, [open]);
+  }, [open, closeChat]);
 
   useEffect(() => {
     if (open && !bootedRef.current) {
@@ -171,20 +217,20 @@ export function BdChatbot() {
     }
   }, [open, handleAction]);
 
-  useEffect(() => {
-    if (open) window.setTimeout(() => document.getElementById("bd-chat-input")?.focus(), 400);
-  }, [open]);
-
   return (
     <>
       <button
         type="button"
         id="chatbotToggle"
+        ref={toggleRef}
         className={`bd-chatbot-toggle ${open ? "bd-chatbot-toggle--active" : ""}`}
-        aria-label="Open chat assistant"
+        aria-label={open ? "Close chat assistant" : "Open chat assistant"}
         aria-expanded={open}
         aria-controls="chatbotWindow"
-        onClick={() => setOpen((o) => !o)}
+        onClick={() => {
+          if (open) closeChat();
+          else setOpen(true);
+        }}
       >
         <svg className="bd-chatbot-toggle__icon bd-chatbot-toggle__icon--chat" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
@@ -195,86 +241,106 @@ export function BdChatbot() {
         </svg>
       </button>
 
-      <div
-        id="chatbotWindow"
-        className={`bd-chatbot-window ${open ? "bd-chatbot-window--open" : ""}`}
-        role="dialog"
-        aria-label="Chat assistant"
-      >
-        <div className="bd-chatbot-header">
-          <div className="bd-chatbot-avatar" aria-hidden>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2">
-              <polyline points="16 18 22 12 16 6" />
-              <polyline points="8 6 2 12 8 18" />
-            </svg>
-          </div>
-          <div>
-            <h4 className="text-[0.92rem] font-semibold text-white">B&amp;D Assistant</h4>
-            <p className="mt-0.5 flex items-center gap-1.5 text-[0.75rem] text-bd-dark-muted">
-              <span className="bd-online-dot" />
-              Online now
-            </p>
-          </div>
-        </div>
-
-        <div className="bd-chatbot-messages" id="chatMessages">
-          {lines.map((line) => {
-            if (line.kind === "bot")
-              return (
-                <div key={line.id} className="bd-chat-msg bd-chat-msg--bot">
-                  {line.text}
-                </div>
-              );
-            if (line.kind === "user")
-              return (
-                <div key={line.id} className="bd-chat-msg bd-chat-msg--user">
-                  {line.text}
-                </div>
-              );
-            return (
-              <div key={line.id} className="bd-chat-options">
-                {line.options.map((opt) => (
-                  <button
-                    key={opt.label}
-                    type="button"
-                    className="bd-chat-opt-btn"
-                    disabled={line.disabled}
-                    onClick={() => !line.disabled && handleAction(opt.action, opt.label)}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
-            );
-          })}
-          {typing ? (
-            <div className="bd-chat-typing" aria-hidden>
-              <span />
-              <span />
-              <span />
+      {open ? (
+        <div
+          id="chatbotWindow"
+          ref={windowRef}
+          className="bd-chatbot-window bd-chatbot-window--open"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby={titleId}
+        >
+          <div className="bd-chatbot-header">
+            <div className="bd-chatbot-avatar" aria-hidden>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" aria-hidden>
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
             </div>
-          ) : null}
-          <div ref={messagesEndRef} />
-        </div>
+            <div className="min-w-0 flex-1">
+              <h4 id={titleId} className="text-[0.92rem] font-semibold text-white">
+                B&amp;D Assistant
+              </h4>
+              <p className="mt-0.5 flex items-center gap-1.5 text-[0.75rem] text-bd-dark-muted">
+                <span className="bd-online-dot" aria-hidden />
+                Online now
+              </p>
+            </div>
+            <button
+              type="button"
+              className="ml-auto rounded-md px-2 py-1 text-sm font-medium text-bd-dark-muted hover:text-white"
+              aria-label="Close chat assistant"
+              onClick={closeChat}
+            >
+              Close
+            </button>
+          </div>
 
-        <div className="bd-chatbot-input">
-          <input
-            id="bd-chat-input"
-            type="text"
-            placeholder="Type a message..."
-            autoComplete="off"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleUserInput()}
-          />
-          <button type="button" aria-label="Send message" onClick={handleUserInput}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <line x1="22" y1="2" x2="11" y2="13" />
-              <polygon points="22 2 15 22 11 13 2 9 22 2" />
-            </svg>
-          </button>
+          <div className="bd-chatbot-messages" id="chatMessages" aria-live="polite" aria-relevant="additions">
+            <span className="sr-only" aria-live="polite">
+              {liveAnnounce}
+            </span>
+            {lines.map((line) => {
+              if (line.kind === "bot")
+                return (
+                  <div key={line.id} className="bd-chat-msg bd-chat-msg--bot">
+                    {line.text}
+                  </div>
+                );
+              if (line.kind === "user")
+                return (
+                  <div key={line.id} className="bd-chat-msg bd-chat-msg--user">
+                    {line.text}
+                  </div>
+                );
+              return (
+                <div key={line.id} className="bd-chat-options" role="group" aria-label="Suggested replies">
+                  {line.options.map((opt) => (
+                    <button
+                      key={opt.label}
+                      type="button"
+                      className="bd-chat-opt-btn"
+                      disabled={line.disabled}
+                      onClick={() => !line.disabled && handleAction(opt.action, opt.label)}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+              );
+            })}
+            {typing ? (
+              <div className="bd-chat-typing" role="status" aria-label="Assistant is typing">
+                <span aria-hidden />
+                <span aria-hidden />
+                <span aria-hidden />
+              </div>
+            ) : null}
+            <div ref={messagesEndRef} />
+          </div>
+
+          <div className="bd-chatbot-input">
+            <label htmlFor="bd-chat-input" className="sr-only">
+              Message
+            </label>
+            <input
+              id="bd-chat-input"
+              type="text"
+              placeholder="Type a message..."
+              autoComplete="off"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleUserInput()}
+            />
+            <button type="button" aria-label="Send message" onClick={handleUserInput}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
+      ) : null}
     </>
   );
 }

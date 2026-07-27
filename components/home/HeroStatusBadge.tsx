@@ -33,7 +33,9 @@ export function HeroStatusBadge() {
   return (
     <div
       className="mb-8 inline-flex max-w-max items-center gap-[10px] rounded-full border border-[rgba(46,196,162,0.18)] bg-[rgba(46,196,162,0.08)] px-5 py-2 font-mono text-[0.8rem] font-medium lowercase text-bd-teal-light"
-      aria-hidden
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
     >
       <span className="bd-badge-dot h-2 w-2 shrink-0 rounded-full bg-bd-teal-light" aria-hidden />
       <span

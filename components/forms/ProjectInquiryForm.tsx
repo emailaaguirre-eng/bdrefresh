@@ -21,7 +21,7 @@ export function ProjectInquiryForm() {
             required
             autoComplete="name"
             placeholder="Your full name"
-            className="mt-2 w-full rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/12"
+            className="mt-2 w-full rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/35"
           />
         </div>
         <div>
@@ -35,7 +35,7 @@ export function ProjectInquiryForm() {
             required
             autoComplete="email"
             placeholder="you@company.com"
-            className="mt-2 w-full rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/12"
+            className="mt-2 w-full rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/35"
           />
         </div>
       </div>
@@ -50,7 +50,7 @@ export function ProjectInquiryForm() {
             type="tel"
             autoComplete="tel"
             placeholder="(555) 123-4567"
-            className="mt-2 w-full rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/12"
+            className="mt-2 w-full rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/35"
           />
         </div>
         <div>
@@ -60,7 +60,7 @@ export function ProjectInquiryForm() {
           <select
             id="service"
             name="service"
-            className="mt-2 w-full rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/12"
+            className="mt-2 w-full rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/35"
             defaultValue=""
           >
             <option value="">Select a service</option>
@@ -87,7 +87,7 @@ export function ProjectInquiryForm() {
           required
           rows={5}
           placeholder="Context, goals, who uses it, constraints (rough notes are fine)."
-          className="mt-2 min-h-[120px] w-full resize-y rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/12"
+          className="mt-2 min-h-[120px] w-full resize-y rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/35"
         />
       </div>
       <button

@@ -2,7 +2,10 @@ import { techStack } from "@/lib/data";
 
 function TechRow({ hidden }: { hidden?: boolean }) {
   return (
-    <div className="flex items-center gap-12 px-6" aria-hidden={hidden || undefined}>
+    <div
+      className="bd-tech-row flex items-center gap-12 px-6"
+      aria-hidden={hidden || undefined}
+    >
       {techStack.map((name) => (
         <span
           key={`${hidden ? "d" : "a"}-${name}`}
@@ -18,7 +21,7 @@ function TechRow({ hidden }: { hidden?: boolean }) {
 
 /**
  * Infinite marquee: two identical rows and translateX(-50%) produce a seamless loop.
- * This is intentional (not a duplicate strip); only one `<TechStrip />` mounts on the home page.
+ * Under prefers-reduced-motion, CSS switches to a wrapping static list (duplicate row hidden).
  */
 export function TechStrip() {
   return (
