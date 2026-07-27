@@ -1,11 +1,56 @@
+"use client";
+
+import { type FormEvent, useRef } from "react";
+
 const formAction =
   process.env.NEXT_PUBLIC_CONTACT_FORM_ACTION?.trim() || "/contact/send.php";
 
+type BdccVtApi = {
+  identify?: (payload: { email?: string; name?: string; company?: string; title?: string }) => Promise<unknown>;
+};
+
 export function ProjectInquiryForm() {
+  const identifiedRef = useRef(false);
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    if (identifiedRef.current) {
+      return;
+    }
+
+    const form = event.currentTarget;
+    const api = (window as unknown as { BdccVt?: BdccVtApi }).BdccVt;
+
+    if (!api?.identify) {
+      return;
+    }
+
+    event.preventDefault();
+
+    const data = new FormData(form);
+    const name = String(data.get("name") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+
+    if (name === "" && email === "") {
+      identifiedRef.current = true;
+      form.requestSubmit();
+
+      return;
+    }
+
+    api
+      .identify({ name, email })
+      .catch(() => undefined)
+      .finally(() => {
+        identifiedRef.current = true;
+        form.requestSubmit();
+      });
+  };
+
   return (
     <form
       action={formAction}
       method="post"
+      onSubmit={handleSubmit}
       className="space-y-5 rounded-2xl border border-bd-light-border bg-bd-light-card p-10 shadow-[0_4px_12px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.04)]"
       aria-label="Project inquiry form"
     >
@@ -83,16 +128,16 @@ export function ProjectInquiryForm() {
         </div>
       </div>
       <div>
-          <label htmlFor="message" className="block text-[0.85rem] font-medium text-bd-light-secondary">
-            Tell Us About Your Project <span aria-hidden="true">*</span>
-            <span className="sr-only">(required)</span>
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            aria-required="true"
-            rows={5}
+        <label htmlFor="message" className="block text-[0.85rem] font-medium text-bd-light-secondary">
+          Tell Us About Your Project <span aria-hidden="true">*</span>
+          <span className="sr-only">(required)</span>
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          required
+          aria-required="true"
+          rows={5}
           placeholder="Context, goals, who uses it, constraints (rough notes are fine)."
           className="mt-2 min-h-[120px] w-full resize-y rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/35"
         />
