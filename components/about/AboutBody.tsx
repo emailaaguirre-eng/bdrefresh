@@ -52,8 +52,8 @@ export function AboutBody() {
                 aria-hidden
               />
               <ol className="relative space-y-5 md:space-y-6" aria-label="About B&amp;D Servicing">
-                <Reveal delay={0.04}>
-                  <li className="relative pl-10 md:pl-11">
+                <li className="relative pl-10 md:pl-11">
+                  <Reveal delay={0.04}>
                     <span
                       className="absolute left-0 top-1/2 flex h-[0.65rem] w-[0.65rem] -translate-y-1/2 rounded-full border-2 border-bd-accent bg-white shadow-[0_0_0_4px_rgba(37,104,160,0.12)] md:h-3 md:w-3"
                       aria-hidden
@@ -64,10 +64,10 @@ export function AboutBody() {
                         functional, scalable, and purposeful.
                       </p>
                     </div>
-                  </li>
-                </Reveal>
-                <Reveal delay={0.08}>
-                  <li className="relative pl-10 md:pl-11">
+                  </Reveal>
+                </li>
+                <li className="relative pl-10 md:pl-11">
+                  <Reveal delay={0.08}>
                     <span
                       className="absolute left-0 top-1/2 flex h-[0.65rem] w-[0.65rem] -translate-y-1/2 rounded-full border-2 border-bd-accent bg-white shadow-[0_0_0_4px_rgba(37,104,160,0.12)] md:h-3 md:w-3"
                       aria-hidden
@@ -79,10 +79,10 @@ export function AboutBody() {
                         workflows and operational goals.
                       </p>
                     </div>
-                  </li>
-                </Reveal>
-                <Reveal delay={0.12}>
-                  <li className="relative pl-10 md:pl-11">
+                  </Reveal>
+                </li>
+                <li className="relative pl-10 md:pl-11">
+                  <Reveal delay={0.12}>
                     <span
                       className="absolute left-0 top-1/2 flex h-[0.65rem] w-[0.65rem] -translate-y-1/2 rounded-full border-2 border-bd-accent bg-white shadow-[0_0_0_4px_rgba(37,104,160,0.12)] md:h-3 md:w-3"
                       aria-hidden
@@ -93,8 +93,8 @@ export function AboutBody() {
                         something your team can understand, manage, and grow over time.
                       </p>
                     </div>
-                  </li>
-                </Reveal>
+                  </Reveal>
+                </li>
               </ol>
             </div>
           </div>

@@ -1,57 +1,71 @@
 #!/usr/bin/env node
 /**
- * Axe WCAG 2 A/AA smoke against key marketing routes.
+ * Axe WCAG 2 A/AA smoke against key marketing routes (Playwright + axe-core).
  * Usage: A11Y_BASE_URL=https://banddservicing.com npm run a11y:smoke
- *
- * Needs a Chromium binary (provided on GitHub Actions via setup-chrome).
- * Locally, set CHROME_BIN / CHROME_PATH, or install chromium.
  */
-import { spawnSync } from "node:child_process";
-import { existsSync } from "node:fs";
+import { createRequire } from "node:module";
+import { chromium } from "playwright";
+
+const require = createRequire(import.meta.url);
+const axeSource = require("axe-core").source;
 
 const base = (process.env.A11Y_BASE_URL || "https://banddservicing.com").replace(/\/$/, "");
 const routes = ["/", "/start-project", "/services", "/about"];
 
-function resolveChrome() {
-  const candidates = [
-    process.env.CHROME_BIN,
-    process.env.CHROME_PATH,
-    process.env.GOOGLE_CHROME_BIN,
-    "/usr/bin/google-chrome",
-    "/usr/bin/google-chrome-stable",
-    "/usr/bin/chromium",
-    "/usr/bin/chromium-browser",
-    "/snap/bin/chromium",
-  ].filter(Boolean);
-  for (const path of candidates) {
-    if (existsSync(path)) return path;
-  }
-  return null;
-}
-
-const chrome = resolveChrome();
-if (!chrome) {
-  console.warn(
-    "a11y:smoke skipped: no Chrome/Chromium binary found.\n" +
-      "Set CHROME_BIN, or run this job in CI (see .github/workflows/a11y-smoke.yml).",
-  );
-  process.exit(0);
-}
-
-process.env.CHROME_BIN = chrome;
-process.env.CHROME_PATH = chrome;
+const browser = await chromium.launch({
+  headless: true,
+  args: ["--no-sandbox", "--disable-dev-shm-usage"],
+});
 
 let failed = 0;
 
-for (const route of routes) {
-  const url = `${base}${route}`;
-  console.log(`\n=== axe: ${url} ===`);
-  const result = spawnSync(
-    "npx",
-    ["--yes", "@axe-core/cli@4.10.1", url, "--exit", "--tags", "wcag2a,wcag2aa"],
-    { stdio: "inherit", env: process.env },
-  );
-  if (result.status !== 0) failed += 1;
+try {
+  for (const route of routes) {
+    const url = `${base}${route}`;
+    console.log(`\n=== axe: ${url} ===`);
+    const page = await browser.newPage();
+    try {
+      await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
+      await page.waitForTimeout(1500);
+      await page.addScriptTag({ content: axeSource });
+      const results = await page.evaluate(async () => {
+        // eslint-disable-next-line no-undef
+        return await axe.run(document, {
+          runOnly: { type: "tag", values: ["wcag2a", "wcag2aa"] },
+          resultTypes: ["violations"],
+        });
+      });
+
+      const violations = results.violations || [];
+      if (!violations.length) {
+        console.log("PASS — 0 violations");
+      } else {
+        failed += 1;
+        console.log(`FAIL — ${violations.length} violation(s)`);
+        for (const v of violations) {
+          const nodes = (v.nodes || []).slice(0, 5);
+          console.log(`\n[${v.impact}] ${v.id}: ${v.help}`);
+          console.log(`  ${v.helpUrl}`);
+          for (const n of nodes) {
+            console.log(`  - ${n.target?.join(" ") || "(target)"}`);
+            if (n.failureSummary) {
+              console.log(`    ${n.failureSummary.split("\n")[0]}`);
+            }
+          }
+          if ((v.nodes || []).length > 5) {
+            console.log(`  … +${v.nodes.length - 5} more`);
+          }
+        }
+      }
+    } catch (err) {
+      failed += 1;
+      console.error(`ERROR — ${err instanceof Error ? err.message : String(err)}`);
+    } finally {
+      await page.close();
+    }
+  }
+} finally {
+  await browser.close();
 }
 
 if (failed > 0) {

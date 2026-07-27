@@ -11,12 +11,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - name: Setup Chrome
-        id: chrome
-        uses: browser-actions/setup-chrome@v1
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
       - name: Axe smoke against production
         env:
           A11Y_BASE_URL: https://banddservicing.com
-          CHROME_BIN: ${{ steps.chrome.outputs.chrome-path }}
-          CHROME_PATH: ${{ steps.chrome.outputs.chrome-path }}
         run: npm run a11y:smoke
