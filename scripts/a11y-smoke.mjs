@@ -10,7 +10,16 @@ const require = createRequire(import.meta.url);
 const axeSource = require("axe-core").source;
 
 const base = (process.env.A11Y_BASE_URL || "https://banddservicing.com").replace(/\/$/, "");
-const routes = ["/", "/start-project", "/services", "/about"];
+const routes = [
+  "/",
+  "/start-project",
+  "/services",
+  "/about",
+  "/work",
+  "/process",
+  "/what-we-do",
+  "/insights",
+];
 
 const browser = await chromium.launch({
   headless: true,
