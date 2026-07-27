@@ -11,7 +11,7 @@ export function PageHero({
   lead: string;
 }) {
   return (
-    <header className="relative overflow-hidden bg-[#080c12] text-bd-dark-text">
+    <div className="relative overflow-hidden bg-[#080c12] text-bd-dark-text">
       <Container className="relative py-16 md:py-20 lg:py-24">
         <div className="flex max-w-[740px] flex-col items-start text-left">
           <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-bd-accent-lighter">
@@ -23,6 +23,6 @@ export function PageHero({
           <p className="mt-5 text-base leading-relaxed text-bd-dark-muted md:text-lg">{lead}</p>
         </div>
       </Container>
-    </header>
+    </div>
   );
 }

@@ -80,8 +80,8 @@ export function SiteHeader() {
     : "bg-white/10 text-white";
 
   const ctaClass = solid
-    ? "ml-2 rounded-full bg-gradient-to-br from-[#2a70aa] via-[#3a8fd4] to-[#5aabee] px-5 py-2 text-sm font-semibold text-white transition hover:opacity-90"
-    : "ml-2 rounded-full bg-gradient-to-br from-[#2a70aa] via-[#3a8fd4] to-[#5aabee] px-5 py-2 text-sm font-semibold text-white shadow-[0_0_20px_rgba(58,143,212,0.25)] transition hover:opacity-90";
+    ? "ml-2 rounded-full bg-bd-accent px-5 py-2 text-sm font-semibold text-white transition hover:bg-bd-accent-dark"
+    : "ml-2 rounded-full bg-bd-accent px-5 py-2 text-sm font-semibold text-white shadow-[0_0_20px_rgba(58,143,212,0.25)] transition hover:bg-bd-accent-dark";
 
   return (
     <header
@@ -157,7 +157,7 @@ export function SiteHeader() {
             <li>
               <Link
                 href="/start-project"
-                className="mt-2 block rounded-full bg-gradient-to-br from-[#2a70aa] via-[#3a8fd4] to-[#5aabee] px-4 py-2.5 text-center text-sm font-semibold text-white hover:opacity-90"
+                className="mt-2 block rounded-full bg-bd-accent px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-bd-accent-dark"
                 onClick={() => setOpen(false)}
               >
                 Start a Project

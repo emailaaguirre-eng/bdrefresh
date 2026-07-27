@@ -9,16 +9,19 @@ export function ProjectInquiryForm() {
       className="space-y-5 rounded-2xl border border-bd-light-border bg-bd-light-card p-10 shadow-[0_4px_12px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.04)]"
       aria-label="Project inquiry form"
     >
+      <p className="text-sm text-bd-light-muted">Required fields are marked with an asterisk (*).</p>
       <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden />
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="block text-[0.85rem] font-medium text-bd-light-secondary">
-            Name *
+            Name <span aria-hidden="true">*</span>
+            <span className="sr-only">(required)</span>
           </label>
           <input
             id="name"
             name="name"
             required
+            aria-required="true"
             autoComplete="name"
             placeholder="Your full name"
             className="mt-2 w-full rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/35"
@@ -26,13 +29,15 @@ export function ProjectInquiryForm() {
         </div>
         <div>
           <label htmlFor="email" className="block text-[0.85rem] font-medium text-bd-light-secondary">
-            Email *
+            Email <span aria-hidden="true">*</span>
+            <span className="sr-only">(required)</span>
           </label>
           <input
             id="email"
             name="email"
             type="email"
             required
+            aria-required="true"
             autoComplete="email"
             placeholder="you@company.com"
             className="mt-2 w-full rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/35"
@@ -78,21 +83,23 @@ export function ProjectInquiryForm() {
         </div>
       </div>
       <div>
-        <label htmlFor="message" className="block text-[0.85rem] font-medium text-bd-light-secondary">
-          Tell Us About Your Project *
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          required
-          rows={5}
+          <label htmlFor="message" className="block text-[0.85rem] font-medium text-bd-light-secondary">
+            Tell Us About Your Project <span aria-hidden="true">*</span>
+            <span className="sr-only">(required)</span>
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            aria-required="true"
+            rows={5}
           placeholder="Context, goals, who uses it, constraints (rough notes are fine)."
           className="mt-2 min-h-[120px] w-full resize-y rounded-lg border border-bd-light-border bg-[#f8f9fc] px-4 py-3 text-[0.95rem] text-bd-light-text outline-none transition focus:border-bd-accent focus:ring-[3px] focus:ring-bd-accent/35"
         />
       </div>
       <button
         type="submit"
-        className="bd-btn-magnetic inline-flex w-full items-center justify-center gap-2 rounded-xl bg-bd-accent py-3.5 text-sm font-semibold text-white transition hover:bg-bd-accent-light sm:w-full"
+        className="bd-btn-magnetic inline-flex w-full items-center justify-center gap-2 rounded-xl bg-bd-accent py-3.5 text-sm font-semibold text-white transition hover:bg-bd-accent-dark sm:w-full"
       >
         <span>Send Message</span>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>

@@ -5,7 +5,7 @@ type Variant = "primary" | "ghost" | "outline";
 
 const styles: Record<Variant, string> = {
   primary:
-    "inline-flex items-center justify-center gap-2 rounded-xl bg-bd-accent px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-bd-accent-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bd-accent-lighter",
+    "inline-flex items-center justify-center gap-2 rounded-xl bg-bd-accent px-5 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-bd-accent-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bd-accent-lighter",
   ghost:
     "inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-5 py-3 text-sm font-semibold text-bd-dark-text transition hover:border-white/35 hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bd-accent-lighter",
   outline:

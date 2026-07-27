@@ -37,14 +37,14 @@ export function ThroughLineSection() {
                   <div className="bd-step-ring bd-throughline-ring mb-5">
                     <ThroughLineIcon n={item.n} />
                   </div>
-                  <span className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.12em] text-bd-accent opacity-70">
+                  <span className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.12em] text-bd-accent">
                     {item.n}
                   </span>
                   <h3 className="mt-2 font-heading text-base font-bold leading-snug tracking-tight text-bd-light-text md:text-[1.05rem]">
                     {item.title}
                   </h3>
                   <p className="mt-2.5 text-[0.88rem] leading-relaxed text-bd-light-secondary">{item.body}</p>
-                  <span className="mt-auto pt-5 font-mono text-[0.65rem] font-bold uppercase tracking-[0.1em] text-bd-accent/80">
+                  <span className="mt-auto pt-5 font-mono text-[0.65rem] font-bold uppercase tracking-[0.1em] text-bd-accent">
                     {item.micro}
                   </span>
                 </article>

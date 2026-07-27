@@ -61,7 +61,7 @@ export function HomeProcessPreview() {
                   <div className="bd-step-ring mx-auto mb-6">
                     <ProcessStepIcon phase={p.phase} />
                   </div>
-                  <span className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.1em] text-bd-accent opacity-60">
+                  <span className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.1em] text-bd-accent">
                     Phase {p.phase}
                   </span>
                   <h3 className="mt-1.5 font-heading text-[1.15rem] font-bold text-bd-light-text">{p.title}</h3>

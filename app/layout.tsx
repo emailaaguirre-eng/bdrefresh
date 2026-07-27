@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Inter, Space_Mono } from "next/font/google";
 import Script from "next/script";
+import { ConsentGatedAnalytics } from "@/components/analytics/ConsentGatedAnalytics";
 import { SiteChrome } from "@/components/layout/SiteChrome";
 import { defaultDescription, getSiteUrl, siteName, siteTagline } from "@/lib/site";
 import "./globals.css";
@@ -70,22 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${dmSans.variable} ${spaceMono.variable}`}>
       <body>
-        {hasGaMeasurementId ? (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
-              strategy="afterInteractive"
-            />
-            <Script id="ga4-gtag" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${gaMeasurementId}');
-              `}
-            </Script>
-          </>
-        ) : null}
+        {hasGaMeasurementId ? <ConsentGatedAnalytics measurementId={gaMeasurementId!} /> : null}
         {hasBdccVisitorTracking ? (
           <Script
             id="bdcc-visitor-tracking"

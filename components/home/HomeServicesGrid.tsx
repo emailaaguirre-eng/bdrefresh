@@ -25,7 +25,7 @@ function ServiceCard({ title, description, index }: { title: string; description
     >
       <div className="bd-service-card-glow" aria-hidden />
       <div className="bd-service-card-inner flex h-full flex-col p-8 md:p-10">
-        <span className="font-mono text-xs font-bold text-bd-accent opacity-50">
+        <span className="font-mono text-xs font-bold text-bd-accent">
           {String(index + 1).padStart(2, "0")}
         </span>
         <div className="bd-service-icon-wrap mt-5 flex h-[52px] w-[52px] items-center justify-center rounded-xl border border-[rgba(37,104,160,0.18)] bg-[rgba(37,104,160,0.08)] text-bd-accent">

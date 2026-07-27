@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CookieSettingsButton } from "@/components/layout/CookieSettingsButton";
 import { footerNav } from "@/lib/nav";
 import { brandLogoSrc, codreXUrl, siteName, siteTagline } from "@/lib/site";
 
@@ -8,11 +9,11 @@ export function SiteFooter() {
       <div className="mx-auto max-w-container py-14 pl-6 pr-24 md:pr-32">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-block">
+            <Link href="/" className="inline-block" aria-label={`${siteName} home`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={brandLogoSrc}
-                alt={siteName}
+                alt=""
                 width={320}
                 height={84}
                 className="h-9 w-auto opacity-95"
@@ -23,9 +24,9 @@ export function SiteFooter() {
             </p>
           </div>
           <div>
-            <p className="font-heading text-xs font-bold uppercase tracking-wider text-bd-dark-text">
+            <h2 className="font-heading text-xs font-bold uppercase tracking-wider text-bd-dark-text">
               Company
-            </p>
+            </h2>
             <ul className="mt-4 space-y-2">
               {footerNav.company.map((l) => (
                 <li key={l.href}>
@@ -37,9 +38,9 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <p className="font-heading text-xs font-bold uppercase tracking-wider text-bd-dark-text">
+            <h2 className="font-heading text-xs font-bold uppercase tracking-wider text-bd-dark-text">
               Explore
-            </p>
+            </h2>
             <ul className="mt-4 space-y-2">
               {footerNav.services.map((l) => (
                 <li key={l.href}>
@@ -53,7 +54,8 @@ export function SiteFooter() {
         </div>
         <div className="mt-12 flex flex-col gap-2 border-t border-bd-dark-border pt-8 text-sm md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} {siteName}. All rights reserved.
+            © {new Date().getFullYear()} {siteName}. All rights reserved.{" "}
+            <CookieSettingsButton />
           </p>
           <p className="font-sans text-sm text-bd-dark-muted">
             <span className="font-normal">Powered by </span>
@@ -63,7 +65,8 @@ export function SiteFooter() {
               rel="noopener noreferrer"
               className="font-semibold text-white hover:text-white/90 hover:underline"
             >
-              CoDre<span className="text-[#6b93c9]">-X</span>
+              CoDre-X
+              <span className="sr-only"> (opens in a new tab)</span>
             </Link>
             <span className="mx-1.5 text-bd-dark-muted" aria-hidden>
               |

@@ -63,7 +63,7 @@ export function ProcessPhasesColumn({ phases }: { phases: readonly ProcessPagePh
                     className={navLinkClass(active)}
                     aria-current={active ? "true" : undefined}
                   >
-                    <span className={active ? "font-mono text-bd-accent" : "font-mono text-bd-accent/50"}>{p.phase}</span>
+                    <span className={active ? "font-mono text-bd-accent" : "font-mono text-bd-dark-muted"}>{p.phase}</span>
                     <span className="lg:ml-2">{p.title}</span>
                   </a>
                 );

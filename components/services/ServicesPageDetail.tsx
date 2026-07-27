@@ -18,7 +18,7 @@ export function ServicesPageDetail() {
             <SectionTag>Offerings</SectionTag>
             <h2
               id="svc-detail-heading"
-              className="whitespace-nowrap font-heading text-2xl font-bold tracking-tight text-bd-light-text sm:text-3xl md:text-4xl"
+              className="font-heading text-2xl md:whitespace-nowrap font-bold tracking-tight text-bd-light-text sm:text-3xl md:text-4xl"
             >
               A field guide to fit
             </h2>
@@ -62,7 +62,7 @@ export function ServicesPageDetail() {
                   >
                     <div className="flex flex-wrap items-start gap-5 md:gap-8">
                       <div className="flex shrink-0 items-center gap-4">
-                        <span className="font-mono text-2xl font-bold tabular-nums text-bd-accent/35 md:text-3xl">
+                        <span className="font-mono text-2xl font-bold tabular-nums text-bd-accent md:text-3xl">
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <div className="flex h-[52px] w-[52px] items-center justify-center rounded-xl border border-[rgba(37,104,160,0.18)] bg-[rgba(37,104,160,0.08)]">

@@ -67,7 +67,10 @@ export function BdChatbot() {
 
   const scrollChat = useCallback(() => {
     window.setTimeout(() => {
-      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+      const reduce =
+        typeof window !== "undefined" &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      messagesEndRef.current?.scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
     }, 50);
   }, []);
 
@@ -125,7 +128,8 @@ export function BdChatbot() {
           if (contact && header) {
             const navH = (header as HTMLElement).offsetHeight;
             const top = contact.getBoundingClientRect().top + window.scrollY - navH;
-            window.scrollTo({ top, behavior: "smooth" });
+            const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            window.scrollTo({ top, behavior: reduce ? "auto" : "smooth" });
           } else {
             router.push("/#contact");
           }
@@ -258,9 +262,9 @@ export function BdChatbot() {
               </svg>
             </div>
             <div className="min-w-0 flex-1">
-              <h4 id={titleId} className="text-[0.92rem] font-semibold text-white">
+              <h2 id={titleId} className="text-[0.92rem] font-semibold text-white">
                 B&amp;D Assistant
-              </h4>
+              </h2>
               <p className="mt-0.5 flex items-center gap-1.5 text-[0.75rem] text-bd-dark-muted">
                 <span className="bd-online-dot" aria-hidden />
                 Online now
@@ -276,8 +280,8 @@ export function BdChatbot() {
             </button>
           </div>
 
-          <div className="bd-chatbot-messages" id="chatMessages" aria-live="polite" aria-relevant="additions">
-            <span className="sr-only" aria-live="polite">
+          <div className="bd-chatbot-messages" id="chatMessages">
+            <span className="sr-only" aria-live="polite" aria-atomic="true">
               {liveAnnounce}
             </span>
             {lines.map((line) => {
