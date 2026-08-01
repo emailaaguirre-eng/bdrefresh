@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CodreXWordmark } from "@/components/brand/CodreXWordmark";
 import { MagneticLink } from "@/components/effects/MagneticLink";
 import { InsightPostCard } from "@/components/insights/InsightPostCard";
 import { ClosingBand } from "@/components/layout/ClosingBand";
@@ -24,7 +25,7 @@ export default function InsightsPage() {
         eyebrow="Insights"
         title={
           <>
-            The CoDre-<span className="text-bd-codrex">X</span> Files
+            The <CodreXWordmark /> Files
           </>
         }
         lead="Thoughtful takes on websites, web applications, digital strategy, and the decisions that shape better online experiences."

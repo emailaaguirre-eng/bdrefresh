@@ -51,6 +51,8 @@ export default {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         heading: ["var(--font-dm)", "var(--font-inter)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        /** CoDre-X wordmark serif (classic Baskerville-style). */
+        codrex: ["var(--font-codrex)", "Georgia", "Times New Roman", "serif"],
       },
       maxWidth: {
         container: "1200px",

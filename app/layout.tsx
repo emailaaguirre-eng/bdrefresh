@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Inter, Space_Mono } from "next/font/google";
+import { DM_Sans, Inter, Libre_Baskerville, Space_Mono } from "next/font/google";
 import Script from "next/script";
 import { ConsentGatedAnalytics } from "@/components/analytics/ConsentGatedAnalytics";
 import { SiteChrome } from "@/components/layout/SiteChrome";
@@ -38,6 +38,14 @@ const spaceMono = Space_Mono({
   display: "swap",
 });
 
+/** Classic serif for CoDre-X wordmark (aligned with logo typography). */
+const libreBaskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-codrex",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
@@ -69,7 +77,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSans.variable} ${spaceMono.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${dmSans.variable} ${spaceMono.variable} ${libreBaskerville.variable}`}
+    >
       <body>
         {hasGaMeasurementId ? <ConsentGatedAnalytics measurementId={gaMeasurementId!} /> : null}
         {hasBdccVisitorTracking ? (

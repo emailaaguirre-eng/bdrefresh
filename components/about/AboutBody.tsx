@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CodrexBand } from "@/components/about/CodrexBand";
+import { CodreXWordmark } from "@/components/brand/CodreXWordmark";
 import { codreXUrl } from "@/lib/site";
 import { Reveal } from "@/components/motion/Reveal";
 import { Container } from "@/components/ui/Container";
@@ -155,7 +156,7 @@ export function AboutBody() {
               rel="noopener noreferrer"
               className="font-semibold text-bd-light-text hover:underline"
             >
-              CoDre-<span className="text-bd-codrex">X</span>
+              <CodreXWordmark />
             </Link>{" "}
             is a division of B&amp;D Servicing representing the company&apos;s premium creative and development work,
             where thoughtful ideas are shaped into custom digital solutions.
