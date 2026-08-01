@@ -39,6 +39,8 @@ export default {
             lighter: "#5aabee",
             dark: "#1b5080",
           },
+          /** CoDre-X brand mark blue (matches legacy `.codrex-x` in styles.css). */
+          codrex: "#678fc6",
           teal: {
             DEFAULT: "#1ba885",
             light: "#2ec4a2",

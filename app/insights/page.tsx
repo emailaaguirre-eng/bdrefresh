@@ -24,7 +24,7 @@ export default function InsightsPage() {
         eyebrow="Insights"
         title={
           <>
-            Notes from <span className="shimmer-text">the build</span>
+            The CoDre-<span className="text-bd-codrex">X</span> Files
           </>
         }
         lead="Thoughtful takes on websites, web applications, digital strategy, and the decisions that shape better online experiences."
