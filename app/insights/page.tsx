@@ -24,9 +24,9 @@ export default function InsightsPage() {
       <PageHero
         eyebrow="Insights"
         title={
-          <>
+          <span className="font-codrex font-bold tracking-normal">
             The <CodreXWordmark /> Files
-          </>
+          </span>
         }
         lead="Thoughtful takes on websites, web applications, digital strategy, and the decisions that shape better online experiences."
       />
