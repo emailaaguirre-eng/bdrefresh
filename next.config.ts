@@ -51,6 +51,14 @@ const nextConfig: NextConfig = {
   env: {
     NEXT_PUBLIC_BUILD_ID: buildId,
   },
+  async redirects() {
+    return [
+      { source: "/privacy-policy", destination: "/privacy", permanent: true },
+      { source: "/cookies", destination: "/cookie-policy", permanent: true },
+      { source: "/terms-of-service", destination: "/terms", permanent: true },
+      { source: "/terms-of-use", destination: "/terms", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

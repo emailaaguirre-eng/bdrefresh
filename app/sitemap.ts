@@ -6,11 +6,16 @@ const routes = [
   "",
   "/what-we-do",
   "/services",
+  "/services/hosting",
   "/process",
   "/about",
   "/work",
   "/start-project",
   "/insights",
+  "/privacy",
+  "/terms",
+  "/cookie-policy",
+  "/accessibility",
   ...getInsightSlugs().map((slug) => `/insights/${slug}`),
 ];
 

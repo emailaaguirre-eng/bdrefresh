@@ -46,7 +46,7 @@
     ]
   },
   "websites": {
-    "text": "Yes — we design and build professional business websites and marketing sites from the ground up: clear structure, design, content placement, and a clean handoff to hosting or ongoing care.",
+    "text": "Yes. We design and build professional business websites and marketing sites from the ground up: clear structure, design, content placement, and a clean handoff to hosting or ongoing care.",
     "options": [
       {
         "label": "Custom web apps?",
@@ -67,7 +67,7 @@
     ]
   },
   "seo": {
-    "text": "Yes — we offer SEO to help search engines and visitors understand your site. That includes technical structure, on-page hygiene, and optional ongoing SEO care so search readiness stays on track.\n\nOngoing SEO care starts at $199 per month. Exact fit depends on your site and goals — we're happy to quote after a short conversation. Rankings are not guaranteed.",
+    "text": "Yes. We offer SEO to help search engines and visitors understand your site. That includes technical structure, on-page hygiene, and optional ongoing SEO care so search readiness stays on track.\n\nOngoing SEO care starts at $199 per month. Exact fit depends on your site and goals. We're happy to quote after a short conversation. Rankings are not guaranteed.",
     "options": [
       {
         "label": "Get a quote",
@@ -80,7 +80,7 @@
     ]
   },
   "hosting": {
-    "text": "Yes — we offer managed hosting for production websites: a managed environment, SSL, backups, and business-hours support so your live site is treated like an operating asset.\n\nManaged hosting starts at $149 per month. Final pricing depends on the site and needs. Website monitoring is also available alongside hosting if you want checks and alerts for the live site.",
+    "text": "Yes. We offer managed hosting for production websites: a managed environment, SSL, backups, and business-hours support so your live site is treated like an operating asset.\n\nManaged hosting starts at $149 per month. Final pricing depends on the site and needs. Website monitoring is also available alongside hosting if you want checks and alerts for the live site.",
     "options": [
       {
         "label": "Website monitoring?",
@@ -101,7 +101,7 @@
     ]
   },
   "monitoring": {
-    "text": "Yes — we offer website monitoring services that can go along with managed hosting, so you have checks and alerts for the live site.\n\nFill out the contact form and the team can walk you through options that fit your setup.",
+    "text": "Yes. We offer website monitoring services that can go along with managed hosting, so you have checks and alerts for the live site.\n\nFill out the contact form and the team can walk you through options that fit your setup.",
     "options": [
       {
         "label": "Go to contact form",
@@ -131,7 +131,7 @@
     ]
   },
   "website_care": {
-    "text": "Yes — Website Care is ongoing maintenance and health checks so updates, uptime, and routine issues are handled before they become emergencies. It's a good fit after launch when you want clear ownership of who watches the site.\n\nPlans are quoted based on the site and support level you need.",
+    "text": "Yes. Website Care is ongoing maintenance and health checks so updates, uptime, and routine issues are handled before they become emergencies. It's a good fit after launch when you want clear ownership of who watches the site.\n\nPlans are quoted based on the site and support level you need.",
     "options": [
       {
         "label": "Managed hosting?",
@@ -148,7 +148,7 @@
     ]
   },
   "graphic_design": {
-    "text": "Yes — we offer graphic design for logos, brand assets, and marketing visuals that feel like the same company as your website or product — not a separate look bolted on later.\n\nWe also write web copy when you need clear messaging: who it's for, what changes, and what to do next.",
+    "text": "Yes. We offer graphic design for logos, brand assets, and marketing visuals that feel like the same company as your website or product, not a separate look bolted on later.\n\nWe also write web copy when you need clear messaging: who it's for, what changes, and what to do next.",
     "options": [
       {
         "label": "Web copy",
@@ -165,7 +165,7 @@
     ]
   },
   "ai": {
-    "text": "Yes — we build practical automation and AI-assisted tools when they solve a real business problem: chatbots, workflow helpers, and custom tools that reduce repetitive work. Scope and pricing depend on what you need done.",
+    "text": "Yes. We build practical automation and AI-assisted tools when they solve a real business problem: chatbots, workflow helpers, and custom tools that reduce repetitive work. Scope and pricing depend on what you need done.",
     "options": [
       {
         "label": "Automation & integrations",
@@ -182,7 +182,7 @@
     ]
   },
   "ai_detail": {
-    "text": "Typical examples include customer-facing assistants, internal helpers for routine tasks, and workflow automation that moves data or triggers follow-ups. We focus on practical outcomes — not buzzwords. A short conversation is the best way to see if AI or simpler automation is the right fit.",
+    "text": "Typical examples include customer-facing assistants, internal helpers for routine tasks, and workflow automation that moves data or triggers follow-ups. We focus on practical outcomes, not buzzwords. A short conversation is the best way to see if AI or simpler automation is the right fit.",
     "options": [
       {
         "label": "Start a conversation",
@@ -195,7 +195,7 @@
     ]
   },
   "automation": {
-    "text": "Yes — we connect systems with APIs, webhooks, and automations so tools stay in sync without copy-paste. That can include CRM updates, form routing, imports, and guarded jobs between platforms.",
+    "text": "Yes. We connect systems with APIs, webhooks, and automations so tools stay in sync without copy-paste. That can include CRM updates, form routing, imports, and guarded jobs between platforms.",
     "options": [
       {
         "label": "Internal tools?",
@@ -212,7 +212,7 @@
     ]
   },
   "internal_tools": {
-    "text": "Yes — we build internal tools and dashboards for teams stuck in spreadsheets and email: approvals, reporting, and admin views with permissions that match how your team actually works.",
+    "text": "Yes. We build internal tools and dashboards for teams stuck in spreadsheets and email: approvals, reporting, and admin views with permissions that match how your team actually works.",
     "options": [
       {
         "label": "Get a quote",
@@ -225,7 +225,7 @@
     ]
   },
   "ecommerce": {
-    "text": "Yes — we can build or extend e-commerce experiences: online stores, payments, and order-related flows. Scope varies widely, so we quote after understanding products, payments, and how you fulfill orders.",
+    "text": "Yes. We can build or extend e-commerce experiences: online stores, payments, and order-related flows. Scope varies widely, so we quote after understanding products, payments, and how you fulfill orders.",
     "options": [
       {
         "label": "Get a quote",
@@ -263,7 +263,7 @@
     ]
   },
   "custom_app": {
-    "text": "Yes — we build custom web applications and portals when templates aren't enough: logins, roles, workflows, and data shaped around how your business actually operates. Pricing depends on scope.",
+    "text": "Yes. We build custom web applications and portals when templates aren't enough: logins, roles, workflows, and data shaped around how your business actually operates. Pricing depends on scope.",
     "options": [
       {
         "label": "Internal tools?",
@@ -280,7 +280,7 @@
     ]
   },
   "desktop": {
-    "text": "Yes — in addition to web apps, we can build desktop tools for Windows and Mac when a local application is the better fit. Most business needs are solved with web apps; we'll recommend the simpler path when it works.",
+    "text": "Yes. In addition to web apps, we can build desktop tools for Windows and Mac when a local application is the better fit. Most business needs are solved with web apps; we'll recommend the simpler path when it works.",
     "options": [
       {
         "label": "Get a quote",
@@ -293,7 +293,7 @@
     ]
   },
   "not_sure": {
-    "text": "No problem. A short conversation is often the fastest way to figure out the right approach. Tell us about the business challenge or idea — no obligation.",
+    "text": "No problem. A short conversation is often the fastest way to figure out the right approach. Tell us about the business challenge or idea. No obligation.",
     "options": [
       {
         "label": "Fill out contact form",
@@ -306,7 +306,7 @@
     ]
   },
   "pricing": {
-    "text": "Most work is scoped to your needs, so we quote after a short conversation. A few public starting points:\n\n• SEO care — starting at $199/month\n• Managed hosting — starting at $149/month\n\nWebsite builds, custom apps, copy, design, and website care are quoted based on scope. Free consultation — no obligation. Rankings and results are never guaranteed.",
+    "text": "Most work is scoped to your needs, so we quote after a short conversation. A few public starting points:\n\n• SEO care: starting at $199/month\n• Managed hosting: starting at $149/month\n\nWebsite builds, custom apps, copy, design, and website care are quoted based on scope. Free consultation. No obligation. Rankings and results are never guaranteed.",
     "options": [
       {
         "label": "How long do projects take?",
@@ -361,7 +361,7 @@
     ]
   },
   "contact": {
-    "text": "Great — the best next step is our contact form. The B&D team reviews messages and typically responds within 24 hours.",
+    "text": "Great. The best next step is our contact form. The B&D team reviews messages and typically responds within 24 hours.",
     "options": [
       {
         "label": "Go to contact form",
@@ -408,7 +408,7 @@
     ]
   },
   "copywriting": {
-    "text": "Yes — we write and refine website copy: homepage messaging, service pages, about pages, calls to action, and clearer existing content. Copy can ship with a new build or as a standalone refresh.",
+    "text": "Yes. We write and refine website copy: homepage messaging, service pages, about pages, calls to action, and clearer existing content. Copy can ship with a new build or as a standalone refresh.",
     "options": [
       {
         "label": "Graphic design too?",
@@ -425,7 +425,7 @@
     ]
   },
   "dns": {
-    "text": "Yes — we help with DNS and email-related setup (records like TXT, CNAME, MX, SPF, DKIM, and DMARC), domain health checks, and deliverability troubleshooting. Scope depends on how many domains and tools are involved.",
+    "text": "Yes. We help with DNS and email-related setup (records like TXT, CNAME, MX, SPF, DKIM, and DMARC), domain health checks, and deliverability troubleshooting. Scope depends on how many domains and tools are involved.",
     "options": [
       {
         "label": "Get a quote",

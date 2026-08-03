@@ -78,7 +78,7 @@ export function WhatWeDoBody() {
                   </p>
                   <p>
                     That’s the posture behind every engagement: clarify the outcome, own the thread from design through
-                    deployment, and leave something the team can run day to day—not a demo that only works at launch.
+                    deployment, and leave something the team can run day to day, not a demo that only works at launch.
                   </p>
                 </div>
               </div>

@@ -1,13 +1,24 @@
 "use client";
 
 import { useReducedMotion } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useCardTilt } from "@/components/effects/useCardTilt";
 import { Reveal } from "@/components/motion/Reveal";
 import { ServiceIcon } from "@/components/services/ServiceIcon";
 import { servicesDetailed } from "@/lib/data";
 
-function ServiceCard({ title, description, index }: { title: string; description: string; index: number }) {
+function ServiceCard({
+  title,
+  description,
+  index,
+  href,
+}: {
+  title: string;
+  description: string;
+  index: number;
+  href?: string;
+}) {
   const reduce = useReducedMotion();
   const [fineHover, setFineHover] = useState(false);
   useEffect(() => {
@@ -33,6 +44,14 @@ function ServiceCard({ title, description, index }: { title: string; description
         </div>
         <h3 className="mt-5 font-heading text-[1.2rem] font-bold tracking-tight text-bd-light-text">{title}</h3>
         <p className="mt-2.5 text-[0.95rem] leading-relaxed text-bd-light-secondary">{description}</p>
+        {href ? (
+          <p className="mt-4 text-sm font-semibold text-bd-accent">
+            Learn more
+            <span aria-hidden className="ml-1">
+              →
+            </span>
+          </p>
+        ) : null}
         <div
           className="pointer-events-none absolute bottom-0 left-10 right-10 h-px bg-gradient-to-r from-transparent via-bd-light-border to-transparent"
           aria-hidden
@@ -41,6 +60,15 @@ function ServiceCard({ title, description, index }: { title: string; description
     </article>
   );
   /* eslint-enable react-hooks/refs */
+
+  if (href) {
+    return (
+      <Link href={href} className="block h-full rounded-2xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bd-accent">
+        {card}
+      </Link>
+    );
+  }
+
   return card;
 }
 
@@ -49,7 +77,7 @@ export function HomeServicesGrid() {
     <div className="mt-12 grid auto-rows-fr gap-6 sm:grid-cols-2 sm:items-stretch">
       {servicesDetailed.map((s, i) => (
         <Reveal key={s.title} delay={i * 0.04} className="h-full">
-          <ServiceCard title={s.title} description={s.description} index={i} />
+          <ServiceCard title={s.title} description={s.description} index={i} href={s.href} />
         </Reveal>
       ))}
     </div>

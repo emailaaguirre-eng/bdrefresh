@@ -52,11 +52,16 @@ export function SiteFooter() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 flex flex-col gap-2 border-t border-bd-dark-border pt-8 text-sm md:flex-row md:items-center md:justify-between">
-          <p>
-            © {new Date().getFullYear()} {siteName}. All rights reserved.{" "}
-            <CookieSettingsButton />
-          </p>
+        <div className="mt-10 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          {footerNav.legal.map((l) => (
+            <Link key={l.href} href={l.href} className="hover:text-bd-accent-lighter">
+              {l.label}
+            </Link>
+          ))}
+          <CookieSettingsButton />
+        </div>
+        <div className="mt-8 flex flex-col gap-2 border-t border-bd-dark-border pt-8 text-sm md:flex-row md:items-center md:justify-between">
+          <p>© {new Date().getFullYear()} {siteName}. All rights reserved.</p>
           <p className="font-sans text-sm text-bd-dark-muted">
             <span className="font-normal">Powered by </span>
             <Link
@@ -65,7 +70,8 @@ export function SiteFooter() {
               rel="noopener noreferrer"
               className="font-semibold text-white hover:text-white/90 hover:underline"
             >
-              CoDre-X
+              CoDre
+              <span className="bd-codrex-x">-X</span>
               <span className="sr-only"> (opens in a new tab)</span>
             </Link>
             <span className="mx-1.5 text-bd-dark-muted" aria-hidden>

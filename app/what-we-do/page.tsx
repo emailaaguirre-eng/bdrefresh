@@ -21,7 +21,7 @@ export default function WhatWeDoPage() {
             Clear ownership. Software that still makes sense <span className="shimmer-text">after launch</span>
           </>
         }
-        lead="We clarify the outcome, shape the system around real operations, and keep design, engineering, and deployment on one thread—so the result holds up in day-to-day use."
+        lead="We clarify the outcome, shape the system around real operations, and keep design, engineering, and deployment on one thread, so the result holds up in day-to-day use."
       />
       <WhatWeDoBody />
       <ClosingBand deck="white" aria-labelledby="wwd-cta-heading">

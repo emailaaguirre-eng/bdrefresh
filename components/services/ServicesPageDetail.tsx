@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "@/components/motion/Reveal";
 import { Container } from "@/components/ui/Container";
 import { SectionTag } from "@/components/ui/SectionTag";
@@ -15,17 +16,16 @@ export function ServicesPageDetail() {
       <section className="bg-bd-light-bg py-16 md:py-20" aria-labelledby="svc-detail-heading">
         <Container>
           <Reveal>
-            <SectionTag>Offerings</SectionTag>
+            <SectionTag>Services</SectionTag>
             <h2
               id="svc-detail-heading"
               className="font-heading text-2xl md:whitespace-nowrap font-bold tracking-tight text-bd-light-text sm:text-3xl md:text-4xl"
             >
-              A field guide to fit
+              Services that fit your next step
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-bd-light-secondary">
-              Every project starts by understanding what needs to happen now and what should be planned for later. We
-              help shape the right first version, prioritize the pieces that matter most, and design the structure so
-              future improvements have a solid place to land.
+              We help you choose a sensible first step, focus on what matters most, and leave room to grow without
+              making things harder to manage later.
             </p>
           </Reveal>
         </Container>
@@ -74,9 +74,16 @@ export function ServicesPageDetail() {
                           {s.title}
                         </h3>
                         <p className="mt-3 text-base leading-relaxed text-bd-light-secondary">{s.description}</p>
-                        <p className="mt-5 border-l-2 border-bd-accent/35 bg-bd-light-bg/80 py-3 pl-4 text-[0.95rem] leading-relaxed text-bd-light-secondary">
-                          <span className="font-semibold text-bd-light-text">{s.insightLabel}:</span> {s.insight}
-                        </p>
+                        {"learnMoreHref" in s && s.learnMoreHref ? (
+                          <p className="mt-4">
+                            <Link
+                              href={s.learnMoreHref}
+                              className="text-sm font-semibold text-bd-accent underline-offset-2 hover:underline"
+                            >
+                              Learn more: {"learnMoreLabel" in s && s.learnMoreLabel ? s.learnMoreLabel : "Details"}
+                            </Link>
+                          </p>
+                        ) : null}
                       </div>
                     </div>
                   </article>

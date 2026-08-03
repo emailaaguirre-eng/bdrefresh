@@ -21,7 +21,7 @@ export default function ServicesPage() {
             What we <span className="shimmer-text">offer</span>
           </>
         }
-        lead="Website builds, custom applications, internal tools, integrations, managed hosting, website care, SEO, copy, and design—scoped to fit the business clearly, run reliably, and grow without becoming hard to manage."
+        lead="Website builds, custom applications, internal tools, integrations, managed hosting, website care, SEO, copy, and design, scoped to fit the business clearly, run reliably, and grow without becoming hard to manage."
       />
       <ServicesPageDetail />
       <ClosingBand deck="alt" aria-labelledby="svc-cta-heading">
@@ -30,7 +30,7 @@ export default function ServicesPage() {
             id="svc-cta-heading"
             className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
           >
-            Not sure which <span className="text-bd-accent-lighter">offer fits</span>?
+            Not sure <span className="text-bd-accent-lighter">where to start</span>?
           </h2>
           <p className="mt-4 text-[1.05rem] leading-relaxed text-bd-light-secondary">
             Describe the problem. We&apos;ll recommend a sane starting point.

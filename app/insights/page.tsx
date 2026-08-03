@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { CodreXWordmark } from "@/components/brand/CodreXWordmark";
 import { MagneticLink } from "@/components/effects/MagneticLink";
 import { InsightPostCard } from "@/components/insights/InsightPostCard";
+import { InsightsEyebrowTransmission } from "@/components/insights/InsightsEyebrowTransmission";
+import { InsightsStarfield } from "@/components/insights/InsightsStarfield";
 import { ClosingBand } from "@/components/layout/ClosingBand";
 import { PageHero } from "@/components/layout/PageHero";
 import { Reveal } from "@/components/motion/Reveal";
@@ -22,13 +24,15 @@ export default function InsightsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Insights"
+        eyebrow={<InsightsEyebrowTransmission />}
         title={
           <span className="font-codrex font-bold tracking-normal">
             The <CodreXWordmark /> Files
           </span>
         }
         lead="Thoughtful takes on websites, web applications, digital strategy, and the decisions that shape better online experiences."
+        backdrop={<InsightsStarfield />}
+        contentClassName="py-20 md:py-24 lg:py-28"
       />
       <section className="dot-grid-bg py-16 md:py-24" aria-label="Articles">
         <Container>

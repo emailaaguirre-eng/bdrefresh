@@ -25,53 +25,63 @@ export const techStack = [
   "Firebase",
 ] as const;
 
-export const servicesDetailed = [
+export type HomeServiceCard = {
+  title: string;
+  description: string;
+  /** Optional deep link (e.g. Hosting & Infrastructure page). */
+  href?: string;
+};
+
+export const servicesDetailed: HomeServiceCard[] = [
   {
     title: "Website Builds",
     description:
-      "Business sites, marketing sites, and web platforms built to earn trust quickly and support the offer clearly.",
+      "Business and marketing sites that make what you do clear, build trust quickly, and give visitors an easy next step.",
   },
   {
     title: "Custom Web Applications",
     description:
-      "When your rules, roles, and data do not fit a template: customer-facing apps and portals scoped to how people actually work.",
+      "For teams where SaaS or templates force awkward workarounds: apps and portals shaped around your roles, data, and rules.",
   },
   {
     title: "Internal Tools & Dashboards",
     description:
-      "For teams stuck in spreadsheets and email chains: dashboards, approvals, and reporting with permissions that match reality.",
+      "For teams stuck in spreadsheets and email: dashboards, approvals, and reporting that match how your work actually gets done.",
   },
   {
     title: "Automation & API Integrations",
     description:
-      "When systems need to stay in sync without copy-paste: APIs, webhooks, imports, deduplication, and guarded jobs between tools.",
+      "Need two or more systems talking to each other? We connect them so your records stay in sync and updates happen automatically.",
   },
   {
     title: "Managed Hosting",
     description:
-      "A managed environment for production sites: SSL, backups, staging when supported, monitoring, and business-hours support.",
+      "We host and look after your live website with backups, monitoring, and business-hours support so day-to-day hosting stays with us.",
+    href: "/services/hosting",
   },
   {
     title: "Website Care",
     description:
-      "Ongoing maintenance and health checks so updates, uptime, and routine issues are handled before they become emergencies.",
+      "Ongoing care to keep your site healthy, with a client portal for updates, reports, change orders, and more.",
+    href: "/services/hosting",
   },
   {
     title: "SEO",
     description:
-      "Technical structure, on-page hygiene, and ongoing SEO care so search engines and humans both understand the offer.",
+      "We help your site show up in search engines, with ongoing SEO care when you want steady attention after the foundation is in place.",
+    href: "/services/hosting",
   },
   {
     title: "Web Copy",
     description:
-      "Messaging that states who it is for, what changes, and what to do next, written alongside the build, not bolted on after.",
+      "Clear messaging about who you help, what you do, and what to do next, written with the site instead of bolted on later.",
   },
   {
     title: "Graphic Design",
     description:
-      "Identity and marketing visuals that read as the same company as the product, not a separate aesthetic layer.",
+      "Logos, brand assets, and marketing visuals that feel like the same company as your website, not a separate look.",
   },
-] as const;
+];
 
 /** Full services page: anchors + extended Value / Use case copy (not the home preview grid). */
 export const servicesPageOffers = [
@@ -80,90 +90,69 @@ export const servicesPageOffers = [
     iconIndex: 0,
     title: "Website Builds",
     description:
-      "Professional business sites, marketing sites, and web platforms shaped around a clear offer, credible first impression, and a path to contact or convert. Typical scope covers structure, design implementation, content placement, and a clean handoff to hosting or care.",
-    insightLabel: "Fit & risk" as const,
-    insight:
-      "Best when the site needs to do a real job—explain the offer, build trust, and move the right people forward—not just look finished in a screenshot.",
+      "Professional business and marketing sites built around a clear message, a strong first impression, and an easy path to get in touch or take the next step.",
   },
   {
     id: "svc-custom-apps",
     iconIndex: 1,
     title: "Custom Web Applications",
     description:
-      "For teams where SaaS or templates force awkward workarounds: customer-facing apps and portals shaped around your roles, data, and rules. Typical scope covers auth, core flows, admin surfaces, and a staging path to production.",
-    insightLabel: "Fit & risk" as const,
-    insight:
-      "Reduces rework from wrong assumptions early. You get explicit tradeoffs on complexity, a sensible permission model, and handoff material your staff can use without re-interpreting the build.",
+      "For teams where SaaS or templates force awkward workarounds: customer-facing apps and portals shaped around your roles, data, and rules.",
   },
   {
     id: "svc-internal-tools",
     iconIndex: 2,
     title: "Internal Tools & Dashboards",
     description:
-      "When decisions live in inboxes and one-off sheets: dashboards, approvals, and reporting that match how work is approved and recorded. Done means people can run daily operations from the tool, not around it.",
-    insightLabel: "Fit & risk" as const,
-    insight:
-      "Cuts duplicate entry and “which version is true?” moments. Audit-friendly patterns where they matter; plain workflows where they do not.",
+      "For teams stuck in inboxes and spreadsheets: dashboards, approvals, and reporting that match how your work actually gets done, so people can run the day from one place.",
   },
   {
     id: "svc-automation",
     iconIndex: 3,
     title: "Automation & API Integrations",
     description:
-      "When two or more systems need to stay aligned: APIs, webhooks, scheduled sync, imports, deduplication, and guardrails so partial failures do not silently corrupt data.",
-    insightLabel: "Fit & risk" as const,
-    insight:
-      "Surfaces integration edges early (auth, rate limits, id mapping). You get operational visibility: what runs, when, and how to recover if a vendor changes behavior.",
+      "Need two or more systems talking to each other? We connect them so your records stay in sync and updates happen automatically.",
   },
   {
     id: "svc-hosting",
     iconIndex: 4,
     title: "Managed Hosting",
     description:
-      "B&D managed hosting for production websites: managed environment, SSL, CDN/caching where appropriate, daily backups, restores, platform maintenance, uptime and resource monitoring, staging when supported, and DNS coordination.",
-    insightLabel: "Fit & risk" as const,
-    insight:
-      "Fits when you want the live site treated as an operating asset—backed up, monitored, and supported—rather than left on a set-and-forget plan.",
+      "We host and look after your live website: secure connection, regular backups, monitoring, and support during business hours so day-to-day hosting stays with us.",
+    learnMoreHref: "/services/hosting",
+    learnMoreLabel: "Hosting & Infrastructure",
   },
   {
     id: "svc-website-care",
     iconIndex: 5,
     title: "Website Care",
     description:
-      "Ongoing managed website care: health checks, maintenance routines, reporting, and support so small issues are caught early and the site stays ready for day-to-day use.",
-    insightLabel: "Fit & risk" as const,
-    insight:
-      "Best after launch when ownership matters: who watches uptime, who handles updates, and how problems get surfaced before customers do.",
+      "Ongoing managed website care to ensure your site is healthy. Includes a client portal so you can stay up to date on the site, review reports, handle change orders, and more.",
+    learnMoreHref: "/services/hosting",
+    learnMoreLabel: "Hosting & Infrastructure",
   },
   {
     id: "svc-seo",
     iconIndex: 6,
     title: "SEO",
     description:
-      "Technical structure, internal linking, and intent-aligned page work so humans and crawlers get a coherent picture, plus ongoing SEO care options when search readiness needs steady attention. Rankings are not guaranteed.",
-    insightLabel: "Fit & risk" as const,
-    insight:
-      "Best when you have a real offer worth finding and are willing to align content with how people actually search. Treats SEO as implementation discipline, not keyword stuffing.",
+      "We help your site show up in search engines. Ongoing SEO care is available when you want steady attention after the foundation is in place.",
+    learnMoreHref: "/services/hosting",
+    learnMoreLabel: "Hosting & Infrastructure",
   },
   {
     id: "svc-web-copy",
     iconIndex: 7,
     title: "Web Copy",
     description:
-      "Copy that states who it is for, what problem you solve, and what happens next, drafted in the same pass as structure and UI so the story matches the product.",
-    insightLabel: "Fit & risk" as const,
-    insight:
-      "Avoids the “beautiful site, vague offer” trap. Visitors self-select; your team spends less time re-explaining basics on first calls.",
+      "Clear messaging about who you help, what you do, and what to do next, written with the site instead of bolted on later.",
   },
   {
     id: "svc-design",
     iconIndex: 8,
     title: "Graphic Design",
     description:
-      "Logos, brand assets, and marketing visuals that sit credibly next to the product, useful when identity and interface need to feel like one organization.",
-    insightLabel: "Fit & risk" as const,
-    insight:
-      "Reduces visual drift between site, decks, and collateral. Clear file delivery and practical formats your vendors can reuse.",
+      "Logos, brand assets, and marketing visuals that feel like the same company as your website, not a separate look.",
   },
 ] as const;
 
@@ -256,7 +245,7 @@ export const workCases = [
     n: "04",
     title: "Professional Services Website",
     description:
-      "A strong service can lose momentum when the website does not clearly communicate its value. This concept organizes services, credibility, and next steps into a focused experience that helps prospective clients understand the offer and determine fit before making contact.",
+      "A strong service can lose momentum when the website does not clearly communicate its value. This concept organizes services, credibility, and next steps into a focused experience that helps prospective clients understand what you do and decide if you are a fit before making contact.",
     image: "/work-previews/site.svg",
     alt: "Concept mockup: professional services marketing site style, not a client deliverable",
     useObject: false,

@@ -106,16 +106,16 @@ const glossary = glossaryRaw.map(([term, definition, why]) => ({
 // Client-facing only: what we offer + a few public starting prices.
 // Do not list full internal rate cards, tier ladders, or proprietary package detail.
 const serviceMenu = `WHAT WE OFFER
-- Website builds — professional business and marketing sites
-- Custom web applications — portals and apps shaped around your workflows
-- Internal tools & dashboards — approvals, reporting, and team systems
-- Automation & API integrations — keep tools in sync without copy-paste
-- Managed hosting — starting at $149/month
-- Website monitoring — checks and alerts for the live site (ask for details)
-- Website care — ongoing maintenance and health checks (quoted to fit)
-- SEO — technical and on-page care; ongoing SEO care starting at $199/month
-- Web copy — clear messaging for pages and calls to action
-- Graphic design — logos, brand assets, and marketing visuals
+- Website builds: professional business and marketing sites
+- Custom web applications: portals and apps shaped around your workflows
+- Internal tools & dashboards: approvals, reporting, and team systems
+- Automation & API integrations: keep tools in sync without copy-paste
+- Managed hosting: starting at $149/month
+- Website monitoring: checks and alerts for the live site (ask for details)
+- Website care: ongoing maintenance and health checks (quoted to fit)
+- SEO: technical and on-page care; ongoing SEO care starting at $199/month
+- Web copy: clear messaging for pages and calls to action
+- Graphic design: logos, brand assets, and marketing visuals
 
 Also available when needed: DNS/email setup, monitoring, and project consulting.
 
