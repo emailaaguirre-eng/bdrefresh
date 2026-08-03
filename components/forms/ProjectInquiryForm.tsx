@@ -1,30 +1,26 @@
 "use client";
 
-import { type FormEvent, useRef } from "react";
+import { type FormEvent, useRef, useState } from "react";
 
-const formAction =
-  process.env.NEXT_PUBLIC_CONTACT_FORM_ACTION?.trim() || "/contact/send.php";
+const formEndpoint =
+  process.env.NEXT_PUBLIC_CONTACT_FORM_ACTION?.trim() || "/api/contact";
 
 type BdccVtApi = {
   identify?: (payload: { email?: string; name?: string; company?: string; title?: string }) => Promise<unknown>;
 };
 
+type FormStatus = "idle" | "submitting" | "success" | "error";
+
 export function ProjectInquiryForm() {
   const identifiedRef = useRef(false);
+  const [status, setStatus] = useState<FormStatus>("idle");
+  const [feedback, setFeedback] = useState<string | null>(null);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    if (identifiedRef.current) {
-      return;
-    }
-
-    const form = event.currentTarget;
+  const runIdentifyThenSubmit = async (form: HTMLFormElement) => {
     const api = (window as unknown as { BdccVt?: BdccVtApi }).BdccVt;
-
-    if (!api?.identify) {
+    if (!api?.identify || identifiedRef.current) {
       return;
     }
-
-    event.preventDefault();
 
     const data = new FormData(form);
     const name = String(data.get("name") ?? "").trim();
@@ -32,29 +28,90 @@ export function ProjectInquiryForm() {
 
     if (name === "" && email === "") {
       identifiedRef.current = true;
-      form.requestSubmit();
-
       return;
     }
 
-    api
-      .identify({ name, email })
-      .catch(() => undefined)
-      .finally(() => {
-        identifiedRef.current = true;
-        form.requestSubmit();
+    try {
+      await api.identify({ name, email });
+    } catch {
+      // Identify is optional — never block lead delivery.
+    } finally {
+      identifiedRef.current = true;
+    }
+  };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+
+    if (status === "submitting") {
+      return;
+    }
+
+    setStatus("submitting");
+    setFeedback(null);
+
+    await runIdentifyThenSubmit(form);
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(formEndpoint, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
       });
+
+      const payload = (await response.json().catch(() => null)) as
+        | { success?: boolean; message?: string }
+        | null;
+
+      if (!response.ok || !payload?.success) {
+        setStatus("error");
+        setFeedback(
+          payload?.message ||
+            "Unable to send your message right now. Please try again or email us directly at info@banddservicing.com.",
+        );
+        identifiedRef.current = false;
+        return;
+      }
+
+      setStatus("success");
+      setFeedback(payload.message || "Message sent successfully.");
+      form.reset();
+      identifiedRef.current = false;
+    } catch {
+      setStatus("error");
+      setFeedback(
+        "Unable to send your message right now. Please try again or email us directly at info@banddservicing.com.",
+      );
+      identifiedRef.current = false;
+    }
   };
 
   return (
     <form
-      action={formAction}
-      method="post"
       onSubmit={handleSubmit}
       className="space-y-5 rounded-2xl border border-bd-light-border bg-bd-light-card p-10 shadow-[0_4px_12px_rgba(0,0,0,0.07),0_2px_4px_rgba(0,0,0,0.04)]"
       aria-label="Project inquiry form"
+      noValidate
     >
       <p className="text-sm text-bd-light-muted">Required fields are marked with an asterisk (*).</p>
+
+      {feedback ? (
+        <div
+          role="alert"
+          aria-live="polite"
+          className={
+            status === "success"
+              ? "rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900"
+              : "rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900"
+          }
+        >
+          {feedback}
+        </div>
+      ) : null}
+
       <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden />
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
@@ -144,9 +201,10 @@ export function ProjectInquiryForm() {
       </div>
       <button
         type="submit"
-        className="bd-btn-magnetic inline-flex w-full items-center justify-center gap-2 rounded-xl bg-bd-accent py-3.5 text-sm font-semibold text-white transition hover:bg-bd-accent-dark sm:w-full"
+        disabled={status === "submitting"}
+        className="bd-btn-magnetic inline-flex w-full items-center justify-center gap-2 rounded-xl bg-bd-accent py-3.5 text-sm font-semibold text-white transition hover:bg-bd-accent-dark disabled:cursor-not-allowed disabled:opacity-70 sm:w-full"
       >
-        <span>Send Message</span>
+        <span>{status === "submitting" ? "Sending…" : "Send Message"}</span>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
           <line x1="22" y1="2" x2="11" y2="13" />
           <polygon points="22 2 15 22 11 13 2 9 22 2" />
