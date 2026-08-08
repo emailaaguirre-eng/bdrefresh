@@ -45,3 +45,10 @@ next-env.d.ts
 # Runtime logs and rate-limit data
 contact/logs/*.log
 contact/logs/*.json
+
+# Local ops / deploy noise (never product source)
+.safety/
+/tmp/
+error_log
+*.preload-form-backup-*
+*.preload-from-backup-*
