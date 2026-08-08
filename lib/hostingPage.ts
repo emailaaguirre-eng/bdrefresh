@@ -1,5 +1,10 @@
 /** Customer-facing Hosting & Infrastructure page copy (aligned with BDCC catalog). */
 
+import {
+  hostingALaCarteServices,
+  hostingSeoCareTiers,
+} from "@/lib/allServicesPage";
+
 export const portalFeatures = [
   {
     id: "status",
@@ -118,80 +123,14 @@ export const websiteCarePoints = [
   "Client portal access for status, reports, and requests",
 ] as const;
 
-export const seoCareTiers = [
-  {
-    name: "SEO Setup",
-    price: "$750 one-time",
-    description:
-      "Baseline metadata, sitemap and indexing setup, Search Console connection, and a clean technical starting point.",
-  },
-  {
-    name: "Essential SEO Care",
-    price: "From $199/mo",
-    description:
-      "Ongoing metadata, headings, image alt text, sitemap and robots review, indexability checks, and a monthly SEO health summary.",
-  },
-  {
-    name: "Professional SEO Care",
-    price: "From $399/mo",
-    description:
-      "Everything in Essential, plus focused improvements to one to three priority pages, internal linking, schema review, and a monthly action summary.",
-  },
-  {
-    name: "Growth SEO",
-    price: "From $699/mo",
-    description:
-      "Broader work across three to five priority pages, topic and conversion guidance, and a quarterly strategy review.",
-  },
-  {
-    name: "Local SEO Care",
-    price: "From $249/mo",
-    description:
-      "Local search readiness, business information consistency, LocalBusiness schema review, and monthly local recommendations. Available standalone or as an add-on.",
-  },
-] as const;
+/**
+ * SEO Care plan rows on the Hosting page — derived from lib/allServicesPage (single source of truth).
+ * Do not maintain a second list of prices or tier names here.
+ */
+export const seoCareTiers = hostingSeoCareTiers;
 
-export const aLaCarteServices = [
-  {
-    name: "Managed Hosting",
-    price: "From $149/mo",
-    note: "$99/mo as an add-on with another qualifying plan",
-    description:
-      "Managed hosting, SSL, backups, website availability monitoring, platform maintenance, and business-hours support.",
-  },
-  {
-    name: "Website Monitoring",
-    price: "From $149/mo",
-    note: null,
-    description:
-      "Automated monitoring and documented alerts for supported website, domain, certificate, performance, and infrastructure signals.",
-  },
-  {
-    name: "Website Care",
-    price: "From $349/mo",
-    note: null,
-    description:
-      "Routine maintenance, approved updates, minor fixes, reporting, and access to the client portal.",
-  },
-  {
-    name: "SEO Care",
-    price: "From $199/mo",
-    note: "Tiers from Essential through Growth; Local available separately",
-    description:
-      "Ongoing technical, on-page, and local SEO support. Rankings, traffic, and leads are not guaranteed.",
-  },
-  {
-    name: "Domain & SSL Management",
-    price: "From $29/mo",
-    note: null,
-    description:
-      "Renewal coordination, certificate checks, and domain-related support designed to reduce expiration surprises.",
-  },
-  {
-    name: "Complete Care",
-    price: "$1,595/mo",
-    note: "Includes Managed Hosting; do not stack the separate hosting add-on",
-    description:
-      "An all-in service package combining premium website care, monitoring, Growth SEO, portal reporting, priority support, and managed hosting.",
-  },
-] as const;
+/**
+ * A la carte summary board on the Hosting page — derived from lib/allServicesPage.
+ * Representative SKUs only; full matrix lives on /services/all.
+ */
+export const aLaCarteServices = hostingALaCarteServices;
