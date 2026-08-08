@@ -83,78 +83,88 @@ export const servicesDetailed: HomeServiceCard[] = [
   },
 ];
 
-/** Full services page: anchors + extended Value / Use case copy (not the home preview grid). */
-export const servicesPageOffers = [
+/** Full services page: product map (build vs after launch), not every SKU. Catalog: /services/all. */
+export type ServicesPageOffer = {
+  id: string;
+  iconIndex: number;
+  title: string;
+  description: string;
+  learnMoreHref?: string;
+  learnMoreLabel?: string;
+};
+
+export type ServicesPageGroup = {
+  id: string;
+  label: string;
+  heading: string;
+  lede: string;
+  items: ServicesPageOffer[];
+};
+
+export const servicesPageGroups: ServicesPageGroup[] = [
   {
-    id: "svc-websites",
-    iconIndex: 0,
-    title: "Website Builds",
-    description:
-      "Professional business and marketing sites built around a clear message, a strong first impression, and an easy path to get in touch or take the next step.",
+    id: "build",
+    label: "Build",
+    heading: "Sites, apps, and brand",
+    lede:
+      "Scoped project work to launch something new or replace tools that no longer fit. Compare plans and packages anytime in the full catalog.",
+    items: [
+      {
+        id: "svc-websites",
+        iconIndex: 0,
+        title: "Website Builds",
+        description:
+          "Business and marketing sites with a clear message, a strong first impression, and an easy path for visitors to get in touch or take the next step.",
+      },
+      {
+        id: "svc-custom-apps",
+        iconIndex: 1,
+        title: "Custom Apps & Tools",
+        description:
+          "Portals, internal dashboards, and integrations when off-the-shelf software forces awkward workarounds. Includes industry Custom Platform Builds (CPBs): prebuilt back end, semi-custom front for salons and barbers, restaurants, e-commerce, and informational sites.",
+        learnMoreHref: "/services/all#cpb",
+        learnMoreLabel: "CPB lines in the catalog",
+      },
+      {
+        id: "svc-brand",
+        iconIndex: 8,
+        title: "Web Copy & Graphic Design",
+        description:
+          "Messaging and visual identity written and designed with the site so brand and pages feel like one company, not a separate layer bolted on later.",
+      },
+    ],
   },
   {
-    id: "svc-custom-apps",
-    iconIndex: 1,
-    title: "Custom Web Applications",
-    description:
-      "For teams where SaaS or templates force awkward workarounds: customer-facing apps and portals shaped around your roles, data, and rules.",
+    id: "care",
+    label: "After launch",
+    heading: "Hosting, care, and search readiness",
+    lede:
+      "Keep the live site online, maintained, and easier for search engines to understand. Deep detail on the Hosting page; tiers and starting prices in the full catalog.",
+    items: [
+      {
+        id: "svc-hosting",
+        iconIndex: 4,
+        title: "Hosting & Website Care",
+        description:
+          "Managed hosting, backups, monitoring, and ongoing care so day-to-day operations stay with us, with a client portal for status, reports, and requests.",
+        learnMoreHref: "/services/hosting",
+        learnMoreLabel: "Hosting & infrastructure story",
+      },
+      {
+        id: "svc-seo",
+        iconIndex: 6,
+        title: "SEO Care",
+        description:
+          "Technical and on-page search readiness, from foundation setup through ongoing monthly care. Rankings, traffic, and leads are not guaranteed.",
+        learnMoreHref: "/services/hosting#hosting-seo",
+        learnMoreLabel: "SEO Care overview",
+      },
+    ],
   },
-  {
-    id: "svc-internal-tools",
-    iconIndex: 2,
-    title: "Internal Tools & Dashboards",
-    description:
-      "For teams stuck in inboxes and spreadsheets: dashboards, approvals, and reporting that match how your work actually gets done, so people can run the day from one place.",
-  },
-  {
-    id: "svc-automation",
-    iconIndex: 3,
-    title: "Automation & API Integrations",
-    description:
-      "Need two or more systems talking to each other? We connect them so your records stay in sync and updates happen automatically.",
-  },
-  {
-    id: "svc-hosting",
-    iconIndex: 4,
-    title: "Managed Hosting",
-    description:
-      "We host and look after your live website: secure connection, regular backups, monitoring, and support during business hours so day-to-day hosting stays with us.",
-    learnMoreHref: "/services/hosting",
-    learnMoreLabel: "Hosting & Infrastructure",
-  },
-  {
-    id: "svc-website-care",
-    iconIndex: 5,
-    title: "Website Care",
-    description:
-      "Ongoing managed website care to ensure your site is healthy. Includes a client portal so you can stay up to date on the site, review reports, handle change orders, and more.",
-    learnMoreHref: "/services/hosting",
-    learnMoreLabel: "Hosting & Infrastructure",
-  },
-  {
-    id: "svc-seo",
-    iconIndex: 6,
-    title: "SEO",
-    description:
-      "We help your site show up in search engines. Ongoing SEO care is available when you want steady attention after the foundation is in place.",
-    learnMoreHref: "/services/hosting",
-    learnMoreLabel: "Hosting & Infrastructure",
-  },
-  {
-    id: "svc-web-copy",
-    iconIndex: 7,
-    title: "Web Copy",
-    description:
-      "Clear messaging about who you help, what you do, and what to do next, written with the site instead of bolted on later.",
-  },
-  {
-    id: "svc-design",
-    iconIndex: 8,
-    title: "Graphic Design",
-    description:
-      "Logos, brand assets, and marketing visuals that feel like the same company as your website, not a separate look.",
-  },
-] as const;
+];
+
+/** @deprecated Use servicesPageGroups — flat list kept only if anything still imports it. */
+export const servicesPageOffers = servicesPageGroups.flatMap((g) => g.items);
 
 export const processPhases = [
   {
