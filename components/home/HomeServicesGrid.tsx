@@ -13,11 +13,13 @@ function ServiceCard({
   description,
   index,
   href,
+  iconIndex,
 }: {
   title: string;
   description: string;
   index: number;
   href?: string;
+  iconIndex?: number;
 }) {
   const reduce = useReducedMotion();
   const [fineHover, setFineHover] = useState(false);
@@ -25,6 +27,7 @@ function ServiceCard({
     setFineHover(window.matchMedia("(min-width: 768px) and (hover: hover)").matches);
   }, []);
   const tilt = useCardTilt({ disabled: reduce || !fineHover });
+  const glyph = iconIndex ?? index;
 
   /* useCardTilt: callback ref; ref.current only read in pointer handlers. */
   /* eslint-disable react-hooks/refs */
@@ -40,7 +43,7 @@ function ServiceCard({
           {String(index + 1).padStart(2, "0")}
         </span>
         <div className="bd-service-icon-wrap mt-5 flex h-[52px] w-[52px] items-center justify-center rounded-xl border border-[rgba(37,104,160,0.18)] bg-[rgba(37,104,160,0.08)] text-bd-accent">
-          <ServiceIcon index={index} />
+          <ServiceIcon index={glyph} />
         </div>
         <h3 className="mt-5 font-heading text-[1.2rem] font-bold tracking-tight text-bd-light-text">{title}</h3>
         <p className="mt-2.5 text-[0.95rem] leading-relaxed text-bd-light-secondary">{description}</p>
@@ -74,10 +77,16 @@ function ServiceCard({
 
 export function HomeServicesGrid() {
   return (
-    <div className="mt-12 grid auto-rows-fr gap-6 sm:grid-cols-2 sm:items-stretch">
+    <div className="mt-12 grid auto-rows-fr gap-6 sm:grid-cols-2 sm:items-stretch lg:grid-cols-2">
       {servicesDetailed.map((s, i) => (
         <Reveal key={s.title} delay={i * 0.04} className="h-full">
-          <ServiceCard title={s.title} description={s.description} index={i} href={s.href} />
+          <ServiceCard
+            title={s.title}
+            description={s.description}
+            index={i}
+            href={s.href}
+            iconIndex={s.iconIndex}
+          />
         </Reveal>
       ))}
     </div>

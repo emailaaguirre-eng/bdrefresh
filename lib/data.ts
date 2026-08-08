@@ -30,56 +30,42 @@ export type HomeServiceCard = {
   description: string;
   /** Optional deep link (e.g. Hosting & Infrastructure page). */
   href?: string;
+  /** Glyph from ServiceIcon; defaults to card order index if omitted. */
+  iconIndex?: number;
 };
 
+/**
+ * Home services preview only — few entry doors, not the full menu.
+ * Full narrative list: /services. Plan catalog: /services/all.
+ */
 export const servicesDetailed: HomeServiceCard[] = [
   {
     title: "Website Builds",
     description:
       "Business and marketing sites that make what you do clear, build trust quickly, and give visitors an easy next step.",
+    href: "/services#svc-websites",
+    iconIndex: 0,
   },
   {
-    title: "Custom Web Applications",
+    title: "Custom Apps & Tools",
     description:
-      "For teams where SaaS or templates force awkward workarounds: apps and portals shaped around your roles, data, and rules.",
+      "Customer portals, internal dashboards, integrations, and industry platforms (CPBs: prebuilt back end, semi-custom front) when off-the-shelf tools force awkward workarounds.",
+    href: "/services#svc-custom-apps",
+    iconIndex: 1,
   },
   {
-    title: "Internal Tools & Dashboards",
+    title: "Hosting & Website Care",
     description:
-      "For teams stuck in spreadsheets and email: dashboards, approvals, and reporting that match how your work actually gets done.",
-  },
-  {
-    title: "Automation & API Integrations",
-    description:
-      "Need two or more systems talking to each other? We connect them so your records stay in sync and updates happen automatically.",
-  },
-  {
-    title: "Managed Hosting",
-    description:
-      "We host and look after your live website with backups, monitoring, and business-hours support so day-to-day hosting stays with us.",
+      "Keep the live site online and healthy: managed hosting, monitoring, maintenance, and a client portal under one relationship.",
     href: "/services/hosting",
+    iconIndex: 4,
   },
   {
-    title: "Website Care",
+    title: "SEO Care",
     description:
-      "Ongoing care to keep your site healthy, with a client portal for updates, reports, change orders, and more.",
-    href: "/services/hosting",
-  },
-  {
-    title: "SEO",
-    description:
-      "We help your site show up in search engines, with ongoing SEO care when you want steady attention after the foundation is in place.",
-    href: "/services/hosting",
-  },
-  {
-    title: "Web Copy",
-    description:
-      "Clear messaging about who you help, what you do, and what to do next, written with the site instead of bolted on later.",
-  },
-  {
-    title: "Graphic Design",
-    description:
-      "Logos, brand assets, and marketing visuals that feel like the same company as your website, not a separate look.",
+      "Technical and on-page search readiness after launch, with ongoing care when you want steady attention. Rankings are not guaranteed.",
+    href: "/services/hosting#hosting-seo",
+    iconIndex: 6,
   },
 ];
 
