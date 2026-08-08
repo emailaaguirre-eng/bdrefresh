@@ -30,16 +30,16 @@ export default function WhatWeDoPage() {
             id="wwd-cta-heading"
             className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
           >
-            Talk through your <span className="text-bd-accent">next step</span>
+            See how we&apos;d own the <span className="text-bd-accent">thread</span>
           </h2>
           <p className="mt-4 text-[1.05rem] leading-relaxed text-bd-light-secondary">
-            Share where you are today and where you want to be. We&apos;ll help you map a sensible path.
+            Describe the outcome you need after launch week. We&apos;ll show how design, engineering, and delivery stay on one path.
           </p>
           <MagneticLink
             href="/start-project"
             className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-bd-accent px-6 py-3.5 text-sm font-semibold text-white shadow-md transition hover:bg-bd-accent-dark"
           >
-            <span>Start a Project</span>
+            <span>Map the approach</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />

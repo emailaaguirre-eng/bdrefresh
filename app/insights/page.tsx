@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { CodreXWordmark } from "@/components/brand/CodreXWordmark";
 import { MagneticLink } from "@/components/effects/MagneticLink";
 import { InsightPostCard } from "@/components/insights/InsightPostCard";
-import { InsightsEyebrowTransmission } from "@/components/insights/InsightsEyebrowTransmission";
 import { InsightsStarfield } from "@/components/insights/InsightsStarfield";
 import { ClosingBand } from "@/components/layout/ClosingBand";
 import { PageHero } from "@/components/layout/PageHero";
@@ -24,7 +23,7 @@ export default function InsightsPage() {
   return (
     <>
       <PageHero
-        eyebrow={<InsightsEyebrowTransmission />}
+        eyebrow="Insights"
         title={
           <span className="font-codrex font-bold tracking-normal">
             The <CodreXWordmark /> Files
@@ -61,16 +60,16 @@ export default function InsightsPage() {
             id="insights-cta-heading"
             className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
           >
-            Planning a <span className="text-bd-accent">new build?</span>
+            From article to a real <span className="text-bd-accent">roadmap</span>
           </h2>
           <p className="mt-4 text-[1.05rem] leading-relaxed text-bd-light-secondary">
-            Tell us what you&apos;re weighing. We&apos;ll help you think through scope and fit.
+            If something you read here matches a decision you&apos;re facing, send the context. We&apos;ll help turn it into a scoped next step.
           </p>
           <MagneticLink
             href="/start-project"
             className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-bd-accent px-6 py-3.5 text-sm font-semibold text-white shadow-md transition hover:bg-bd-accent-dark"
           >
-            <span>Start a Project</span>
+            <span>Apply this to your site</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />

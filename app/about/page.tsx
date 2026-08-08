@@ -21,7 +21,7 @@ export default function AboutPage() {
             Built beyond templates, designed for the <span className="shimmer-text">way you work.</span>
           </>
         }
-        lead="B&D Servicing has been building building digital applications, internal tools, and systems shaped around real business needs."
+        lead="B&D Servicing builds digital applications, internal tools, and systems shaped around real business needs."
       />
       <AboutBody />
       <ClosingBand deck="alt" aria-labelledby="about-cta-heading">
@@ -30,16 +30,16 @@ export default function AboutPage() {
             id="about-cta-heading"
             className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
           >
-            Want to see if we&apos;re a <span className="text-bd-accent">good fit?</span>
+            Prefer a team that finishes <span className="text-bd-accent">past launch week</span>?
           </h2>
           <p className="mt-4 text-[1.05rem] leading-relaxed text-bd-light-secondary">
-            Share a bit about your project. We&apos;ll respond with clear next steps.
+            Introduce the business and the outcome you need. We&apos;ll reply with whether we&apos;re the right fit and what a first step looks like.
           </p>
           <MagneticLink
             href="/start-project"
             className="bd-btn-magnetic mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-bd-accent px-6 py-3.5 text-sm font-semibold text-white shadow-md transition hover:bg-bd-accent-dark"
           >
-            <span>Start a Project</span>
+            <span>Introduce your project</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
               <line x1="5" y1="12" x2="19" y2="12" />
               <polyline points="12 5 19 12 12 19" />
