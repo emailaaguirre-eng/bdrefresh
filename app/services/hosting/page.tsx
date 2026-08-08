@@ -51,11 +51,10 @@ export default function HostingInfrastructurePage() {
             id="hosting-cta-heading"
             className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
           >
-            Not sure which services your website needs?
+            Want a practical mix for a <span className="text-bd-accent">live site</span>?
           </h2>
           <p className="mt-4 text-[1.05rem] leading-relaxed text-bd-light-secondary">
-            We can review your current setup and recommend a practical mix of hosting, care, monitoring, and SEO support
-            without adding services you do not need.
+            Send your current hosting and care situation. We will recommend only the layers you need, not a full stack by default.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <MagneticLink
@@ -68,8 +67,8 @@ export default function HostingInfrastructurePage() {
                 <polyline points="12 5 19 12 12 19" />
               </svg>
             </MagneticLink>
-            <ButtonLink href="/services" variant="outline" className="bd-btn-magnetic">
-              See All Services
+            <ButtonLink href="/services/all" variant="outline" className="bd-btn-magnetic">
+              See All Services & Packages
             </ButtonLink>
           </div>
         </Reveal>

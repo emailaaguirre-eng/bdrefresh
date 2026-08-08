@@ -419,8 +419,8 @@ export function HostingInfrastructureBody() {
                 environments may require separate scoping.
               </p>
               <div className="mt-8">
-                <ButtonLink href="/services" className="bd-btn-magnetic">
-                  See All Services
+                <ButtonLink href="/services/all" className="bd-btn-magnetic">
+                  See All Services & Packages
                 </ButtonLink>
               </div>
             </Reveal>
@@ -444,7 +444,7 @@ export function HostingInfrastructureBody() {
               <Reveal delay={0.08}>
                 <div className="mt-4 border border-bd-light-border bg-white px-6 py-6 md:px-7 md:py-7">
                   <p className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-bd-accent">
-                    Not sure what to pick?
+                    Need a lean set of plans?
                   </p>
                   <p className="mt-3 text-[1.02rem] leading-relaxed text-bd-light-secondary">
                     You do not need every package. We can review your site and help determine the right mix of hosting,

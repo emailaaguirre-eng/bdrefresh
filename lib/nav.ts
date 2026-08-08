@@ -2,7 +2,6 @@ export const mainNav = [
   { href: "/", label: "Home" },
   { href: "/what-we-do", label: "What We Do" },
   { href: "/services", label: "Services" },
-  { href: "/services/hosting", label: "Hosting" },
   { href: "/process", label: "Process" },
   { href: "/about", label: "About" },
   { href: "/work", label: "Work" },
@@ -17,7 +16,8 @@ export const footerNav = {
   ],
   services: [
     { href: "/services", label: "Services" },
-    { href: "/services/hosting", label: "Hosting & Infrastructure" },
+    { href: "/services/all", label: "All plans & packages" },
+    { href: "/services/hosting", label: "Hosting & care" },
     { href: "/process", label: "Process" },
     { href: "/what-we-do", label: "What We Do" },
   ],
