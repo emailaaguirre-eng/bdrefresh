@@ -10,7 +10,7 @@ export function InsightPostCard({ post, featured }: { post: InsightPost; feature
   const href = `/insights/${post.slug}`;
   return (
     <article
-      className={`group rounded-2xl border border-bd-light-border bg-white p-8 shadow-card transition hover:border-bd-accent/25 hover:shadow-card-hover md:p-10 ${
+      className={`group rounded-none border border-bd-light-border bg-white p-8 shadow-none transition hover:border-bd-accent/25 md:p-10 ${
         featured ? "ring-1 ring-bd-accent/10" : ""
       }`}
     >
