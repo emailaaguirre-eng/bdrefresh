@@ -49,7 +49,7 @@ export default function HostingInfrastructurePage() {
         <Reveal>
           <h2
             id="hosting-cta-heading"
-            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
+            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-bold tracking-tight text-bd-light-text"
           >
             Want a practical mix for a <span className="text-bd-accent">live site</span>?
           </h2>

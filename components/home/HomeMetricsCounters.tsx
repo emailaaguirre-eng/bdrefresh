@@ -19,7 +19,7 @@ export function HomeMetricsCounters() {
     <div className="mt-10 grid grid-cols-1 gap-6 border-t border-bd-light-border pt-8 sm:grid-cols-3 sm:gap-8">
       {pillars.map((p) => (
         <div key={p.title}>
-          <div className="font-heading text-lg font-bold tracking-tight text-bd-accent">{p.title}</div>
+          <div className="font-editorial text-lg font-bold tracking-tight text-bd-accent">{p.title}</div>
           <p className="mt-2 text-[0.88rem] leading-relaxed text-bd-light-secondary">{p.body}</p>
         </div>
       ))}

@@ -386,7 +386,7 @@ export function HostingInfrastructureBody() {
               {seoCareTiers.map((tier, i) => (
                 <Reveal key={tier.name} delay={i * 0.03}>
                   <li className="px-6 py-5 transition hover:bg-bd-light-bg/50 sm:grid sm:grid-cols-[minmax(0,1.1fr)_minmax(0,7.5rem)_minmax(0,1.4fr)] sm:items-start sm:gap-6 sm:py-6">
-                    <h3 className="font-heading text-lg font-bold text-bd-light-text">{tier.name}</h3>
+                    <h3 className="font-editorial text-lg font-bold text-bd-light-text">{tier.name}</h3>
                     <p className="mt-1 font-mono text-sm font-semibold text-bd-accent sm:mt-0.5">{tier.price}</p>
                     <p className="mt-2 text-[0.98rem] leading-relaxed text-bd-light-secondary sm:mt-0.5">
                       {tier.description}
@@ -431,7 +431,7 @@ export function HostingInfrastructureBody() {
                   <Reveal key={svc.name} delay={i * 0.03}>
                     <li className="px-6 py-6 transition hover:bg-bd-light-bg/40 md:px-7 md:py-7">
                       <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8">
-                        <h3 className="font-heading text-xl font-bold text-bd-light-text">{svc.name}</h3>
+                        <h3 className="font-editorial text-xl font-bold text-bd-light-text">{svc.name}</h3>
                         <p className="shrink-0 font-mono text-sm font-semibold text-bd-accent">{svc.price}</p>
                       </div>
                       {svc.note ? <p className="mt-1 text-sm text-bd-light-muted">{svc.note}</p> : null}

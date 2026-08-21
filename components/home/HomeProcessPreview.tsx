@@ -62,7 +62,7 @@ export function HomeProcessPreview() {
                   <span className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.1em] text-bd-accent">
                     Phase {p.phase}
                   </span>
-                  <h3 className="mt-1.5 font-heading text-[1.15rem] font-bold text-bd-light-text">{p.title}</h3>
+                  <h3 className="mt-1.5 font-editorial text-[1.15rem] font-bold text-bd-light-text">{p.title}</h3>
                   <p className="mx-auto mt-2 max-w-[220px] text-[0.88rem] leading-relaxed text-bd-light-secondary">{p.body}</p>
                 </div>
               </Reveal>

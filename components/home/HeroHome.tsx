@@ -129,7 +129,7 @@ export function HeroHome() {
         <div className="max-w-[740px]">
           <HeroStatusBadge />
 
-          <h1 className="mb-5 font-heading text-[clamp(2.5rem,5.5vw,4rem)] font-black leading-[1.08] tracking-[-0.03em] text-white">
+          <h1 className="mb-5 font-heading text-[clamp(2.5rem,5.5vw,4rem)] font-bold leading-[1.12] tracking-[-0.015em] text-white">
             Websites and apps, built <span className="shimmer-text">end-to-end.</span>
           </h1>
 

@@ -23,7 +23,7 @@ export function HostingOverviewRail() {
           <li key={layer.label} className="relative">
             <div className="h-full border border-bd-light-border bg-white px-3 py-3">
               <p className="font-mono text-[0.62rem] text-bd-light-muted">{String(i + 1).padStart(2, "0")}</p>
-              <p className="mt-1 font-heading text-sm font-bold text-bd-light-text">{layer.label}</p>
+              <p className="mt-1 font-editorial text-sm font-bold text-bd-light-text">{layer.label}</p>
               <p className="mt-0.5 text-xs text-bd-light-secondary">{layer.note}</p>
             </div>
             {i < layers.length - 1 ? (

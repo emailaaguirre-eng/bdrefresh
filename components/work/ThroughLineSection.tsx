@@ -40,7 +40,7 @@ export function ThroughLineSection() {
                   <span className="font-mono text-[0.7rem] font-bold uppercase tracking-[0.12em] text-bd-accent">
                     {item.n}
                   </span>
-                  <h3 className="mt-2 font-heading text-base font-bold leading-snug tracking-tight text-bd-light-text md:text-[1.05rem]">
+                  <h3 className="mt-2 font-editorial text-base font-bold leading-snug tracking-tight text-bd-light-text md:text-[1.05rem]">
                     {item.title}
                   </h3>
                   <p className="mt-2.5 text-[0.88rem] leading-relaxed text-bd-light-secondary">{item.body}</p>

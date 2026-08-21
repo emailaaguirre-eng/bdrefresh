@@ -28,7 +28,7 @@ export default function AllServicesPage() {
         <Reveal>
           <h2
             id="all-svc-cta-heading"
-            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
+            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-bold tracking-tight text-bd-light-text"
           >
             Ready to price against a real <span className="text-bd-accent">scope</span>?
           </h2>

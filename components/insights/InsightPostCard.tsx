@@ -20,7 +20,7 @@ export function InsightPostCard({ post, featured }: { post: InsightPost; feature
       <time dateTime={post.publishedAt} className={`block text-sm text-bd-light-muted ${featured ? "mt-3" : "mt-0"}`}>
         {formatDate(post.publishedAt)}
       </time>
-      <h2 className="mt-3 font-heading text-xl font-bold tracking-tight text-bd-light-text md:text-2xl">
+      <h2 className="mt-3 font-editorial text-xl font-bold tracking-tight text-bd-light-text md:text-2xl">
         <Link
           href={href}
           className="transition hover:text-bd-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bd-accent"

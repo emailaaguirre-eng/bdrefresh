@@ -28,7 +28,7 @@ export default function AboutPage() {
         <Reveal>
           <h2
             id="about-cta-heading"
-            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
+            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-bold tracking-tight text-bd-light-text"
           >
             Prefer a team that finishes <span className="text-bd-accent">past launch week</span>?
           </h2>

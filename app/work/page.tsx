@@ -57,7 +57,7 @@ export default function WorkPage() {
                     </figure>
                     <div className="flex flex-1 flex-col p-6">
                       <span className="font-mono text-xs font-bold text-bd-accent">{item.n}</span>
-                      <h3 className="mt-2 font-heading text-xl font-bold">{item.title}</h3>
+                      <h3 className="mt-2 font-editorial text-xl font-bold">{item.title}</h3>
                       <p className="mt-3 flex-1 text-sm leading-relaxed text-bd-light-secondary">{item.description}</p>
                       <div className="mt-4 h-px w-full shrink-0 bg-gradient-to-r from-bd-accent/40 to-transparent" />
                     </div>
@@ -74,7 +74,7 @@ export default function WorkPage() {
             <Reveal>
               <h2
                 id="work-focus-heading"
-                className="font-heading text-[clamp(2rem,4vw,2.75rem)] font-extrabold tracking-[-0.025em] text-white"
+                className="font-heading text-[clamp(2rem,4vw,2.75rem)] font-bold tracking-[-0.015em] text-white"
               >
                 Where this work{" "}
                 <span className="bd-home-cta-real-glow inline-block">
@@ -101,7 +101,7 @@ export default function WorkPage() {
         <Reveal>
           <h2
             id="work-cta-heading"
-            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
+            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-bold tracking-tight text-bd-light-text"
           >
             Have a system in mind like <span className="text-bd-accent">these</span>?
           </h2>

@@ -214,7 +214,7 @@ export function PortalFeatureExplorer() {
                         <FeatureIcon id={active.id} />
                       </span>
                       <div className="min-w-0">
-                        <h3 className="font-heading text-xl font-bold tracking-tight text-white sm:text-2xl">
+                        <h3 className="font-editorial text-xl font-bold tracking-tight text-white sm:text-2xl">
                           {active.title}
                         </h3>
                         <p className="mt-3 text-[1.02rem] leading-relaxed text-[#c2d0e0]">{active.detail}</p>

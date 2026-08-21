@@ -36,7 +36,7 @@ export function HomeCtaBand() {
         <Reveal>
           <h2
             id="home-cta-heading"
-            className="font-heading text-[clamp(2rem,4vw,2.75rem)] font-extrabold tracking-[-0.025em] text-white"
+            className="font-heading text-[clamp(2rem,4vw,2.75rem)] font-bold tracking-[-0.015em] text-white"
           >
             Ready to build{" "}
             <span className="bd-home-cta-real-glow inline-block">

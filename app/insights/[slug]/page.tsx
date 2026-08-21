@@ -51,7 +51,7 @@ export default async function InsightArticlePage({ params }: Props) {
         <p className="mt-6 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-bd-accent-lighter">
           Article
         </p>
-        <h1 className="mt-4 font-heading text-[clamp(2.5rem,5.5vw,4rem)] font-black leading-[1.08] tracking-[-0.03em] text-white">
+        <h1 className="mt-4 font-heading text-[clamp(2.5rem,5.5vw,4rem)] font-bold leading-[1.12] tracking-[-0.015em] text-white">
           {post.title}
         </h1>
         <p className="mt-4 text-base leading-relaxed text-bd-dark-muted md:text-lg">{post.description}</p>

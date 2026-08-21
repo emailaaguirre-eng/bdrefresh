@@ -49,7 +49,10 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        heading: ["var(--font-dm)", "var(--font-inter)", "system-ui", "sans-serif"],
+        /** Architectural / structural headings — IBM Plex Sans. */
+        heading: ["var(--font-plex)", "var(--font-inter)", "system-ui", "sans-serif"],
+        /** Compact / editorial UI — Instrument Sans. */
+        editorial: ["var(--font-instrument)", "var(--font-inter)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
         /** CoDre-X wordmark serif (classic Baskerville-style). */
         codrex: ["var(--font-codrex)", "Georgia", "Times New Roman", "serif"],

@@ -18,7 +18,7 @@ function PlanRow({ item, index }: { item: CatalogItem; index: number }) {
               <span className="font-mono text-[0.72rem] font-bold tabular-nums tracking-wider text-bd-accent">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h3 className="font-heading text-lg font-bold tracking-tight text-bd-light-text md:text-xl">
+              <h3 className="font-editorial text-lg font-bold tracking-tight text-bd-light-text md:text-xl">
                 {item.name}
               </h3>
             </div>

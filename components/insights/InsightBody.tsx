@@ -23,7 +23,7 @@ export function InsightBody({ blocks }: { blocks: InsightBlock[] }) {
         }
         if (b.kind === "h3") {
           return (
-            <h3 key={i} className="mt-8 font-heading text-lg font-bold text-bd-light-text">
+            <h3 key={i} className="mt-8 font-editorial text-lg font-bold text-bd-light-text">
               {b.text}
             </h3>
           );

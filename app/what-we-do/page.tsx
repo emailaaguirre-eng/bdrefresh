@@ -28,7 +28,7 @@ export default function WhatWeDoPage() {
         <Reveal>
           <h2
             id="wwd-cta-heading"
-            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
+            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-bold tracking-tight text-bd-light-text"
           >
             See how we&apos;d own the <span className="text-bd-accent">thread</span>
           </h2>

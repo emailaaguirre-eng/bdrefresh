@@ -45,7 +45,7 @@ function ServiceCard({
         <div className="bd-service-icon-wrap mt-5 flex h-[52px] w-[52px] items-center justify-center rounded-xl border border-[rgba(37,104,160,0.18)] bg-[rgba(37,104,160,0.08)] text-bd-accent">
           <ServiceIcon index={glyph} />
         </div>
-        <h3 className="mt-5 font-heading text-[1.2rem] font-bold tracking-tight text-bd-light-text">{title}</h3>
+        <h3 className="mt-5 font-editorial text-[1.2rem] font-bold tracking-tight text-bd-light-text">{title}</h3>
         <p className="mt-2.5 text-[0.95rem] leading-relaxed text-bd-light-secondary">{description}</p>
         {href ? (
           <p className="mt-4 text-sm font-semibold text-bd-accent">

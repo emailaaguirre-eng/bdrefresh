@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Inter, Libre_Baskerville, Space_Mono } from "next/font/google";
+import { IBM_Plex_Sans, Instrument_Sans, Inter, Libre_Baskerville, Space_Mono } from "next/font/google";
 import Script from "next/script";
 import { ConsentGatedAnalytics } from "@/components/analytics/ConsentGatedAnalytics";
 import { SiteChrome } from "@/components/layout/SiteChrome";
@@ -24,10 +24,19 @@ const inter = Inter({
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+/** Architectural / structural headings (replaces DM Sans). */
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  weight: ["600", "700", "800", "900"],
-  variable: "--font-dm",
+  weight: ["600", "700"],
+  variable: "--font-plex",
+  display: "swap",
+});
+
+/** Compact / editorial UI text (card titles, dense interface labels). */
+const instrumentSans = Instrument_Sans({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-instrument",
   display: "swap",
 });
 
@@ -79,7 +88,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${dmSans.variable} ${spaceMono.variable} ${libreBaskerville.variable}`}
+      className={`${inter.variable} ${ibmPlexSans.variable} ${instrumentSans.variable} ${spaceMono.variable} ${libreBaskerville.variable}`}
     >
       <body>
         {hasGaMeasurementId ? <ConsentGatedAnalytics measurementId={gaMeasurementId!} /> : null}

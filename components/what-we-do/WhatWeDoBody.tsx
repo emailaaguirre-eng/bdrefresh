@@ -116,7 +116,7 @@ export function WhatWeDoBody() {
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-[rgba(37,104,160,0.15)] bg-[rgba(37,104,160,0.08)]">
                     <WhoHelpIconLock />
                   </div>
-                  <h3 className="mt-5 font-heading text-xl font-bold text-bd-light-text">Small business</h3>
+                  <h3 className="mt-5 font-editorial text-xl font-bold text-bd-light-text">Small business</h3>
                   <p className="mt-2 flex-1 text-base leading-relaxed text-bd-light-secondary">
                     A fast, credible web presence that earns trust in the first scroll.
                   </p>
@@ -129,7 +129,7 @@ export function WhatWeDoBody() {
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-[rgba(37,104,160,0.15)] bg-[rgba(37,104,160,0.08)]">
                     <WhoHelpIconTrending />
                   </div>
-                  <h3 className="mt-5 font-heading text-xl font-bold text-bd-light-text">Growing company</h3>
+                  <h3 className="mt-5 font-editorial text-xl font-bold text-bd-light-text">Growing company</h3>
                   <p className="mt-2 flex-1 text-base leading-relaxed text-bd-light-secondary">
                     Internal platforms that cut manual steps and make reporting clear.
                   </p>

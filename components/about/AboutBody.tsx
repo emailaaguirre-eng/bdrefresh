@@ -122,7 +122,7 @@ export function AboutBody() {
                     className="pointer-events-none absolute -right-6 -top-8 h-28 w-28 rounded-full bg-bd-accent/[0.06] blur-2xl transition group-hover:bg-bd-accent/[0.1]"
                     aria-hidden
                   />
-                  <p className="font-heading text-lg font-bold text-bd-light-text">{item.title}</p>
+                  <p className="font-editorial text-lg font-bold text-bd-light-text">{item.title}</p>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-bd-light-secondary md:text-[0.95rem]">{item.body}</p>
                   <div className="mt-5 h-0.5 w-12 rounded-full bg-gradient-to-r from-bd-accent to-bd-accent-lighter opacity-70" aria-hidden />
                 </li>

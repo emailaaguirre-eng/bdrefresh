@@ -38,7 +38,7 @@ export function ServicesOfferCard({ item, index }: { item: ServicesPageOffer; in
             </div>
           </div>
           <div className="min-w-0 flex-1">
-            <h3 className="font-heading text-xl font-bold tracking-tight text-bd-light-text md:text-2xl">
+            <h3 className="font-editorial text-xl font-bold tracking-tight text-bd-light-text md:text-2xl">
               {item.title}
             </h3>
             <p className="mt-3 text-base leading-relaxed text-bd-light-secondary">{item.description}</p>

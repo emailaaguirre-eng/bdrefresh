@@ -77,7 +77,7 @@ export default function StartProjectPage() {
             {steps.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.06}>
                 <article className="h-full rounded-2xl border border-bd-light-border bg-white p-6 shadow-card">
-                  <h3 className="font-heading text-lg font-bold">{s.title}</h3>
+                  <h3 className="font-editorial text-lg font-bold">{s.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-bd-light-secondary">{s.body}</p>
                 </article>
               </Reveal>

@@ -28,7 +28,7 @@ export default function ServicesPage() {
         <Reveal>
           <h2
             id="svc-cta-heading"
-            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-extrabold tracking-tight text-bd-light-text"
+            className="font-heading text-[clamp(1.75rem,4vw,2.5rem)] font-bold tracking-tight text-bd-light-text"
           >
             Need a build, or care for what&apos;s <span className="text-bd-accent-lighter">already live</span>?
           </h2>
