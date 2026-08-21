@@ -74,7 +74,7 @@ export function DeployTerminal() {
   return (
     <div
       ref={rootRef}
-      className="flex flex-col overflow-hidden rounded-2xl border border-[#21262d] bg-[#0d1117] shadow-[0_12px_40px_rgba(0,0,0,0.08)]"
+      className="w-full overflow-hidden rounded-none border border-[#21262d] bg-[#0d1117] shadow-[0_12px_40px_rgba(0,0,0,0.08)]"
       role="img"
       aria-label="Terminal showing deploy output: release build, checks, health status, and live status"
     >
@@ -89,7 +89,7 @@ export function DeployTerminal() {
           <span className="transition-colors hover:text-[#e05252]">×</span>
         </div>
       </div>
-      <div className="flex-1 px-6 py-8 pb-6 font-mono text-[0.85rem] leading-[1.7] text-[#c9d1d9] md:px-9">
+      <div className="px-6 py-8 pb-6 font-mono text-[0.85rem] leading-[1.7] text-[#c9d1d9] md:px-9">
         <div className="terminal-line whitespace-pre-wrap">
           <span className="font-semibold text-[#2ec4a2]">$</span>{" "}
           <span className="text-[#79c0ff]">bd deploy</span>

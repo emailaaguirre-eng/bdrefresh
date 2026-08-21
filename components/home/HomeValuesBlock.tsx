@@ -2,18 +2,13 @@ import { Reveal } from "@/components/motion/Reveal";
 import { DeployTerminal } from "@/components/home/DeployTerminal";
 import { HomeMetricsCounters } from "@/components/home/HomeMetricsCounters";
 import { Container } from "@/components/ui/Container";
-import { SectionTag } from "@/components/ui/SectionTag";
 
 export function HomeValuesBlock() {
   return (
     <section className="bg-bd-light-alt py-20 md:py-28" aria-labelledby="home-values-heading">
       <Container>
-        <div className="grid items-stretch gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-start gap-10 md:gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <DeployTerminal />
-          </Reveal>
-          <Reveal delay={0.08}>
-            <SectionTag>Our Values</SectionTag>
             <h2 id="home-values-heading" className="text-left font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
               Dedicated to Providing
               <br />
@@ -26,6 +21,9 @@ export function HomeValuesBlock() {
               end.
             </p>
             <HomeMetricsCounters />
+          </Reveal>
+          <Reveal delay={0.08} className="min-w-0 w-full lg:order-first">
+            <DeployTerminal />
           </Reveal>
         </div>
       </Container>
