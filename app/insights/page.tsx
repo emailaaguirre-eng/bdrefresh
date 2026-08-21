@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { CodreXWordmark } from "@/components/brand/CodreXWordmark";
 import { MagneticLink } from "@/components/effects/MagneticLink";
 import { InsightPostCard } from "@/components/insights/InsightPostCard";
 import { InsightsStarfield } from "@/components/insights/InsightsStarfield";
@@ -23,12 +22,18 @@ export default function InsightsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Insights"
         title={
-          <span className="font-codrex font-bold tracking-normal">
-            The <CodreXWordmark /> Files
-          </span>
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src="/thecodrexfiles.png"
+            alt="The CoDre-X Files"
+            width={957}
+            height={351}
+            decoding="async"
+            className="h-auto w-full max-w-[min(100%,18rem)] sm:max-w-[20rem] md:max-w-[22rem] lg:max-w-[24rem]"
+          />
         }
+        titleClassName="!mt-0 w-full max-w-none tracking-normal"
         lead="Thoughtful takes on websites, web applications, digital strategy, and the decisions that shape better online experiences."
         backdrop={<InsightsStarfield />}
         contentClassName="py-20 md:py-24 lg:py-28"

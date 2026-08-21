@@ -132,36 +132,38 @@ export function AboutBody() {
       </section>
 
       <CodrexBand>
-        <Reveal>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-<img
-  src="/codrex-logo-v2-blue.png"
-  alt="CoDre-X Concept Realized"
-  width={420}
-  height={138}
-  loading="lazy"
-  decoding="async"
-  fetchPriority="low"
-  className="mb-6 h-auto w-full max-w-[340px] md:max-w-[420px]"
-/>
-          <h2 id="codrex-heading" className="sr-only">
-            CoDre-X
-          </h2>
-        </Reveal>
-        <Reveal className="mt-10 max-w-3xl text-[1.05rem] leading-relaxed text-bd-light-secondary">
-          <p>
-            <Link
-              href={codreXUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-bd-light-text hover:underline"
-            >
-              <CodreXWordmark />
-            </Link>{" "}
-            is a division of B&amp;D Servicing representing the company&apos;s premium creative and development work,
-            where thoughtful ideas are shaped into custom digital solutions.
-          </p>
-        </Reveal>
+        <div className="mx-auto flex max-w-3xl flex-col items-center">
+          <Reveal className="flex w-full flex-col items-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/codrexltblue.png"
+              alt="CoDre-X — Concept Realized"
+              width={948}
+              height={268}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+              className="mb-6 h-auto w-full max-w-[260px] md:max-w-[320px]"
+            />
+            <h2 id="codrex-heading" className="sr-only">
+              CoDre-X
+            </h2>
+          </Reveal>
+          <Reveal className="mt-10 w-full text-center text-lg leading-relaxed text-bd-light-secondary">
+            <p>
+              <Link
+                href={codreXUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-bd-light-text hover:underline"
+              >
+                <CodreXWordmark />
+              </Link>{" "}
+              is our premium creative and development partner, where thoughtful ideas are shaped into custom digital
+              solutions.
+            </p>
+          </Reveal>
+        </div>
       </CodrexBand>
     </>
   );

@@ -8,6 +8,7 @@ export function PageHero({
   actions,
   backdrop,
   contentClassName = "py-16 md:py-20 lg:py-24",
+  titleClassName,
 }: {
   /** Omit or pass null/empty to hide the mono eyebrow row. */
   eyebrow?: ReactNode | null;
@@ -18,13 +19,15 @@ export function PageHero({
   /** Absolute layer behind copy (e.g. Insights night sky). */
   backdrop?: ReactNode;
   contentClassName?: string;
+  /** Extra classes on the h1 (e.g. reset tracking when title is a logo image). */
+  titleClassName?: string;
 }) {
   const showEyebrow = eyebrow != null && eyebrow !== false && eyebrow !== "";
   return (
     <div className="relative overflow-hidden bg-[#080c12] text-bd-dark-text">
       {backdrop}
       <Container className={`relative z-10 ${contentClassName}`}>
-        <div className="flex max-w-[740px] flex-col items-start text-left">
+        <div className="flex w-full max-w-[740px] flex-col items-start text-left">
           {showEyebrow ? (
             <div className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-bd-accent-lighter">
               {eyebrow}
@@ -34,6 +37,7 @@ export function PageHero({
             className={[
               showEyebrow ? "mt-4" : "",
               "font-heading text-[clamp(2.5rem,5.5vw,4rem)] font-bold leading-[1.12] tracking-[-0.015em] text-white",
+              titleClassName,
             ]
               .filter(Boolean)
               .join(" ")}
