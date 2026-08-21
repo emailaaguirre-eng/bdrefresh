@@ -16,7 +16,6 @@ export default function ProcessPage() {
   return (
     <>
       <PageHero
-        eyebrow="Process"
         title={
           <>
             <span className="md:whitespace-nowrap">

@@ -34,7 +34,6 @@ export default function StartProjectPage() {
   return (
     <>
       <PageHero
-        eyebrow="Start a project"
         title={
           <>
             Tell us what you’re building

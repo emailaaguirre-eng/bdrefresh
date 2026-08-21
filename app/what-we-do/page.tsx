@@ -15,7 +15,6 @@ export default function WhatWeDoPage() {
   return (
     <>
       <PageHero
-        eyebrow="What we do"
         title={
           <>
             Clear ownership. Software that still makes sense after launch

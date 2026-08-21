@@ -15,7 +15,6 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About"
         title={
           <>
             Built beyond templates, designed for the way you work.

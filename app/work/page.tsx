@@ -22,7 +22,6 @@ export default function WorkPage() {
   return (
     <>
       <PageHero
-        eyebrow="Work"
         title={
           <>
             B&amp;D Projects

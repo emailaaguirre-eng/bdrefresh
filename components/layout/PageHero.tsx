@@ -9,7 +9,8 @@ export function PageHero({
   backdrop,
   contentClassName = "py-16 md:py-20 lg:py-24",
 }: {
-  eyebrow: ReactNode;
+  /** Omit or pass null/empty to hide the mono eyebrow row. */
+  eyebrow?: ReactNode | null;
   title: ReactNode;
   lead: string;
   /** Optional CTA row under the lead (e.g. primary + secondary links). */
@@ -18,15 +19,25 @@ export function PageHero({
   backdrop?: ReactNode;
   contentClassName?: string;
 }) {
+  const showEyebrow = eyebrow != null && eyebrow !== false && eyebrow !== "";
   return (
     <div className="relative overflow-hidden bg-[#080c12] text-bd-dark-text">
       {backdrop}
       <Container className={`relative z-10 ${contentClassName}`}>
         <div className="flex max-w-[740px] flex-col items-start text-left">
-          <div className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-bd-accent-lighter">
-            {eyebrow}
-          </div>
-          <h1 className="mt-4 font-heading text-[clamp(2.5rem,5.5vw,4rem)] font-bold leading-[1.12] tracking-[-0.015em] text-white">
+          {showEyebrow ? (
+            <div className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-bd-accent-lighter">
+              {eyebrow}
+            </div>
+          ) : null}
+          <h1
+            className={[
+              showEyebrow ? "mt-4" : "",
+              "font-heading text-[clamp(2.5rem,5.5vw,4rem)] font-bold leading-[1.12] tracking-[-0.015em] text-white",
+            ]
+              .filter(Boolean)
+              .join(" ")}
+          >
             {title}
           </h1>
           <p className="mt-5 text-base leading-relaxed text-bd-dark-muted md:text-lg">{lead}</p>

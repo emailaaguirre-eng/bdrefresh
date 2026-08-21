@@ -15,7 +15,6 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Services"
         title={
           <>
             What we offer

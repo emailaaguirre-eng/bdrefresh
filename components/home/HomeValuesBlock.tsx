@@ -7,6 +7,7 @@ export function HomeValuesBlock() {
   return (
     <section className="bg-bd-light-alt py-20 md:py-28" aria-labelledby="home-values-heading">
       <Container>
+        {/* Top: copy first in DOM (a11y/mobile); terminal left on desktop */}
         <div className="grid items-start gap-10 md:gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <h2 id="home-values-heading" className="text-left font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
@@ -20,12 +21,15 @@ export function HomeValuesBlock() {
               provide clean documentation, with staging and review checkpoints baked into delivery, not bolted on at the
               end.
             </p>
-            <HomeMetricsCounters />
           </Reveal>
           <Reveal delay={0.08} className="min-w-0 w-full lg:order-first">
             <DeployTerminal />
           </Reveal>
         </div>
+        {/* Bottom: section-wide evidence under both columns */}
+        <Reveal delay={0.12} className="mt-10 md:mt-12">
+          <HomeMetricsCounters />
+        </Reveal>
       </Container>
     </section>
   );

@@ -16,7 +16,7 @@ const pillars = [
 /** Grounded trust strip (no unverifiable metrics). */
 export function HomeMetricsCounters() {
   return (
-    <div className="mt-10 grid grid-cols-1 gap-6 border-t border-bd-light-border pt-8 sm:grid-cols-3 sm:gap-8">
+    <div className="grid grid-cols-1 gap-6 border-t border-bd-light-border pt-8 sm:grid-cols-3 sm:gap-8">
       {pillars.map((p) => (
         <div key={p.title}>
           <div className="font-editorial text-lg font-bold tracking-tight text-bd-accent">{p.title}</div>
