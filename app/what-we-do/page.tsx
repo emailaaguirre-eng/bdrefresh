@@ -18,7 +18,7 @@ export default function WhatWeDoPage() {
         eyebrow="What we do"
         title={
           <>
-            Clear ownership. Software that still makes sense <span className="shimmer-text">after launch</span>
+            Clear ownership. Software that still makes sense after launch
           </>
         }
         lead="We clarify the outcome, shape the system around real operations, and keep design, engineering, and deployment on one thread, so the result holds up in day-to-day use."

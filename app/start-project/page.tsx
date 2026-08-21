@@ -37,7 +37,7 @@ export default function StartProjectPage() {
         eyebrow="Start a project"
         title={
           <>
-            Tell us what you’re <span className="shimmer-text">building</span>
+            Tell us what you’re building
           </>
         }
         lead="Tight brief or rough notes both work. We'll review what you send, reply honestly on fit, ask a few clear questions, and suggest a sensible next step. If we are not the right fit, we will say so."

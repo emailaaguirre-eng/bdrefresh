@@ -18,7 +18,7 @@ export default function AllServicesPage() {
         eyebrow="Catalog"
         title={
           <>
-            All services <span className="shimmer-text">&amp; packages</span>
+            All services &amp; packages
           </>
         }
         lead="Every service and plan we offer, clearly listed so you can compare what stands alone and what comes as a package, including Custom Platform Builds: industry-specific platforms with a prebuilt back end and a semi-custom front end. Choose what fits now without buying extras you do not need."

@@ -19,7 +19,7 @@ export default function HostingInfrastructurePage() {
         eyebrow="Hosting & Infrastructure"
         title={
           <>
-            Hosting, monitoring, and <span className="shimmer-text">website care</span>
+            Hosting, monitoring, and website care
           </>
         }
         lead="Your website should not become another thing you have to worry about. We help keep it available, maintained, protected, and ready for customers while giving you one place to stay informed."

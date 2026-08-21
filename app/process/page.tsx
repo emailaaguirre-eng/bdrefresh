@@ -20,7 +20,7 @@ export default function ProcessPage() {
         title={
           <>
             <span className="md:whitespace-nowrap">
-              From idea to <span className="shimmer-text">production</span>
+              From idea to production
             </span>
           </>
         }

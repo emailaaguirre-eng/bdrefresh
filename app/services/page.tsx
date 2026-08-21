@@ -18,7 +18,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title={
           <>
-            What we <span className="shimmer-text">offer</span>
+            What we offer
           </>
         }
         lead="Build when you need a site, application platform, or brand foundation. After launch, we host, care for, and support the live site. Plans and prices are listed in the full catalog."

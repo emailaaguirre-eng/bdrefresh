@@ -18,7 +18,7 @@ export default function AboutPage() {
         eyebrow="About"
         title={
           <>
-            Built beyond templates, designed for the <span className="shimmer-text">way you work.</span>
+            Built beyond templates, designed for the way you work.
           </>
         }
         lead="B&D Servicing builds digital applications, internal tools, and systems shaped around real business needs."

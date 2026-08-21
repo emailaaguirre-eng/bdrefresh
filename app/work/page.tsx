@@ -25,7 +25,7 @@ export default function WorkPage() {
         eyebrow="Work"
         title={
           <>
-            B&amp;D <span className="shimmer-text">Projects</span>
+            B&amp;D Projects
           </>
         }
         lead="We build websites, applications, internal tools, and platforms for real operations. The examples below are a small sample of the kinds of systems we build and illustrate the solutions they provide for our clients."
