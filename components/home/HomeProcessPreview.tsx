@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Reveal } from "@/components/motion/Reveal";
 import { Container } from "@/components/ui/Container";
-import { SectionTag } from "@/components/ui/SectionTag";
 import { processPhases } from "@/lib/data";
 import { ProcessStepIcon } from "@/components/process/ProcessStepIcon";
 
@@ -40,7 +39,6 @@ export function HomeProcessPreview() {
     >
       <Container>
         <Reveal>
-          <SectionTag>Our Process</SectionTag>
           <h2 id="home-process-heading" className="font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
             How We Build
           </h2>

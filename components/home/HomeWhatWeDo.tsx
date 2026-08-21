@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "@/components/motion/Reveal";
 import { Container } from "@/components/ui/Container";
-import { SectionTag } from "@/components/ui/SectionTag";
 
 export function HomeWhatWeDo() {
   return (
@@ -9,7 +8,6 @@ export function HomeWhatWeDo() {
       <Container>
         <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_minmax(0,20rem)] md:gap-12 lg:grid-cols-[1fr_minmax(0,26rem)] lg:gap-16">
           <Reveal>
-            <SectionTag>What We Do</SectionTag>
             <h2 id="home-wwd-heading" className="font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
               Development-first.
               <br />

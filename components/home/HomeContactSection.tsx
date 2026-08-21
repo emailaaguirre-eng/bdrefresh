@@ -1,7 +1,6 @@
 import { Reveal } from "@/components/motion/Reveal";
 import { ProjectInquiryForm } from "@/components/forms/ProjectInquiryForm";
 import { Container } from "@/components/ui/Container";
-import { SectionTag } from "@/components/ui/SectionTag";
 
 /** Legacy index.html `#contact` — same structure: info column + form. */
 export function HomeContactSection() {
@@ -9,7 +8,6 @@ export function HomeContactSection() {
     <section className="bg-bd-light-alt py-24 md:py-[110px]" id="contact" aria-labelledby="contact-heading">
       <Container>
         <Reveal>
-          <SectionTag>Contact</SectionTag>
           <h2 id="contact-heading" className="font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
             Start Your Project
           </h2>

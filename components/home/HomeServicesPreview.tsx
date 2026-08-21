@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "@/components/motion/Reveal";
 import { Container } from "@/components/ui/Container";
-import { SectionTag } from "@/components/ui/SectionTag";
 import { HomeServicesGrid } from "@/components/home/HomeServicesGrid";
 
 /** Home `#services` — few entry doors into the full services menu. */
@@ -16,7 +15,6 @@ export function HomeServicesPreview() {
       <div className="pointer-events-none absolute -bottom-24 left-[-100px] h-[350px] w-[350px] rounded-full bg-[rgba(46,196,162,0.04)] blur-[80px]" />
       <Container className="relative">
         <Reveal>
-          <SectionTag>Services</SectionTag>
           <h2 id="home-svc-heading" className="font-heading text-3xl font-bold tracking-tight text-bd-light-text md:text-4xl">
             What We Offer
           </h2>
