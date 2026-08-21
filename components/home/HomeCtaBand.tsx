@@ -38,10 +38,7 @@ export function HomeCtaBand() {
             id="home-cta-heading"
             className="font-heading text-[clamp(2rem,4vw,2.75rem)] font-bold tracking-[-0.015em] text-white"
           >
-            Ready to build{" "}
-            <span className="bd-home-cta-real-glow inline-block">
-              <span className="bd-home-cta-real-text">something real?</span>
-            </span>
+            Ready to build <span className="text-bd-accent">something real?</span>
           </h2>
           <p className="mt-4 text-[1.1rem] leading-relaxed text-bd-dark-muted">
             Tell us about your project. We&apos;ll scope it, plan it, and build it right, with a direct reply and clear

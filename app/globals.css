@@ -69,57 +69,6 @@
     z-index: 1;
   }
 
-  /* Matches banddservicing-website .shimmer-text (hero gradient sweep) */
-  .shimmer-text {
-    position: relative;
-    display: inline-block;
-    /* background-clip: text can clip descenders (g, j, y); pad the line box */
-    padding-bottom: 0.18em;
-    line-height: 1.2;
-    background: linear-gradient(
-      120deg,
-      #5aabee 0%,
-      #5aabee 30%,
-      #b8deff 42%,
-      #ffffff 50%,
-      #b8deff 58%,
-      #5aabee 70%,
-      #5aabee 100%
-    );
-    background-size: 250% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    animation: bd-shimmer-sweep 4s ease-in-out infinite;
-  }
-
-  .shimmer-text:hover {
-    animation-duration: 1.5s;
-    filter: drop-shadow(0 0 16px rgba(90, 171, 238, 0.5));
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .shimmer-text {
-      animation: none;
-      filter: none;
-      background: none;
-      color: theme("colors.bd.accent.lighter");
-      -webkit-text-fill-color: unset;
-      -webkit-background-clip: unset;
-      background-clip: unset;
-    }
-  }
-
-  @keyframes bd-shimmer-sweep {
-    0%,
-    100% {
-      background-position: 100% center;
-    }
-    50% {
-      background-position: -100% center;
-    }
-  }
 
   /* Home CTA band: drifting aurora blobs (cursor spotlight is inline in HomeCtaMotionBackdrop) */
   @keyframes bd-home-cta-float-1 {
@@ -176,37 +125,6 @@
     animation-delay: -3s;
   }
 
-  @keyframes bd-home-cta-real-sweep {
-    0%,
-    100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
-
-  .bd-home-cta-real-glow {
-    filter: drop-shadow(0 0 10px rgba(90, 171, 238, 0.35)) drop-shadow(0 0 24px rgba(46, 196, 162, 0.12));
-  }
-
-  .bd-home-cta-real-text {
-    background: linear-gradient(
-      105deg,
-      #8ec9ff 0%,
-      #5aabee 22%,
-      #7dccb8 42%,
-      #5aabee 58%,
-      #d4ecff 78%,
-      #5aabee 100%
-    );
-    background-size: 220% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    animation: bd-home-cta-real-sweep 9s ease-in-out infinite;
-  }
 
   @media (hover: hover) and (pointer: fine) {
     .bd-home-cta-satellite-zone {
@@ -220,19 +138,6 @@
     .bd-home-cta-aurora--3 {
       animation: none;
       opacity: 0.65;
-    }
-
-    .bd-home-cta-real-text {
-      animation: none;
-      background: none;
-      color: theme("colors.bd.accent.lighter");
-      -webkit-text-fill-color: unset;
-      -webkit-background-clip: unset;
-      background-clip: unset;
-    }
-
-    .bd-home-cta-real-glow {
-      filter: none;
     }
   }
 

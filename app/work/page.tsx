@@ -75,10 +75,7 @@ export default function WorkPage() {
                 id="work-focus-heading"
                 className="font-heading text-[clamp(2rem,4vw,2.75rem)] font-bold tracking-[-0.015em] text-white"
               >
-                Where this work{" "}
-                <span className="bd-home-cta-real-glow inline-block">
-                  <span className="bd-home-cta-real-text">tends to land</span>
-                </span>
+                Where this work <span className="text-bd-accent">tends to land</span>
               </h2>
               <ul className="mt-6 flex flex-wrap gap-3" role="list">
                 {focus.map((label) => (

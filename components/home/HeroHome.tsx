@@ -130,7 +130,7 @@ export function HeroHome() {
           <HeroStatusBadge />
 
           <h1 className="mb-5 font-heading text-[clamp(2.5rem,5.5vw,4rem)] font-bold leading-[1.12] tracking-[-0.015em] text-white">
-            Websites and apps, built <span className="shimmer-text">end-to-end.</span>
+            Websites and apps, built <span className="text-bd-accent">end-to-end.</span>
           </h1>
 
           <div className="mt-5 flex flex-wrap items-center gap-4 font-mono text-[0.95rem] font-semibold tracking-[0.02em] text-bd-accent-lighter">
