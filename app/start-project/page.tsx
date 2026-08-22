@@ -34,9 +34,10 @@ export default function StartProjectPage() {
   return (
     <>
       <PageHero
+        environment={{ intensity: "editorial", layout: "eta" }}
         title={
           <>
-            Tell us what you’re building
+            Tell us what you’re <span className="text-bd-accent">building</span>
           </>
         }
         lead="Tight brief or rough notes both work. We'll review what you send, reply honestly on fit, ask a few clear questions, and suggest a sensible next step. If we are not the right fit, we will say so."

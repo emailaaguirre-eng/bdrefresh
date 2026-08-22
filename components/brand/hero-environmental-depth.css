@@ -1,0 +1,527 @@
+/**
+ * B&D Hero Environmental Depth — INNER-PAGE hero system (prototype).
+ * Architectural planes / edges behind crisp typography. No gradient text.
+ * Never apply on Home (protected) or Insights (CoDre-X).
+ * Intensity ~10–20% quieter than signature-lab C.
+ */
+
+.bd-hero-env {
+  --ex: 0;
+  --ey: 0;
+  --env-opacity: 0.82;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: var(--env-opacity);
+  contain: paint;
+}
+
+.bd-hero-env--editorial {
+  --env-opacity: 0.72;
+}
+
+.bd-hero-env--restrained {
+  --env-opacity: 0.55;
+}
+
+.bd-hero-env__field {
+  position: absolute;
+  inset: 0;
+  opacity: 0.14;
+  background-image:
+    linear-gradient(rgba(37, 104, 160, 0.11) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 104, 160, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 65% 55% at 32% 38%, #000 15%, transparent 72%);
+  mask-image: radial-gradient(ellipse 65% 55% at 32% 38%, #000 15%, transparent 72%);
+  transform: translate3d(calc(var(--ex) * 1.2px), calc(var(--ey) * 1.2px), 0);
+}
+
+.bd-hero-env--restrained .bd-hero-env__field {
+  opacity: 0.08;
+}
+
+.bd-hero-env__plane {
+  position: absolute;
+  border: 1px solid rgba(37, 104, 160, 0.16);
+  background: linear-gradient(
+    145deg,
+    rgba(37, 104, 160, 0.07) 0%,
+    rgba(20, 58, 92, 0.03) 48%,
+    rgba(5, 171, 196, 0.035) 100%
+  );
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.bd-hero-env__plane--teal {
+  border-color: rgba(5, 171, 196, 0.12);
+  background: linear-gradient(
+    210deg,
+    rgba(27, 80, 128, 0.09) 0%,
+    rgba(8, 12, 18, 0.02) 55%,
+    rgba(5, 171, 196, 0.045) 100%
+  );
+}
+
+.bd-hero-env__edge {
+  position: absolute;
+  height: 1px;
+  opacity: 0.42;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(90, 171, 238, 0.22),
+    rgba(37, 104, 160, 0.16),
+    transparent
+  );
+}
+
+.bd-hero-env__edge--teal {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(5, 171, 196, 0.18),
+    rgba(37, 104, 160, 0.14),
+    transparent
+  );
+}
+
+.bd-hero-env__rail {
+  position: absolute;
+  width: 1px;
+  opacity: 0.32;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 104, 160, 0.28),
+    rgba(5, 171, 196, 0.12),
+    transparent
+  );
+}
+
+.bd-hero-env--restrained .bd-hero-env__edge {
+  opacity: 0.28;
+}
+.bd-hero-env--restrained .bd-hero-env__rail {
+  opacity: 0.2;
+}
+
+/* ── Layout alpha (legal / restrained base) — left-weighted strata ────── */
+.bd-hero-env[data-layout="alpha"] .bd-hero-env__plane--a {
+  width: 68%;
+  height: 54%;
+  left: -8%;
+  top: 10%;
+  transform: perspective(960px) rotateY(calc(-7deg + var(--ex) * 0.28deg))
+    rotateX(calc(3.5deg + var(--ey) * -0.2deg))
+    translate3d(calc(var(--ex) * 2.5px), calc(var(--ey) * 1.8px), 0);
+}
+.bd-hero-env[data-layout="alpha"] .bd-hero-env__plane--b {
+  width: 48%;
+  height: 40%;
+  right: -6%;
+  bottom: 14%;
+  transform: perspective(960px) rotateY(calc(5deg + var(--ex) * 0.32deg))
+    rotateX(calc(-2.5deg + var(--ey) * 0.18deg))
+    translate3d(calc(var(--ex) * -3px), calc(var(--ey) * 2.2px), 0);
+}
+.bd-hero-env[data-layout="alpha"] .bd-hero-env__plane--c {
+  width: 32%;
+  height: 24%;
+  left: 30%;
+  top: 48%;
+  border-color: rgba(90, 171, 238, 0.1);
+  background: rgba(20, 58, 92, 0.06);
+  transform: perspective(960px) rotateY(calc(-2deg + var(--ex) * 0.15deg))
+    translate3d(calc(var(--ex) * 1.5px), calc(var(--ey) * -1.5px), 0);
+}
+.bd-hero-env[data-layout="alpha"] .bd-hero-env__edge--1 {
+  width: 52%;
+  left: 6%;
+  top: 24%;
+  transform: rotate(-7deg) translate3d(calc(var(--ex) * 1.5px), calc(var(--ey) * 0.8px), 0);
+}
+.bd-hero-env[data-layout="alpha"] .bd-hero-env__edge--2 {
+  width: 36%;
+  right: 8%;
+  bottom: 30%;
+  transform: rotate(11deg) translate3d(calc(var(--ex) * -1.5px), calc(var(--ey) * 1.5px), 0);
+}
+.bd-hero-env[data-layout="alpha"] .bd-hero-env__rail--1 {
+  height: 56%;
+  left: 10%;
+  top: 16%;
+  transform: translate3d(calc(var(--ex) * 1.2px), calc(var(--ey) * 1.5px), 0);
+}
+.bd-hero-env[data-layout="alpha"] .bd-hero-env__rail--2 {
+  height: 40%;
+  right: 22%;
+  bottom: 18%;
+  transform: translate3d(calc(var(--ex) * -1.2px), calc(var(--ey) * -1.2px), 0);
+}
+
+/* ── Layout beta (what-we-do / catalog) — open right field ─────────────── */
+.bd-hero-env[data-layout="beta"] .bd-hero-env__plane--a {
+  width: 58%;
+  height: 62%;
+  left: 18%;
+  top: -4%;
+  transform: perspective(960px) rotateY(calc(4deg + var(--ex) * 0.25deg))
+    rotateX(calc(2deg + var(--ey) * -0.15deg))
+    translate3d(calc(var(--ex) * 2px), calc(var(--ey) * 2px), 0);
+}
+.bd-hero-env[data-layout="beta"] .bd-hero-env__plane--b {
+  width: 44%;
+  height: 50%;
+  left: -10%;
+  bottom: 6%;
+  transform: perspective(960px) rotateY(calc(-6deg + var(--ex) * 0.3deg))
+    rotateX(calc(-2deg + var(--ey) * 0.2deg))
+    translate3d(calc(var(--ex) * -2.5px), calc(var(--ey) * 2px), 0);
+}
+.bd-hero-env[data-layout="beta"] .bd-hero-env__plane--c {
+  width: 28%;
+  height: 34%;
+  right: 8%;
+  top: 28%;
+  border-color: rgba(90, 171, 238, 0.1);
+  background: rgba(20, 58, 92, 0.055);
+  transform: perspective(960px) rotateY(calc(3deg + var(--ex) * 0.18deg))
+    translate3d(calc(var(--ex) * 2px), calc(var(--ey) * -1.5px), 0);
+}
+.bd-hero-env[data-layout="beta"] .bd-hero-env__edge--1 {
+  width: 64%;
+  left: 12%;
+  top: 38%;
+  transform: rotate(-3deg) translate3d(calc(var(--ex) * 2px), calc(var(--ey) * 1px), 0);
+}
+.bd-hero-env[data-layout="beta"] .bd-hero-env__edge--2 {
+  width: 30%;
+  right: 4%;
+  top: 18%;
+  transform: rotate(8deg) translate3d(calc(var(--ex) * -1px), calc(var(--ey) * 1.5px), 0);
+}
+.bd-hero-env[data-layout="beta"] .bd-hero-env__rail--1 {
+  height: 70%;
+  left: 42%;
+  top: 8%;
+  opacity: 0.22;
+  transform: translate3d(calc(var(--ex) * 1px), calc(var(--ey) * 2px), 0);
+}
+.bd-hero-env[data-layout="beta"] .bd-hero-env__rail--2 {
+  height: 36%;
+  right: 14%;
+  bottom: 12%;
+  transform: translate3d(calc(var(--ex) * -1.5px), calc(var(--ey) * -1px), 0);
+}
+
+/* ── Layout gamma (services / hosting) — stacked horizontal bands ─────── */
+.bd-hero-env[data-layout="gamma"] .bd-hero-env__plane--a {
+  width: 78%;
+  height: 36%;
+  left: -4%;
+  top: 18%;
+  transform: perspective(960px) rotateX(calc(5deg + var(--ey) * -0.2deg))
+    rotateY(calc(-3deg + var(--ex) * 0.2deg))
+    translate3d(calc(var(--ex) * 2px), calc(var(--ey) * 1.5px), 0);
+}
+.bd-hero-env[data-layout="gamma"] .bd-hero-env__plane--b {
+  width: 62%;
+  height: 32%;
+  right: -8%;
+  top: 48%;
+  transform: perspective(960px) rotateX(calc(-4deg + var(--ey) * 0.18deg))
+    rotateY(calc(4deg + var(--ex) * 0.25deg))
+    translate3d(calc(var(--ex) * -2.5px), calc(var(--ey) * 2px), 0);
+}
+.bd-hero-env[data-layout="gamma"] .bd-hero-env__plane--c {
+  width: 36%;
+  height: 22%;
+  left: 22%;
+  bottom: 10%;
+  border-color: rgba(90, 171, 238, 0.09);
+  background: rgba(20, 58, 92, 0.05);
+  transform: perspective(960px) rotateY(calc(-2deg + var(--ex) * 0.12deg))
+    translate3d(calc(var(--ex) * 1.5px), calc(var(--ey) * -1px), 0);
+}
+.bd-hero-env[data-layout="gamma"] .bd-hero-env__edge--1 {
+  width: 70%;
+  left: 4%;
+  top: 42%;
+  transform: rotate(0.5deg) translate3d(calc(var(--ex) * 2px), 0, 0);
+}
+.bd-hero-env[data-layout="gamma"] .bd-hero-env__edge--2 {
+  width: 44%;
+  right: 2%;
+  bottom: 26%;
+  transform: rotate(-2deg) translate3d(calc(var(--ex) * -1.5px), calc(var(--ey) * 1px), 0);
+}
+.bd-hero-env[data-layout="gamma"] .bd-hero-env__rail--1 {
+  height: 48%;
+  left: 16%;
+  top: 22%;
+  transform: translate3d(calc(var(--ex) * 1px), calc(var(--ey) * 1.5px), 0);
+}
+.bd-hero-env[data-layout="gamma"] .bd-hero-env__rail--2 {
+  height: 44%;
+  right: 28%;
+  top: 30%;
+  transform: translate3d(calc(var(--ex) * -1px), calc(var(--ey) * 1px), 0);
+}
+
+/* ── Layout delta (process) — left→right sequence suggestion ──────────── */
+.bd-hero-env[data-layout="delta"] .bd-hero-env__plane--a {
+  width: 34%;
+  height: 58%;
+  left: -2%;
+  top: 12%;
+  transform: perspective(960px) rotateY(calc(-5deg + var(--ex) * 0.22deg))
+    translate3d(calc(var(--ex) * 1.5px), calc(var(--ey) * 1.5px), 0);
+}
+.bd-hero-env[data-layout="delta"] .bd-hero-env__plane--b {
+  width: 34%;
+  height: 50%;
+  left: 32%;
+  top: 22%;
+  transform: perspective(960px) rotateY(calc(1deg + var(--ex) * 0.2deg))
+    translate3d(calc(var(--ex) * 2px), calc(var(--ey) * 2px), 0);
+}
+.bd-hero-env[data-layout="delta"] .bd-hero-env__plane--c {
+  width: 30%;
+  height: 42%;
+  right: 4%;
+  top: 30%;
+  border-color: rgba(90, 171, 238, 0.1);
+  background: rgba(20, 58, 92, 0.05);
+  transform: perspective(960px) rotateY(calc(5deg + var(--ex) * 0.22deg))
+    translate3d(calc(var(--ex) * 2.5px), calc(var(--ey) * 1px), 0);
+}
+.bd-hero-env[data-layout="delta"] .bd-hero-env__edge--1 {
+  width: 78%;
+  left: 6%;
+  top: 46%;
+  transform: rotate(-1deg) translate3d(calc(var(--ex) * 2.5px), calc(var(--ey) * 0.5px), 0);
+}
+.bd-hero-env[data-layout="delta"] .bd-hero-env__edge--2 {
+  width: 24%;
+  left: 48%;
+  top: 28%;
+  transform: rotate(90deg) translate3d(calc(var(--ey) * 1px), 0, 0);
+  opacity: 0.28;
+}
+.bd-hero-env[data-layout="delta"] .bd-hero-env__rail--1 {
+  height: 52%;
+  left: 30%;
+  top: 18%;
+  transform: translate3d(calc(var(--ex) * 1.5px), calc(var(--ey) * 1px), 0);
+}
+.bd-hero-env[data-layout="delta"] .bd-hero-env__rail--2 {
+  height: 44%;
+  left: 62%;
+  top: 26%;
+  transform: translate3d(calc(var(--ex) * 1.5px), calc(var(--ey) * 1.5px), 0);
+}
+
+/* ── Layout epsilon (about) — quieter editorial crop ──────────────────── */
+.bd-hero-env[data-layout="epsilon"] .bd-hero-env__plane--a {
+  width: 52%;
+  height: 70%;
+  right: -12%;
+  top: -8%;
+  transform: perspective(960px) rotateY(calc(7deg + var(--ex) * 0.28deg))
+    translate3d(calc(var(--ex) * -2px), calc(var(--ey) * 1.5px), 0);
+}
+.bd-hero-env[data-layout="epsilon"] .bd-hero-env__plane--b {
+  width: 40%;
+  height: 36%;
+  left: -6%;
+  bottom: 8%;
+  transform: perspective(960px) rotateY(calc(-4deg + var(--ex) * 0.2deg))
+    translate3d(calc(var(--ex) * 2px), calc(var(--ey) * 2px), 0);
+}
+.bd-hero-env[data-layout="epsilon"] .bd-hero-env__plane--c {
+  display: none;
+}
+.bd-hero-env[data-layout="epsilon"] .bd-hero-env__edge--1 {
+  width: 48%;
+  right: 10%;
+  top: 32%;
+  transform: rotate(-12deg) translate3d(calc(var(--ex) * -1.5px), calc(var(--ey) * 1px), 0);
+}
+.bd-hero-env[data-layout="epsilon"] .bd-hero-env__edge--2 {
+  width: 28%;
+  left: 8%;
+  bottom: 22%;
+  transform: rotate(6deg) translate3d(calc(var(--ex) * 1px), calc(var(--ey) * -1px), 0);
+}
+.bd-hero-env[data-layout="epsilon"] .bd-hero-env__rail--1 {
+  height: 58%;
+  right: 24%;
+  top: 12%;
+  transform: translate3d(calc(var(--ex) * -1px), calc(var(--ey) * 1.5px), 0);
+}
+.bd-hero-env[data-layout="epsilon"] .bd-hero-env__rail--2 {
+  display: none;
+}
+
+/* ── Layout zeta (work) — proof / portfolio weight bottom-right ───────── */
+.bd-hero-env[data-layout="zeta"] .bd-hero-env__plane--a {
+  width: 60%;
+  height: 48%;
+  right: -4%;
+  bottom: 4%;
+  transform: perspective(960px) rotateY(calc(5deg + var(--ex) * 0.25deg))
+    rotateX(calc(-3deg + var(--ey) * 0.15deg))
+    translate3d(calc(var(--ex) * -2.5px), calc(var(--ey) * 2px), 0);
+}
+.bd-hero-env[data-layout="zeta"] .bd-hero-env__plane--b {
+  width: 46%;
+  height: 42%;
+  left: -8%;
+  top: 14%;
+  transform: perspective(960px) rotateY(calc(-5deg + var(--ex) * 0.22deg))
+    translate3d(calc(var(--ex) * 2px), calc(var(--ey) * 1.5px), 0);
+}
+.bd-hero-env[data-layout="zeta"] .bd-hero-env__plane--c {
+  width: 24%;
+  height: 28%;
+  left: 40%;
+  top: 36%;
+  border-color: rgba(90, 171, 238, 0.09);
+  background: rgba(20, 58, 92, 0.05);
+  transform: perspective(960px) rotateY(calc(2deg + var(--ex) * 0.15deg))
+    translate3d(calc(var(--ex) * 1.5px), calc(var(--ey) * -1px), 0);
+}
+.bd-hero-env[data-layout="zeta"] .bd-hero-env__edge--1 {
+  width: 56%;
+  right: 6%;
+  bottom: 36%;
+  transform: rotate(4deg) translate3d(calc(var(--ex) * -2px), calc(var(--ey) * 1px), 0);
+}
+.bd-hero-env[data-layout="zeta"] .bd-hero-env__edge--2 {
+  width: 34%;
+  left: 10%;
+  top: 30%;
+  transform: rotate(-9deg) translate3d(calc(var(--ex) * 1.5px), calc(var(--ey) * 1px), 0);
+}
+.bd-hero-env[data-layout="zeta"] .bd-hero-env__rail--1 {
+  height: 50%;
+  left: 18%;
+  top: 20%;
+  transform: translate3d(calc(var(--ex) * 1px), calc(var(--ey) * 1.5px), 0);
+}
+.bd-hero-env[data-layout="zeta"] .bd-hero-env__rail--2 {
+  height: 38%;
+  right: 16%;
+  bottom: 16%;
+  transform: translate3d(calc(var(--ex) * -1.5px), calc(var(--ey) * -1px), 0);
+}
+
+/* ── Layout eta (start-project) — open, inviting, lighter crop ────────── */
+.bd-hero-env[data-layout="eta"] .bd-hero-env__plane--a {
+  width: 50%;
+  height: 44%;
+  right: -10%;
+  top: 20%;
+  transform: perspective(960px) rotateY(calc(6deg + var(--ex) * 0.22deg))
+    translate3d(calc(var(--ex) * -2px), calc(var(--ey) * 1.5px), 0);
+}
+.bd-hero-env[data-layout="eta"] .bd-hero-env__plane--b {
+  width: 42%;
+  height: 38%;
+  left: -12%;
+  bottom: 16%;
+  transform: perspective(960px) rotateY(calc(-4deg + var(--ex) * 0.18deg))
+    translate3d(calc(var(--ex) * 2px), calc(var(--ey) * 1.5px), 0);
+}
+.bd-hero-env[data-layout="eta"] .bd-hero-env__plane--c {
+  display: none;
+}
+.bd-hero-env[data-layout="eta"] .bd-hero-env__edge--1 {
+  width: 40%;
+  right: 12%;
+  top: 40%;
+  transform: rotate(-5deg) translate3d(calc(var(--ex) * -1px), calc(var(--ey) * 1px), 0);
+}
+.bd-hero-env[data-layout="eta"] .bd-hero-env__edge--2 {
+  display: none;
+}
+.bd-hero-env[data-layout="eta"] .bd-hero-env__rail--1 {
+  height: 42%;
+  right: 30%;
+  top: 24%;
+  opacity: 0.22;
+  transform: translate3d(calc(var(--ex) * -1px), calc(var(--ey) * 1px), 0);
+}
+.bd-hero-env[data-layout="eta"] .bd-hero-env__rail--2 {
+  display: none;
+}
+
+/* Hosting: reuse gamma but hide field slightly more infra feel via class */
+.bd-hero-env--hosting .bd-hero-env__field {
+  background-size: 40px 40px;
+  opacity: 0.11;
+}
+
+/* Motion */
+@media (prefers-reduced-motion: no-preference) {
+  .bd-hero-env--live .bd-hero-env__plane--a {
+    animation: bd-hero-env-drift-a 24s ease-in-out infinite;
+  }
+  .bd-hero-env--live .bd-hero-env__plane--b {
+    animation: bd-hero-env-drift-b 29s ease-in-out infinite;
+  }
+}
+
+@keyframes bd-hero-env-drift-a {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 3px -2px;
+  }
+}
+
+@keyframes bd-hero-env-drift-b {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: -4px 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bd-hero-env--live .bd-hero-env__plane--a,
+  .bd-hero-env--live .bd-hero-env__plane--b {
+    animation: none;
+  }
+  .bd-hero-env {
+    --ex: 0 !important;
+    --ey: 0 !important;
+  }
+}
+
+/* Mobile: fewer elements, simpler crop, no pointer (JS gated) */
+@media (max-width: 767px) {
+  .bd-hero-env__plane--c,
+  .bd-hero-env__rail--2,
+  .bd-hero-env__edge--2 {
+    display: none;
+  }
+  .bd-hero-env__field {
+    opacity: 0.09;
+    background-size: 44px 44px;
+  }
+  .bd-hero-env {
+    --env-opacity: 0.7;
+  }
+  .bd-hero-env--restrained {
+    --env-opacity: 0.48;
+  }
+}

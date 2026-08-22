@@ -16,9 +16,10 @@ export default function AllServicesPage() {
     <>
       <PageHero
         eyebrow="Catalog"
+        environment={{ intensity: "default", layout: "beta" }}
         title={
           <>
-            All services &amp; packages
+            All <span className="text-bd-accent">services &amp; packages</span>
           </>
         }
         lead="Every service and plan we offer, clearly listed so you can compare what stands alone and what comes as a package, including Custom Platform Builds: industry-specific platforms with a prebuilt back end and a semi-custom front end. Choose what fits now without buying extras you do not need."

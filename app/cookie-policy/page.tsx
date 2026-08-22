@@ -12,7 +12,11 @@ export default function CookiePolicyPage() {
   return (
     <LegalDoc
       eyebrow="Legal"
-      title="Cookie Policy"
+      title={
+        <>
+          Cookie <span className="text-bd-accent">Policy</span>
+        </>
+      }
       lead="Essential cookies keep the site working. Optional analytics run only with your consent."
       updated="August 1, 2026"
       blocks={cookieBlocks}

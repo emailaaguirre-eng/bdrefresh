@@ -22,9 +22,10 @@ export default function WorkPage() {
   return (
     <>
       <PageHero
+        environment={{ intensity: "default", layout: "zeta" }}
         title={
           <>
-            B&amp;D Projects
+            B&amp;D <span className="text-bd-accent">Projects</span>
           </>
         }
         lead="We build websites, applications, internal tools, and platforms for real operations. The examples below are a small sample of the kinds of systems we build and illustrate the solutions they provide for our clients."

@@ -16,10 +16,11 @@ export default function ProcessPage() {
   return (
     <>
       <PageHero
+        environment={{ intensity: "default", layout: "delta" }}
         title={
           <>
             <span className="md:whitespace-nowrap">
-              From idea to production
+              From idea to <span className="text-bd-accent">production</span>
             </span>
           </>
         }

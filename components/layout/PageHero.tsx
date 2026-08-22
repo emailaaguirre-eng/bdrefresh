@@ -1,5 +1,18 @@
 import type { ReactNode } from "react";
+import {
+  HeroEnvironmentalDepth,
+  type HeroEnvIntensity,
+  type HeroEnvLayout,
+} from "@/components/brand/HeroEnvironmentalDepth";
 import { Container } from "@/components/ui/Container";
+
+export type PageHeroEnvironment =
+  | false
+  | {
+      intensity?: HeroEnvIntensity;
+      layout?: HeroEnvLayout;
+      hosting?: boolean;
+    };
 
 export function PageHero({
   eyebrow,
@@ -9,6 +22,7 @@ export function PageHero({
   backdrop,
   contentClassName = "py-16 md:py-20 lg:py-24",
   titleClassName,
+  environment = false,
 }: {
   /** Omit or pass null/empty to hide the mono eyebrow row. */
   eyebrow?: ReactNode | null;
@@ -21,11 +35,25 @@ export function PageHero({
   contentClassName?: string;
   /** Extra classes on the h1 (e.g. reset tracking when title is a logo image). */
   titleClassName?: string;
+  /**
+   * Inner-page B&D Environmental Depth (NOT for Home or Insights).
+   * Omit / false keeps the hero plain — required for Insights CoDre-X.
+   */
+  environment?: PageHeroEnvironment;
 }) {
   const showEyebrow = eyebrow != null && eyebrow !== false && eyebrow !== "";
+  const env = environment === false || environment == null ? null : environment;
+
   return (
     <div className="relative overflow-hidden bg-[#080c12] text-bd-dark-text">
       {backdrop}
+      {env ? (
+        <HeroEnvironmentalDepth
+          intensity={env.intensity}
+          layout={env.layout}
+          hosting={env.hosting}
+        />
+      ) : null}
       <Container className={`relative z-10 ${contentClassName}`}>
         <div className="flex w-full max-w-[740px] flex-col items-start text-left">
           {showEyebrow ? (

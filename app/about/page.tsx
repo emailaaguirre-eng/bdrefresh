@@ -15,9 +15,11 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
+        environment={{ intensity: "editorial", layout: "epsilon" }}
         title={
           <>
-            Built beyond templates, designed for the way you work.
+            Built beyond templates, designed for{" "}
+            <span className="text-bd-accent">the way you work.</span>
           </>
         }
         lead="B&D Servicing builds digital applications, internal tools, and systems shaped around real business needs."

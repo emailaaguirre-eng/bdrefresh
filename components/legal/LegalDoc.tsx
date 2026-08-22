@@ -15,14 +15,19 @@ export function LegalDoc({
   blocks,
 }: {
   eyebrow: string;
-  title: string;
+  title: ReactNode;
   lead: string;
   updated: string;
   blocks: LegalBlock[];
 }) {
   return (
     <>
-      <PageHero eyebrow={eyebrow} title={title} lead={lead} />
+      <PageHero
+        eyebrow={eyebrow}
+        title={title}
+        lead={lead}
+        environment={{ intensity: "restrained", layout: "alpha" }}
+      />
       <section className="bg-white py-14 md:py-16">
         <Container>
           <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-bd-light-secondary">

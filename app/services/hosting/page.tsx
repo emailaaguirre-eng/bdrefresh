@@ -17,9 +17,10 @@ export default function HostingInfrastructurePage() {
     <>
       <PageHero
         eyebrow="Hosting & Infrastructure"
+        environment={{ intensity: "default", layout: "gamma", hosting: true }}
         title={
           <>
-            Hosting, monitoring, and website care
+            Hosting, monitoring, and <span className="text-bd-accent">website care</span>
           </>
         }
         lead="Your website should not become another thing you have to worry about. We help keep it available, maintained, protected, and ready for customers while giving you one place to stay informed."

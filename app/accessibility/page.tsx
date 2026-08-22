@@ -12,7 +12,7 @@ export default function AccessibilityPage() {
   return (
     <LegalDoc
       eyebrow="Legal"
-      title="Accessibility"
+      title={<span className="text-bd-accent">Accessibility</span>}
       lead="We design for clarity and access, and we welcome feedback when something gets in the way."
       updated="August 1, 2026"
       blocks={accessibilityBlocks}

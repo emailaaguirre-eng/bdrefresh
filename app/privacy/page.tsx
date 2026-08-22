@@ -12,7 +12,11 @@ export default function PrivacyPage() {
   return (
     <LegalDoc
       eyebrow="Legal"
-      title="Privacy Policy"
+      title={
+        <>
+          Privacy <span className="text-bd-accent">Policy</span>
+        </>
+      }
       lead="What we collect on this website, why we collect it, and the choices you have."
       updated="August 1, 2026"
       blocks={privacyBlocks}

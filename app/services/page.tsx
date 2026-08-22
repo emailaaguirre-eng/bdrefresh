@@ -15,9 +15,10 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
+        environment={{ intensity: "default", layout: "gamma" }}
         title={
           <>
-            What we offer
+            What we <span className="text-bd-accent">offer</span>
           </>
         }
         lead="Build when you need a site, application platform, or brand foundation. After launch, we host, care for, and support the live site. Plans and prices are listed in the full catalog."

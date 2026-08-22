@@ -12,7 +12,11 @@ export default function TermsPage() {
   return (
     <LegalDoc
       eyebrow="Legal"
-      title="Terms of Use"
+      title={
+        <>
+          Terms of <span className="text-bd-accent">Use</span>
+        </>
+      }
       lead="The rules for using this website. Project work is covered by separate agreements."
       updated="August 1, 2026"
       blocks={termsBlocks}

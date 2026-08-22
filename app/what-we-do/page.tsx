@@ -15,9 +15,11 @@ export default function WhatWeDoPage() {
   return (
     <>
       <PageHero
+        environment={{ intensity: "default", layout: "beta" }}
         title={
           <>
-            Clear ownership. Software that still makes sense after launch
+            Clear ownership.{" "}
+            <span className="text-bd-accent">Software that still makes sense after launch</span>
           </>
         }
         lead="We clarify the outcome, shape the system around real operations, and keep design, engineering, and deployment on one thread, so the result holds up in day-to-day use."
