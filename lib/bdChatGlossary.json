@@ -1,0 +1,614 @@
+[
+  {
+    "term": "Website",
+    "definition": "A collection of web pages that represent a business, brand, service, product, or organization online.",
+    "why": "A website is often the first place people go to understand what a business does, whether it is credible, and how to contact or buy from it.",
+    "keys": [
+      "web site",
+      "websites"
+    ]
+  },
+  {
+    "term": "Landing page",
+    "definition": "A focused single page built around one specific offer, campaign, service, or action.",
+    "why": "Landing pages help guide visitors toward one clear next step, such as booking a call, submitting a form, or buying.",
+    "keys": [
+      "landing pages"
+    ]
+  },
+  {
+    "term": "Homepage",
+    "definition": "The main entry page of a website.",
+    "why": "The homepage usually sets the first impression and helps visitors decide where to go next.",
+    "keys": [
+      "home page",
+      "home pages"
+    ]
+  },
+  {
+    "term": "Domain",
+    "definition": "The web address people use to find a website, such as example.com.",
+    "why": "Domains connect to websites, email, DNS records, and security settings.",
+    "keys": [
+      "domain name",
+      "domains"
+    ]
+  },
+  {
+    "term": "DNS",
+    "definition": "DNS is the system that tells the internet where a domain should point, including the website, email provider, and verification records.",
+    "why": "Incorrect DNS settings can break websites, email, SSL, tracking tools, and platform connections.",
+    "keys": [
+      "domain name system"
+    ]
+  },
+  {
+    "term": "Hosting",
+    "definition": "Hosting is the server or platform where a website or application lives so people can access it online.",
+    "why": "Hosting affects speed, uptime, security, backups, and launch reliability.",
+    "keys": [
+      "web hosting",
+      "website hosting",
+      "host a site",
+      "host a website"
+    ]
+  },
+  {
+    "term": "SSL",
+    "definition": "SSL is the security certificate that allows a website to load securely with HTTPS.",
+    "why": "Without SSL, browsers may show security warnings and visitors may not trust the site.",
+    "keys": [
+      "https",
+      "tls certificate",
+      "ssl certificate"
+    ]
+  },
+  {
+    "term": "CMS",
+    "definition": "A CMS, or content management system, lets people update website content without editing code.",
+    "why": "A CMS can make it easier to manage pages, posts, images, and site content over time.",
+    "keys": [
+      "content management system",
+      "content management systems"
+    ]
+  },
+  {
+    "term": "Responsive design",
+    "definition": "Responsive design means a website adapts to different screen sizes, including phones, tablets, and desktops.",
+    "why": "Visitors expect websites to work well on mobile devices, and poor mobile design can hurt trust and conversions.",
+    "keys": []
+  },
+  {
+    "term": "SEO",
+    "definition": "SEO, or search engine optimization, is the process of improving a website so search engines can understand it and users can find it.",
+    "why": "SEO can support visibility, trust, traffic, and lead generation over time.",
+    "keys": [
+      "seo's",
+      "search engine optimization"
+    ]
+  },
+  {
+    "term": "On-page SEO",
+    "definition": "On-page SEO focuses on the content and structure of individual pages, including titles, headings, copy, internal links, metadata, and image descriptions.",
+    "why": "Good on-page SEO helps search engines and visitors understand what each page is about.",
+    "keys": [
+      "on page seo"
+    ]
+  },
+  {
+    "term": "Technical SEO",
+    "definition": "Technical SEO focuses on the behind-the-scenes health of a website, including speed, indexing, crawlability, redirects, structured data, sitemaps, and site architecture.",
+    "why": "Technical SEO helps search engines access and understand the site properly.",
+    "keys": []
+  },
+  {
+    "term": "Local SEO",
+    "definition": "Local SEO helps a business appear in search results for a geographic area or service location.",
+    "why": "Local SEO is important for businesses that serve specific cities, regions, or local customers.",
+    "keys": []
+  },
+  {
+    "term": "Metadata",
+    "definition": "Metadata is behind-the-scenes page information, such as title tags and meta descriptions, that helps describe a page.",
+    "why": "Metadata can affect how pages appear in search results and how clearly users understand the page.",
+    "keys": []
+  },
+  {
+    "term": "Sitemap",
+    "definition": "A sitemap is a file that lists important website pages for search engines.",
+    "why": "Sitemaps help search engines discover and understand site structure.",
+    "keys": []
+  },
+  {
+    "term": "Robots.txt",
+    "definition": "Robots.txt is a file that gives search engines instructions about which parts of a site they can or should not crawl.",
+    "why": "Incorrect robots.txt settings can accidentally block important pages from search engines.",
+    "keys": []
+  },
+  {
+    "term": "Redirect",
+    "definition": "A redirect sends visitors and search engines from one URL to another.",
+    "why": "Redirects help preserve traffic and avoid broken links when pages move or URLs change.",
+    "keys": []
+  },
+  {
+    "term": "Analytics",
+    "definition": "Analytics tools track website or campaign activity, such as visits, traffic sources, clicks, and conversions.",
+    "why": "Analytics help businesses understand what is working and where improvements are needed.",
+    "keys": []
+  },
+  {
+    "term": "Google Search Console",
+    "definition": "Google Search Console is a Google tool that shows how a website appears in Google search and whether there are indexing or technical issues.",
+    "why": "It helps identify search visibility, indexing problems, crawl errors, and performance opportunities.",
+    "keys": [
+      "search console"
+    ]
+  },
+  {
+    "term": "Conversion",
+    "definition": "A conversion is a desired action a visitor takes, such as submitting a form, booking a call, making a purchase, or downloading something.",
+    "why": "Conversions are how websites and campaigns are often measured.",
+    "keys": []
+  },
+  {
+    "term": "CTA",
+    "definition": "CTA means call to action. It is the prompt that tells users what to do next, such as \"Book a call\" or \"Request a quote.\"",
+    "why": "Clear CTAs help visitors take the next step.",
+    "keys": []
+  },
+  {
+    "term": "CRM",
+    "definition": "A CRM is a system used to manage leads, contacts, customers, sales activity, and follow-up.",
+    "why": "Connecting website forms or automations to a CRM helps reduce manual entry and keeps leads organized.",
+    "keys": [
+      "customer relationship management"
+    ]
+  },
+  {
+    "term": "API",
+    "definition": "An API, or application programming interface, is a structured way for one software system to communicate with another.",
+    "why": "APIs are often what make integrations, automations, dashboards, portals, payment tools, CRMs, email platforms, and custom applications work together.",
+    "keys": [
+      "application programming interface",
+      "apis",
+      "api's",
+      "an api",
+      "the api"
+    ]
+  },
+  {
+    "term": "API integrations",
+    "definition": "API integrations are connections built between software systems using APIs so tools can share information, trigger actions, update records, or keep data consistent.",
+    "why": "API integrations can reduce manual entry, prevent duplicate work, improve reporting, and help business systems work together more reliably.",
+    "keys": []
+  },
+  {
+    "term": "Integration",
+    "definition": "An integration connects two or more tools or systems so they can share data or trigger actions.",
+    "why": "Integrations reduce manual work and make business systems more connected.",
+    "keys": [
+      "integrations",
+      "system integration",
+      "software integration"
+    ]
+  },
+  {
+    "term": "Automation",
+    "definition": "Automation uses rules or workflows to handle repetitive tasks automatically, such as notifications, CRM updates, spreadsheet updates, approvals, or follow-up tasks.",
+    "why": "Automation can save time, reduce manual errors, and make processes more consistent.",
+    "keys": [
+      "automations",
+      "business automation",
+      "process automation"
+    ]
+  },
+  {
+    "term": "Workflow",
+    "definition": "A workflow is the series of steps a task or process follows from start to finish.",
+    "why": "Clear workflows make automation, reporting, approvals, and accountability easier.",
+    "keys": [
+      "workflows",
+      "business workflow"
+    ]
+  },
+  {
+    "term": "Webhooks",
+    "definition": "A webhook is a way for one system to notify another system when something happens, such as a form submission, payment, booking, or status change.",
+    "why": "Webhooks are useful for real-time updates because they can trigger actions automatically when an event occurs.",
+    "keys": [
+      "webhook"
+    ]
+  },
+  {
+    "term": "Dashboard",
+    "definition": "A dashboard is a visual screen that shows important information, metrics, statuses, or actions in one place.",
+    "why": "Dashboards help teams quickly understand what is happening and what needs attention.",
+    "keys": [
+      "dashboards"
+    ]
+  },
+  {
+    "term": "Client portal",
+    "definition": "A client portal is a secure area where clients can log in to access documents, tasks, messages, forms, status updates, or deliverables.",
+    "why": "Client portals reduce back-and-forth emails and give clients one organized place to find information.",
+    "keys": [
+      "client portals"
+    ]
+  },
+  {
+    "term": "Portal",
+    "definition": "A portal is a secure user area for customers, clients, staff, or partners.",
+    "why": "Portals can improve transparency, reduce support load, and organize user-specific information.",
+    "keys": [
+      "portals"
+    ]
+  },
+  {
+    "term": "Admin dashboard",
+    "definition": "An admin dashboard is a private control panel where authorized users manage data, content, users, settings, reports, or workflows.",
+    "why": "Admin dashboards help teams operate a system without editing code directly.",
+    "keys": [
+      "admin dashboards",
+      "admin panel",
+      "admin panels"
+    ]
+  },
+  {
+    "term": "User roles",
+    "definition": "User roles define what different users are allowed to see or do inside a system.",
+    "why": "Roles protect information and keep workflows organized by permission level.",
+    "keys": []
+  },
+  {
+    "term": "Authentication",
+    "definition": "Authentication is the process of verifying a user's identity, usually through login credentials or other security checks.",
+    "why": "Authentication protects private areas, accounts, dashboards, portals, and sensitive data.",
+    "keys": []
+  },
+  {
+    "term": "Database",
+    "definition": "A database is where structured information is stored, such as users, orders, leads, products, form submissions, tasks, or reports.",
+    "why": "Good database structure makes it easier to search, update, report on, and protect business information.",
+    "keys": [
+      "databases",
+      "db"
+    ]
+  },
+  {
+    "term": "Data migration",
+    "definition": "Data migration is the process of moving information from one system, file, or platform to another.",
+    "why": "Clean migration helps preserve important records when switching tools or rebuilding systems.",
+    "keys": []
+  },
+  {
+    "term": "Data sync",
+    "definition": "Data sync keeps information consistent between systems, such as making sure a contact added in one platform also appears correctly in another.",
+    "why": "Data sync reduces duplicate entry, outdated records, and mismatched information across tools.",
+    "keys": [
+      "data synchronization",
+      "sync data"
+    ]
+  },
+  {
+    "term": "Deduplication",
+    "definition": "Deduplication is the process of finding and removing duplicate records.",
+    "why": "Deduplication keeps CRMs, mailing lists, reports, and workflows cleaner and more reliable.",
+    "keys": []
+  },
+  {
+    "term": "Tagging",
+    "definition": "Tagging is a way to label records so they can be grouped, filtered, reported on, or used in automations.",
+    "why": "Tags help organize leads, clients, campaigns, support requests, project stages, and follow-up actions.",
+    "keys": []
+  },
+  {
+    "term": "Backup",
+    "definition": "A backup is a saved copy of website, application, or database information.",
+    "why": "Backups help restore data if something breaks, is deleted, or becomes corrupted.",
+    "keys": [
+      "backups"
+    ]
+  },
+  {
+    "term": "Uptime monitoring",
+    "definition": "Uptime monitoring checks whether a website or application is online and reachable.",
+    "why": "It helps detect outages quickly.",
+    "keys": []
+  },
+  {
+    "term": "Monitoring",
+    "definition": "Monitoring tracks whether a website or application is online, performing well, and free from major errors.",
+    "why": "Monitoring helps identify outages, slow pages, broken functionality, or system errors after launch.",
+    "keys": [
+      "website monitoring",
+      "uptime monitoring",
+      "site monitoring"
+    ]
+  },
+  {
+    "term": "Maintenance",
+    "definition": "Maintenance is ongoing care for a website, app, or system, such as updates, backups, fixes, monitoring, and content changes.",
+    "why": "Maintenance keeps systems healthier, safer, and more reliable over time.",
+    "keys": []
+  },
+  {
+    "term": "Security review",
+    "definition": "A security review checks access, permissions, SSL, plugins, backups, spam protection, and other basic risks.",
+    "why": "Security reviews help reduce avoidable problems and protect business systems.",
+    "keys": []
+  },
+  {
+    "term": "SPF",
+    "definition": "SPF is an email authentication record that helps identify which servers are allowed to send email for a domain.",
+    "why": "SPF can help reduce spoofing and support better email trust.",
+    "keys": []
+  },
+  {
+    "term": "DKIM",
+    "definition": "DKIM is an email authentication method that adds a digital signature to messages.",
+    "why": "DKIM helps receiving mail systems verify that a message was not altered and is connected to the sending domain.",
+    "keys": []
+  },
+  {
+    "term": "DMARC",
+    "definition": "DMARC is an email authentication policy that helps protect a domain from spoofing and gives visibility into who is sending email on behalf of the domain.",
+    "why": "DMARC helps improve domain protection and supports better email trust when SPF and DKIM are also configured correctly.",
+    "keys": []
+  },
+  {
+    "term": "Deliverability",
+    "definition": "Deliverability is the ability of emails to reach recipients inboxes instead of spam or being blocked.",
+    "why": "Deliverability affects whether clients, leads, and customers actually receive important emails.",
+    "keys": []
+  },
+  {
+    "term": "Email authentication",
+    "definition": "Email authentication uses records like SPF, DKIM, and DMARC to help prove that email sent from a domain is legitimate.",
+    "why": "It helps protect domain reputation and reduce spoofing or spam issues.",
+    "keys": []
+  },
+  {
+    "term": "Google Workspace",
+    "definition": "Google Workspace is Google's business email and productivity platform.",
+    "why": "It can host business email, calendars, documents, and collaboration tools.",
+    "keys": []
+  },
+  {
+    "term": "Microsoft 365",
+    "definition": "Microsoft 365 is Microsoft's business email and productivity platform.",
+    "why": "It can host Outlook email, calendars, documents, Teams, SharePoint, and other business tools.",
+    "keys": []
+  },
+  {
+    "term": "Power Automate",
+    "definition": "Power Automate is Microsoft's workflow automation tool.",
+    "why": "It can connect Microsoft 365 apps and other services to automate approvals, notifications, data movement, and repetitive tasks.",
+    "keys": []
+  },
+  {
+    "term": "Zapier",
+    "definition": "Zapier is an automation platform that connects apps and triggers actions between them.",
+    "why": "It is useful for lightweight automations between common business tools.",
+    "keys": []
+  },
+  {
+    "term": "Make",
+    "definition": "Make is an automation platform used to build visual workflows between apps and systems.",
+    "why": "It can support more complex automation scenarios and data flows.",
+    "keys": []
+  },
+  {
+    "term": "Web app",
+    "definition": "A web app is software that runs in a browser and allows users to do more than read static web pages.",
+    "why": "Web apps can support logins, dashboards, forms, workflows, portals, and business tools.",
+    "keys": [
+      "web application",
+      "web applications",
+      "web apps"
+    ]
+  },
+  {
+    "term": "Progressive web app",
+    "definition": "A progressive web app is a web app designed to behave more like a mobile app, sometimes including installable access or offline-friendly features.",
+    "why": "It can offer an app-like experience without always requiring a native app store release.",
+    "keys": [
+      "pwa"
+    ]
+  },
+  {
+    "term": "Native mobile app",
+    "definition": "A native mobile app is an app built specifically for platforms like iOS or Android.",
+    "why": "Native apps can support mobile-specific features but usually require more planning, development, testing, and maintenance.",
+    "keys": [
+      "native app"
+    ]
+  },
+  {
+    "term": "MVP",
+    "definition": "MVP means minimum viable product, which is the smallest useful version of a product that can test an idea or workflow.",
+    "why": "MVPs help reduce risk by focusing on the essential features first.",
+    "keys": [
+      "minimum viable product"
+    ]
+  },
+  {
+    "term": "Prototype",
+    "definition": "A prototype is an early model of a website, app, or feature used to test structure, flow, or design before full development.",
+    "why": "Prototypes help clarify ideas before investing in a full build.",
+    "keys": [
+      "prototypes"
+    ]
+  },
+  {
+    "term": "Wireframe",
+    "definition": "A wireframe is a simple layout plan that shows page or screen structure without final visual design.",
+    "why": "Wireframes help plan content, layout, and user flow early.",
+    "keys": [
+      "wireframes"
+    ]
+  },
+  {
+    "term": "Mockup",
+    "definition": "A mockup is a more polished visual representation of what a page, screen, or design may look like.",
+    "why": "Mockups help review design direction before development.",
+    "keys": [
+      "mockups",
+      "concept mockup"
+    ]
+  },
+  {
+    "term": "QA",
+    "definition": "QA, or quality assurance, is the testing process used to check that a website, application, or workflow works as expected before release.",
+    "why": "QA can include checking forms, links, mobile layouts, browser behavior, user flows, permissions, integrations, and edge cases.",
+    "keys": [
+      "quality assurance",
+      "quality control"
+    ]
+  },
+  {
+    "term": "CI/CD",
+    "definition": "CI/CD is a development process that can automatically test and deploy code changes through a controlled pipeline.",
+    "why": "CI/CD can make releases safer, faster, and more consistent, especially for applications or sites with frequent updates.",
+    "keys": [
+      "continuous integration",
+      "continuous deployment",
+      "ci cd"
+    ]
+  },
+  {
+    "term": "Deployment",
+    "definition": "Deployment is the process of moving a website, app, or update from development into the live environment where users can access it.",
+    "why": "Deployment includes launch checks, hosting, environment settings, DNS, security, testing, and rollback planning.",
+    "keys": [
+      "deploy",
+      "deploying",
+      "ship to production"
+    ]
+  },
+  {
+    "term": "Staging",
+    "definition": "Staging is a test environment used to review changes before they go live.",
+    "why": "Staging helps teams test updates, catch issues, and approve changes before affecting the live production site or application.",
+    "keys": [
+      "staging environment",
+      "staging site"
+    ]
+  },
+  {
+    "term": "Production",
+    "definition": "Production is the live version of a website or application that real users, customers, or staff interact with.",
+    "why": "Changes in production need to be handled carefully because mistakes can affect real users, business operations, or customer experience.",
+    "keys": [
+      "production environment",
+      "production site",
+      "live site"
+    ]
+  },
+  {
+    "term": "Internal tools",
+    "definition": "Internal tools are private systems built for staff to manage workflows, records, approvals, tasks, dashboards, reporting, or daily operations.",
+    "why": "Internal tools reduce scattered spreadsheets, manual tracking, and process confusion by giving teams one structured place to work.",
+    "keys": [
+      "internal tool",
+      "in-house tool",
+      "in house tools"
+    ]
+  },
+  {
+    "term": "Custom applications",
+    "definition": "A custom application is software built around a specific business process instead of forcing the business to fit into a generic template or off-the-shelf tool.",
+    "why": "Custom applications are helpful when a business has unique workflows, user roles, data needs, integrations, or reporting requirements that standard software does not handle well.",
+    "keys": [
+      "custom application",
+      "custom apps",
+      "custom software"
+    ]
+  },
+  {
+    "term": "Full stack / end-to-end development",
+    "definition": "Full stack or end-to-end development means handling the visible part users interact with, the behind-the-scenes logic, the database, and the deployment process that gets the system live.",
+    "why": "A complete project may include more than screens or design. It may also require backend logic, data storage, security, hosting, testing, and launch support.",
+    "keys": [
+      "full stack",
+      "end-to-end",
+      "end to end",
+      "fullstack"
+    ]
+  },
+  {
+    "term": "Scalable platform",
+    "definition": "A scalable platform is built so it can grow over time, whether that means more users, more data, more features, or more integrations.",
+    "why": "Scalability helps reduce the need to rebuild from scratch when the business grows or the system becomes more complex.",
+    "keys": []
+  },
+  {
+    "term": "Architecture",
+    "definition": "Architecture is the technical blueprint for how a website, app, database, integrations, and infrastructure fit together.",
+    "why": "Good architecture helps a system stay reliable, maintainable, and easier to expand.",
+    "keys": [
+      "system architecture",
+      "software architecture"
+    ]
+  },
+  {
+    "term": "Tech stack",
+    "definition": "A tech stack is the collection of technologies used to build and run a project, such as programming languages, frameworks, databases, hosting, APIs, and third-party services.",
+    "why": "The tech stack affects performance, cost, maintenance, scalability, and future development options.",
+    "keys": [
+      "technology stack",
+      "stack"
+    ]
+  },
+  {
+    "term": "Documentation",
+    "definition": "Documentation is written guidance that explains how a system works, how to maintain it, and how to use important features or workflows.",
+    "why": "Documentation makes handoff, training, support, and future updates easier.",
+    "keys": [
+      "docs",
+      "technical documentation"
+    ]
+  },
+  {
+    "term": "Custom Platform Build",
+    "definition": "A Custom Platform Build (CPB) is an industry-specific platform from B&D Servicing: a prebuilt back end for how that type of business runs, plus a semi-custom front end tailored to your brand, content, and customer experience. You get proven workflows (public site when needed, staff tools, customer flows, and the modules that matter) without a full custom-software project or a one-size-fits-all template.",
+    "why": "CPBs are a middle path between a stock website theme and a fully custom app—faster to stand up than greenfield software, more operational fit than a generic template.",
+    "keys": [
+      "cpb",
+      "cpbs",
+      "cpb's",
+      "custom platform build",
+      "custom platform builds",
+      "custom platform",
+      "custom platforms"
+    ]
+  },
+  {
+    "term": "Managed hosting",
+    "definition": "Managed hosting is hosting where the provider (here, B&D) runs and looks after the live website environment for you—not just “server space.” That typically includes a managed production environment, SSL, backups and restore help, platform maintenance, monitoring of uptime and resources, DNS coordination, and business-hours support under one relationship.",
+    "why": "Managed hosting treats the live site as an operating asset so you are not alone with servers, updates, and recovery when something breaks.",
+    "keys": [
+      "managed host",
+      "managed web hosting",
+      "website managed hosting"
+    ]
+  },
+  {
+    "term": "Website care",
+    "definition": "Website care is ongoing maintenance after launch: updates, small fixes, content changes within plan limits, and keeping the site healthy day to day under a care plan.",
+    "why": "Care plans keep a live site current and supported without treating every small change as a new project.",
+    "keys": [
+      "site care",
+      "care plan",
+      "website maintenance"
+    ]
+  },
+  {
+    "term": "Webhook",
+    "definition": "A webhook is a way for one system to notify another when something happens by sending an HTTP request (for example, “order paid” or “form submitted”) so the receiving system can react immediately.",
+    "why": "Webhooks power near-real-time integrations without constant polling.",
+    "keys": [
+      "webhooks"
+    ]
+  }
+]

@@ -1,10 +1,14 @@
 {
   "greeting": {
-    "text": "Hi! I'm the B&D Servicing assistant. I can help you learn about what we offer and whether we're a good fit. What can I help with?",
+    "text": "Hi! I'm the B&D Servicing assistant. I can help with what we offer, plain-language definitions (API, SEO, hosting, CPBs, and more), and whether we're a good fit. What can I help with?",
     "options": [
       {
         "label": "What do you offer?",
         "action": "services"
+      },
+      {
+        "label": "Glossary / definitions",
+        "action": "glossary_help"
       },
       {
         "label": "Can you help with my project?",
@@ -20,12 +24,75 @@
       }
     ]
   },
+  "glossary_help": {
+    "text": "Ask what a term means in plain language. For example: “What is an API?”, “What is managed hosting?”, “What is SEO?”, “What is a CPB?”, “What is automation?”, or “What is a webhook?”\n\nI’ll give a short definition and why it matters for web and business systems. You can also ask about a specific B&D service afterward.",
+    "options": [
+      {
+        "label": "What is a CPB?",
+        "action": "define:Custom Platform Build"
+      },
+      {
+        "label": "What is an API?",
+        "action": "define:API"
+      },
+      {
+        "label": "What is managed hosting?",
+        "action": "define:Managed hosting"
+      },
+      {
+        "label": "What do you offer?",
+        "action": "services"
+      }
+    ]
+  },
+  "cpb": {
+    "text": "Yes. Custom Platform Builds (CPBs) are industry-specific platforms: a prebuilt back end for how that type of business runs, plus a semi-custom front end for your brand, content, and customer experience.\n\nWe are developing CPB lines for salons and barbers, restaurants, e-commerce, and informational sites—so you get proven workflows without a full custom-software project or a one-size template.\n\nTell us your industry and how work happens today; we can match a CPB line and quote front-end and delivery scope.",
+    "options": [
+      {
+        "label": "What is a CPB?",
+        "action": "define:Custom Platform Build"
+      },
+      {
+        "label": "See service catalog",
+        "action": "service_catalog_hint"
+      },
+      {
+        "label": "Get a quote",
+        "action": "contact"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
+  "service_catalog_hint": {
+    "text": "Full plans and CPB lines are listed on our services catalog at /services/all (Plans & packages). For a quote on a specific line, the contact form is still the fastest path.",
+    "options": [
+      {
+        "label": "Talk to the team",
+        "action": "contact"
+      },
+      {
+        "label": "Back to CPBs",
+        "action": "cpb"
+      },
+      {
+        "label": "Back to services",
+        "action": "services"
+      }
+    ]
+  },
   "services": {
-    "text": "Here's what we offer:\n\n• Website builds\n• Custom web applications\n• Internal tools & dashboards\n• Automation & API integrations\n• Managed hosting\n• Website monitoring\n• Website care\n• SEO\n• Web copy\n• Graphic design\n\nAsk about any of these, or tell us what you're trying to get done.",
+    "text": "Here's what we offer:\n\n• Website builds\n• Custom Platform Builds (CPBs)\n• Custom web applications\n• Internal tools & dashboards\n• Automation & API integrations\n• Managed hosting\n• Website monitoring\n• Website care\n• SEO\n• Web copy\n• Graphic design\n\nAsk about any of these, ask “what is …” for a simple definition, or tell us what you're trying to get done.",
     "options": [
       {
         "label": "Websites & apps",
         "action": "websites"
+      },
+      {
+        "label": "Custom Platform Builds",
+        "action": "cpb"
       },
       {
         "label": "SEO",
@@ -38,6 +105,10 @@
       {
         "label": "Copy & design",
         "action": "graphic_design"
+      },
+      {
+        "label": "Glossary / definitions",
+        "action": "glossary_help"
       },
       {
         "label": "Something else",
@@ -391,11 +462,15 @@
     ]
   },
   "fallback": {
-    "text": "I may need a little more detail. B&D offers website builds, custom web apps, internal tools, automation, managed hosting, website monitoring, website care, SEO, web copy, and graphic design. You can ask about a specific service or request a quote.",
+    "text": "I may need a little more detail. B&D offers website builds, Custom Platform Builds (CPBs), custom web apps, internal tools, automation, managed hosting, website monitoring, website care, SEO, web copy, and graphic design. You can ask about a specific service, ask what a term means (for example “What is an API?”), or request a quote.",
     "options": [
       {
         "label": "What do you offer?",
         "action": "services"
+      },
+      {
+        "label": "Glossary / definitions",
+        "action": "glossary_help"
       },
       {
         "label": "Pricing & timelines",

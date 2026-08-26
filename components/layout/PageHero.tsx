@@ -22,12 +22,13 @@ export function PageHero({
   backdrop,
   contentClassName = "py-16 md:py-20 lg:py-24",
   titleClassName,
+  leadClassName,
   environment = false,
 }: {
   /** Omit or pass null/empty to hide the mono eyebrow row. */
   eyebrow?: ReactNode | null;
   title: ReactNode;
-  lead: string;
+  lead: ReactNode;
   /** Optional CTA row under the lead (e.g. primary + secondary links). */
   actions?: ReactNode;
   /** Absolute layer behind copy (e.g. Insights night sky). */
@@ -35,6 +36,7 @@ export function PageHero({
   contentClassName?: string;
   /** Extra classes on the h1 (e.g. reset tracking when title is a logo image). */
   titleClassName?: string;
+  leadClassName?: string;
   /**
    * Inner-page B&D Environmental Depth (NOT for Home or Insights).
    * Omit / false keeps the hero plain — required for Insights CoDre-X.
@@ -72,7 +74,18 @@ export function PageHero({
           >
             {title}
           </h1>
-          <p className="mt-5 text-base leading-relaxed text-bd-dark-muted md:text-lg">{lead}</p>
+          {lead ? (
+            <p
+              className={[
+                "mt-5 text-base leading-relaxed text-bd-dark-muted md:text-lg",
+                leadClassName,
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
+              {lead}
+            </p>
+          ) : null}
           {actions ? <div className="mt-8 flex flex-wrap gap-4">{actions}</div> : null}
         </div>
       </Container>

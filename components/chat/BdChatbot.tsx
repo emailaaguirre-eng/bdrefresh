@@ -1,5 +1,6 @@
 "use client";
 
+import glossaryEntries from "@/lib/bdChatGlossary.json";
 import keywordRows from "@/lib/bdChatKeywords.json";
 import responses from "@/lib/bdChatResponses.json";
 import { useRouter } from "next/navigation";
@@ -7,10 +8,29 @@ import { useCallback, useEffect, useId, useRef, useState } from "react";
 
 type Opt = { label: string; action: string };
 
+type GlossaryEntry = {
+  term: string;
+  definition: string;
+  why: string;
+  keys?: string[];
+};
+
 type ChatLine =
   | { kind: "bot"; id: number; text: string }
   | { kind: "user"; id: number; text: string }
   | { kind: "options"; id: number; options: Opt[]; disabled: boolean };
+
+type ResolvedReply =
+  | { kind: "action"; action: string }
+  | { kind: "glossary"; entry: GlossaryEntry };
+
+const glossary = glossaryEntries as GlossaryEntry[];
+
+const glossaryReplyOptions: Opt[] = [
+  { label: "Ask another term", action: "glossary_help" },
+  { label: "What do you offer?", action: "services" },
+  { label: "Talk to the team", action: "contact" },
+];
 
 function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -26,6 +46,62 @@ function keywordMatches(input: string, key: string): boolean {
   return input.includes(normalizedKey);
 }
 
+function formatGlossaryEntry(entry: GlossaryEntry): string {
+  return `${entry.term}\n\nDefinition: ${entry.definition}\n\nWhy it matters: ${entry.why}`;
+}
+
+function matchGlossaryEntry(lower: string): GlossaryEntry | null {
+  const scored = glossary.map((entry) => {
+    const phrases = [entry.term, ...(entry.keys ?? [])].filter(Boolean);
+    const maxLen = Math.max(0, ...phrases.map((p) => p.length));
+    return { entry, phrases, maxLen };
+  });
+  scored.sort((a, b) => b.maxLen - a.maxLen);
+
+  for (const { entry, phrases } of scored) {
+    if (entry.term === "Make" && /\bto make\b|\bmake a\b|\bmake an\b|\bmake sure\b|\bmake sense\b/i.test(lower)) {
+      continue;
+    }
+    for (const phrase of phrases) {
+      const ph = phrase.toLowerCase().trim();
+      if (!ph) continue;
+      if (ph.length <= 3) {
+        if (new RegExp(`\\b${escapeRegExp(ph)}\\b`, "i").test(lower)) return entry;
+      } else if (lower.includes(ph)) {
+        return entry;
+      }
+    }
+  }
+  return null;
+}
+
+function findGlossaryByTerm(term: string): GlossaryEntry | null {
+  const target = term.toLowerCase().trim();
+  return (
+    glossary.find((e) => e.term.toLowerCase() === target) ??
+    glossary.find((e) => (e.keys ?? []).some((k) => k.toLowerCase() === target)) ??
+    null
+  );
+}
+
+/** Prefer definitions for "what is …" and bare term questions; keep service intents for "do you offer …". */
+function isDefinitionalQuery(lower: string): boolean {
+  if (
+    /^(what(?:'s|s)?\s+(?:is|are|does)\b|what\s+is\b|what\s+are\b|define\b|definition\s+of\b|meaning\s+of\b|explain\b|tell\s+me\s+about\b|what\s+does\b.+\bmean\b)/i.test(
+      lower,
+    )
+  ) {
+    return true;
+  }
+  // Bare term or short "X?" style questions (not service/project intent)
+  const stripped = lower.replace(/[?!.,;:]+$/g, "").trim();
+  if (!stripped || stripped.split(/\s+/).length > 5) return false;
+  if (/\b(can you|do you|need|want|build|price|cost|quote|how much|help me|looking for|offer|hire)\b/i.test(stripped)) {
+    return false;
+  }
+  return matchGlossaryEntry(stripped) !== null;
+}
+
 function matchKeywords(input: string): string {
   const lower = input.toLowerCase().trim();
   for (const row of keywordRows) {
@@ -34,6 +110,29 @@ function matchKeywords(input: string): string {
     }
   }
   return "fallback";
+}
+
+function resolveUserText(text: string): ResolvedReply {
+  const lower = text.toLowerCase().trim();
+  if (!lower) return { kind: "action", action: "fallback" };
+
+  if (/(^|\b)(glossary|definitions|terminology|technical terms|dictionary)\b/i.test(lower)) {
+    return { kind: "action", action: "glossary_help" };
+  }
+
+  if (isDefinitionalQuery(lower)) {
+    const gloss = matchGlossaryEntry(lower);
+    if (gloss) return { kind: "glossary", entry: gloss };
+  }
+
+  const action = matchKeywords(lower);
+  if (action !== "fallback") return { kind: "action", action };
+
+  // Unknown free text: still try a glossary hit (e.g. user typed only a related phrase)
+  const gloss = matchGlossaryEntry(lower);
+  if (gloss && isDefinitionalQuery(lower)) return { kind: "glossary", entry: gloss };
+
+  return { kind: "action", action: "fallback" };
 }
 
 function getResp(action: string): { text: string; options?: Opt[] } {
@@ -115,6 +214,22 @@ export function BdChatbot() {
     }, 0);
   }, []);
 
+  const deliverBotReply = useCallback(
+    (text: string, options?: Opt[], delayMs = 450) => {
+      setTyping(true);
+      setLiveAnnounce("Assistant is typing");
+      scrollChat();
+      window.setTimeout(() => {
+        setTyping(false);
+        addBot(text);
+        if (options?.length) {
+          window.setTimeout(() => addOptions(options), 200);
+        }
+      }, delayMs);
+    },
+    [addBot, addOptions, scrollChat],
+  );
+
   const handleAction = useCallback(
     (action: string, label: string | null) => {
       disablePreviousOptions();
@@ -146,20 +261,19 @@ export function BdChatbot() {
         return;
       }
 
-      const resp = getResp(action);
-      setTyping(true);
-      setLiveAnnounce("Assistant is typing");
-      scrollChat();
-      const delay = 400 + Math.random() * 400;
-      window.setTimeout(() => {
-        setTyping(false);
-        addBot(resp.text);
-        if (resp.options?.length) {
-          window.setTimeout(() => addOptions(resp.options!), 200);
+      if (action.startsWith("define:")) {
+        const term = action.slice("define:".length);
+        const entry = findGlossaryByTerm(term);
+        if (entry) {
+          deliverBotReply(formatGlossaryEntry(entry), glossaryReplyOptions, 400 + Math.random() * 400);
+          return;
         }
-      }, delay);
+      }
+
+      const resp = getResp(action);
+      deliverBotReply(resp.text, resp.options, 400 + Math.random() * 400);
     },
-    [addBot, addOptions, addUser, closeChat, disablePreviousOptions, router, scrollChat],
+    [addBot, addUser, closeChat, deliverBotReply, disablePreviousOptions, router],
   );
 
   const handleUserInput = useCallback(() => {
@@ -168,20 +282,14 @@ export function BdChatbot() {
     setInput("");
     disablePreviousOptions();
     addUser(text);
-    const action = matchKeywords(text);
-    const resp = getResp(action);
-    setTyping(true);
-    setLiveAnnounce("Assistant is typing");
-    scrollChat();
-    const delay = 500 + Math.random() * 500;
-    window.setTimeout(() => {
-      setTyping(false);
-      addBot(resp.text);
-      if (resp.options?.length) {
-        window.setTimeout(() => addOptions(resp.options!), 200);
-      }
-    }, delay);
-  }, [addBot, addOptions, addUser, disablePreviousOptions, input, scrollChat]);
+    const resolved = resolveUserText(text);
+    if (resolved.kind === "glossary") {
+      deliverBotReply(formatGlossaryEntry(resolved.entry), glossaryReplyOptions, 500 + Math.random() * 500);
+      return;
+    }
+    const resp = getResp(resolved.action);
+    deliverBotReply(resp.text, resp.options, 500 + Math.random() * 500);
+  }, [addUser, deliverBotReply, disablePreviousOptions, input]);
 
   useEffect(() => {
     if (!open) return;
